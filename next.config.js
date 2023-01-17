@@ -37,7 +37,16 @@ module.exports = {
         headers: [
           {
             key: 'Cache-Control',
-            value: `s-maxage=${60 * 60 * 24 * 365}, stale-while-revalidate=${60 * 60 * 1}`,
+            value: `s-maxage=${60 * 60 * 24 * 365}, stale-while-revalidate=${60 * 60 * 24}`,
+          },
+        ],
+      },
+      {
+        source: '/_next/:all*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: `s-maxage=${60 * 60 * 24 * 365}, stale-while-revalidate=${60 * 60 * 24}`,
           },
         ],
       },
