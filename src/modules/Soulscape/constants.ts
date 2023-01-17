@@ -1,0 +1,136 @@
+import { imageDomainUrl } from 'shared/constants/Assets';
+
+export const SOULSCAPE_IMAGES = {
+  'h-bg': {
+    url: `${imageDomainUrl}/Soulscape/h-bg.webp`,
+    width: 2560,
+    height: 1440,
+    alt: 'image',
+  },
+  'h-phone-1': {
+    url: `${imageDomainUrl}/Soulscape/h-phone-1.webp`,
+    width: 707,
+    height: 1400,
+    alt: 'image',
+  },
+  'h-phone-2': {
+    url: `${imageDomainUrl}/Soulscape/h-phone-2.webp`,
+    width: 707,
+    height: 1400,
+    alt: 'image',
+  },
+  'h-phone-3': {
+    url: `${imageDomainUrl}/Soulscape/h-phone-3.webp`,
+    width: 707,
+    height: 1400,
+    alt: 'image',
+  },
+  's1-phone-1': {
+    url: `${imageDomainUrl}/Soulscape/s1-phone-1.webp`,
+    width: 963,
+    height: 1656,
+    alt: 'image',
+  },
+  's1-phone-2': {
+    url: `${imageDomainUrl}/Soulscape/s1-phone-2.webp`,
+    width: 974,
+    height: 1678,
+    alt: 'image',
+  },
+  's1-phone-3': {
+    url: `${imageDomainUrl}/Soulscape/s1-phone-3.webp`,
+    width: 963,
+    height: 1656,
+    alt: 'image',
+  },
+  's2-phone-1': {
+    url: `${imageDomainUrl}/Soulscape/s2-phone-1.webp`,
+    width: 963,
+    height: 1656,
+    alt: 'image',
+  },
+  's2-phone-2': {
+    url: `${imageDomainUrl}/Soulscape/s2-phone-2.webp`,
+    width: 963,
+    height: 1656,
+    alt: 'image',
+  },
+  's3-phone-1': {
+    url: `${imageDomainUrl}/Soulscape/s3-phone-1.webp`,
+    width: 963,
+    height: 1656,
+    alt: 'image',
+  },
+  's3-phone-2': {
+    url: `${imageDomainUrl}/Soulscape/s3-phone-2.webp`,
+    width: 963,
+    height: 1592,
+    alt: 'image',
+  },
+  's3-phone-3': {
+    url: `${imageDomainUrl}/Soulscape/s3-phone-3.webp`,
+    width: 964,
+    height: 1656,
+    alt: 'image',
+  },
+  's3-phone-4': {
+    url: `${imageDomainUrl}/Soulscape/s3-phone-4.webp`,
+    width: 963,
+    height: 1656,
+    alt: 'image',
+  },
+  's4-phone-1': {
+    url: `${imageDomainUrl}/Soulscape/s4-phone-1.webp`,
+    width: 943,
+    height: 1656,
+    alt: 'image',
+  },
+  's4-phone-2': {
+    url: `${imageDomainUrl}/Soulscape/s4-phone-2.webp`,
+    width: 963,
+    height: 1656,
+    alt: 'image',
+  },
+  's4-phone-3': {
+    url: `${imageDomainUrl}/Soulscape/s4-phone-3.webp`,
+    width: 963,
+    height: 1656,
+    alt: 'image',
+  },
+  's5-phone-1': {
+    url: `${imageDomainUrl}/Soulscape/s5-phone-1.webp`,
+    width: 963,
+    height: 1656,
+    alt: 'image',
+  },
+  's5-phone-2': {
+    url: `${imageDomainUrl}/Soulscape/s5-phone-2.webp`,
+    width: 963,
+    height: 1604,
+    alt: 'image',
+  },
+  's5-phone-3': {
+    url: `${imageDomainUrl}/Soulscape/s5-phone-3.webp`,
+    width: 963,
+    height: 1604,
+    alt: 'image',
+  },
+  's6-bg': {
+    url: `${imageDomainUrl}/Soulscape/s6-bg.webp`,
+    width: 2560,
+    height: 1440,
+    alt: 'image',
+  },
+  's6-phone-1': {
+    url: `${imageDomainUrl}/Soulscape/s6-phone-1.webp`,
+    width: 963,
+    height: 1656,
+    alt: 'image',
+  },
+  's6-phone-2': {
+    url: `${imageDomainUrl}/Soulscape/s6-phone-2.webp`,
+    width: 963,
+    height: 1584,
+    alt: 'image',
+  },
+};

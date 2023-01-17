@@ -1,0 +1,91 @@
+import { HeroWrapper } from './Hero.styled';
+
+import { HOME_IMAGES } from '../constants';
+
+import classNames from 'classnames';
+import ImageFuture from 'next/future/image';
+import Image from 'next/image';
+import Link from 'next/link';
+import React from 'react';
+import AppleSvg from 'shared/assets/svg/apple.svg';
+
+const Hero: React.FC = () => {
+  return (
+    <HeroWrapper className={classNames("relative")}>
+      <ImageFuture
+        className="absolute top-0 h-full w-full object-cover"
+        src={HOME_IMAGES['h-bg'].url}
+        height={HOME_IMAGES['h-bg'].height}
+        width={HOME_IMAGES['h-bg'].width}
+        alt={HOME_IMAGES['h-bg'].alt}
+        priority
+      />
+      <div className="container isolate mx-auto flex h-full flex-col items-center px-6 pt-36 xl:pt-40">
+        <div className="pb-8">
+          <p className="max-w-xs pb-4 text-center font-['Gilroy'] text-base font-[400] tracking-[2px] text-white md:max-w-md lg:max-w-xl xl:max-w-4xl">
+            RENEWME BRAND
+          </p>
+          <h1 className="hero-text pb-4 text-center font-['Gilroy'] text-3xl font-[600] leading-10 text-white md:text-4xl lg:text-5xl xl:text-6xl">
+            A World of Balance
+          </h1>
+          <p className="hero-text max-w-xs text-center font-['Gilroy'] text-base font-[400] text-white md:max-w-md md:text-lg lg:max-w-xl lg:text-xl xl:max-w-3xl xl:text-2xl">
+            A new and refreshing wellness brand inspiring more confidence, balance, and peace of
+            mind.
+          </p>
+        </div>
+        <div className="hero-buttons grid grid-cols-[1fr_1fr] gap-4">
+          <Link href={'#'}>
+            <a className="flex h-10 items-center rounded-lg bg-orange-1 px-4 text-center font-['Gilroy'] text-sm font-[400] text-white hover:bg-orange-1-hover lg:h-11 lg:text-base xl:h-14 xl:text-lg">
+              Corporate Partners
+            </a>
+          </Link>
+          <Link href={'#'}>
+            <a className="grid h-10 grid-cols-[20%_1fr] grid-rows-[auto_1fr] items-center gap-x-2 rounded-lg bg-white px-2.5 hover:bg-white/90 lg:h-11 xl:h-14 xl:text-lg">
+              <AppleSvg className="col-start-1 row-start-1 row-end-3 h-auto w-5 justify-self-end lg:w-6 xl:w-7" />
+              <sub className="col-start-2 row-span-1 mt-2 mb-0.5 font-['Gilroy'] text-[11px] font-[500] text-black-1 lg:text-[12px] xl:mt-3 xl:text-[13px]">
+                Download on the
+              </sub>
+              <span className="col-start-2 row-span-2 font-['Gilroy'] text-lg font-[500] text-black-1 lg:text-xl xl:text-2xl">
+                App Store
+              </span>
+            </a>
+          </Link>
+        </div>
+      </div>
+      <div className="relative mt-20 flex h-[480px] w-full justify-center overflow-hidden lg:h-[700px] xl:h-[800px]">
+        <div className="absolute flex h-full gap-[8px] lg:relative lg:grid lg:grid-cols-[repeat(3_,1fr)] lg:content-center lg:justify-items-center">
+          <div className="hero-image relative h-full w-screen max-w-[240px] lg:max-w-[340px] xl:max-w-[353px]">
+            <Image
+              src={HOME_IMAGES['h-phone-1'].url}
+              layout="responsive"
+              height={HOME_IMAGES['h-phone-1'].height}
+              width={HOME_IMAGES['h-phone-1'].width}
+              alt={HOME_IMAGES['h-phone-1'].alt}
+              priority
+            />
+          </div>
+          <div className="hero-image relative h-full w-screen max-w-[240px] lg:max-w-[340px] xl:max-w-[353px]">
+            <Image
+              src={HOME_IMAGES['h-phone-2'].url}
+              height={HOME_IMAGES['h-phone-2'].height}
+              width={HOME_IMAGES['h-phone-2'].width}
+              alt={HOME_IMAGES['h-phone-2'].alt}
+              priority
+            />
+          </div>
+          <div className="hero-image relative h-full w-screen max-w-[240px] lg:max-w-[340px] xl:max-w-[353px]">
+            <Image
+              src={HOME_IMAGES['h-phone-3'].url}
+              height={HOME_IMAGES['h-phone-3'].height}
+              width={HOME_IMAGES['h-phone-3'].width}
+              alt={HOME_IMAGES['h-phone-3'].alt}
+              priority
+            />
+          </div>
+        </div>
+      </div>
+    </HeroWrapper>
+  );
+};
+
+export default Hero;
