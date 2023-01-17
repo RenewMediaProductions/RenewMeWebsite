@@ -33,7 +33,7 @@ module.exports = {
   async headers() {
     return [
       {
-        source: '/:all*(svg|jpg|png|webp)',
+        source: '/:all*',
         headers: [
           {
             key: 'Cache-Control',
