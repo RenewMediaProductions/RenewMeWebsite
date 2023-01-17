@@ -32,15 +32,15 @@ module.exports = {
   /* Headers */
   async headers() {
     return [
-      {
-        source: '/:all*',
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: `s-maxage=${60 * 60 * 24 * 365}, stale-while-revalidate=${60 * 60 * 24}`,
-          },
-        ],
-      },
+      // {
+      //   source: '/:all*',
+      //   headers: [
+      //     {
+      //       key: 'Cache-Control',
+      //       value: `s-maxage=${60 * 60 * 24 * 365}, stale-while-revalidate=${60 * 60 * 24}`,
+      //     },
+      //   ],
+      // },
       {
         source: '/_next/:all*',
         headers: [
