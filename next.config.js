@@ -26,7 +26,7 @@ module.exports = {
     styledComponents: true,
   },
   images: {
-    minimumCacheTTL: 84600,
+    minimumCacheTTL: 60 * 60 * 24 * 180,
     domains: ['d1nzwmcp9dgg5h.cloudfront.net'],
   },
   webpack(config) {
