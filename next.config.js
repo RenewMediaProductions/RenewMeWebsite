@@ -27,7 +27,7 @@ module.exports = {
   },
   images: {
     minimumCacheTTL: 60 * 60 * 24 * 365,
-    domains: ['renewme-resources.s3.amazonaws.com'],
+    domains: ['d1nzwmcp9dgg5h.cloudfront.net'],
   },
 
   /* Headers */
