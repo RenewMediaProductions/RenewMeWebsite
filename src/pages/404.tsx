@@ -1,6 +1,5 @@
-import { NextPage } from 'next';
+import { GetServerSideProps, NextPage } from 'next';
 import { useRouter } from 'next/router';
-import React from 'react';
 import { ROUTES } from 'shared/constants/Routes';
 import { styled } from 'shared/theme';
 
@@ -10,6 +9,18 @@ const NotFoundPageWrapper = styled.div`
   justify-content: center;
   align-items: center;
 `;
+
+// eslint-disable-next-line @typescript-eslint/require-await
+export const getServerSideProps: GetServerSideProps = async ({ res }) => {
+  res.setHeader(
+    'Cache-Control',
+    `s-maxage=${60 * 60 * 24 * 365}, stale-while-revalidate=${60 * 60 * 24}`
+  );
+
+  return {
+    props: {},
+  };
+};
 
 const NotFoundPage: NextPage = () => {
   const { push: navigate } = useRouter();
