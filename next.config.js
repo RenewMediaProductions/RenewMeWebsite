@@ -27,23 +27,23 @@ module.exports = {
   },
   images: {
     minimumCacheTTL: 60 * 60 * 24 * 365,
-    domains: ['d1nzwmcp9dgg5h.cloudfront.net'],
+    domains: ['https://renewme-resources.s3.amazonaws.com'],
   },
 
-  // /* Headers */
-  // async headers() {
-  //   return [
-  //     {
-  //       source: '/:all*',
-  //       headers: [
-  //         {
-  //           key: 'Cache-Control',
-  //           value: `s-maxage=${60 * 60 * 24 * 365}, stale-while-revalidate=${60 * 60 * 24}`,
-  //         },
-  //       ],
-  //     },
-  //   ];
-  // },
+  /* Headers */
+  async headers() {
+    return [
+      {
+        source: '/:all*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: `s-maxage=${60 * 60 * 24 * 365}, stale-while-revalidate=${60 * 60 * 24}`,
+          },
+        ],
+      },
+    ];
+  },
 
   /* Webpack */
   webpack(config) {

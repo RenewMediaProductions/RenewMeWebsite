@@ -1,1 +1,1 @@
-export const imageDomainUrl = 'https://d1nzwmcp9dgg5h.cloudfront.net';
+export const imageDomainUrl = 'https://renewme-resources.s3.amazonaws.com';
