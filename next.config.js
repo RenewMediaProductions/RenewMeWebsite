@@ -26,7 +26,6 @@ module.exports = {
     styledComponents: true,
   },
   images: {
-    minimumCacheTTL: 60 * 60 * 24 * 365,
     domains: ['d1nzwmcp9dgg5h.cloudfront.net'],
   },
 
