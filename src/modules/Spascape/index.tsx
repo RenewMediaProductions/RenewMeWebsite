@@ -8,7 +8,7 @@ import React from 'react';
 
 const Spascape: React.FC = () => {
   return (
-    <SpascapeWrapper className="flex flex-col bg-gray-2">
+    <SpascapeWrapper className="flex flex-col overflow-hidden bg-gray-2">
       <Hero />
       <Network />
       <EscapeTranquility />

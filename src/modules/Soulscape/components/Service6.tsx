@@ -4,7 +4,6 @@ import { SOULSCAPE_IMAGES } from '../constants';
 
 import classNames from 'classnames';
 import ImageFuture from 'next/future/image';
-import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import InfoSvg from 'shared/assets/svg/Soulscape/s6-info.svg';
@@ -14,70 +13,92 @@ interface Props {
 }
 
 const Service6: React.FC<Props> = ({ className }) => {
-  const serviceClass = classNames(
-    `relative h-[680px] mt-[-35px]`,
-    `md:h-[520px] md:mt-[25px]`,
-    `lg:h-[770px] lg:mt-0`,
-    className
-  );
-  const contentClass = classNames(
-    `relative flex flex-col items-center justify-center w-screen h-full isolate`
-  );
-  const phone1Class = classNames(
-    `hidden w-full max-w-[320px] transition-opacity duration-1000`,
-    `md:mt-[13px] md:left-[calc(50%_-_250px)] md:top-[50%] md:max-w-[330px] md:block md:absolute md:translate-x-[-50%] md:translate-y-[-50%]`,
-    `lg:left-[50%] lg:top-[50%] lg:max-w-[470px]`
-  );
-  const phone2Class = classNames(
-    `block w-full max-w-[320px] transition-opacity duration-1000 mt-[-35px]`,
-    `md:mt-[25px] md:left-[calc(50%_+_250px)] md:top-[50%] md:max-w-[330px] md:block md:absolute md:translate-x-[-50%] md:translate-y-[-50%]`,
-    `lg:left-[calc(50%_-_350px)] lg:top-[50%] lg:max-w-[470px]`
-  );
-  const infoClass = classNames(
-    `flex flex-col gap-2 items-center mt-[-50px] transition-opacity duration-1000 w-[305px]`,
-    `md:mt-0 md:left-[50%] md:top-[50%] md:w-[220px] md:absolute md:translate-x-[-50%] md:translate-y-[-50%]`,
-    `lg:items-start lg:left-[calc(50%_+_350px)] lg:top-[50%] lg:w-[315px]`
-  );
-
   return (
-    <Service6Wrapper className={serviceClass}>
+    <Service6Wrapper
+      className={classNames(
+        `relative mt-[-30px] h-[calc(470px+165px+40px+60px)] py-[30px]`, // {phone height} + {info height} + {margin between phone and info}
+        `md:mt-[-40px] md:py-[40px] lg:h-[calc(613px+80px)]`,
+        `xl:h-[calc(666px+80px)]`,
+        className
+      )}
+    >
       <ImageFuture
-        className="absolute top-0 object-cover object-right w-full h-full"
+        className={classNames(
+          `absolute top-0 h-[110%] w-full object-cover object-right`,
+          `md:object-center`,
+          `lg:object-right`
+        )}
         src={SOULSCAPE_IMAGES['s6-bg'].url}
         height={SOULSCAPE_IMAGES['s6-bg'].height}
         width={SOULSCAPE_IMAGES['s6-bg'].width}
         alt={SOULSCAPE_IMAGES['s6-bg'].alt}
       />
-      <div className={contentClass}>
-        <div className={phone1Class}>
-          <Image
-            src={SOULSCAPE_IMAGES['s6-phone-2'].url}
-            layout="responsive"
-            width={SOULSCAPE_IMAGES['s6-phone-2'].width}
-            alt={SOULSCAPE_IMAGES['s6-phone-2'].alt}
-            height={SOULSCAPE_IMAGES['s6-phone-2'].height}
-          />
-        </div>
-        <div className={phone2Class}>
-          <Image
-            src={SOULSCAPE_IMAGES['s6-phone-1'].url}
-            layout="responsive"
-            width={SOULSCAPE_IMAGES['s6-phone-1'].width}
-            alt={SOULSCAPE_IMAGES['s6-phone-1'].alt}
-            height={SOULSCAPE_IMAGES['s6-phone-1'].height}
-          />
-        </div>
-        <div className={infoClass}>
-          <InfoSvg className="h-[33px] w-[auto] lg:h-[48px]" />
-          <p className="font-['Gilroy'] font-[600] text-lg text-black-1 text-center md:text-xl lg:text-2xl lg:text-start">
+      <div
+        className={classNames(
+          `relative isolate flex h-full w-screen flex-col items-center justify-between`,
+          `md:justify-start`
+        )}
+      >
+        <ImageFuture
+          className={classNames(
+            `top-[-10px] block w-full max-w-[230px] transition-opacity duration-1000`,
+            `md:absolute md:left-[calc(50%-250px)] md:top-[50%] md:block md:translate-x-[-50%] md:translate-y-[-50%]`,
+            `lg:left-[calc(50%-320px)] lg:max-w-[300px]`,
+            `xl:left-[calc(50%-370px)] xl:max-w-[326px]`
+          )}
+          src={SOULSCAPE_IMAGES['s6-phone-1'].url}
+          width={SOULSCAPE_IMAGES['s6-phone-1'].width}
+          height={SOULSCAPE_IMAGES['s6-phone-1'].height}
+          alt={SOULSCAPE_IMAGES['s6-phone-1'].alt}
+        />
+        <ImageFuture
+          className={classNames(
+            `hidden w-full max-w-[230px] transition-opacity duration-1000`,
+            `md:absolute md:left-[50%] md:top-[50%] md:block md:translate-x-[-50%] md:translate-y-[-50%]`,
+            `lg:max-w-[300px]`,
+            `xl:max-w-[326px]`
+          )}
+          src={SOULSCAPE_IMAGES['s6-phone-2'].url}
+          width={SOULSCAPE_IMAGES['s6-phone-2'].width}
+          height={SOULSCAPE_IMAGES['s6-phone-2'].height}
+          alt={SOULSCAPE_IMAGES['s6-phone-2'].alt}
+        />
+        <div
+          className={classNames(
+            `absolute bottom-0 flex w-[305px] flex-col items-center gap-2 transition-opacity duration-1000`,
+            `md:bottom-[unset] md:top-[50%] md:left-[calc(50%+250px)] md:w-[230px] md:translate-x-[-50%] md:translate-y-[-50%] md:items-start`,
+            `lg:left-[calc(50%+320px)] lg:w-[300px]`,
+            `xl:left-[calc(50%+370px)] xl:w-[326px]`
+          )}
+        >
+          <InfoSvg className={classNames(`h-[33px] w-[auto]`, `lg:h-[48px]`)} />
+          <p
+            className={classNames(
+              `text-center font-['Gilroy'] text-lg font-[600] text-black-1`,
+              `md:text-start md:text-xl`,
+              `lg:text-2xl`
+            )}
+          >
             Spa Finder
           </p>
-          <p className="font-['Gilroy'] font-[400] text-sm text-gray-3 text-center md:text-base lg:text-lg lg:text-start">
+          <p
+            className={classNames(
+              `text-center font-['Gilroy'] text-sm font-[400] text-gray-3`,
+              `md:text-start md:text-base`,
+              `lg:text-start lg:text-lg`
+            )}
+          >
             Pep Talks, affirmations, and spotlight influencers inspire you to lead a more productive
             and balanced life.
           </p>
           <Link href={'#'}>
-            <a className="font-['Gilroy'] font-[600] text-sm text-blue-3 underline md:text-base lg:text-lg">
+            <a
+              className={classNames(
+                `font-['Gilroy'] text-sm font-[600] text-blue-3 underline`,
+                `md:text-base`,
+                `lg:text-lg`
+              )}
+            >
               Find a Resort & Spa
             </a>
           </Link>

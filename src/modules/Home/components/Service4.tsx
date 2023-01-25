@@ -3,7 +3,7 @@ import { Service4Wrapper } from './Service4.styled';
 import { HOME_IMAGES, STARS } from '../constants';
 
 import classNames from 'classnames';
-import Image from 'next/image';
+import ImageFuture from 'next/future/image';
 import React from 'react';
 import InfoSvg from 'shared/assets/svg/Home/s4-info.svg';
 
@@ -17,7 +17,7 @@ const Stars = () => {
       {STARS.map((star, idx) => (
         <span
           key={idx}
-          className="absolute rounded-[50%] bg-white"
+          className={classNames(`absolute rounded-[50%] bg-white`)}
           style={{
             top: `${star.top}%`,
             left: `${star.left}%`,
@@ -31,75 +31,86 @@ const Stars = () => {
 };
 
 const Service4: React.FC<Props> = ({ className }) => {
-  const serviceClass = classNames(
-    `relative h-[680px] mt-[-30px]`,
-    `md:h-[830px] md:mt-[-45px]`,
-    `lg:h-[1090px] lg:mt-[-60px]`,
-    className
-  );
-  const contentClass = classNames(
-    `relative flex flex-col items-center justify-center w-screen h-full isolate`
-  );
-  const phone1Class = classNames(
-    `hidden w-full max-w-[320px] transition-opacity duration-1000`,
-    `md:left-[calc(50%_-_250px)] md:top-[calc(50%_+_10px)] md:max-w-[330px] md:block md:absolute md:translate-x-[-50%] md:translate-y-[-50%]`,
-    `lg:left-[calc(50%_-_350px)] lg:top-[calc(50%_+_30px)] lg:max-w-[470px]`
-  );
-  const phone2Class = classNames(
-    `block w-full max-w-[320px] transition-opacity duration-1000 mt-[-30px]`,
-    `md:left-[50%] md:top-[calc(50%_-_100px)] md:max-w-[330px] md:absolute md:translate-x-[-50%] md:translate-y-[-50%]`,
-    `lg:top-[calc(50%_-_100px)] lg:max-w-[470px]`
-  );
-  const phone3Class = classNames(
-    `hidden w-full max-w-[320px] transition-opacity duration-1000`,
-    `md:left-[calc(50%_+_250px)] md:top-[calc(50%_+_65px)] md:max-w-[330px] md:block md:absolute md:translate-x-[-50%] md:translate-y-[-50%]`,
-    `lg:left-[calc(50%_+_350px)] lg:top-[calc(50%_+_95px)] lg:max-w-[470px]`
-  );
-  const infoClass = classNames(
-    `flex flex-col gap-2 items-center mt-[-50px] transition-opacity duration-1000 w-[305px]`,
-    `md:items-start md:left-[50%] md:top-[calc(50%_+_310px)] md:w-[220px] md:absolute md:translate-x-[-50%] md:translate-y-[-50%]`,
-    `lg:top-[calc(50%_+_410px)] lg:w-[315px]`
-  );
-
   return (
-    <Service4Wrapper className={serviceClass}>
-      <div className="bg">
+    <Service4Wrapper
+      className={classNames(
+        `relative h-[calc(470px+157px+40px)]`, // {phone height} + {info height} + {margin between phone and info}
+        `md:h-[calc(470px+245px+40px)]`,
+        `lg:h-[calc(613px+264px+60px)]`,
+        `xl:h-[calc(666px+264px+60px)]`,
+        className
+      )}
+    >
+      <div className={classNames(`bg`)}>
         <Stars />
       </div>
-      <div className={contentClass}>
-        <div className={phone2Class}>
-          <Image
-            src={HOME_IMAGES['s4-phone-1'].url}
-            layout="responsive"
-            width={HOME_IMAGES['s4-phone-1'].width}
-            height={HOME_IMAGES['s4-phone-1'].height}
-            alt={HOME_IMAGES['s4-phone-1'].alt}
-          />
-        </div>
-        <div className={phone1Class}>
-          <Image
-            src={HOME_IMAGES['s4-phone-2'].url}
-            layout="responsive"
-            width={HOME_IMAGES['s4-phone-2'].width}
-            height={HOME_IMAGES['s4-phone-2'].height}
-            alt={HOME_IMAGES['s4-phone-2'].alt}
-          />
-        </div>
-        <div className={phone3Class}>
-          <Image
-            src={HOME_IMAGES['s4-phone-3'].url}
-            layout="responsive"
-            width={HOME_IMAGES['s4-phone-3'].width}
-            height={HOME_IMAGES['s4-phone-3'].height}
-            alt={HOME_IMAGES['s4-phone-3'].alt}
-          />
-        </div>
-        <div className={infoClass}>
-          <InfoSvg className="h-[33px] w-[auto] lg:h-[48px]" />
-          <p className="font-['Gilroy'] font-[600] text-lg text-white text-center md:text-xl lg:text-2xl">
+      <div
+        className={classNames(
+          `relative isolate flex h-full w-screen flex-col items-center justify-between`,
+          `md:justify-start`
+        )}
+      >
+        <ImageFuture
+          className={classNames(
+            `top-[-10px] block w-full max-w-[230px] transition-opacity duration-1000`,
+            `md:absolute md:top-0`,
+            `lg:max-w-[300px]`,
+            `xl:max-w-[326px]`
+          )}
+          src={HOME_IMAGES['s4-phone-2'].url}
+          width={HOME_IMAGES['s4-phone-2'].width}
+          height={HOME_IMAGES['s4-phone-2'].height}
+          alt={HOME_IMAGES['s4-phone-2'].alt}
+        />
+        <ImageFuture
+          className={classNames(
+            `hidden w-full max-w-[230px] transition-opacity duration-1000`,
+            `md:absolute md:bottom-[calc(40px*2)] md:left-[calc(50%-250px)] md:block md:translate-x-[-50%]`,
+            `lg:bottom-[calc(30px*2)] lg:left-[calc(50%-320px)] lg:max-w-[300px]`,
+            `xl:bottom-[calc(20px*2)] xl:left-[calc(50%-370px)] xl:max-w-[326px]`
+          )}
+          src={HOME_IMAGES['s4-phone-1'].url}
+          width={HOME_IMAGES['s4-phone-1'].width}
+          height={HOME_IMAGES['s4-phone-1'].height}
+          alt={HOME_IMAGES['s4-phone-1'].alt}
+        />
+        <ImageFuture
+          className={classNames(
+            `hidden w-full max-w-[230px] transition-opacity duration-1000`,
+            `md:absolute md:bottom-[calc(40px*2)] md:left-[calc(50%+250px)] md:block md:translate-x-[-50%]`,
+            `lg:bottom-[calc(30px*2)] lg:left-[calc(50%+320px)] lg:max-w-[300px]`,
+            `xl:bottom-[calc(20px*2)] xl:left-[calc(50%+370px)] xl:max-w-[326px]`
+          )}
+          src={HOME_IMAGES['s4-phone-3'].url}
+          width={HOME_IMAGES['s4-phone-3'].width}
+          height={HOME_IMAGES['s4-phone-3'].height}
+          alt={HOME_IMAGES['s4-phone-3'].alt}
+        />
+        <div
+          className={classNames(
+            `absolute bottom-0 flex w-[305px] flex-col items-center gap-2 transition-opacity duration-1000`,
+            `md:left-[50%] md:w-[230px] md:translate-x-[-50%] md:items-start`,
+            `lg:w-[300px]`,
+            `xl:w-[326px]`
+          )}
+        >
+          <InfoSvg className={classNames(`h-[33px] w-[auto]`, `lg:h-[48px]`)} />
+          <p
+            className={classNames(
+              `text-center font-['Gilroy'] text-lg font-[600] text-white`,
+              `md:text-xl`,
+              `lg:text-2xl`
+            )}
+          >
             Sleep Smarter
           </p>
-          <p className="font-['Gilroy'] font-[400] text-sm text-white text-center md:text-start md:text-base lg:text-lg">
+          <p
+            className={classNames(
+              `text-center font-['Gilroy'] text-sm font-[400] text-white`,
+              `md:text-start md:text-base`,
+              `lg:text-lg`
+            )}
+          >
             Designed to help you make the most out of your sleep, our bedtime journeys gently
             nurture your subconscious to develop positivity, enhance imagination, and peace of mind.
           </p>

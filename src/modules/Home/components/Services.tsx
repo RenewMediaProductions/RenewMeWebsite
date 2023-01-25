@@ -10,11 +10,18 @@ import Service8 from './Service8';
 import Service9 from './Service9';
 import { ServicesWrapper } from './Services.styled';
 
+import classNames from 'classnames';
 import React from 'react';
 
 const Services: React.FC = () => {
   return (
-    <ServicesWrapper className="flex flex-col gap-16 md:mt-[-50px] lg:mt-0">
+    <ServicesWrapper
+      className={classNames(
+        `mt-16 flex flex-col gap-16`,
+        `md:mt-[60px] md:gap-[60px]`,
+        `lg:mt-[80px] lg:gap-[80px]`
+      )}
+    >
       <Service1 />
       <Service2 />
       <Service3 />

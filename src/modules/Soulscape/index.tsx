@@ -9,7 +9,7 @@ import React from 'react';
 
 const Soulscape: React.FC = () => {
   return (
-    <SoulscapeWrapper className="flex flex-col bg-gray-2">
+    <SoulscapeWrapper className="flex flex-col overflow-hidden bg-gray-2">
       <Hero />
       <Network />
       <TravelBalance />

@@ -5,6 +5,10 @@ export const HeroWrapper = styled.div`
     animation: heroImageAnim 800ms linear;
     animation-fill-mode: forwards;
     opacity: 0;
+
+    img {
+      filter: drop-shadow(0px 15px 4px rgba(0, 0, 0, 0.25));
+    }
   }
   .hero-text {
     animation: fadeAnim 800ms linear;
