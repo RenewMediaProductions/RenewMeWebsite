@@ -1,62 +1,62 @@
-import { imageDomainUrl } from 'shared/constants/Assets';
+import { assetVersion, imageDomainUrl } from 'shared/constants/Assets';
 
 export const PARTNERS_IMAGES = {
   'h-card-1': {
-    url: `${imageDomainUrl}/Partners/h-card-1.webp`,
+    url: `${imageDomainUrl}/Partners/h-card-1.webp?v=${assetVersion}`,
     width: 420,
     height: 604,
     alt: 'image',
   },
   'h-card-2': {
-    url: `${imageDomainUrl}/Partners/h-card-2.webp`,
+    url: `${imageDomainUrl}/Partners/h-card-2.webp?v=${assetVersion}`,
     width: 420,
     height: 604,
     alt: 'image',
   },
   'h-card-3': {
-    url: `${imageDomainUrl}/Partners/h-card-3.webp`,
+    url: `${imageDomainUrl}/Partners/h-card-3.webp?v=${assetVersion}`,
     width: 420,
     height: 604,
     alt: 'image',
   },
   'h-card-4': {
-    url: `${imageDomainUrl}/Partners/h-card-4.webp`,
+    url: `${imageDomainUrl}/Partners/h-card-4.webp?v=${assetVersion}`,
     width: 420,
     height: 604,
     alt: 'image',
   },
   'h-card-5': {
-    url: `${imageDomainUrl}/Partners/h-card-5.webp`,
+    url: `${imageDomainUrl}/Partners/h-card-5.webp?v=${assetVersion}`,
     width: 420,
     height: 604,
     alt: 'image',
   },
   'wellness-1': {
-    url: `${imageDomainUrl}/Partners/wellness-1.webp`,
+    url: `${imageDomainUrl}/Partners/wellness-1.webp?v=${assetVersion}`,
     width: 1110,
     height: 589,
     alt: 'image',
   },
   'wellness-2': {
-    url: `${imageDomainUrl}/Partners/wellness-2.webp`,
+    url: `${imageDomainUrl}/Partners/wellness-2.webp?v=${assetVersion}`,
     width: 1110,
     height: 589,
     alt: 'image',
   },
   'wellness-3': {
-    url: `${imageDomainUrl}/Partners/wellness-3.webp`,
+    url: `${imageDomainUrl}/Partners/wellness-3.webp?v=${assetVersion}`,
     width: 1110,
     height: 589,
     alt: 'image',
   },
   'wellness-4': {
-    url: `${imageDomainUrl}/Partners/wellness-4.webp`,
+    url: `${imageDomainUrl}/Partners/wellness-4.webp?v=${assetVersion}`,
     width: 1110,
     height: 589,
     alt: 'image',
   },
   'wellness-5': {
-    url: `${imageDomainUrl}/Partners/wellness-5.webp`,
+    url: `${imageDomainUrl}/Partners/wellness-5.webp?v=${assetVersion}`,
     width: 1110,
     height: 589,
     alt: 'image',
