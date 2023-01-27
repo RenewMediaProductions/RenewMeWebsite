@@ -37,10 +37,10 @@ const Service5: React.FC<Props> = ({ className }) => {
             `lg:max-w-[300px]`,
             `xl:max-w-[326px]`
           )}
-          src={SOULSCAPE_IMAGES['s4-phone-2'].url}
-          width={SOULSCAPE_IMAGES['s4-phone-2'].width}
-          height={SOULSCAPE_IMAGES['s4-phone-2'].height}
-          alt={SOULSCAPE_IMAGES['s4-phone-2'].alt}
+          src={SOULSCAPE_IMAGES['s5-phone-2'].url}
+          width={SOULSCAPE_IMAGES['s5-phone-2'].width}
+          height={SOULSCAPE_IMAGES['s5-phone-2'].height}
+          alt={SOULSCAPE_IMAGES['s5-phone-2'].alt}
         />
         <ImageFuture
           className={classNames(
@@ -49,10 +49,10 @@ const Service5: React.FC<Props> = ({ className }) => {
             `lg:bottom-[calc(30px*2)] lg:left-[calc(50%-320px)] lg:max-w-[300px]`,
             `xl:bottom-[calc(20px*2)] xl:left-[calc(50%-370px)] xl:max-w-[326px]`
           )}
-          src={SOULSCAPE_IMAGES['s4-phone-1'].url}
-          width={SOULSCAPE_IMAGES['s4-phone-1'].width}
-          height={SOULSCAPE_IMAGES['s4-phone-1'].height}
-          alt={SOULSCAPE_IMAGES['s4-phone-1'].alt}
+          src={SOULSCAPE_IMAGES['s5-phone-1'].url}
+          width={SOULSCAPE_IMAGES['s5-phone-1'].width}
+          height={SOULSCAPE_IMAGES['s5-phone-1'].height}
+          alt={SOULSCAPE_IMAGES['s5-phone-1'].alt}
         />
         <ImageFuture
           className={classNames(
@@ -61,10 +61,10 @@ const Service5: React.FC<Props> = ({ className }) => {
             `lg:bottom-[calc(30px*2)] lg:left-[calc(50%+320px)] lg:max-w-[300px]`,
             `xl:bottom-[calc(20px*2)] xl:left-[calc(50%+370px)] xl:max-w-[326px]`
           )}
-          src={SOULSCAPE_IMAGES['s4-phone-3'].url}
-          width={SOULSCAPE_IMAGES['s4-phone-3'].width}
-          height={SOULSCAPE_IMAGES['s4-phone-3'].height}
-          alt={SOULSCAPE_IMAGES['s4-phone-3'].alt}
+          src={SOULSCAPE_IMAGES['s5-phone-3'].url}
+          width={SOULSCAPE_IMAGES['s5-phone-3'].width}
+          height={SOULSCAPE_IMAGES['s5-phone-3'].height}
+          alt={SOULSCAPE_IMAGES['s5-phone-3'].alt}
         />
         <div
           className={classNames(

@@ -4,4 +4,4 @@ export const imageDomainUrl = 'https://d1nzwmcp9dgg5h.cloudfront.net';
 /**
  * Increment this version number when you update the production assets.
  */
-export const assetVersion = '1.0.0';
+export const assetVersion = '1.1.0';
