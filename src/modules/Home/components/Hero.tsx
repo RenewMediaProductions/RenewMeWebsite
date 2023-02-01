@@ -127,7 +127,7 @@ const Hero: React.FC = () => {
               `lg:max-w-[300px]`,
               `xl:max-w-[326px]`
             )}
-            src={'/assets/Home/h-phone-1.png'}
+            src={HOME_IMAGES['h-phone-1'].url}
             height={HOME_IMAGES['h-phone-1'].height}
             width={HOME_IMAGES['h-phone-1'].width}
             alt={HOME_IMAGES['h-phone-1'].alt}
@@ -139,7 +139,7 @@ const Hero: React.FC = () => {
               `lg:max-w-[300px]`,
               `xl:max-w-[326px]`
             )}
-            src={'/assets/Home/h-phone-2.png'}
+            src={HOME_IMAGES['h-phone-2'].url}
             height={HOME_IMAGES['h-phone-2'].height}
             width={HOME_IMAGES['h-phone-2'].width}
             alt={HOME_IMAGES['h-phone-2'].alt}
@@ -151,7 +151,7 @@ const Hero: React.FC = () => {
               `lg:max-w-[300px]`,
               `xl:max-w-[326px]`
             )}
-            src={'/assets/Home/h-phone-3.png'}
+            src={HOME_IMAGES['h-phone-3'].url}
             height={HOME_IMAGES['h-phone-3'].height}
             width={HOME_IMAGES['h-phone-3'].width}
             alt={HOME_IMAGES['h-phone-3'].alt}
