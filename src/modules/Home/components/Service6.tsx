@@ -48,10 +48,10 @@ const Service6: React.FC<Props> = ({ className }) => {
             `lg:left-[calc(50%-320px*-1.5)] lg:max-w-[300px]`,
             `xl:left-[calc(50%-370px*-1.5)] xl:max-w-[326px]`
           )}
-          src={HOME_IMAGES['s6-phone-1'].url}
-          width={HOME_IMAGES['s6-phone-1'].width}
-          height={HOME_IMAGES['s6-phone-1'].height}
-          alt={HOME_IMAGES['s6-phone-1'].alt}
+          src={HOME_IMAGES['s6-phone-4'].url}
+          width={HOME_IMAGES['s6-phone-4'].width}
+          height={HOME_IMAGES['s6-phone-4'].height}
+          alt={HOME_IMAGES['s6-phone-4'].alt}
         />
         <ImageFuture
           className={classNames(
@@ -72,10 +72,10 @@ const Service6: React.FC<Props> = ({ className }) => {
             `lg:bottom-[calc(30px*2)] lg:left-[calc(50%+320px*-1.5)] lg:max-w-[300px]`,
             `xl:bottom-[calc(20px*2)] xl:left-[calc(50%+370px*-1.5)] xl:max-w-[326px]`
           )}
-          src={HOME_IMAGES['s6-phone-4'].url}
-          width={HOME_IMAGES['s6-phone-4'].width}
-          height={HOME_IMAGES['s6-phone-4'].height}
-          alt={HOME_IMAGES['s6-phone-4'].alt}
+          src={HOME_IMAGES['s6-phone-1'].url}
+          width={HOME_IMAGES['s6-phone-1'].width}
+          height={HOME_IMAGES['s6-phone-1'].height}
+          alt={HOME_IMAGES['s6-phone-1'].alt}
         />
         <div
           className={classNames(
