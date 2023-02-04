@@ -14,19 +14,19 @@ const WhatPeopleAreSaying: React.FC<Props> = ({ className }) => {
   return (
     <WhatPeopleAreSayingWrapper className={mainClass}>
       <div className="bg"></div>
-      <div className="container flex flex-col items-center gap-6 px-6 mx-auto isolate md:gap-10 lg:gap-24">
-        <h1 className="font-['Gilroy'] font-[500] text-3xl text-center md:text-4xl lg:text-5xl xl:text-6xl">
+      <div className="container isolate mx-auto flex flex-col items-center gap-6 px-6 md:gap-10 lg:gap-24">
+        <h1 className="text-center font-['Gilroy'] text-3xl font-[500] md:text-4xl lg:text-5xl xl:text-6xl">
           Never miss an update <br />
-          Join our mailing list
+          Join our mailing list.
         </h1>
-        <div className="relative flex w-full bg-white rounded-[100px] md:max-w-[500px] lg:max-w-[730px]">
+        <div className="relative flex w-full rounded-[100px] bg-white md:max-w-[500px] lg:max-w-[730px]">
           <input
-            className="font-['Gilroy'] font-[400] p-5 bg-transparent text-base outline-none w-[95%] placeholder:text-black-1 md:text-lg md:px-7 lg:text-xl"
+            className="w-[95%] bg-transparent p-5 font-['Gilroy'] text-base font-[400] outline-none placeholder:text-black-1 md:px-7 md:text-lg lg:text-xl"
             type="text"
             placeholder="Email Address"
           />
-          <span className="absolute h-11 w-11 top-[50%] translate-y-[-50%] right-3 bg-orange-1 rounded-[50%] flex items-center justify-center cursor-pointer">
-            <ArrowRightSvg className="w-auto h-[40%]" />
+          <span className="absolute top-[50%] right-3 flex h-11 w-11 translate-y-[-50%] cursor-pointer items-center justify-center rounded-[50%] bg-orange-1">
+            <ArrowRightSvg className="h-[40%] w-auto" />
           </span>
         </div>
       </div>

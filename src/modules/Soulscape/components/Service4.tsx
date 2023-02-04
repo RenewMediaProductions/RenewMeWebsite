@@ -90,8 +90,8 @@ const Service4: React.FC<Props> = ({ className }) => {
               `lg:text-lg`
             )}
           >
-            A suite of meditations to help travelers enhance their sense of peace and tranquility
-            on-the-go.
+            A suite of meditations helps you enhance a state of peace and tranquility whether on the
+            move at the airport, or unwinding in the comfort of your hotel.
           </p>
         </div>
       </div>

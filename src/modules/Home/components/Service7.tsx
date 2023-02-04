@@ -15,10 +15,10 @@ const Service7: React.FC<Props> = ({ className }) => {
   return (
     <Service7Wrapper
       className={classNames(
-        `relative h-[calc(470px+117px+40px)]`, // {phone height} + {info height} + {margin between phone and info}
-        `md:h-[calc(470px+149px+40px)]`,
-        `lg:h-[calc(613px+180px+60px)]`,
-        `xl:h-[calc(666px+180px+60px)]`,
+        `relative h-[calc(470px+137px+40px)]`, // {phone height} + {info height} + {margin between phone and info}
+        `md:h-[calc(470px+173px+40px)]`,
+        `lg:h-[calc(613px+208px+60px)]`,
+        `xl:h-[calc(666px+208px+60px)]`,
         className
       )}
     >
@@ -90,7 +90,8 @@ const Service7: React.FC<Props> = ({ className }) => {
               `lg:text-lg`
             )}
           >
-            Ask questions about how to live more balanced and receive feedback and encouragement.
+            Ask questions to RenewMe AI about how to navigate life’s common programs and lead a more
+            balanced existence.
           </p>
         </div>
       </div>

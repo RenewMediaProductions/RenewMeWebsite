@@ -91,8 +91,8 @@ const Service5: React.FC<Props> = ({ className }) => {
               `lg:text-lg`
             )}
           >
-            Soulscape makes it easy to access airlines, hotels, and other booking sites to plan your
-            next vacation.
+            Soulscape makes it easy to plan your next vacation. Book with airlines, hotels, and
+            other sites, and discover the best deals to your favorite destinations.
           </p>
           <Link href={'#'}>
             <a

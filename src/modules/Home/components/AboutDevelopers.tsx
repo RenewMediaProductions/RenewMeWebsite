@@ -11,14 +11,15 @@ interface Props {
 }
 
 const AboutDevelopers: React.FC<Props> = ({ className }) => {
-  const mainClass = classNames(
-    `sticky top-[-30%] pt-10 flex flex-col gap-10 min-h-[1150px] w-full bg-gray-2`,
-    `md:h-full md:min-h-[900px] md:grid md:grid-cols-[repeat(10,1fr)] md:items-center md:justify-center`,
-    className
-  );
-
   return (
-    <AboutDevelopersWrapper className={mainClass} id="about-developers">
+    <AboutDevelopersWrapper
+      className={classNames(
+        `sticky top-[-30%] flex min-h-[1150px] w-full flex-col gap-10 bg-white pt-10`,
+        `md:grid md:h-full md:min-h-[900px] md:grid-cols-[repeat(10,1fr)] md:items-center md:justify-center`,
+        className
+      )}
+      id="about-developers"
+    >
       <div className="ad-text flex flex-col gap-6 px-6 md:col-start-5 md:col-end-11 md:row-start-1 md:row-end-2 lg:max-w-[540px] xl:max-w-[600px]">
         <h1 className="font-['Gilroy'] text-3xl font-[600] text-black-1 md:text-4xl lg:text-5xl xl:text-6xl">
           About Developers

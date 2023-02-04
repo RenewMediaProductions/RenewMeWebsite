@@ -10,7 +10,7 @@ import React from 'react';
 
 const Home: React.FC = () => {
   return (
-    <HomeWrapper className="flex flex-col overflow-hidden bg-gray-2">
+    <HomeWrapper className="flex flex-col overflow-hidden bg-[#FAFAFA]">
       <Hero />
       <Network />
       <GlobalMission />

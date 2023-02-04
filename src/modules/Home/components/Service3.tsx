@@ -15,10 +15,10 @@ const Service3: React.FC<Props> = ({ className }) => {
   return (
     <Service3Wrapper
       className={classNames(
-        `relative h-[calc(470px+157px+40px)]`, // {phone height} + {info height} + {margin between phone and info}
-        `md:h-[calc(470px+221px+40px)]`,
-        `lg:h-[calc(613px+264px+60px)]`,
-        `xl:h-[calc(666px+264px+60px)]`,
+        `relative h-[calc(470px+177px+40px)]`, // {phone height} + {info height} + {margin between phone and info}
+        `md:h-[calc(470px+269px+40px)]`,
+        `lg:h-[calc(613px+292px+60px)]`,
+        `xl:h-[calc(666px+292px+60px)]`,
         className
       )}
     >
@@ -81,7 +81,7 @@ const Service3: React.FC<Props> = ({ className }) => {
               `lg:text-2xl`
             )}
           >
-            Meditate & Relax
+            Relax & Renew
           </p>
           <p
             className={classNames(
@@ -90,8 +90,9 @@ const Service3: React.FC<Props> = ({ className }) => {
               `lg:text-lg`
             )}
           >
-            Ease tension and develop a positive mindset improve self-esteem, mindfulness,
-            motivation, relationships, body image, confidence, productivity, and happiness.
+            Ease tension and boost a positive mindset with 1-10 minute audio tracks to improve
+            health, self-esteem, mindfulness, motivation, relationships, body image, confidence,
+            coping skills, self-awareness, and happiness.
           </p>
         </div>
       </div>

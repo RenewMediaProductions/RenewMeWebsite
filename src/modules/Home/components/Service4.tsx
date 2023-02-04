@@ -34,7 +34,7 @@ const Service4: React.FC<Props> = ({ className }) => {
   return (
     <Service4Wrapper
       className={classNames(
-        `relative h-[calc(470px+157px+40px)]`, // {phone height} + {info height} + {margin between phone and info}
+        `relative h-[calc(470px+167px+40px)]`, // {phone height} + {info height} + {margin between phone and info}
         `md:h-[calc(470px+245px+40px)]`,
         `lg:h-[calc(613px+264px+60px)]`,
         `xl:h-[calc(666px+264px+60px)]`,
@@ -102,7 +102,7 @@ const Service4: React.FC<Props> = ({ className }) => {
               `lg:text-2xl`
             )}
           >
-            Sleep Smarter
+            Sleep Escape
           </p>
           <p
             className={classNames(
@@ -111,8 +111,9 @@ const Service4: React.FC<Props> = ({ className }) => {
               `lg:text-lg`
             )}
           >
-            Designed to help you make the most out of your sleep, our bedtime journeys gently
-            nurture your subconscious to develop positivity, enhance imagination, and peace of mind.
+            Drift into a world of peace and tranquility with bedtime journeys designed to gently
+            nurture your well-being and enhance relaxation, imagination, and positive beliefs while
+            you rest.
           </p>
         </div>
       </div>

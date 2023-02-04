@@ -78,8 +78,9 @@ const Service2: React.FC<Props> = ({ className }) => {
               `lg:text-lg`
             )}
           >
-            Check for news updates, weather, and safety considerations for a more balanced travel
-            experience.
+            A safe traveler is a more balanced traveler. Check for news updates, weather, and safety
+            considerations, and essential travel tips for a stress-free and enjoyable experience on
+            your journey.
           </p>
         </div>
       </div>

@@ -15,10 +15,10 @@ const Service1: React.FC<Props> = ({ className }) => {
   return (
     <Service1Wrapper
       className={classNames(
-        `relative h-[calc(470px+137px+40px)]`, // {phone height} + {info height} + {margin between phone and info}
-        `md:h-[calc(470px+197px+40px)]`,
-        `lg:h-[calc(613px+208px+60px)]`,
-        `xl:h-[calc(666px+208px+60px)]`,
+        `relative h-[calc(470px+177px+40px)]`, // {phone height} + {info height} + {margin between phone and info}
+        `md:h-[calc(470px+245px+40px)]`,
+        `lg:h-[calc(613px+264px+60px)]`,
+        `xl:h-[calc(666px+264px+60px)]`,
         className
       )}
     >
@@ -90,8 +90,9 @@ const Service1: React.FC<Props> = ({ className }) => {
               `lg:text-lg`
             )}
           >
-            Discover your strongest and weakest elements and navigate coping skills and audio tracks
-            best suited to enhance your life balance.
+            Take a quick and easy test to assess your goals and measure your level of life balance.
+            Find out your strengths and weaknesses, and begin your journey to a more productive and
+            happy existence.
           </p>
         </div>
       </div>

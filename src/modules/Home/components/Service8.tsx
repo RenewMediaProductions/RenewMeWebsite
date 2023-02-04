@@ -69,7 +69,7 @@ const Service8: React.FC<Props> = ({ className }) => {
               `lg:text-2xl`
             )}
           >
-            Fit on the Go
+            Fitness on the Go
           </p>
           <p
             className={classNames(
@@ -78,7 +78,7 @@ const Service8: React.FC<Props> = ({ className }) => {
               `lg:text-lg`
             )}
           >
-            Stay healthy and fit whether at home or traveling with simple exercises that help you
+            Stay healthy and fit whether at home or traveling with simple exercises to help you
             regain and maintain balance and vitality.
           </p>
         </div>

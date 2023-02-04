@@ -17,8 +17,8 @@ const Service10: React.FC<Props> = ({ className }) => {
       className={classNames(
         `relative h-[calc(470px+117px+40px)]`, // {phone height} + {info height} + {margin between phone and info}
         `md:h-[calc(470px+149px+40px)]`,
-        `lg:h-[calc(613px+152px+60px)]`,
-        `xl:h-[calc(666px+152px+60px)]`,
+        `lg:h-[calc(613px+180px+60px)]`,
+        `xl:h-[calc(666px+180px+60px)]`,
         className
       )}
     >
@@ -90,7 +90,7 @@ const Service10: React.FC<Props> = ({ className }) => {
               `lg:text-lg`
             )}
           >
-            Discover articles, resources, and treatment to empower self-growth.
+            Discover articles, resources, and treatment to empower self-growth and recovery.
           </p>
         </div>
       </div>

@@ -15,10 +15,10 @@ const Service5: React.FC<Props> = ({ className }) => {
   return (
     <Service5Wrapper
       className={classNames(
-        `relative h-[calc(470px+137px+40px)]`, // {phone height} + {info height} + {margin between phone and info}
-        `md:h-[calc(470px+201px+40px)]`,
-        `lg:h-[calc(613px+240px+60px)]`,
-        `xl:h-[calc(666px+240px+60px)]`,
+        `relative h-[calc(470px+177px+40px)]`, // {phone height} + {info height} + {margin between phone and info}
+        `md:h-[calc(470px+273px+40px)]`,
+        `lg:h-[calc(613px+296px+60px)]`,
+        `xl:h-[calc(666px+296px+60px)]`,
         className
       )}
     >
@@ -90,8 +90,9 @@ const Service5: React.FC<Props> = ({ className }) => {
               `lg:text-lg`
             )}
           >
-            Set goals and keep track of small but significant steps on your journey to a happier and
-            more empowered existence.
+            Take a minute to track small but significant steps each day on your journey to wellness.
+            Earn sparkles and achieve rewards and wisdoms to inspire progress towards greater life
+            balance.
           </p>
         </div>
       </div>

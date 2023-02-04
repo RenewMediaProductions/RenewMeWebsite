@@ -90,8 +90,9 @@ const Service1: React.FC<Props> = ({ className }) => {
               `lg:text-lg`
             )}
           >
-            Simplify your travels and let Soulscape help you to pack better, and check-in and
-            check-out to your favorite destinations.
+            Simplify your travels and let Soulscape help you to travel with ease. Explore tips to
+            pack, weather updates, and how to best check-in and check-out of your favorite
+            destinations.
           </p>
         </div>
       </div>
