@@ -16,10 +16,10 @@ const Service5: React.FC<Props> = ({ className }) => {
   return (
     <Service5Wrapper
       className={classNames(
-        `relative h-[calc(470px+165px+40px)]`, // {phone height} + {info height} + {margin between phone and info}
-        `md:h-[calc(470px+205px+40px)]`,
-        `lg:h-[calc(613px+216px+60px)]`,
-        `xl:h-[calc(666px+216px+60px)]`,
+        `relative h-[calc(470px+185px+40px)]`, // {phone height} + {info height} + {margin between phone and info}
+        `md:h-[calc(470px+253px+40px)]`,
+        `lg:h-[calc(613px+272px+60px)]`,
+        `xl:h-[calc(666px+272px+60px)]`,
         className
       )}
     >
