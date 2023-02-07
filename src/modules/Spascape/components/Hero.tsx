@@ -63,43 +63,33 @@ const Hero: React.FC = () => {
           <Link href={'#'}>
             <a
               className={classNames(
-                `flex h-10 items-center rounded-lg bg-orange-1 px-4 text-center font-['Gilroy'] text-sm font-[400] text-white hover:bg-orange-1-hover`,
-                `lg:h-11 lg:text-base`,
-                `xl:h-14 xl:text-lg`
+                `flex h-10 w-[129px] items-center rounded-lg bg-orange-1 px-4 text-center font-['Gilroy'] text-sm font-[400] text-white hover:bg-orange-1-hover`
               )}
             >
-              Corporate Partners
+              Brand Partners
             </a>
           </Link>
           <Link href={'#'}>
             <a
               className={classNames(
-                `grid h-10 grid-cols-[20%_1fr] grid-rows-[auto_1fr] items-center gap-x-2 rounded-lg bg-white px-2.5 hover:bg-white/90`,
-                `lg:h-11`,
-                `xl:h-14 xl:text-lg`
+                `grid h-10 w-[121px] grid-cols-[auto_1fr] grid-rows-[auto_1fr] items-center gap-x-[5px] rounded-lg bg-white pl-2 hover:bg-white/90`
               )}
             >
               <AppleSvg
                 className={classNames(
-                  `col-start-1 row-start-1 row-end-3 h-auto w-5 justify-self-end`,
-                  `lg:w-6`,
-                  `xl:w-7`
+                  `col-start-1 row-start-1 row-end-3 h-auto w-[17px] justify-self-end`
                 )}
               />
               <sub
                 className={classNames(
-                  `col-start-2 row-span-1 mt-2 mb-0.5 font-['Gilroy'] text-[11px] font-[500] text-black-1`,
-                  `lg:text-[12px]`,
-                  `xl:mt-3 xl:text-[13px]`
+                  `col-start-2 row-span-1 mt-2 mb-0.5 font-['Gilroy'] text-[8px] font-[500] text-black-1`
                 )}
               >
                 Download on the
               </sub>
               <span
                 className={classNames(
-                  `col-start-2 row-span-2 font-['Gilroy'] text-lg font-[500] text-black-1`,
-                  `lg:text-xl`,
-                  `xl:text-2xl`
+                  `col-start-2 row-span-2  font-['Gilroy'] text-lg font-[600] text-black-1`
                 )}
               >
                 App Store

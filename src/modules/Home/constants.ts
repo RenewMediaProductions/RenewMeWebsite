@@ -1,12 +1,6 @@
 import { assetVersion, imageDomainUrl } from 'shared/constants/Assets';
 
 export const HOME_IMAGES = {
-  'dr-lisa-palmer': {
-    url: `${imageDomainUrl}/Home/dr-lisa-palmer.webp?v=${assetVersion}`,
-    width: 631,
-    height: 912,
-    alt: 'image',
-  },
   'h-bg': {
     url: `${imageDomainUrl}/Home/h-bg.jpg?v=${assetVersion}`,
     width: 1440,
@@ -203,6 +197,42 @@ export const HOME_IMAGES = {
     url: `${imageDomainUrl}/Home/s10-phone-3.png?v=${assetVersion}`,
     width: 823,
     height: 1680,
+    alt: 'image',
+  },
+  'man-1': {
+    url: `${imageDomainUrl}/Home/man-1.png?v=${assetVersion}`,
+    width: 184,
+    height: 184,
+    alt: 'image',
+  },
+  'man-2': {
+    url: `${imageDomainUrl}/Home/man-2.png?v=${assetVersion}`,
+    width: 132,
+    height: 132,
+    alt: 'image',
+  },
+  'man-3': {
+    url: `${imageDomainUrl}/Home/man-3.png?v=${assetVersion}`,
+    width: 176,
+    height: 176,
+    alt: 'image',
+  },
+  'man-4': {
+    url: `${imageDomainUrl}/Home/man-4.png?v=${assetVersion}`,
+    width: 136,
+    height: 136,
+    alt: 'image',
+  },
+  'man-5': {
+    url: `${imageDomainUrl}/Home/man-5.png?v=${assetVersion}`,
+    width: 184,
+    height: 184,
+    alt: 'image',
+  },
+  women: {
+    url: `${imageDomainUrl}/Home/women.png?v=${assetVersion}`,
+    width: 285,
+    height: 282,
     alt: 'image',
   },
 };

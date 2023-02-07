@@ -32,7 +32,7 @@ const Service2: React.FC<Props> = ({ className }) => {
         <ImageFuture
           className={classNames(
             `top-[-10px] block w-full max-w-[230px] transition-opacity duration-1000`,
-            `md:absolute md:left-[calc(50%-250px)] md:top-0 md:block md:translate-x-[-50%]`,
+            `md:absolute md:left-[calc(50%-250px)] md:top-[unset] md:bottom-0 md:block md:translate-x-[-50%]`,
             `lg:left-[calc(50%-320px)] lg:max-w-[300px]`,
             `xl:left-[calc(50%-370px)] xl:max-w-[326px]`
           )}
@@ -44,7 +44,7 @@ const Service2: React.FC<Props> = ({ className }) => {
         <ImageFuture
           className={classNames(
             `hidden w-full max-w-[230px] transition-opacity duration-1000`,
-            `md:absolute md:left-[calc(50%+250px)] md:bottom-0 md:block md:translate-x-[-50%]`,
+            `md:absolute md:left-[calc(50%+250px)] md:top-0 md:block md:translate-x-[-50%]`,
             `lg:left-[calc(50%+320px)] lg:max-w-[300px]`,
             `xl:left-[calc(50%+370px)] xl:max-w-[326px]`
           )}

@@ -1,6 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import { FooterWrapper } from './Footer.styled';
 
+import { getYear } from 'date-fns';
 import Link from 'next/link';
 import React from 'react';
 import FacebookSvg from 'shared/assets/svg/facebook.svg';
@@ -12,16 +13,19 @@ import { ROUTES } from 'shared/constants/Routes';
 
 const Footer: React.FC = () => {
   return (
-    <FooterWrapper className="z-10 bg-blue-1">
+    <FooterWrapper className="z-10 bg-[#3A3A3B]">
       <div className="container mx-auto flex flex-col gap-10 px-6 py-10 md:grid md:grid-cols-2 md:grid-rows-[1fr_auto] md:gap-y-20">
         <div className="grid gap-2 md:flex md:flex-col md:gap-[25px]">
           <div className="h-9 w-auto cursor-pointer md:h-9">
             <LogoFooterSvg className="h-full w-auto" />
           </div>
           <p className="max-w-sm font-['Gilroy'] text-xs font-[400] text-white md:text-sm">
-            Created by Former Apple Developers and Founded by America's Leading Psychotherapist, Dr.
-            Lisa Palmer Director of The Renew Center of Florida , Ranked #1 for Treatment of PTSD in
-            US.
+            Created by Former Apple Developers and Founded by America’s Leading Psychotherapist, Dr.
+            Lisa Palmer, Director of The Renew Center of Florida , Ranked #1 for Treatment of PTSD
+            in US.
+          </p>
+          <p className="max-w-sm font-['Gilroy'] text-xs font-[400] text-white md:text-sm">
+            Discover Resources and Wellness Brands
           </p>
         </div>
         <div className="flex flex-col gap-8 md:flex-row md:justify-between">
@@ -83,7 +87,7 @@ const Footer: React.FC = () => {
         </div>
         <div className="flex flex-col gap-10 md:col-span-2 md:flex-row md:items-end">
           <p className="font-['Gilroy'] text-xs font-[400] text-white md:text-sm">
-            © 2022 RenewMe. All Rights Reserved.
+            © {getYear(new Date())} RenewMe. All Rights Reserved.
           </p>
           <div className="flex gap-7 md:ml-auto">
             <Link href={'#'}>

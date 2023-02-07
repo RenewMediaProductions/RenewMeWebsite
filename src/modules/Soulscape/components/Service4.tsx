@@ -32,9 +32,9 @@ const Service4: React.FC<Props> = ({ className }) => {
         <ImageFuture
           className={classNames(
             `top-[-10px] block w-full max-w-[230px] transition-opacity duration-1000`,
-            `md:absolute md:top-0`,
-            `lg:max-w-[300px]`,
-            `xl:max-w-[326px]`
+            `md:absolute md:top-[unset] md:bottom-[0] md:left-[calc(50%-250px/2)] md:block md:translate-x-[-50%]`,
+            `lg:left-[calc(50%-320px/2)] lg:max-w-[300px]`,
+            `xl:left-[calc(50%-370px/2)] xl:max-w-[326px]`
           )}
           src={SOULSCAPE_IMAGES['s4-phone-2'].url}
           width={SOULSCAPE_IMAGES['s4-phone-2'].width}
@@ -44,33 +44,45 @@ const Service4: React.FC<Props> = ({ className }) => {
         <ImageFuture
           className={classNames(
             `hidden w-full max-w-[230px] transition-opacity duration-1000`,
-            `md:absolute md:bottom-[calc(40px*2)] md:left-[calc(50%-250px)] md:block md:translate-x-[-50%]`,
-            `lg:bottom-[calc(30px*2)] lg:left-[calc(50%-320px)] lg:max-w-[300px]`,
-            `xl:bottom-[calc(20px*2)] xl:left-[calc(50%-370px)] xl:max-w-[326px]`
+            `md:absolute md:top-[0] md:left-[calc(50%-250px*-1.5)] md:block md:translate-x-[-50%]`,
+            `lg:left-[calc(50%-320px*-1.5)] lg:max-w-[300px]`,
+            `xl:left-[calc(50%-370px*-1.5)] xl:max-w-[326px]`
           )}
-          src={SOULSCAPE_IMAGES['s4-phone-1'].url}
-          width={SOULSCAPE_IMAGES['s4-phone-1'].width}
-          height={SOULSCAPE_IMAGES['s4-phone-1'].height}
-          alt={SOULSCAPE_IMAGES['s4-phone-1'].alt}
+          src={SOULSCAPE_IMAGES['s4-phone-4'].url}
+          width={SOULSCAPE_IMAGES['s4-phone-4'].width}
+          height={SOULSCAPE_IMAGES['s4-phone-4'].height}
+          alt={SOULSCAPE_IMAGES['s4-phone-4'].alt}
         />
         <ImageFuture
           className={classNames(
             `hidden w-full max-w-[230px] transition-opacity duration-1000`,
-            `md:absolute md:bottom-[calc(40px*2)] md:left-[calc(50%+250px)] md:block md:translate-x-[-50%]`,
-            `lg:bottom-[calc(30px*2)] lg:left-[calc(50%+320px)] lg:max-w-[300px]`,
-            `xl:bottom-[calc(20px*2)] xl:left-[calc(50%+370px)] xl:max-w-[326px]`
+            `md:absolute md:bottom-[calc(100px*2)] md:left-[calc(50%+250px/2)] md:block md:translate-x-[-50%]`,
+            `lg:bottom-[calc(90px*2)] lg:left-[calc(50%+320px/2)] lg:max-w-[300px]`,
+            `xl:bottom-[calc(80px*2)] xl:left-[calc(50%+370px/2)] xl:max-w-[326px]`
           )}
           src={SOULSCAPE_IMAGES['s4-phone-3'].url}
           width={SOULSCAPE_IMAGES['s4-phone-3'].width}
           height={SOULSCAPE_IMAGES['s4-phone-3'].height}
           alt={SOULSCAPE_IMAGES['s4-phone-3'].alt}
         />
+        <ImageFuture
+          className={classNames(
+            `hidden w-full max-w-[230px] transition-opacity duration-1000`,
+            `md:absolute md:top-[0] md:left-[calc(50%+250px*-1.5)] md:block md:translate-x-[-50%]`,
+            `lg:left-[calc(50%+320px*-1.5)] lg:max-w-[300px]`,
+            `xl:left-[calc(50%+370px*-1.5)] xl:max-w-[326px]`
+          )}
+          src={SOULSCAPE_IMAGES['s4-phone-1'].url}
+          width={SOULSCAPE_IMAGES['s4-phone-1'].width}
+          height={SOULSCAPE_IMAGES['s4-phone-1'].height}
+          alt={SOULSCAPE_IMAGES['s4-phone-1'].alt}
+        />
         <div
           className={classNames(
             `absolute bottom-0 flex w-[305px] flex-col items-center gap-2 transition-opacity duration-1000`,
-            `md:left-[50%] md:w-[230px] md:translate-x-[-50%] md:items-start`,
-            `lg:w-[300px]`,
-            `xl:w-[326px]`
+            `md:left-[calc(50%-250px/2)] md:top-0 md:bottom-[unset] md:w-[230px] md:translate-x-[-50%] md:items-start`,
+            `lg:left-[calc(50%-320px/2)] lg:w-[300px]`,
+            `xl:left-[calc(50%-370px/2)] xl:w-[326px]`
           )}
         >
           <InfoSvg className={classNames(`h-[33px] w-[auto] lg:h-[48px]`)} />

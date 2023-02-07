@@ -3,8 +3,10 @@ import { AboutDevelopersWrapper } from './AboutDevelopers.styled';
 import { HOME_IMAGES } from '../constants';
 
 import classNames from 'classnames';
-import Image from 'next/image';
+import ImageFuture from 'next/future/image';
 import React from 'react';
+import AppleSvg from 'shared/assets/svg/apple.svg';
+import RenewMeSvg from 'shared/assets/svg/renew-me.svg';
 
 interface Props {
   className?: string;
@@ -14,46 +16,67 @@ const AboutDevelopers: React.FC<Props> = ({ className }) => {
   return (
     <AboutDevelopersWrapper
       className={classNames(
-        `sticky top-[-30%] flex min-h-[1150px] w-full flex-col gap-10 bg-white pt-10`,
-        `md:grid md:h-full md:min-h-[900px] md:grid-cols-[repeat(10,1fr)] md:items-center md:justify-center`,
+        `flex h-full min-h-[1200px] w-full  flex-col gap-10 bg-[#FAFAFA] pt-[80px]`,
+        `md:px-10`,
+        `lg:grid lg:h-screen lg:grid-cols-[0.8fr_1fr] lg:items-center lg:justify-center`,
         className
       )}
       id="about-developers"
     >
-      <div className="ad-text flex flex-col gap-6 px-6 md:col-start-5 md:col-end-11 md:row-start-1 md:row-end-2 lg:max-w-[540px] xl:max-w-[600px]">
+      <div className="flex flex-col gap-6 px-6 md:col-start-5 md:col-end-11 md:row-start-1 md:row-end-2 lg:max-w-[540px] xl:max-w-[600px]">
         <h1 className="font-['Gilroy'] text-3xl font-[600] text-black-1 md:text-4xl lg:text-5xl xl:text-6xl">
-          About Developers
+          M
+          <AppleSvg
+            className={classNames(
+              `mb-[6px] inline-block h-auto w-full max-w-[21px] [&>path]:fill-[#3A3A3B]`,
+              `lg:mb-[9px] lg:max-w-[29px]`,
+              `xl:mb-[10px] xl:max-w-[37px]`
+            )}
+          />
+          de with Love.
         </h1>
-        <p className="font-['Gilroy'] text-base font-[500] text-black-1 md:text-lg lg:text-xl">
-          <a href="https://www.therenewcenter.com" target="_blank" rel="noopener noreferrer">
-            RenewMe
-          </a>{' '}
-          brand is the brainchild of leading psychotherapist and national media personality Dr. Lisa
-          Palmer, the only female psychotherapist to develop a smartphone “superapp” of its kind in
-          the mindfulness and self-growth space.
-        </p>
-        <p className="font-['Gilroy'] text-base font-[500] text-black-1 md:text-lg lg:text-xl">
-          Founder of The Renew Center of Florida Ranked #1 in the U.S. for the Treatment of PTSD,
-          RenewMe combines psychology with the power of advanced technology engineered by former
-          Apple engineers to empower employees and customers of global brands with a mission of
-          helping them lead a more happy and balanced life.
-        </p>
-        <div className="mt-10">
-          <div className="font-['Gilroy'] text-lg font-[600] text-black-1 md:text-xl lg:text-2xl xl:text-3xl">
-            Dr. Lisa Palmer
-          </div>
-          <sub className="font-['Gilroy'] text-base font-[500] text-black-1 md:text-lg lg:text-xl">
-            CEO of RenewMe Brand
-          </sub>
+        <div className="font-['Gilroy'] text-base font-[500] text-black-1 md:text-lg lg:text-xl">
+          <p className={classNames(`font-['Gilroy'] text-lg font-[700]`)}>
+            Where Psychology Meets Technology
+          </p>
+          <p className={classNames(`font-['Gilroy'] text-lg font-[400]`)}>
+            RenewMe combines psychology with the power of advanced technology engineered by former
+            Apple engineers to empower employees and customers of global brands with a mission of
+            helping them lead a more happy and balanced life.
+          </p>
+        </div>
+        <div className="font-['Gilroy'] text-base font-[500] text-black-1 md:text-lg lg:text-xl">
+          <p className={classNames(`font-['Gilroy'] text-lg font-[700]`)}>
+            Inspired by Mental Health Awareness
+          </p>
+          <p className={classNames(`font-['Gilroy'] text-lg font-[400]`)}>
+            RenewMe brand is the brainchild of leading psychotherapist and national media
+            personality Dr. Lisa Palmer, founder of The Renew Center of Florida Ranked #1 in the
+            U.S. for the Treatment of PTSD, and the first female psychotherapist and minority woman
+            in business to develop a self-help smartphone app of its kind.
+          </p>
+        </div>
+        <div className="font-['Gilroy'] text-base font-[500] text-black-1 md:text-lg lg:text-xl">
+          <p className={classNames(`font-['Gilroy'] text-lg font-[700]`)}>
+            Powered by Former Apple Engineers
+          </p>
+          <p className={classNames(`font-['Gilroy'] text-lg font-[400]`)}>
+            Our development team includes former Senior iOS Engineers at Apple Inc. (from 2011 to
+            2015) where they were responsible for building and maintaining iOS, iPad, AppleTV and
+            AppleWatch apps for the iTunes Store, App Store, Apple Trailers, Apple Remote, iTunes U,
+            Podcasts and Apple Music.
+          </p>
         </div>
       </div>
-      <div className="ad-image relative left-0 mt-auto w-screen max-w-[350px] md:col-start-1 md:col-end-6 md:row-start-1 md:row-end-2 md:grid md:w-full md:self-end lg:max-w-[430px] xl:max-w-[630px]">
-        <Image
-          src={HOME_IMAGES['dr-lisa-palmer'].url}
-          alt={HOME_IMAGES['dr-lisa-palmer'].alt}
-          layout="responsive"
-          height={HOME_IMAGES['dr-lisa-palmer'].height}
-          width={HOME_IMAGES['dr-lisa-palmer'].width}
+      <div className="relative h-full w-full">
+        <RenewMeSvg className={classNames(`absolute top-0  h-full w-full`)} />
+        <ImageFuture
+          className={classNames(`absolute top-0 h-full w-full object-cover`)}
+          src={HOME_IMAGES.women.url}
+          height={HOME_IMAGES.women.height}
+          width={HOME_IMAGES.women.width}
+          alt={HOME_IMAGES.women.alt}
+          priority
         />
       </div>
     </AboutDevelopersWrapper>

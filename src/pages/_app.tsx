@@ -1,12 +1,14 @@
+import { QueryClientProvider } from '@tanstack/react-query';
 import axios from 'axios';
 import Head from 'next/head';
 import React from 'react';
 import RootLayout from 'shared/components/Layouts/RootLayout';
 import { GlobalStyle, theme, ThemeProvider } from 'shared/theme';
+import { queryClient } from 'shared/utils/Query';
 import { SWRConfig } from 'swr';
-import '../../styles/globals.css';
 
 import type { AppProps } from 'next/app';
+import '../../styles/globals.css';
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -51,16 +53,21 @@ export default function MyApp({ Component, pageProps }: AppProps) {
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff" />
       </Head>
-      <ThemeProvider theme={theme}>
-        <SWRConfig
-          value={{ dedupingInterval: 5000, fetcher: (url: string) => axios(url).then(r => r.data) }}
-        >
-          <GlobalStyle />
-          <RootLayout>
-            <Component {...pageProps} />
-          </RootLayout>
-        </SWRConfig>
-      </ThemeProvider>
+      <QueryClientProvider client={queryClient}>
+        <ThemeProvider theme={theme}>
+          <SWRConfig
+            value={{
+              dedupingInterval: 5000,
+              fetcher: (url: string) => axios(url).then(r => r.data),
+            }}
+          >
+            <GlobalStyle />
+            <RootLayout>
+              <Component {...pageProps} />
+            </RootLayout>
+          </SWRConfig>
+        </ThemeProvider>
+      </QueryClientProvider>
     </React.Fragment>
   );
 }

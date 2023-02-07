@@ -15,10 +15,10 @@ const Service3: React.FC<Props> = ({ className }) => {
   return (
     <Service3Wrapper
       className={classNames(
-        `relative h-[calc(470px+117px+40px)]`, // {phone height} + {info height} + {margin between phone and info}
-        `md:h-[calc(470px+149px+40px)]`,
-        `lg:h-[calc(613px+180px+60px)]`,
-        `xl:h-[calc(666px+180px+60px)]`,
+        `relative h-[calc(470px+137px+40px)]`, // {phone height} + {info height} + {margin between phone and info}
+        `md:h-[calc(470px+173px+40px)]`,
+        `lg:h-[calc(613px+208px+60px)]`,
+        `xl:h-[calc(666px+208px+60px)]`,
         className
       )}
     >
@@ -32,9 +32,9 @@ const Service3: React.FC<Props> = ({ className }) => {
         <ImageFuture
           className={classNames(
             `top-[-10px] block w-full max-w-[230px] transition-opacity duration-1000`,
-            `md:absolute md:top-[0] md:bottom-[calc(40px*2)] md:left-[calc(50%-250px/2)] md:block md:translate-x-[-50%]`,
-            `lg:left-[calc(50%-320px/2)] lg:max-w-[300px]`,
-            `xl:left-[calc(50%-370px/2)] xl:max-w-[326px]`
+            `md:absolute md:top-[calc(80px*2)] md:left-[calc(50%-250px/2)] md:block md:translate-x-[-50%]`,
+            `lg:top-[calc(70px*2)] lg:left-[calc(50%-320px/2)] lg:max-w-[300px]`,
+            `xl:top-[calc(60px*2)] xl:left-[calc(50%-370px/2)] xl:max-w-[326px]`
           )}
           src={SOULSCAPE_IMAGES['s3-phone-2'].url}
           width={SOULSCAPE_IMAGES['s3-phone-2'].width}
@@ -44,21 +44,21 @@ const Service3: React.FC<Props> = ({ className }) => {
         <ImageFuture
           className={classNames(
             `hidden w-full max-w-[230px] transition-opacity duration-1000`,
-            `md:absolute md:top-[0] md:left-[calc(50%-250px*-1.5)] md:block md:translate-x-[-50%]`,
+            `md:absolute md:bottom-[0] md:left-[calc(50%-250px*-1.5)] md:block md:translate-x-[-50%]`,
             `lg:left-[calc(50%-320px*-1.5)] lg:max-w-[300px]`,
             `xl:left-[calc(50%-370px*-1.5)] xl:max-w-[326px]`
           )}
-          src={SOULSCAPE_IMAGES['s3-phone-1'].url}
-          width={SOULSCAPE_IMAGES['s3-phone-1'].width}
-          height={SOULSCAPE_IMAGES['s3-phone-1'].height}
-          alt={SOULSCAPE_IMAGES['s3-phone-1'].alt}
+          src={SOULSCAPE_IMAGES['s3-phone-4'].url}
+          width={SOULSCAPE_IMAGES['s3-phone-4'].width}
+          height={SOULSCAPE_IMAGES['s3-phone-4'].height}
+          alt={SOULSCAPE_IMAGES['s3-phone-4'].alt}
         />
         <ImageFuture
           className={classNames(
             `hidden w-full max-w-[230px] transition-opacity duration-1000`,
-            `md:absolute md:bottom-[calc(40px*2)] md:left-[calc(50%+250px/2)] md:block md:translate-x-[-50%]`,
-            `lg:bottom-[calc(30px*2)] lg:left-[calc(50%+320px/2)] lg:max-w-[300px]`,
-            `xl:bottom-[calc(20px*2)] xl:left-[calc(50%+370px/2)] xl:max-w-[326px]`
+            `md:absolute md:top-[0] md:left-[calc(50%+250px/2)] md:block md:translate-x-[-50%]`,
+            `lg:left-[calc(50%+320px/2)] lg:max-w-[300px]`,
+            `xl:left-[calc(50%+370px/2)] xl:max-w-[326px]`
           )}
           src={SOULSCAPE_IMAGES['s3-phone-3'].url}
           width={SOULSCAPE_IMAGES['s3-phone-3'].width}
@@ -68,21 +68,21 @@ const Service3: React.FC<Props> = ({ className }) => {
         <ImageFuture
           className={classNames(
             `hidden w-full max-w-[230px] transition-opacity duration-1000`,
-            `md:absolute md:bottom-[calc(40px*2)] md:left-[calc(50%+250px*-1.5)] md:block md:translate-x-[-50%]`,
-            `lg:bottom-[calc(30px*2)] lg:left-[calc(50%+320px*-1.5)] lg:max-w-[300px]`,
-            `xl:bottom-[calc(20px*2)] xl:left-[calc(50%+370px*-1.5)] xl:max-w-[326px]`
+            `md:absolute md:bottom-[0] md:left-[calc(50%+250px*-1.5)] md:block md:translate-x-[-50%]`,
+            `lg:left-[calc(50%+320px*-1.5)] lg:max-w-[300px]`,
+            `xl:left-[calc(50%+370px*-1.5)] xl:max-w-[326px]`
           )}
-          src={SOULSCAPE_IMAGES['s3-phone-4'].url}
-          width={SOULSCAPE_IMAGES['s3-phone-4'].width}
-          height={SOULSCAPE_IMAGES['s3-phone-4'].height}
-          alt={SOULSCAPE_IMAGES['s3-phone-4'].alt}
+          src={SOULSCAPE_IMAGES['s3-phone-1'].url}
+          width={SOULSCAPE_IMAGES['s3-phone-1'].width}
+          height={SOULSCAPE_IMAGES['s3-phone-1'].height}
+          alt={SOULSCAPE_IMAGES['s3-phone-1'].alt}
         />
         <div
           className={classNames(
             `absolute bottom-0 flex w-[305px] flex-col items-center gap-2 transition-opacity duration-1000`,
-            `md:left-[calc(50%-250px/2)] md:w-[230px] md:translate-x-[-50%] md:items-start`,
-            `lg:left-[calc(50%-320px/2)] lg:w-[300px]`,
-            `xl:left-[calc(50%-370px/2)] xl:w-[326px]`
+            `md:left-[calc(50%+250px/2)] md:w-[230px] md:translate-x-[-50%] md:items-start`,
+            `lg:left-[calc(50%+320px/2)] lg:w-[300px]`,
+            `xl:left-[calc(50%+370px/2)] xl:w-[326px]`
           )}
         >
           <InfoSvg className={classNames(`h-[33px] w-[auto]`, `lg:h-[48px]`)} />
@@ -93,7 +93,7 @@ const Service3: React.FC<Props> = ({ className }) => {
               `lg:text-2xl`
             )}
           >
-            Balance on the Go
+            Healthy Living on the Go
           </p>
           <p
             className={classNames(
@@ -102,8 +102,8 @@ const Service3: React.FC<Props> = ({ className }) => {
               `lg:text-lg`
             )}
           >
-            Learn ways to have a healthier mind-body-soul while traveling to your favorite
-            destinations.
+            An oasis of wellness resources helps you maintain a healthier mind-body-soul while
+            traveling to your favorite destinations.
           </p>
         </div>
       </div>

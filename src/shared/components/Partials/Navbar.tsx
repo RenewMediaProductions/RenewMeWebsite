@@ -6,7 +6,6 @@ import { useRouter } from 'next/router';
 import React, { useMemo, useState } from 'react';
 import { useEffectOnce, useWindowSize } from 'react-use';
 import CloseSvg from 'shared/assets/svg/close.svg';
-import LogoDarkSvg from 'shared/assets/svg/logo-dark.svg';
 import LogoSvg from 'shared/assets/svg/logo.svg';
 import { ROUTES } from 'shared/constants/Routes';
 import { useThemeStore } from 'shared/store/Theme';
@@ -41,7 +40,7 @@ const Navbar: React.FC<Props> = ({ hide, isTop = true }) => {
   );
 
   const mainClass = classNames(
-    'top-0 z-10 w-full sticky transition-[top] duration-300',
+    'top-0 z-20 w-full sticky transition-[top] duration-300',
     hide ? (show ? 'top-0' : 'top-[-64px]') : 'top-0',
     !isTop && !show ? 'backdrop-blur-2xl bg-[#ffffff99]' : ''
   );
@@ -74,21 +73,16 @@ const Navbar: React.FC<Props> = ({ hide, isTop = true }) => {
   const menuPlaceholderClass = classNames(
     `mx-auto flex justify-center items-center gap-1 font-['Gilroy'] font-[500] text-sm`
   );
-  const hamburgerClass = classNames(
-    'h-0.5 w-5',
-    theme !== Themes.Light || !isTop ? 'bg-black-1' : 'bg-white',
-    show && 'hidden'
-  );
   const mobileMenuClass = classNames(
     `fixed w-full h-screen top-0 left-0 px-[15%] pt-[15%] text-white`,
-    show ? 'block backdrop-blur-2xl' : 'hidden',
+    show ? 'block backdrop-blur-2xl bg-[rgba(83,158,216,0.5)]' : 'hidden',
     'lg:hidden'
   );
 
   const renderLogo = useMemo(() => {
     const logoClass = classNames(`w-auto h-full`, !isDesktop && show && 'hidden');
 
-    if (theme !== Themes.Light || !isTop) return <LogoDarkSvg className={logoClass} />;
+    // if (theme !== Themes.Light || !isTop) return <LogoDarkSvg className={logoClass} />;
     return <LogoSvg className={logoClass} />;
   }, [theme, isDesktop, show, isTop]);
 
@@ -100,17 +94,35 @@ const Navbar: React.FC<Props> = ({ hide, isTop = true }) => {
 
   return (
     <NavbarWrapper className={mainClass}>
-      <div className="container relative flex items-center justify-center h-16 px-6 mx-auto">
+      <div className="container relative mx-auto flex h-16 items-center justify-center px-6">
         <div
-          className="flex flex-col space-y-1 mr-3 cursor-pointer z-[3] lg:hidden"
+          className="z-[3] mr-3 flex cursor-pointer flex-col space-y-1 lg:hidden"
           onClick={handleClick}
         >
-          <span className={hamburgerClass}></span>
-          <span className={hamburgerClass}></span>
-          <span className={hamburgerClass}></span>
+          <span
+            className={classNames(
+              'h-0.5 w-5',
+              theme !== Themes.Light || !isTop ? 'bg-black-1' : 'bg-white',
+              show && 'hidden'
+            )}
+          ></span>
+          <span
+            className={classNames(
+              'h-0.5 w-5',
+              theme !== Themes.Light || !isTop ? 'bg-black-1' : 'bg-white',
+              show && 'hidden'
+            )}
+          ></span>
+          <span
+            className={classNames(
+              'h-0.5 w-5',
+              theme !== Themes.Light || !isTop ? 'bg-black-1' : 'bg-white',
+              show && 'hidden'
+            )}
+          ></span>
         </div>
         <Link href={ROUTES.HOME}>
-          <a className="h-7 w-auto cursor-pointer z-[3] lg:h-8 ga">{renderLogo}</a>
+          <a className="ga z-[3] h-7 w-auto cursor-pointer lg:h-8">{renderLogo}</a>
         </Link>
         <div className={menuClass}>
           <div className={menuPlaceholderClass}>
@@ -125,7 +137,7 @@ const Navbar: React.FC<Props> = ({ hide, isTop = true }) => {
             </Link>
           </div>
         </div>
-        <div className="flex gap-1 ml-auto z-[2] font-['Gilroy'] font-[500] text-sm">
+        <div className="z-[2] ml-auto flex gap-1 font-['Gilroy'] text-sm font-[500]">
           <Link href={ROUTES.GLOBAL_PARTNERS}>
             <a className={globalPartnersClass}>Global Partners</a>
           </Link>
@@ -137,12 +149,12 @@ const Navbar: React.FC<Props> = ({ hide, isTop = true }) => {
           </Link>
         </div>
         <div className={mobileMenuClass}>
-          <div className="flex flex-col gap-7 font-['Gilroy'] font-[500] text-xl">
+          <div className="flex flex-col gap-7 font-['Gilroy'] text-xl font-[500]">
             <div
-              className="h-[36px] w-[36px] rounded-[50%] bg-orange-1 cursor-pointer flex justify-center items-center"
+              className="flex h-[36px] w-[36px] cursor-pointer items-center justify-center rounded-[50%] bg-orange-1"
               onClick={handleClick}
             >
-              <CloseSvg className="w-auto h-[11px]" />
+              <CloseSvg className="h-[11px] w-auto" />
             </div>
             <Link href={ROUTES.HOME}>
               <a className="hover:underline">RenewMe</a>
@@ -153,7 +165,7 @@ const Navbar: React.FC<Props> = ({ hide, isTop = true }) => {
             <Link href={ROUTES.SPASCAPE}>
               <a className="hover:underline">Spascape</a>
             </Link>
-            <div className="w-full h-[1px] bg-[#f2f2f2]"></div>
+            <div className="h-[1px] w-full bg-[#f2f2f2]"></div>
             <Link href={ROUTES.GLOBAL_PARTNERS}>
               <a className="hover:underline">Global Partners</a>
             </Link>

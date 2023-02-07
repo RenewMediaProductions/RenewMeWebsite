@@ -9,7 +9,7 @@ export const WhatPeopleAreSayingWrapper = styled.div`
     background: radial-gradient(
       111.91% 157.37% at 50% 157.37%,
       rgba(255, 255, 255, 0) 0%,
-      #eaeaea 100%
+      #eaeaea 78.06%
     );
   }
 `;

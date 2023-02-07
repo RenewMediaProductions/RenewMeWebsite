@@ -8,7 +8,7 @@ export const Service4Wrapper = styled.div`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: linear-gradient(180deg, #212528 0%, #4b5e7f 100%);
+    background: linear-gradient(180deg, rgba(225, 236, 216, 0.9) 0%, rgba(75, 94, 127, 0.9) 100%);
   }
 
   ${({ theme }) => theme.screens.smallMedia} {

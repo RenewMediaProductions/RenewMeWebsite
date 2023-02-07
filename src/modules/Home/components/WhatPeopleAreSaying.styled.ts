@@ -11,6 +11,7 @@ export const WhatPeopleAreSayingWrapper = styled.div`
       rgba(255, 255, 255, 0) 0%,
       rgba(234, 234, 234, 0.8) 100%
     );
+    filter: blur(12px);
   }
 
   .testimonials {

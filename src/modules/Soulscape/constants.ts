@@ -97,6 +97,12 @@ export const SOULSCAPE_IMAGES = {
     height: 1680,
     alt: 'image',
   },
+  's4-phone-4': {
+    url: `${imageDomainUrl}/Soulscape/s4-phone-4.png?v=${assetVersion}`,
+    width: 823,
+    height: 1680,
+    alt: 'image',
+  },
   's5-phone-1': {
     url: `${imageDomainUrl}/Soulscape/s5-phone-1.png?v=${assetVersion}`,
     width: 823,

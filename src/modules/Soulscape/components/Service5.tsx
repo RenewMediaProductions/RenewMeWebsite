@@ -37,17 +37,17 @@ const Service5: React.FC<Props> = ({ className }) => {
             `lg:max-w-[300px]`,
             `xl:max-w-[326px]`
           )}
-          src={SOULSCAPE_IMAGES['s5-phone-2'].url}
-          width={SOULSCAPE_IMAGES['s5-phone-2'].width}
-          height={SOULSCAPE_IMAGES['s5-phone-2'].height}
-          alt={SOULSCAPE_IMAGES['s5-phone-2'].alt}
+          src={SOULSCAPE_IMAGES['s5-phone-3'].url}
+          width={SOULSCAPE_IMAGES['s5-phone-3'].width}
+          height={SOULSCAPE_IMAGES['s5-phone-3'].height}
+          alt={SOULSCAPE_IMAGES['s5-phone-3'].alt}
         />
         <ImageFuture
           className={classNames(
             `hidden w-full max-w-[230px] transition-opacity duration-1000`,
-            `md:absolute md:bottom-[calc(40px*2)] md:left-[calc(50%-250px)] md:block md:translate-x-[-50%]`,
-            `lg:bottom-[calc(30px*2)] lg:left-[calc(50%-320px)] lg:max-w-[300px]`,
-            `xl:bottom-[calc(20px*2)] xl:left-[calc(50%-370px)] xl:max-w-[326px]`
+            `md:absolute md:bottom-[calc(80px*2)] md:left-[calc(50%-250px)] md:block md:translate-x-[-50%]`,
+            `lg:bottom-[calc(70px*2)] lg:left-[calc(50%-320px)] lg:max-w-[300px]`,
+            `xl:bottom-[calc(60px*2)] xl:left-[calc(50%-370px)] xl:max-w-[326px]`
           )}
           src={SOULSCAPE_IMAGES['s5-phone-1'].url}
           width={SOULSCAPE_IMAGES['s5-phone-1'].width}
@@ -57,14 +57,14 @@ const Service5: React.FC<Props> = ({ className }) => {
         <ImageFuture
           className={classNames(
             `hidden w-full max-w-[230px] transition-opacity duration-1000`,
-            `md:absolute md:bottom-[calc(40px*2)] md:left-[calc(50%+250px)] md:block md:translate-x-[-50%]`,
-            `lg:bottom-[calc(30px*2)] lg:left-[calc(50%+320px)] lg:max-w-[300px]`,
-            `xl:bottom-[calc(20px*2)] xl:left-[calc(50%+370px)] xl:max-w-[326px]`
+            `md:absolute md:bottom-[calc(80px*2)] md:left-[calc(50%+250px)] md:block md:translate-x-[-50%]`,
+            `lg:bottom-[calc(70px*2)] lg:left-[calc(50%+320px)] lg:max-w-[300px]`,
+            `xl:bottom-[calc(60px*2)] xl:left-[calc(50%+370px)] xl:max-w-[326px]`
           )}
-          src={SOULSCAPE_IMAGES['s5-phone-3'].url}
-          width={SOULSCAPE_IMAGES['s5-phone-3'].width}
-          height={SOULSCAPE_IMAGES['s5-phone-3'].height}
-          alt={SOULSCAPE_IMAGES['s5-phone-3'].alt}
+          src={SOULSCAPE_IMAGES['s5-phone-2'].url}
+          width={SOULSCAPE_IMAGES['s5-phone-2'].width}
+          height={SOULSCAPE_IMAGES['s5-phone-2'].height}
+          alt={SOULSCAPE_IMAGES['s5-phone-2'].alt}
         />
         <div
           className={classNames(

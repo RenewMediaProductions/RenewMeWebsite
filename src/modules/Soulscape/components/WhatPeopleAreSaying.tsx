@@ -9,10 +9,10 @@ interface Props {
 }
 
 const WhatPeopleAreSaying: React.FC<Props> = ({ className }) => {
-  const mainClass = classNames('w-screen relative flex flex-col py-28 !bg-blue-2', className);
-
   return (
-    <WhatPeopleAreSayingWrapper className={mainClass}>
+    <WhatPeopleAreSayingWrapper
+      className={classNames('relative flex w-screen flex-col bg-[#F07E58] py-28', className)}
+    >
       <div className="bg"></div>
       <div className="container isolate mx-auto flex flex-col items-center gap-6 px-6 md:gap-10 lg:gap-24">
         <h1 className="text-center font-['Gilroy'] text-3xl font-[500] md:text-4xl lg:text-5xl xl:text-6xl">
