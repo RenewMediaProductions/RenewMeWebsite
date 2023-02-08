@@ -3,7 +3,7 @@ import { EscapeTranquilityWrapper } from './EscapeTranquility.styled';
 import { SPASCAPE_IMAGES } from '../constants';
 
 import classNames from 'classnames';
-import Image from 'next/image';
+import ImageFuture from 'next/future/image';
 import Link from 'next/link';
 import React from 'react';
 import ExpediaSvg from 'shared/assets/svg/Spascape/expedia.svg';
@@ -16,20 +16,18 @@ const EscapeTranquility: React.FC = () => {
   return (
     <EscapeTranquilityWrapper
       className={classNames(
-        `relative flex min-h-[812px] flex-col items-center justify-center overflow-hidden`,
+        `relative flex min-h-[900px] flex-col items-center justify-center overflow-hidden bg-[#EFE7E0]`,
         `lg:h-[900px]`
       )}
     >
-      <div className="absolute top-[50%] left-[50%] h-full max-h-[1000px] min-h-[600px] w-full min-w-[600px] max-w-[1000px] translate-x-[-50%] translate-y-[-50%] ">
-        <Image
-          src={SPASCAPE_IMAGES['es-bg'].url}
-          alt={SPASCAPE_IMAGES['es-bg'].alt}
-          layout="fill"
-          objectFit="cover"
-          objectPosition="center"
-          priority
-        />
-      </div>
+      <ImageFuture
+        className={classNames(`absolute top-0 h-full w-full object-cover object-right-bottom`)}
+        src={SPASCAPE_IMAGES['es-bg'].url}
+        height={SPASCAPE_IMAGES['es-bg'].height}
+        width={SPASCAPE_IMAGES['es-bg'].width}
+        alt={SPASCAPE_IMAGES['es-bg'].alt}
+        priority
+      />
       <h1 className="isolate pb-4 text-center font-['Gilroy'] text-[32px] font-[600] md:text-5xl lg:text-6xl">
         Escape to Tranquility
       </h1>

@@ -3,8 +3,8 @@ import { assetVersion, imageDomainUrl } from 'shared/constants/Assets';
 export const HOME_IMAGES = {
   'h-bg': {
     url: `${imageDomainUrl}/Home/h-bg.jpg?v=${assetVersion}`,
-    width: 1440,
-    height: 900,
+    width: 2560,
+    height: 1440,
     alt: 'image',
   },
   'h-phone-1': {

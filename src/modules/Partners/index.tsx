@@ -7,7 +7,7 @@ import React from 'react';
 
 const Partners: React.FC = () => {
   return (
-    <PartnersWrapper className="flex flex-col bg-gray-2">
+    <PartnersWrapper className="flex flex-col overflow-x-hidden bg-white">
       <Hero />
       <Wellness />
       <WhatPeopleAreSaying />

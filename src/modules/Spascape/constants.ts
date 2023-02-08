@@ -4,7 +4,7 @@ export const SPASCAPE_IMAGES = {
   'h-bg': {
     url: `${imageDomainUrl}/Spascape/h-bg.jpg?v=${assetVersion}`,
     width: 2560,
-    height: 1498,
+    height: 1440,
     alt: 'image',
   },
   'h-phone-1': {
@@ -20,9 +20,9 @@ export const SPASCAPE_IMAGES = {
     alt: 'image',
   },
   'es-bg': {
-    url: `${imageDomainUrl}/Spascape/es-bg.webp?v=${assetVersion}`,
-    width: 2882,
-    height: 1800,
+    url: `${imageDomainUrl}/Spascape/es-bg.jpg?v=${assetVersion}`,
+    width: 2560,
+    height: 900,
     alt: 'image',
   },
 };

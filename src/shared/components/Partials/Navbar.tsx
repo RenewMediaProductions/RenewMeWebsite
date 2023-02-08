@@ -6,6 +6,7 @@ import { useRouter } from 'next/router';
 import React, { useMemo, useState } from 'react';
 import { useEffectOnce, useWindowSize } from 'react-use';
 import CloseSvg from 'shared/assets/svg/close.svg';
+import LogoDarkSvg from 'shared/assets/svg/logo-dark.svg';
 import LogoSvg from 'shared/assets/svg/logo.svg';
 import { ROUTES } from 'shared/constants/Routes';
 import { useThemeStore } from 'shared/store/Theme';
@@ -82,7 +83,7 @@ const Navbar: React.FC<Props> = ({ hide, isTop = true }) => {
   const renderLogo = useMemo(() => {
     const logoClass = classNames(`w-auto h-full`, !isDesktop && show && 'hidden');
 
-    // if (theme !== Themes.Light || !isTop) return <LogoDarkSvg className={logoClass} />;
+    if (theme !== Themes.Light || !isTop) return <LogoDarkSvg className={logoClass} />;
     return <LogoSvg className={logoClass} />;
   }, [theme, isDesktop, show, isTop]);
 

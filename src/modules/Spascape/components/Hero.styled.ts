@@ -6,7 +6,7 @@ export const HeroWrapper = styled.div`
     bottom: 0;
     height: 267px;
     width: 100%;
-    background: linear-gradient(180deg, rgba(242, 242, 242, 0) 13.19%, #ededed 89.62%);
+    background: linear-gradient(180deg, rgba(239, 231, 224, 0) 13.19%, #efe7e0 89.62%);
   }
   .hero-image {
     animation: heroImageAnim 800ms linear;

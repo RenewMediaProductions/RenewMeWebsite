@@ -1,12 +1,31 @@
 import { styled } from 'shared/theme';
 
 export const HeroWrapper = styled.div`
-  .bg-bot {
+  .bg-1 {
     position: absolute;
-    bottom: 0;
-    height: 267px;
-    width: 100%;
-    background: linear-gradient(180deg, rgba(242, 242, 242, 0) 13.19%, #ededed 89.62%);
+    width: 577.4px;
+    height: 577.4px;
+    left: calc(50% - 150px);
+    top: 10%;
+    transform: translateX(-50%);
+    background: radial-gradient(
+      50% 50% at 50% 50%,
+      rgba(0, 192, 197, 0.25) 0%,
+      rgba(243, 243, 243, 0) 80.42%
+    );
+  }
+  .bg-2 {
+    position: absolute;
+    width: 577.4px;
+    height: 577.4px;
+    left: calc(50% + 150px);
+    top: 10%;
+    transform: translateX(-50%);
+    background: radial-gradient(
+      50% 50% at 50% 50%,
+      rgba(240, 126, 89, 0.25) 0%,
+      rgba(243, 243, 243, 0) 80.42%
+    );
   }
   .hero-image {
     animation: heroImageAnim 800ms linear;
@@ -52,10 +71,6 @@ export const HeroWrapper = styled.div`
   ${({ theme }) => theme.screens.largeMedia} {
   }
   ${({ theme }) => theme.screens.xLargeMedia} {
-    .bg {
-      height: 1000px;
-      width: 1000px;
-    }
   }
   ${({ theme }) => theme.screens.xxLargeMedia} {
   }
