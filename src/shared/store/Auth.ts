@@ -29,7 +29,7 @@ export const useAuthStore = create(
         const expiration = new Date(LocalStorageUtil.get(LockLocalStorage.Expiration) || '');
         const now = new Date();
 
-        if (expiration < now) {
+        if (expiration.getTime() <= now.getTime()) {
           state.isAuth = false;
           LocalStorageUtil.set(LockLocalStorage.Expiration, '');
         }
