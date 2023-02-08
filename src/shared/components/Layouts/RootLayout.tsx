@@ -1,5 +1,6 @@
 import { RootLayoutWrapper } from './RootLayout.styled';
 
+import Lock from 'modules/Lock';
 import { useRouter } from 'next/router';
 import React, { useEffect } from 'react';
 import { ROUTES } from 'shared/constants/Routes';
@@ -25,7 +26,11 @@ const RootLayout: React.FC<{ children: any }> = ({ children }) => {
     }
   }, [router.pathname, setTheme]);
 
-  return <RootLayoutWrapper>{children}</RootLayoutWrapper>;
+  return (
+    <RootLayoutWrapper className="relative">
+      <Lock>{children}</Lock>
+    </RootLayoutWrapper>
+  );
 };
 
 export default RootLayout;

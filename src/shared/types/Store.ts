@@ -15,3 +15,15 @@ export interface ThemeStore {
   /* Functions */
   setTheme: (theme: Themes) => StoreResponse;
 }
+
+export interface AuthStore {
+  /* States */
+  isAuth: boolean;
+
+  /* Computed States */
+  // computed: {};
+
+  /* Functions */
+  unlock: (password: string) => StoreResponse;
+  verify: () => StoreResponse;
+}

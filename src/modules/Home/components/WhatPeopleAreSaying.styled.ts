@@ -6,12 +6,12 @@ export const WhatPeopleAreSayingWrapper = styled.div`
     top: 0;
     height: 100%;
     width: 100%;
+    filter: blur(12px);
     background: radial-gradient(
       111.91% 157.37% at 50% 157.37%,
       rgba(255, 255, 255, 0) 0%,
       rgba(234, 234, 234, 0.8) 100%
     );
-    filter: blur(12px);
   }
 
   .testimonials {

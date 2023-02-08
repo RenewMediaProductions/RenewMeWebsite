@@ -18,7 +18,7 @@ const AboutDevelopers: React.FC<Props> = ({ className }) => {
       className={classNames(
         `flex h-full min-h-[1200px] w-full  flex-col gap-10 bg-[#FAFAFA] pt-[80px]`,
         `md:px-10`,
-        `lg:grid lg:h-screen lg:grid-cols-[0.8fr_1fr] lg:items-center lg:justify-center`,
+        ``,
         className
       )}
       id="about-developers"

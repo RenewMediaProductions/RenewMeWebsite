@@ -1,18 +1,13 @@
-// import { useRouter } from 'next/router';
 import React from 'react';
-// import { useEffectOnce } from 'react-use';
-// import { ROUTES } from 'shared/constants/Routes';
-// import { useUserStore } from 'shared/store';
+import { useEffectOnce } from 'react-use';
+import { useAuthStore } from 'shared/store/Auth';
 
 const AuthenticatedRoute: React.FC<{ children: any }> = ({ children }) => {
-  // const { push: navigate } = useRouter();
-  // const { isSignedIn } = useUserStore(state => state.computed);
+  const verify = useAuthStore(state => state.verify);
 
-  // useEffectOnce(() => {
-  //   if (!isSignedIn) navigate(ROUTES.LOGIN);
-  // });
-
-  // if (!isSignedIn) return null;
+  useEffectOnce(() => {
+    verify();
+  });
 
   return <React.Fragment>{children}</React.Fragment>;
 };

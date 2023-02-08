@@ -19,6 +19,7 @@ module.exports = {
     PORT: process.env.PORT,
     STAGE: process.env.STAGE,
     YOUTUBE_API_KEY: process.env.YOUTUBE_API_KEY,
+    WEB_PASSWORD: process.env.WEB_PASSWORD,
   },
   reactStrictMode: true,
   swcMinify: true,
