@@ -83,6 +83,7 @@ const Lock: React.FC<{ children: ReactNode }> = ({ children }) => {
             name="password"
             id="password"
             onChange={handleChange}
+            onKeyUp={e => e.key === 'Enter' && handleClickUnlock()}
             value={password}
           />
           <button
