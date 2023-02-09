@@ -9,7 +9,7 @@ import { immer } from 'zustand/middleware/immer';
 export const useAuthStore = create(
   immer<AuthStore>(set => ({
     /* States */
-    isAuth: false,
+    isAuth: true,
 
     /* Computed States */
     // computed: {},
@@ -26,7 +26,9 @@ export const useAuthStore = create(
     },
     verify: () => {
       set((state: AuthStore) => {
-        const expiration = new Date(LocalStorageUtil.get(LockLocalStorage.Expiration) || '');
+        const currentExpiration = LocalStorageUtil.get(LockLocalStorage.Expiration);
+        const hasExpiration = !!currentExpiration;
+        const expiration = hasExpiration ? new Date(currentExpiration) : new Date();
         const now = new Date();
 
         if (now.getTime() >= expiration.getTime()) {
