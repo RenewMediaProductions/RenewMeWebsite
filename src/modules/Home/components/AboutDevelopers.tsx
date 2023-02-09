@@ -16,14 +16,19 @@ const AboutDevelopers: React.FC<Props> = ({ className }) => {
   return (
     <AboutDevelopersWrapper
       className={classNames(
-        `flex h-full min-h-[1200px] w-full  flex-col gap-10 bg-[#FAFAFA] pt-[80px]`,
+        `grid h-[1600px] w-full grid-rows-[auto_1fr] bg-[#FAFAFA] pt-[80px]`,
         `md:px-10`,
-        ``,
+        `xl:h-[1024px] xl:grid-cols-[repeat(2,1fr)] xl:grid-rows-[1fr] xl:items-center`,
         className
       )}
       id="about-developers"
     >
-      <div className="flex flex-col gap-6 px-6 md:col-start-5 md:col-end-11 md:row-start-1 md:row-end-2 lg:max-w-[540px] xl:max-w-[600px]">
+      <div
+        className={classNames(
+          `flex flex-col gap-6 px-6`,
+          `xl:col-[2/3] xl:row-[1/2] xl:max-w-[700px]`
+        )}
+      >
         <h1 className="font-['Gilroy'] text-3xl font-[600] text-black-1 md:text-4xl lg:text-5xl xl:text-6xl">
           M
           <AppleSvg
@@ -68,16 +73,114 @@ const AboutDevelopers: React.FC<Props> = ({ className }) => {
           </p>
         </div>
       </div>
-      <div className="relative h-full w-full">
-        <RenewMeSvg className={classNames(`absolute top-0  h-full w-full`)} />
-        <ImageFuture
-          className={classNames(`absolute top-0 h-full w-full object-cover`)}
-          src={HOME_IMAGES.women.url}
-          height={HOME_IMAGES.women.height}
-          width={HOME_IMAGES.women.width}
-          alt={HOME_IMAGES.women.alt}
-          priority
-        />
+      <div
+        className={classNames(
+          `relative h-full w-full`,
+          `xl:col-[1/2] xl:row-[1/2] xl:grid xl:max-w-[700px] xl:justify-self-end`
+        )}
+      >
+        <div className="bg"></div>
+        <div
+          className={classNames(
+            `absolute top-[50%] left-[50%] w-full max-w-[380px] translate-y-[-50%] translate-x-[-50%]`,
+            `min-[575px]:max-w-[536px]`
+          )}
+        >
+          <RenewMeSvg className={classNames(`h-auto w-full`)} />
+        </div>
+        <div
+          className={classNames(
+            `absolute top-[50%] left-[50%] w-full max-w-[202px] translate-y-[-50%] translate-x-[-50%]`,
+            `min-[575px]:max-w-[252px]`
+          )}
+        >
+          <ImageFuture
+            className={classNames(`h-auto w-full`)}
+            src={HOME_IMAGES.women.url}
+            height={HOME_IMAGES.women.height}
+            width={HOME_IMAGES.women.width}
+            alt={HOME_IMAGES.women.alt}
+          />
+          <div className="absolute bottom-[-30px] flex w-full flex-col items-center justify-center">
+            <span className="font-['Gilroy'] text-base font-[700] text-[#3A3A3B]">
+              Dr. Lisa Palmer
+            </span>
+            <span className="font-['Gilroy'] text-base font-[400] text-[#7B7C7D]">
+              CEO fo RenewMe Brand
+            </span>
+          </div>
+        </div>
+        <div
+          className={classNames(
+            `absolute top-[calc(50%-220px)] left-[calc(50%-80px)] w-full max-w-[120px] translate-x-[-50%] translate-y-[-50%]`,
+            `min-[575px]:left-[calc(50%-100px)] min-[575px]:top-[calc(50%-300px)] min-[575px]:max-w-[159px]`
+          )}
+        >
+          <ImageFuture
+            className={classNames(`h-auto w-full`)}
+            src={HOME_IMAGES['man-1'].url}
+            height={HOME_IMAGES['man-1'].height}
+            width={HOME_IMAGES['man-1'].width}
+            alt={HOME_IMAGES['man-1'].alt}
+          />
+        </div>
+        <div
+          className={classNames(
+            `absolute top-[calc(50%-200px)] left-[calc(50%+80px)] w-full max-w-[90px] translate-x-[-50%] translate-y-[-50%]`,
+            `min-[575px]:left-[calc(50%+190px)] min-[575px]:top-[calc(50%-200px)] min-[575px]:max-w-[120px]`
+          )}
+        >
+          <ImageFuture
+            className={classNames(`h-auto w-full`)}
+            src={HOME_IMAGES['man-2'].url}
+            height={HOME_IMAGES['man-2'].height}
+            width={HOME_IMAGES['man-2'].width}
+            alt={HOME_IMAGES['man-2'].alt}
+          />
+        </div>
+        <div
+          className={classNames(
+            `absolute top-[calc(50%+200px)] left-[calc(50%-130px)] w-full max-w-[130px] translate-x-[-50%] translate-y-[-50%]`,
+            `min-[575px]:left-[calc(50%-190px)] min-[575px]:top-[calc(50%+190px)] min-[575px]:max-w-[160px]`
+          )}
+        >
+          <ImageFuture
+            className={classNames(`h-auto w-full`)}
+            src={HOME_IMAGES['man-3'].url}
+            height={HOME_IMAGES['man-3'].height}
+            width={HOME_IMAGES['man-3'].width}
+            alt={HOME_IMAGES['man-3'].alt}
+          />
+        </div>
+        <div
+          className={classNames(
+            `absolute top-[calc(50%+250px)] left-[50%] w-full max-w-[90px] translate-x-[-50%] translate-y-[-50%]`,
+            `min-[575px]:top-[calc(50%+300px)] min-[575px]:max-w-[120px]`,
+            `xl:top-[calc(50%+350px)] `
+          )}
+        >
+          <ImageFuture
+            className={classNames(`h-auto w-full`)}
+            src={HOME_IMAGES['man-4'].url}
+            height={HOME_IMAGES['man-4'].height}
+            width={HOME_IMAGES['man-4'].width}
+            alt={HOME_IMAGES['man-4'].alt}
+          />
+        </div>
+        <div
+          className={classNames(
+            `absolute top-[calc(50%+200px)] left-[calc(50%+130px)] w-full max-w-[130px] translate-x-[-50%] translate-y-[-50%]`,
+            `min-[575px]:left-[calc(50%+190px)] min-[575px]:top-[calc(50%+220px)] min-[575px]:max-w-[160px]`
+          )}
+        >
+          <ImageFuture
+            className={classNames(`h-auto w-full`)}
+            src={HOME_IMAGES['man-5'].url}
+            height={HOME_IMAGES['man-5'].height}
+            width={HOME_IMAGES['man-5'].width}
+            alt={HOME_IMAGES['man-5'].alt}
+          />
+        </div>
       </div>
     </AboutDevelopersWrapper>
   );

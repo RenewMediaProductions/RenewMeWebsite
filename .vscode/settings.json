@@ -9,4 +9,5 @@
   "eslint.format.enable": true,
   "eslint.alwaysShowStatus": true,
   "eslint.lintTask.enable": true,
+  "svg.preview.background": "custom",
 }
