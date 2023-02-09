@@ -23,13 +23,13 @@ const Lock: React.FC<{ children: ReactNode }> = ({ children }) => {
     <React.Fragment>
       <div
         className={classNames(
-          `bg-[rgba(83, 158, 216, 0.3)] fixed top-0 flex h-full w-screen flex-col items-center justify-center gap-3 p-5 backdrop-blur-[40px]`,
+          `fixed top-0 flex h-full w-screen flex-col items-center justify-center gap-3 bg-[rgba(83,158,216,0.3)] p-5 backdrop-blur-[40px]`,
           !isAuth && 'z-50'
         )}
       >
         <div
           className={classNames(
-            `relative flex h-full max-h-[614px] w-full max-w-[540px] flex-col items-center rounded-3xl bg-white px-5 pt-10`
+            `relative flex h-full max-h-[614px] w-full max-w-[540px] flex-col items-center overflow-hidden rounded-3xl bg-white px-5 pt-10`
           )}
         >
           <LogoDarkSvg className="mb-[26px] h-[40px] w-auto" />
@@ -52,10 +52,10 @@ const Lock: React.FC<{ children: ReactNode }> = ({ children }) => {
           <div className="absolute bottom-[-50px] h-[70%] w-full">
             <LogoLockSvg className="h-auto w-full" />
           </div>
-          <div className={classNames(`absolute bottom-0 max-w-[220px]`, `md:max-w-[274px]`)}>
+          <div className={classNames(`absolute bottom-0 h-full max-h-[50%]`)}>
             <div className="absolute bottom-0 h-[35%] w-full bg-[linear-gradient(180deg,rgba(255,255,255,0)_0%,#FFFFFF_82.29%)]"></div>
             <ImageFuture
-              className={classNames(`h-auto w-full`)}
+              className={classNames(`h-full w-auto `, `[@media(max-height:770px)]:hidden`)}
               src={LOCK_IMAGES.phone.url}
               height={LOCK_IMAGES.phone.height}
               width={LOCK_IMAGES.phone.width}
