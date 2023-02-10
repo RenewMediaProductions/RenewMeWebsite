@@ -47,8 +47,8 @@ const Wellness: React.FC<Props> = ({ className }) => {
     if (detailRef.current) {
       const imageGap = width > 1280 ? 50 : (width - detailRef.current.clientWidth) / 2;
 
-      // * We added this for 1280px and below because of the center alignment
-      const addedLength = width > 1280 ? 0 : (imageGap + detailRef.current.clientWidth) * 2;
+      // * We added this because of the center alignment
+      const addedLength = (imageGap + detailRef.current.clientWidth) * 2;
 
       const imageLeft = activeIdx
         ? activeIdx * detailRef.current.clientWidth + activeIdx * imageGap - addedLength
@@ -91,7 +91,7 @@ const Wellness: React.FC<Props> = ({ className }) => {
       </div>
       <div
         ref={detailRef}
-        className="container grid max-w-[1110px] gap-y-[10px] md:grid-cols-[repeat(2,1fr)]"
+        className="container grid w-full max-w-[1110px] gap-y-[10px] md:grid-cols-[repeat(2,1fr)]"
       >
         <div className="lg:leading-[72px ] font-['Gilroy'] text-4xl font-[600] text-black-1 transition-all duration-1000 ease-in-out md:text-5xl lg:text-[60px]">
           {WELLNESS[activeIdx].title} <br />
