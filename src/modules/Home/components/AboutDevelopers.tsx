@@ -26,7 +26,7 @@ const AboutDevelopers: React.FC<Props> = ({ className }) => {
       <div
         className={classNames(
           `flex flex-col gap-6 px-6`,
-          `xl:col-[2/3] xl:row-[1/2] xl:max-w-[700px]`
+          `xl:col-[2/3] xl:row-[1/2] xl:max-w-[calc(700px+(24px*2))] xl:gap-10`
         )}
       >
         <h1 className="font-['Gilroy'] text-3xl font-[600] text-black-1 md:text-4xl lg:text-5xl xl:text-6xl">
@@ -40,32 +40,32 @@ const AboutDevelopers: React.FC<Props> = ({ className }) => {
           />
           de with Love.
         </h1>
-        <div className="font-['Gilroy'] text-base font-[500] text-black-1 md:text-lg lg:text-xl">
-          <p className={classNames(`font-['Gilroy'] text-lg font-[700]`)}>
+        <div>
+          <p className={classNames(`font-['Gilroy'] text-2xl font-[700] text-[#3A3A3B]`)}>
             Where Psychology Meets Technology
           </p>
-          <p className={classNames(`font-['Gilroy'] text-lg font-[400]`)}>
+          <p className={classNames(`font-['Gilroy'] text-lg font-[400] text-[#7B7C7D]`)}>
             RenewMe combines psychology with the power of advanced technology engineered by former
             Apple engineers to empower employees and customers of global brands with a mission of
             helping them lead a more happy and balanced life.
           </p>
         </div>
-        <div className="font-['Gilroy'] text-base font-[500] text-black-1 md:text-lg lg:text-xl">
-          <p className={classNames(`font-['Gilroy'] text-lg font-[700]`)}>
-            Inspired by Mental Health Awareness
+        <div>
+          <p className={classNames(`font-['Gilroy'] text-2xl font-[700] text-[#3A3A3B]`)}>
+            Mission of Mental Health Awareness
           </p>
-          <p className={classNames(`font-['Gilroy'] text-lg font-[400]`)}>
+          <p className={classNames(`font-['Gilroy'] text-lg font-[400] text-[#7B7C7D]`)}>
             RenewMe brand is the brainchild of leading psychotherapist and national media
             personality Dr. Lisa Palmer, founder of The Renew Center of Florida Ranked #1 in the
             U.S. for the Treatment of PTSD, and the first female psychotherapist and minority woman
             in business to develop a self-help smartphone app of its kind.
           </p>
         </div>
-        <div className="font-['Gilroy'] text-base font-[500] text-black-1 md:text-lg lg:text-xl">
-          <p className={classNames(`font-['Gilroy'] text-lg font-[700]`)}>
+        <div>
+          <p className={classNames(`font-['Gilroy'] text-2xl font-[700] text-[#3A3A3B]`)}>
             Powered by Former Apple Engineers
           </p>
-          <p className={classNames(`font-['Gilroy'] text-lg font-[400]`)}>
+          <p className={classNames(`font-['Gilroy'] text-lg font-[400] text-[#7B7C7D]`)}>
             Our development team includes former Senior iOS Engineers at Apple Inc. (from 2011 to
             2015) where they were responsible for building and maintaining iOS, iPad, AppleTV and
             AppleWatch apps for the iTunes Store, App Store, Apple Trailers, Apple Remote, iTunes U,

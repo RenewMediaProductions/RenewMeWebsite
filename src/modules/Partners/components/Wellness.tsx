@@ -68,9 +68,8 @@ const Wellness: React.FC<Props> = ({ className }) => {
   return (
     <WellnessWrapper
       className={classNames(
-        `relative mt-12 flex h-screen max-h-[1024px] w-screen flex-col items-center justify-between gap-5 overflow-hidden py-12 px-5`,
-        `md:max-h-[896px]`,
-        `lg:max-h-[1024px]`,
+        `relative mt-[30px] flex h-full w-screen flex-col items-center justify-between gap-[60px] overflow-hidden px-5 pt-[30px] pb-[60px]`,
+        `lg:mt-[40px] lg:gap-[80px] lg:pt-[40px] lg:pb-[80px]`,
         className
       )}
       style={{ background: WELLNESS[activeIdx].bgColor }}
@@ -92,7 +91,7 @@ const Wellness: React.FC<Props> = ({ className }) => {
       </div>
       <div
         ref={detailRef}
-        className="container grid max-w-[1110px] gap-y-[10px] md:grid-cols-[repeat(2,1fr)] md:pt-12"
+        className="container grid max-w-[1110px] gap-y-[10px] md:grid-cols-[repeat(2,1fr)]"
       >
         <div className="lg:leading-[72px ] font-['Gilroy'] text-4xl font-[600] text-black-1 transition-all duration-1000 ease-in-out md:text-5xl lg:text-[60px]">
           {WELLNESS[activeIdx].title} <br />
@@ -102,7 +101,7 @@ const Wellness: React.FC<Props> = ({ className }) => {
           {WELLNESS[activeIdx].description}
         </div>
       </div>
-      <div className="relative grid pb-12 xl:!max-w-[1110px] 2xl:!max-w-[1110px]">
+      <div className="relative grid">
         <div
           className="wellness-img-placeholder relative left-0 flex h-full w-full transition-[left] duration-1000 ease-in-out"
           style={{ left: -imageOption.left }}

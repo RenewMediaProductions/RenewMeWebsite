@@ -1,6 +1,13 @@
 import { styled } from 'shared/theme';
 
 export const HeroWrapper = styled.div`
+  .bg-bot {
+    position: absolute;
+    bottom: 0;
+    height: 267px;
+    width: 100%;
+    background: linear-gradient(180deg, rgba(250, 250, 250, 0) 1.53%, #fafafa 51.67%);
+  }
   .hero-image {
     animation: heroImageAnim 800ms linear;
     animation-fill-mode: forwards;

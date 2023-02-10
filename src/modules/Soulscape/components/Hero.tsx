@@ -13,8 +13,7 @@ const Hero: React.FC = () => {
     <HeroWrapper className={classNames(`relative`)}>
       <ImageFuture
         className={classNames(
-          `absolute top-0 h-full w-full object-cover`,
-          `xl:object-[center_-200px]`
+          `absolute top-0 h-[1440px] w-[2560px] object-cover object-[center-416px]`
         )}
         src={SOULSCAPE_IMAGES['h-bg'].url}
         height={SOULSCAPE_IMAGES['h-bg'].height}
@@ -22,6 +21,7 @@ const Hero: React.FC = () => {
         alt={SOULSCAPE_IMAGES['h-bg'].alt}
         priority
       />
+      <div className={classNames(`bg-bot`)}></div>
       <div
         className={classNames(
           `container isolate mx-auto flex h-full flex-col items-center px-6 pt-36`,
@@ -51,7 +51,7 @@ const Hero: React.FC = () => {
           </h1>
           <p
             className={classNames(
-              `hero-text max-w-xs text-center font-['Gilroy'] text-base font-[400] text-white`,
+              `hero-text max-w-xs text-center font-['Gilroy'] text-base font-[500] text-white`,
               `md:max-w-md md:text-lg`,
               `lg:max-w-xl lg:text-xl`,
               `xl:max-w-3xl xl:text-2xl`
@@ -65,7 +65,7 @@ const Hero: React.FC = () => {
           <Link href={'#'}>
             <a
               className={classNames(
-                `flex h-10 w-[129px] items-center rounded-lg bg-orange-1 px-4 text-center font-['Gilroy'] text-sm font-[400] text-white hover:bg-orange-1-hover`
+                `flex h-10 w-[129px] items-center rounded-lg bg-orange-1 px-4 text-center font-['Gilroy'] text-sm font-[600] text-white hover:bg-orange-1-hover`
               )}
             >
               Brand Partners

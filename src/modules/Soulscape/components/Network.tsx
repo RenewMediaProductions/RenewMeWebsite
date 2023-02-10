@@ -10,29 +10,29 @@ import SKYSvg from 'shared/assets/svg/n-sky.svg';
 
 const Network: React.FC = () => {
   return (
-    <NetworkWrapper className="">
-      <div className="container flex flex-col h-full gap-10 px-6 pt-16 mx-auto">
-        <span className="font-['Gilroy'] font-[400] text-base text-center text-black-1 md:text-lg lg:text-xl">
+    <NetworkWrapper className="z-[2] bg-[#FAFAFA]">
+      <div className="container mx-auto flex h-full flex-col gap-10 px-6 pt-16">
+        <span className="text-center font-['Gilroy'] text-base font-[400] text-black-1 md:text-lg lg:text-xl">
           CEO of RenewMe, Dr. Lisa Palmer is seen on the following networks:
         </span>
-        <div className="grid items-center grid-cols-3 grid-rows-2 gap-10 justify-items-center md:grid-rows-1 md:grid-cols-6 ">
+        <div className="grid grid-cols-3 grid-rows-2 items-center justify-items-center gap-10 md:grid-cols-6 md:grid-rows-1 ">
           <div className="h-[27px] lg:h-[33px] xl:h-[40px]">
-            <CBSSvg className="w-auto h-full" />
+            <CBSSvg className="h-full w-auto" />
           </div>
           <div className="h-[18px] lg:h-[24px] xl:h-[30px]">
-            <NBCSvg className="w-auto h-full" />
+            <NBCSvg className="h-full w-auto" />
           </div>
           <div className="h-[20px] lg:h-[26px] xl:h-[32px]">
-            <FOXSvg className="w-auto h-full" />
+            <FOXSvg className="h-full w-auto" />
           </div>
           <div className="h-[21px] lg:h-[27px] xl:h-[34px]">
-            <CNNSvg className="w-auto h-full" />
+            <CNNSvg className="h-full w-auto" />
           </div>
           <div className="h-[31px] lg:h-[37px] xl:h-[41px]">
-            <SKYSvg className="w-auto h-full" />
+            <SKYSvg className="h-full w-auto" />
           </div>
           <div className="h-[29px] lg:h-[35px] xl:h-[42px]">
-            <ABCSvg className="w-auto h-full" />
+            <ABCSvg className="h-full w-auto" />
           </div>
         </div>
       </div>

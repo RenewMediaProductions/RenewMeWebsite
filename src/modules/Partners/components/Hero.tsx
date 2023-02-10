@@ -30,7 +30,7 @@ const Hero: React.FC = () => {
           <Link href={'#'}>
             <a
               className={classNames(
-                `flex h-10 items-center rounded-lg bg-orange-1 px-4 text-center font-['Gilroy'] text-sm font-[400] text-white hover:bg-orange-1-hover`
+                `flex h-10 items-center rounded-lg bg-orange-1 px-4 text-center font-['Gilroy'] text-sm font-[600] text-white hover:bg-orange-1-hover`
               )}
             >
               Discover Partnerships
