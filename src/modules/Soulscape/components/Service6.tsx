@@ -16,7 +16,7 @@ const Service6: React.FC<Props> = ({ className }) => {
   return (
     <Service6Wrapper
       className={classNames(
-        `relative mt-[-60px] h-[calc(470px+165px+40px+120px)]`, // {phone height} + {info height} + {margin between phone and info}
+        `relative mt-[-40px] h-[calc(470px+165px+40px+80px)]`, // {phone height} + {info height} + {margin between phone and info}
         `md:mt-[-60px] md:h-[calc(470px+120px)]`,
         `lg:mt-[-80px] lg:h-[calc(613px+160px)]`,
         `xl:h-[calc(666px+160px)]`,
@@ -42,7 +42,7 @@ const Service6: React.FC<Props> = ({ className }) => {
       >
         <ImageFuture
           className={classNames(
-            `relative top-[60px] block w-full max-w-[230px] transition-opacity duration-1000`,
+            `relative top-[40px] block w-full max-w-[230px] transition-opacity duration-1000`,
             `md:absolute md:left-[calc(50%-250px)] md:top-[50%] md:block md:translate-x-[-50%] md:translate-y-[-50%]`,
             `lg:left-[calc(50%-320px)] lg:max-w-[300px]`,
             `xl:left-[calc(50%-395px)] xl:max-w-[326px]`
@@ -66,7 +66,7 @@ const Service6: React.FC<Props> = ({ className }) => {
         />
         <div
           className={classNames(
-            `absolute bottom-[60px] flex w-[305px] flex-col items-center gap-2 transition-opacity duration-1000`,
+            `absolute bottom-[40px] flex w-[305px] flex-col items-center gap-2 transition-opacity duration-1000`,
             `md:bottom-[unset] md:top-[50%] md:left-[calc(50%+250px)] md:w-[230px] md:translate-x-[-50%] md:translate-y-[-50%] md:items-start`,
             `lg:left-[calc(50%+320px)] lg:w-[300px]`,
             `xl:left-[calc(50%+395px)] xl:w-[326px]`

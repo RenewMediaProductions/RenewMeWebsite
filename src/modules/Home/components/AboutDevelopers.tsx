@@ -16,7 +16,8 @@ const AboutDevelopers: React.FC<Props> = ({ className }) => {
   return (
     <AboutDevelopersWrapper
       className={classNames(
-        `grid h-[1600px] w-full grid-rows-[auto_1fr] bg-[#FAFAFA] pt-[80px]`,
+        `grid h-[1700px] w-full grid-rows-[auto_1fr] bg-[#FAFAFA] pt-[80px]`,
+        `min-[575px]:h-[1500px]`,
         `md:px-10`,
         `xl:h-[1024px] xl:grid-cols-[repeat(2,1fr)] xl:grid-rows-[1fr] xl:items-center`,
         className

@@ -17,8 +17,8 @@ const Service9: React.FC<Props> = ({ className }) => {
       className={classNames(
         `relative h-[calc(470px+137px+40px)]`, // {phone height} + {info height} + {margin between phone and info}
         `md:h-[calc(470px+120px)]`,
-        `lg:h-[calc(613px+128px)]`,
-        `xl:h-[calc(666px+128px)]`,
+        `lg:h-[calc(613px+120px)]`,
+        `xl:h-[calc(666px+120px)]`,
         className
       )}
     >

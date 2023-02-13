@@ -16,9 +16,9 @@ const Service1: React.FC<Props> = ({ className }) => {
     <Service1Wrapper
       className={classNames(
         `relative h-[calc(470px+157px+40px)]`, // {phone height} + {info height} + {margin between phone and info}
-        `md:h-[calc(470px+221px+40px)]`,
-        `lg:h-[calc(613px+272px+90px)]`,
-        `xl:h-[calc(666px+272px+90px)]`,
+        `md:h-[calc(470px+221px+60px)]`,
+        `lg:h-[calc(613px+244px+90px)]`,
+        `xl:h-[calc(666px+244px+90px)]`,
         className
       )}
     >

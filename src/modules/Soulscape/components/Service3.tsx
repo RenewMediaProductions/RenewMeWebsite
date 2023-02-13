@@ -16,7 +16,7 @@ const Service3: React.FC<Props> = ({ className }) => {
     <Service3Wrapper
       className={classNames(
         `relative h-[calc(470px+137px+40px)]`, // {phone height} + {info height} + {margin between phone and info}
-        `md:h-[calc(470px+173px+40px)]`,
+        `md:h-[calc(470px+173px+60px)]`,
         `lg:h-[calc(613px+216px+90px)]`,
         `xl:h-[calc(666px+216px+90px)]`,
         className

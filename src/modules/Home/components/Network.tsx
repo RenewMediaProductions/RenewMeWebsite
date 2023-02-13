@@ -10,7 +10,7 @@ import SKYSvg from 'shared/assets/svg/n-sky.svg';
 
 const Network: React.FC = () => {
   return (
-    <NetworkWrapper className="z-[2]">
+    <NetworkWrapper className="z-[2] bg-[#FAFAFA]">
       <div className="container mx-auto flex h-full flex-col gap-10 px-6 pt-16">
         <span className="text-center font-['Gilroy'] text-base font-[400] text-black-1 md:text-lg lg:text-xl">
           CEO of RenewMe, Dr. Lisa Palmer is seen on the following networks:

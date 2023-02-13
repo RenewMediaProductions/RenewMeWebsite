@@ -110,7 +110,7 @@ const Hero: React.FC = () => {
           className={classNames(
             `hero-image absolute flex h-auto justify-center gap-[20px]`,
             `lg:gap-[20px]`,
-            `xl:gap-[44px]`
+            `xl:gap-[70px]`
           )}
         >
           <ImageFuture
