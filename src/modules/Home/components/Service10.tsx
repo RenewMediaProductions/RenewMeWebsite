@@ -15,10 +15,10 @@ const Service10: React.FC<Props> = ({ className }) => {
   return (
     <Service10Wrapper
       className={classNames(
-        `relative h-[calc(470px+117px+40px)]`, // {phone height} + {info height} + {margin between phone and info}
-        `md:h-[calc(470px+149px+40px)]`,
-        `lg:h-[calc(613px+188px+90px)]`,
-        `xl:h-[calc(666px+188px+90px)]`,
+        `relative h-[calc(470px+145px+40px)]`, // {phone height} + {info height} + {margin between phone and info}
+        `md:h-[calc(470px+177px+40px)]`,
+        `lg:h-[calc(613px+220px+90px)]`,
+        `xl:h-[calc(666px+220px+90px)]`,
         className
       )}
     >
@@ -77,11 +77,11 @@ const Service10: React.FC<Props> = ({ className }) => {
           <p
             className={classNames(
               `text-center font-['Gilroy'] text-lg font-[600] text-black-1`,
-              `md:text-xl`,
+              `md:text-start md:text-xl`,
               `lg:pt-[8px] lg:text-2xl`
             )}
           >
-            Resources & Treatment
+            Resources & <br /> Treatment
           </p>
           <p
             className={classNames(
