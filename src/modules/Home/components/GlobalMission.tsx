@@ -5,7 +5,7 @@ import React from 'react';
 const GlobalMission: React.FC = () => {
   return (
     <GlobalMissionWrapper className="z-[2] flex justify-center">
-      <div className="mx-auto flex h-full max-w-[340px] flex-col gap-10 pt-16 md:max-w-[550px] lg:max-w-[860px] lg:pt-28 xl:max-w-[916px] xl:gap-12">
+      <div className="mx-auto flex h-full max-w-[340px] flex-col gap-10 pt-16 md:max-w-[550px] lg:max-w-[860px] lg:pt-[160px] xl:max-w-[916px] xl:gap-12">
         <h1 className="font-['Gilroy'] text-3xl font-[600] text-black-1 md:text-4xl lg:text-5xl xl:text-6xl">
           Our Global Mission
         </h1>

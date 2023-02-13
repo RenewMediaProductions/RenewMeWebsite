@@ -91,7 +91,7 @@ const AboutDevelopers: React.FC<Props> = ({ className }) => {
         <div
           className={classNames(
             `absolute top-[50%] left-[50%] w-full max-w-[202px] translate-y-[-50%] translate-x-[-50%]`,
-            `min-[575px]:max-w-[252px]`
+            `min-[575px]:max-w-[250px]`
           )}
         >
           <ImageFuture

@@ -2,7 +2,7 @@ import { styled } from 'shared/theme';
 
 export const Service4Wrapper = styled.div`
   .bg {
-    height: 110%;
+    height: 115%;
     width: 100vw;
     position: absolute;
     top: 50%;

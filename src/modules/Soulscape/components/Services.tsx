@@ -13,9 +13,9 @@ const Services: React.FC = () => {
   return (
     <ServicesWrapper
       className={classNames(
-        `mt-16 flex flex-col gap-16`,
-        `md:mt-[60px] md:gap-[60px]`,
-        `lg:mt-[80px] lg:gap-[80px]`
+        `mt-[80px] flex flex-col gap-[80px]`,
+        `md:mt-[120px] md:gap-[120px]`,
+        `lg:mt-[160px] lg:gap-[160px]`
       )}
     >
       <Service1 />

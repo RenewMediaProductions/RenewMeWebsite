@@ -17,8 +17,8 @@ const Service8: React.FC<Props> = ({ className }) => {
       className={classNames(
         `relative h-[calc(470px+137px+40px)]`, // {phone height} + {info height} + {margin between phone and info}
         `md:h-[calc(470px+120px)]`,
-        `lg:h-[calc(613px+120px)]`,
-        `xl:h-[calc(666px+120px)]`,
+        `lg:h-[calc(613px+128px)]`,
+        `xl:h-[calc(666px+128px)]`,
         className
       )}
     >
@@ -34,7 +34,7 @@ const Service8: React.FC<Props> = ({ className }) => {
             `top-[-10px] block w-full max-w-[230px] transition-opacity duration-1000`,
             `md:absolute md:left-[calc(50%-250px)] md:top-0 md:block md:translate-x-[-50%]`,
             `lg:left-[calc(50%-320px)] lg:max-w-[300px]`,
-            `xl:left-[calc(50%-370px)] xl:max-w-[326px]`
+            `xl:left-[calc(50%-395px)] xl:max-w-[326px]`
           )}
           src={HOME_IMAGES['s8-phone-1'].url}
           width={HOME_IMAGES['s8-phone-1'].width}
@@ -46,7 +46,7 @@ const Service8: React.FC<Props> = ({ className }) => {
             `hidden w-full max-w-[230px] transition-opacity duration-1000`,
             `md:absolute md:left-[calc(50%+250px)] md:bottom-0 md:block md:translate-x-[-50%]`,
             `lg:left-[calc(50%+320px)] lg:max-w-[300px]`,
-            `xl:left-[calc(50%+370px)] xl:max-w-[326px]`
+            `xl:left-[calc(50%+395px)] xl:max-w-[326px]`
           )}
           src={HOME_IMAGES['s8-phone-2'].url}
           width={HOME_IMAGES['s8-phone-2'].width}
@@ -66,7 +66,7 @@ const Service8: React.FC<Props> = ({ className }) => {
             className={classNames(
               `text-center font-['Gilroy'] text-lg font-[600] text-black-1`,
               `md:text-start`,
-              `lg:text-2xl`
+              `lg:pt-[8px] lg:text-2xl`
             )}
           >
             Fitness on the Go

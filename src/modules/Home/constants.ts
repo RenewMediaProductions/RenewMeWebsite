@@ -231,8 +231,8 @@ export const HOME_IMAGES = {
   },
   women: {
     url: `${imageDomainUrl}/Home/women.png?v=${assetVersion}`,
-    width: 285,
-    height: 282,
+    width: 253,
+    height: 250,
     alt: 'image',
   },
 };

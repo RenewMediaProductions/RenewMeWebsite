@@ -16,15 +16,16 @@ const Service6: React.FC<Props> = ({ className }) => {
   return (
     <Service6Wrapper
       className={classNames(
-        `relative mt-[-30px] h-[calc(470px+165px+40px+60px)] py-[30px]`, // {phone height} + {info height} + {margin between phone and info}
-        `md:mt-[-40px] md:py-[40px] lg:h-[calc(613px+80px)]`,
-        `xl:h-[calc(666px+80px)]`,
+        `relative mt-[-60px] h-[calc(470px+165px+40px+120px)]`, // {phone height} + {info height} + {margin between phone and info}
+        `md:mt-[-60px] md:h-[calc(470px+120px)]`,
+        `lg:mt-[-80px] lg:h-[calc(613px+160px)]`,
+        `xl:h-[calc(666px+160px)]`,
         className
       )}
     >
       <ImageFuture
         className={classNames(
-          `absolute top-0 h-[110%] w-full object-cover object-right`,
+          `absolute top-0 h-[100%] w-full object-cover object-right`,
           `md:object-center`,
           `lg:object-right`
         )}
@@ -41,10 +42,10 @@ const Service6: React.FC<Props> = ({ className }) => {
       >
         <ImageFuture
           className={classNames(
-            `top-[-10px] block w-full max-w-[230px] transition-opacity duration-1000`,
+            `relative top-[60px] block w-full max-w-[230px] transition-opacity duration-1000`,
             `md:absolute md:left-[calc(50%-250px)] md:top-[50%] md:block md:translate-x-[-50%] md:translate-y-[-50%]`,
             `lg:left-[calc(50%-320px)] lg:max-w-[300px]`,
-            `xl:left-[calc(50%-370px)] xl:max-w-[326px]`
+            `xl:left-[calc(50%-395px)] xl:max-w-[326px]`
           )}
           src={SOULSCAPE_IMAGES['s6-phone-1'].url}
           width={SOULSCAPE_IMAGES['s6-phone-1'].width}
@@ -65,10 +66,10 @@ const Service6: React.FC<Props> = ({ className }) => {
         />
         <div
           className={classNames(
-            `absolute bottom-0 flex w-[305px] flex-col items-center gap-2 transition-opacity duration-1000`,
+            `absolute bottom-[60px] flex w-[305px] flex-col items-center gap-2 transition-opacity duration-1000`,
             `md:bottom-[unset] md:top-[50%] md:left-[calc(50%+250px)] md:w-[230px] md:translate-x-[-50%] md:translate-y-[-50%] md:items-start`,
             `lg:left-[calc(50%+320px)] lg:w-[300px]`,
-            `xl:left-[calc(50%+370px)] xl:w-[326px]`
+            `xl:left-[calc(50%+395px)] xl:w-[326px]`
           )}
         >
           <InfoSvg className={classNames(`h-[33px] w-[auto]`, `lg:h-[48px]`)} />
@@ -76,7 +77,7 @@ const Service6: React.FC<Props> = ({ className }) => {
             className={classNames(
               `text-center font-['Gilroy'] text-lg font-[600] text-black-1`,
               `md:text-start md:text-xl`,
-              `lg:text-2xl`
+              `lg:pt-[8px] lg:text-2xl`
             )}
           >
             Spa Finder

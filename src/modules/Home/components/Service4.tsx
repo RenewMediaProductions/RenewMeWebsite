@@ -36,8 +36,8 @@ const Service4: React.FC<Props> = ({ className }) => {
       className={classNames(
         `relative h-[calc(470px+167px+40px)]`, // {phone height} + {info height} + {margin between phone and info}
         `md:h-[calc(470px+245px+40px)]`,
-        `lg:h-[calc(613px+264px+60px)]`,
-        `xl:h-[calc(666px+264px+60px)]`,
+        `lg:h-[calc(613px+272px+90px)]`,
+        `xl:h-[calc(666px+272px+90px)]`,
         className
       )}
     >
@@ -67,7 +67,7 @@ const Service4: React.FC<Props> = ({ className }) => {
             `hidden w-full max-w-[230px] transition-opacity duration-1000`,
             `md:absolute md:bottom-[calc(40px*2)] md:left-[calc(50%-250px)] md:block md:translate-x-[-50%]`,
             `lg:bottom-[calc(30px*2)] lg:left-[calc(50%-320px)] lg:max-w-[300px]`,
-            `xl:bottom-[calc(20px*2)] xl:left-[calc(50%-370px)] xl:max-w-[326px]`
+            `xl:bottom-[calc(20px*2)] xl:left-[calc(50%-395px)] xl:max-w-[326px]`
           )}
           src={HOME_IMAGES['s4-phone-1'].url}
           width={HOME_IMAGES['s4-phone-1'].width}
@@ -79,7 +79,7 @@ const Service4: React.FC<Props> = ({ className }) => {
             `hidden w-full max-w-[230px] transition-opacity duration-1000`,
             `md:absolute md:bottom-[calc(40px*2)] md:left-[calc(50%+250px)] md:block md:translate-x-[-50%]`,
             `lg:bottom-[calc(30px*2)] lg:left-[calc(50%+320px)] lg:max-w-[300px]`,
-            `xl:bottom-[calc(20px*2)] xl:left-[calc(50%+370px)] xl:max-w-[326px]`
+            `xl:bottom-[calc(20px*2)] xl:left-[calc(50%+395px)] xl:max-w-[326px]`
           )}
           src={HOME_IMAGES['s4-phone-3'].url}
           width={HOME_IMAGES['s4-phone-3'].width}
@@ -99,7 +99,7 @@ const Service4: React.FC<Props> = ({ className }) => {
             className={classNames(
               `text-center font-['Gilroy'] text-lg font-[600] text-white`,
               `md:text-xl`,
-              `lg:text-2xl`
+              `lg:pt-[8px] lg:text-2xl`
             )}
           >
             Sleep Escape
