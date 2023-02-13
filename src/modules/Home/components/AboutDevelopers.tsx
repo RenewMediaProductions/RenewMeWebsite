@@ -6,6 +6,7 @@ import classNames from 'classnames';
 import ImageFuture from 'next/future/image';
 import React from 'react';
 import AppleSvg from 'shared/assets/svg/apple.svg';
+import HeartSvg from 'shared/assets/svg/heart.svg';
 import RenewMeSvg from 'shared/assets/svg/renew-me.svg';
 
 interface Props {
@@ -34,12 +35,20 @@ const AboutDevelopers: React.FC<Props> = ({ className }) => {
           M
           <AppleSvg
             className={classNames(
-              `mb-[6px] inline-block h-auto w-full max-w-[21px] [&>path]:fill-[#3A3A3B]`,
+              `mb-[6px] inline-block h-auto w-full max-w-[19px] [&>path]:fill-[#3A3A3B]`,
               `lg:mb-[9px] lg:max-w-[29px]`,
               `xl:mb-[10px] xl:max-w-[37px]`
             )}
           />
-          de with Love.
+          de with L
+          <HeartSvg
+            className={classNames(
+              `inline-block h-auto w-full max-w-[19px] [&>path]:fill-[#3A3A3B]`,
+              `lg:max-w-[29px]`,
+              `xl:max-w-[37px]`
+            )}
+          />
+          ve.
         </h1>
         <div>
           <p className={classNames(`font-['Gilroy'] text-2xl font-[700] text-[#3A3A3B]`)}>

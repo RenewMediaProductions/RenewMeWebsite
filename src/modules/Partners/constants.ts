@@ -69,7 +69,7 @@ export const WELLNESS = [
     subtitle: 'Lifestyle',
     description: `Everywhere you go, your mindset goes with you! We love collaborating with lifestyle brands to enhance added life balance benefits and rewards for customers. Nothing better than the added pleasure of mindfulness, motivation, and relaxation while you enjoy your  favorite popular brand products.`,
     image: PARTNERS_IMAGES['wellness-1'],
-    bgColor: '#D9C6D9',
+    bgColor: 'rgba(179, 141, 178, 0.5)',
   },
   {
     title: 'Wellness for',

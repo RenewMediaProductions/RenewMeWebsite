@@ -38,7 +38,7 @@ const Hero: React.FC = () => {
           </Link>
         </div>
       </div>
-      <div className="mt-20 grid justify-items-center overflow-x-auto px-[15px]">
+      <div className="mt-20 grid justify-items-center overflow-x-auto px-[15px] md:mt-[120px]">
         <div className="grid grid-flow-col gap-x-[15px]">
           <div className="hero-image relative h-full w-[260px] max-w-[210px]">
             <Image

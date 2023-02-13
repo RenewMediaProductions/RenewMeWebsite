@@ -68,8 +68,8 @@ const Wellness: React.FC<Props> = ({ className }) => {
   return (
     <WellnessWrapper
       className={classNames(
-        `relative mt-[30px] flex h-full w-screen flex-col items-center justify-between gap-[60px] overflow-hidden px-5 pt-[30px] pb-[60px]`,
-        `lg:mt-[40px] lg:gap-[80px] lg:pt-[40px] lg:pb-[80px]`,
+        `relative mt-[80px] flex h-full w-screen flex-col items-center justify-between gap-[60px] overflow-hidden px-5 pt-[80px] pb-[70px]`,
+        `lg:mt-[80px] lg:gap-[80px] lg:pt-[58px] lg:pb-[80px]`,
         className
       )}
       style={{ background: WELLNESS[activeIdx].bgColor }}
@@ -91,13 +91,13 @@ const Wellness: React.FC<Props> = ({ className }) => {
       </div>
       <div
         ref={detailRef}
-        className="container grid w-full max-w-[1110px] gap-y-[10px] md:grid-cols-[repeat(2,1fr)]"
+        className="container grid w-full max-w-[1110px] gap-y-[30px] md:grid-cols-[repeat(2,1fr)]"
       >
-        <div className="lg:leading-[72px ] font-['Gilroy'] text-4xl font-[600] text-black-1 transition-all duration-1000 ease-in-out md:text-5xl lg:text-[60px]">
+        <div className="font-['Gilroy'] text-4xl font-[600] text-black-1 transition-all duration-1000 ease-in-out md:text-5xl lg:text-[60px] lg:leading-[72px]">
           {WELLNESS[activeIdx].title} <br />
           {WELLNESS[activeIdx].subtitle}
         </div>
-        <div className="font-['Gilroy'] text-base font-[500] text-black-1 transition-all duration-1000 ease-in-out md:text-lg lg:text-[20px] lg:leading-[32px] ">
+        <div className="font-['Gilroy'] text-base font-[500] text-black-1 transition-all duration-1000 ease-in-out md:max-w-[538px] md:text-lg lg:text-[20px] lg:leading-[32px] ">
           {WELLNESS[activeIdx].description}
         </div>
       </div>
