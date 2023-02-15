@@ -29,13 +29,15 @@ const Lock: React.FC<{ children: ReactNode }> = ({ children }) => {
       >
         <div
           className={classNames(
-            `relative flex h-full max-h-[614px] w-full max-w-[540px] flex-col items-center overflow-hidden rounded-3xl bg-white px-5 pt-10`
+            `relative flex h-full max-h-[614px] min-h-[436px] w-full min-w-[335px] max-w-[540px] flex-col items-center overflow-hidden rounded-3xl bg-white px-5 pt-10`,
+            `[@media(max-height:784px)]:min-h-[484px]`,
+            `md:min-w-[unset]`
           )}
         >
           <LogoDarkSvg className="mb-[26px] h-[40px] w-auto" />
           <p
             className={classNames(
-              `mb-[6.5px] max-w-[336px] text-center font-['Gilroy'] text-[24px] font-[600] leading-[130%] text-[#3A3A3B]`,
+              `mb-[6.5px] max-w-[336px] text-center font-['Gilroy'] text-[20px] font-[600] leading-[130%] text-[#3A3A3B]`,
               `md:max-w-[unset] md:text-[28px]`
             )}
           >
@@ -43,7 +45,7 @@ const Lock: React.FC<{ children: ReactNode }> = ({ children }) => {
           </p>
           <p
             className={classNames(
-              `max-w-[336px] px-7 text-center font-['Gilroy'] text-sm font-[500] text-[#828282]`,
+              `max-w-[336px] px-3 text-center font-['Gilroy'] text-[14px] font-[500] text-[#828282]`,
               `md:max-w-[unset] md:px-14 md:text-base`
             )}
           >
@@ -55,7 +57,7 @@ const Lock: React.FC<{ children: ReactNode }> = ({ children }) => {
           <div className={classNames(`absolute bottom-0 h-full max-h-[50%]`)}>
             <div className="absolute bottom-0 h-[35%] w-full bg-[linear-gradient(180deg,rgba(255,255,255,0)_0%,#FFFFFF_82.29%)]"></div>
             <ImageFuture
-              className={classNames(`h-full w-auto `, `[@media(max-height:770px)]:hidden`)}
+              className={classNames(`h-full w-auto`)}
               src={LOCK_IMAGES.phone.url}
               height={LOCK_IMAGES.phone.height}
               width={LOCK_IMAGES.phone.width}
@@ -66,7 +68,8 @@ const Lock: React.FC<{ children: ReactNode }> = ({ children }) => {
         </div>
         <div
           className={classNames(
-            `flex h-full max-h-[248px] w-full max-w-[540px] flex-col rounded-3xl bg-white px-[32px] py-[40px]`
+            `flex h-full max-h-[248px] w-full min-w-[335px] max-w-[540px] flex-col rounded-3xl bg-white px-[32px] py-[40px]`,
+            `md:min-w-[unset]`
           )}
         >
           <label
