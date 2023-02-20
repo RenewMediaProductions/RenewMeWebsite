@@ -5,8 +5,8 @@ export const AboutDevelopersWrapper = styled.div`
     position: absolute;
     width: 600px;
     height: 600px;
-    left: 50%;
-    top: 50%;
+    left: 45%;
+    top: 58%;
     transform: translate(-50%, -50%);
     background: radial-gradient(
       50% 50% at 50% 50%,
@@ -24,6 +24,10 @@ export const AboutDevelopersWrapper = styled.div`
   ${({ theme }) => theme.screens.mediumMedia} {
   }
   ${({ theme }) => theme.screens.largeMedia} {
+    .bg {
+      height: 900px;
+      width: 900px;
+    }
   }
   ${({ theme }) => theme.screens.xLargeMedia} {
   }

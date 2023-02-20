@@ -54,11 +54,10 @@ const Hero: React.FC = () => {
               `hero-text max-w-xs text-center font-['Gilroy'] text-base font-[500] text-white`,
               `md:max-w-md md:text-lg`,
               `lg:max-w-xl lg:text-xl`,
-              `xl:max-w-3xl xl:text-2xl`
+              `xl:max-w-[550px] xl:text-2xl`
             )}
           >
-            A new and refreshing wellness brand inspiring more confidence, balance, and peace of
-            mind.
+            A new and refreshing wellness brand inspiring you to be all you are meant to be.
           </p>
         </div>
         <div className={classNames(`hero-buttons flex gap-4`)}>

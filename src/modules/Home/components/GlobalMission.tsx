@@ -10,26 +10,22 @@ const GlobalMission: React.FC = () => {
           Our Global Mission
         </h1>
         <p className="font-['Gilroy'] text-base font-[400] text-black-1 md:text-lg lg:text-xl ">
-          At RenewMe we believe that together we can make the world more balanced.
+          RenewMe is a purpose-driven brand with a mission of mental health awareness, harmonizing
+          the best in psychology and technology with something for everyone — from the employee to
+          the traveler — to lead a more balanced life.
         </p>
         <p className="font-['Gilroy'] text-base font-[400] text-black-1 md:text-lg lg:text-xl">
-          This all-inclusive iOS smartphone superapp powered by former senior{' '}
-          <strong>Apple engineers</strong> along with{' '}
-          <strong>
-            founder and national media personality, Dr. Lisa Palmer of{' '}
-            <a href="https://www.therenewcenter.com" rel="noreferrer" target="_blank">
-              The Renew Center
-            </a>{' '}
-            of Florida, ranked #1 for Treatment of PTSD in US 2017
-          </strong>
-          , promotes mental health awareness and encourages you to unleash strength and wisdom from
-          within.
+          Made by tech-savvy millennials with future generations in mind, RenewMe transports you
+          into a mesmerizing world of renewal building upon your strengths from within. This
+          solution-oriented iOS “superapp” is more than mindfulness, it is focused on enhancing
+          self-growth. Combining chic and trendy features with a world class user-friendly
+          interface, it is unlike anything you have ever seen.
         </p>
         <p className="font-['Gilroy'] text-base font-[400] text-black-1 md:text-lg lg:text-xl">
-          The ultimate escape for body-mind-soul, this oasis of wellness helps you regain and
-          maintain balance on-the-go. Combining the power of psychology with technology we inspire
-          customers and employees of select organizations corporate, travel, and hospitality brands
-          to achieve a greater sense of peace, productivity, and happiness.
+          Powered by former senior Apple engineers, every aspect of this innovative concept is
+          carefully constructed and inspired by the breadth of real-life experiences of one of
+          America’s leading psychotherapists who now joins the ranks of few women in the exclusive
+          space of iOS technology.
         </p>
       </div>
     </GlobalMissionWrapper>

@@ -16,7 +16,7 @@ const Service7: React.FC<Props> = ({ className }) => {
     <Service7Wrapper
       className={classNames(
         `relative h-[calc(470px+137px+40px)]`, // {phone height} + {info height} + {margin between phone and info}
-        `md:h-[calc(470px+173px+60px)]`,
+        `md:h-[calc(470px+197px+60px)]`,
         `lg:h-[calc(613px+216px+90px)]`,
         `xl:h-[calc(666px+216px+90px)]`,
         className
@@ -81,7 +81,7 @@ const Service7: React.FC<Props> = ({ className }) => {
               `lg:pt-[8px] lg:text-2xl`
             )}
           >
-            Talk to RenewMe
+            Talk to iRenewMe
           </p>
           <p
             className={classNames(
@@ -90,8 +90,8 @@ const Service7: React.FC<Props> = ({ className }) => {
               `lg:text-lg`
             )}
           >
-            Ask questions to RenewMe AI about how to navigate life’s common programs and lead a more
-            balanced existence.
+            Ask questions to RenewMe artificial intelligence about how to navigate life’s common
+            programs and lead a more balanced existence.
           </p>
         </div>
       </div>

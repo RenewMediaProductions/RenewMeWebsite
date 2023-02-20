@@ -36,7 +36,7 @@ const Hero: React.FC = () => {
               `xl:max-w-4xl`
             )}
           >
-            RENEWME REJUVENATE
+            RENEWME SPA
           </p>
           <h1
             className={classNames(

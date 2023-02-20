@@ -93,7 +93,7 @@ const Service3: React.FC<Props> = ({ className }) => {
               `lg:pt-[8px] lg:text-2xl`
             )}
           >
-            Healthy Living on the Go
+            Healthy Living
           </p>
           <p
             className={classNames(

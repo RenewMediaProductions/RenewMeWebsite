@@ -57,8 +57,8 @@ const Hero: React.FC = () => {
               `xl:max-w-3xl xl:text-2xl`
             )}
           >
-            An immersive experience for the mindful traveler to stay relaxed, organized, and
-            balanced on their wanderlust journeys.
+            A soothing experience for the mindful traveler to stay relaxed and balanced on their
+            wanderlust journeys.
           </p>
         </div>
         <div className={classNames(`hero-buttons grid grid-cols-[1fr_1fr] gap-4`)}>

@@ -51,7 +51,7 @@ const AboutDevelopers: React.FC<Props> = ({ className }) => {
           ve.
         </h1>
         <div>
-          <p className={classNames(`font-['Gilroy'] text-2xl font-[700] text-[#3A3A3B]`)}>
+          <p className={classNames(`mb-2 font-['Gilroy'] text-2xl font-[700] text-[#3A3A3B]`)}>
             Where Psychology Meets Technology
           </p>
           <p className={classNames(`font-['Gilroy'] text-lg font-[400] text-[#7B7C7D]`)}>
@@ -61,7 +61,7 @@ const AboutDevelopers: React.FC<Props> = ({ className }) => {
           </p>
         </div>
         <div>
-          <p className={classNames(`font-['Gilroy'] text-2xl font-[700] text-[#3A3A3B]`)}>
+          <p className={classNames(`mb-2 font-['Gilroy'] text-2xl font-[700]  text-[#3A3A3B]`)}>
             Mission of Mental Health Awareness
           </p>
           <p className={classNames(`font-['Gilroy'] text-lg font-[400] text-[#7B7C7D]`)}>
@@ -72,7 +72,7 @@ const AboutDevelopers: React.FC<Props> = ({ className }) => {
           </p>
         </div>
         <div>
-          <p className={classNames(`font-['Gilroy'] text-2xl font-[700] text-[#3A3A3B]`)}>
+          <p className={classNames(`mb-2 font-['Gilroy'] text-2xl font-[700] text-[#3A3A3B]`)}>
             Powered by Former Apple Engineers
           </p>
           <p className={classNames(`font-['Gilroy'] text-lg font-[400] text-[#7B7C7D]`)}>
@@ -92,38 +92,8 @@ const AboutDevelopers: React.FC<Props> = ({ className }) => {
         <div className="bg"></div>
         <div
           className={classNames(
-            `absolute top-[50%] left-[50%] w-full max-w-[380px] translate-y-[-50%] translate-x-[-50%]`,
-            `min-[575px]:max-w-[536px]`
-          )}
-        >
-          <RenewMeSvg className={classNames(`h-auto w-full`)} />
-        </div>
-        <div
-          className={classNames(
-            `absolute top-[50%] left-[50%] w-full max-w-[202px] translate-y-[-50%] translate-x-[-50%]`,
-            `min-[575px]:max-w-[250px]`
-          )}
-        >
-          <ImageFuture
-            className={classNames(`h-auto w-full`)}
-            src={HOME_IMAGES.women.url}
-            height={HOME_IMAGES.women.height}
-            width={HOME_IMAGES.women.width}
-            alt={HOME_IMAGES.women.alt}
-          />
-          <div className="absolute bottom-[-30px] flex w-full flex-col items-center justify-center">
-            <span className="font-['Gilroy'] text-base font-[700] text-[#3A3A3B]">
-              Dr. Lisa Palmer
-            </span>
-            <span className="font-['Gilroy'] text-base font-[400] text-[#7B7C7D]">
-              CEO fo RenewMe Brand
-            </span>
-          </div>
-        </div>
-        <div
-          className={classNames(
             `absolute top-[calc(50%-220px)] left-[calc(50%-80px)] w-full max-w-[120px] translate-x-[-50%] translate-y-[-50%]`,
-            `min-[575px]:left-[calc(50%-100px)] min-[575px]:top-[calc(50%-300px)] min-[575px]:max-w-[159px]`
+            `min-[575px]:left-[calc(50%-100px)] min-[575px]:top-[calc(50%-250px)] min-[575px]:max-w-[159px]`
           )}
         >
           <ImageFuture
@@ -137,7 +107,8 @@ const AboutDevelopers: React.FC<Props> = ({ className }) => {
         <div
           className={classNames(
             `absolute top-[calc(50%-200px)] left-[calc(50%+80px)] w-full max-w-[90px] translate-x-[-50%] translate-y-[-50%]`,
-            `min-[575px]:left-[calc(50%+190px)] min-[575px]:top-[calc(50%-200px)] min-[575px]:max-w-[120px]`
+            `min-[575px]:left-[calc(50%+190px)] min-[575px]:top-[calc(50%-200px)] min-[575px]:max-w-[120px]`,
+            `lg:top-[calc(50%-170px)]`
           )}
         >
           <ImageFuture
@@ -166,7 +137,7 @@ const AboutDevelopers: React.FC<Props> = ({ className }) => {
           className={classNames(
             `absolute top-[calc(50%+250px)] left-[50%] w-full max-w-[90px] translate-x-[-50%] translate-y-[-50%]`,
             `min-[575px]:top-[calc(50%+300px)] min-[575px]:max-w-[120px]`,
-            `xl:top-[calc(50%+350px)] `
+            `lg:top-[calc(50%+300px)] `
           )}
         >
           <ImageFuture
@@ -180,7 +151,8 @@ const AboutDevelopers: React.FC<Props> = ({ className }) => {
         <div
           className={classNames(
             `absolute top-[calc(50%+200px)] left-[calc(50%+130px)] w-full max-w-[130px] translate-x-[-50%] translate-y-[-50%]`,
-            `min-[575px]:left-[calc(50%+190px)] min-[575px]:top-[calc(50%+220px)] min-[575px]:max-w-[160px]`
+            `min-[575px]:left-[calc(50%+190px)] min-[575px]:top-[calc(50%+220px)] min-[575px]:max-w-[160px]`,
+            `lg:left-[calc(50%+200px)]`
           )}
         >
           <ImageFuture
@@ -189,6 +161,29 @@ const AboutDevelopers: React.FC<Props> = ({ className }) => {
             height={HOME_IMAGES['man-5'].height}
             width={HOME_IMAGES['man-5'].width}
             alt={HOME_IMAGES['man-5'].alt}
+          />
+        </div>
+        <div
+          className={classNames(
+            `absolute top-[50%] left-[50%] w-full max-w-[380px] translate-y-[-50%] translate-x-[-50%]`,
+            `min-[575px]:max-w-[536px]`
+          )}
+        >
+          <RenewMeSvg className={classNames(`h-auto w-full`)} />
+        </div>
+        <div
+          className={classNames(
+            `absolute top-[50%] left-[50%] w-full max-w-[202px] translate-y-[-50%] translate-x-[-50%]`,
+            `min-[575px]:max-w-[250px]`,
+            `lg:max-w-[252px]`
+          )}
+        >
+          <ImageFuture
+            className={classNames(`h-auto w-full`)}
+            src={HOME_IMAGES.women.url}
+            height={HOME_IMAGES.women.height}
+            width={HOME_IMAGES.women.width}
+            alt={HOME_IMAGES.women.alt}
           />
         </div>
       </div>
