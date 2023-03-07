@@ -3,7 +3,7 @@ import { Service5Wrapper } from './Service5.styled';
 import { HOME_IMAGES } from '../constants';
 
 import classNames from 'classnames';
-import ImageFuture from 'next/future/image';
+import Image from 'next/image';
 import React from 'react';
 import InfoSvg from 'shared/assets/svg/Home/s5-info.svg';
 
@@ -29,31 +29,31 @@ const Service5: React.FC<Props> = ({ className }) => {
           `md:justify-start`
         )}
       >
-        <ImageFuture
+        <Image
           className={classNames(
             `top-[-10px] block w-full max-w-[230px] transition-opacity duration-1000`,
             `md:absolute md:top-0`,
             `lg:max-w-[300px]`,
             `xl:max-w-[326px]`
           )}
-          src={HOME_IMAGES['s5-phone-2'].url}
-          width={HOME_IMAGES['s5-phone-2'].width}
-          height={HOME_IMAGES['s5-phone-2'].height}
-          alt={HOME_IMAGES['s5-phone-2'].alt}
+          src={HOME_IMAGES['s5-phone-1'].url}
+          width={HOME_IMAGES['s5-phone-1'].width}
+          height={HOME_IMAGES['s5-phone-1'].height}
+          alt={HOME_IMAGES['s5-phone-1'].alt}
         />
-        <ImageFuture
+        <Image
           className={classNames(
             `hidden w-full max-w-[230px] transition-opacity duration-1000`,
             `md:absolute md:bottom-[calc(40px*2)] md:left-[calc(50%-250px)] md:block md:translate-x-[-50%]`,
             `lg:bottom-[calc(30px*2)] lg:left-[calc(50%-320px)] lg:max-w-[300px]`,
             `xl:bottom-[calc(20px*2)] xl:left-[calc(50%-395px)] xl:max-w-[326px]`
           )}
-          src={HOME_IMAGES['s5-phone-1'].url}
-          width={HOME_IMAGES['s5-phone-1'].width}
-          height={HOME_IMAGES['s5-phone-1'].height}
-          alt={HOME_IMAGES['s5-phone-1'].alt}
+          src={HOME_IMAGES['s5-phone-2'].url}
+          width={HOME_IMAGES['s5-phone-2'].width}
+          height={HOME_IMAGES['s5-phone-2'].height}
+          alt={HOME_IMAGES['s5-phone-2'].alt}
         />
-        <ImageFuture
+        <Image
           className={classNames(
             `hidden w-full max-w-[230px] transition-opacity duration-1000`,
             `md:absolute md:bottom-[calc(40px*2)] md:left-[calc(50%+250px)] md:block md:translate-x-[-50%]`,

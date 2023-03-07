@@ -3,7 +3,7 @@ import { Service6Wrapper } from './Service6.styled';
 import { SOULSCAPE_IMAGES } from '../constants';
 
 import classNames from 'classnames';
-import ImageFuture from 'next/future/image';
+import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import InfoSvg from 'shared/assets/svg/Soulscape/s6-info.svg';
@@ -23,7 +23,7 @@ const Service6: React.FC<Props> = ({ className }) => {
         className
       )}
     >
-      <ImageFuture
+      <Image
         className={classNames(
           `absolute top-0 h-[100%] w-full object-cover object-right`,
           `md:object-center`,
@@ -40,7 +40,7 @@ const Service6: React.FC<Props> = ({ className }) => {
           `md:justify-start`
         )}
       >
-        <ImageFuture
+        <Image
           className={classNames(
             `relative top-[40px] block w-full max-w-[230px] transition-opacity duration-1000`,
             `md:absolute md:left-[calc(50%-250px)] md:top-[50%] md:block md:translate-x-[-50%] md:translate-y-[-50%]`,
@@ -52,7 +52,7 @@ const Service6: React.FC<Props> = ({ className }) => {
           height={SOULSCAPE_IMAGES['s6-phone-1'].height}
           alt={SOULSCAPE_IMAGES['s6-phone-1'].alt}
         />
-        <ImageFuture
+        <Image
           className={classNames(
             `hidden w-full max-w-[230px] transition-opacity duration-1000`,
             `md:absolute md:left-[50%] md:top-[50%] md:block md:translate-x-[-50%] md:translate-y-[-50%]`,
@@ -92,7 +92,7 @@ const Service6: React.FC<Props> = ({ className }) => {
             Pep Talks, affirmations, and spotlight influencers inspire you to lead a more productive
             and balanced life.
           </p>
-          <Link href={'#'}>
+          <Link legacyBehavior href={'#'}>
             <a
               className={classNames(
                 `font-['Gilroy'] text-sm font-[600] text-blue-3 underline`,

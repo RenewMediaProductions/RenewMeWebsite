@@ -3,7 +3,7 @@ import { Service5Wrapper } from './Service5.styled';
 import { SOULSCAPE_IMAGES } from '../constants';
 
 import classNames from 'classnames';
-import ImageFuture from 'next/future/image';
+import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import InfoSvg from 'shared/assets/svg/Soulscape/s5-info.svg';
@@ -30,7 +30,7 @@ const Service5: React.FC<Props> = ({ className }) => {
           `md:justify-start`
         )}
       >
-        <ImageFuture
+        <Image
           className={classNames(
             `top-[-10px] block w-full max-w-[230px] transition-opacity duration-1000`,
             `md:absolute md:top-0`,
@@ -42,7 +42,7 @@ const Service5: React.FC<Props> = ({ className }) => {
           height={SOULSCAPE_IMAGES['s5-phone-3'].height}
           alt={SOULSCAPE_IMAGES['s5-phone-3'].alt}
         />
-        <ImageFuture
+        <Image
           className={classNames(
             `hidden w-full max-w-[230px] transition-opacity duration-1000`,
             `md:absolute md:bottom-[calc(80px*2)] md:left-[calc(50%-250px)] md:block md:translate-x-[-50%]`,
@@ -54,7 +54,7 @@ const Service5: React.FC<Props> = ({ className }) => {
           height={SOULSCAPE_IMAGES['s5-phone-1'].height}
           alt={SOULSCAPE_IMAGES['s5-phone-1'].alt}
         />
-        <ImageFuture
+        <Image
           className={classNames(
             `hidden w-full max-w-[230px] transition-opacity duration-1000`,
             `md:absolute md:bottom-[calc(80px*2)] md:left-[calc(50%+250px)] md:block md:translate-x-[-50%]`,
@@ -94,7 +94,7 @@ const Service5: React.FC<Props> = ({ className }) => {
             Soulscape makes it easy to plan your next vacation. Book with airlines, hotels, and
             other sites, and discover the best deals to your favorite destinations.
           </p>
-          <Link href={'#'}>
+          <Link legacyBehavior href={'#'}>
             <a
               className={classNames(
                 `font-['Gilroy'] text-sm font-[600] text-blue-3 underline`,

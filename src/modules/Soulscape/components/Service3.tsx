@@ -3,7 +3,7 @@ import { Service3Wrapper } from './Service3.styled';
 import { SOULSCAPE_IMAGES } from '../constants';
 
 import classNames from 'classnames';
-import ImageFuture from 'next/future/image';
+import Image from 'next/image';
 import React from 'react';
 import InfoSvg from 'shared/assets/svg/Soulscape/s3-info.svg';
 
@@ -29,7 +29,7 @@ const Service3: React.FC<Props> = ({ className }) => {
           `md:justify-start`
         )}
       >
-        <ImageFuture
+        <Image
           className={classNames(
             `top-[-10px] block w-full max-w-[230px] transition-opacity duration-1000`,
             `md:absolute md:top-[calc(80px*2)] md:left-[calc(50%-250px/2)] md:block md:translate-x-[-50%]`,
@@ -41,7 +41,7 @@ const Service3: React.FC<Props> = ({ className }) => {
           height={SOULSCAPE_IMAGES['s3-phone-2'].height}
           alt={SOULSCAPE_IMAGES['s3-phone-2'].alt}
         />
-        <ImageFuture
+        <Image
           className={classNames(
             `hidden w-full max-w-[230px] transition-opacity duration-1000`,
             `md:absolute md:bottom-[0] md:left-[calc(50%-250px*-1.5)] md:block md:translate-x-[-50%]`,
@@ -53,7 +53,7 @@ const Service3: React.FC<Props> = ({ className }) => {
           height={SOULSCAPE_IMAGES['s3-phone-4'].height}
           alt={SOULSCAPE_IMAGES['s3-phone-4'].alt}
         />
-        <ImageFuture
+        <Image
           className={classNames(
             `hidden w-full max-w-[230px] transition-opacity duration-1000`,
             `md:absolute md:top-[0] md:left-[calc(50%+250px/2)] md:block md:translate-x-[-50%]`,
@@ -65,7 +65,7 @@ const Service3: React.FC<Props> = ({ className }) => {
           height={SOULSCAPE_IMAGES['s3-phone-3'].height}
           alt={SOULSCAPE_IMAGES['s3-phone-3'].alt}
         />
-        <ImageFuture
+        <Image
           className={classNames(
             `hidden w-full max-w-[230px] transition-opacity duration-1000`,
             `md:absolute md:bottom-[0] md:left-[calc(50%+250px*-1.5)] md:block md:translate-x-[-50%]`,

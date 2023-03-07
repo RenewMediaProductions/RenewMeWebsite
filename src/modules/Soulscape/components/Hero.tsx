@@ -3,7 +3,7 @@ import { HeroWrapper } from './Hero.styled';
 import { SOULSCAPE_IMAGES } from '../constants';
 
 import classNames from 'classnames';
-import ImageFuture from 'next/future/image';
+import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import AppleSvg from 'shared/assets/svg/apple.svg';
@@ -11,10 +11,8 @@ import AppleSvg from 'shared/assets/svg/apple.svg';
 const Hero: React.FC = () => {
   return (
     <HeroWrapper className={classNames(`relative`)}>
-      <ImageFuture
-        className={classNames(
-          `absolute top-0 h-[1440px] w-[2560px] object-cover object-[center-416px]`
-        )}
+      <Image
+        className={classNames(`absolute top-0 h-[1440px] w-[2560px] object-cover object-center`)}
         src={SOULSCAPE_IMAGES['h-bg'].url}
         height={SOULSCAPE_IMAGES['h-bg'].height}
         width={SOULSCAPE_IMAGES['h-bg'].width}
@@ -31,10 +29,7 @@ const Hero: React.FC = () => {
         <div className={classNames(`pb-8`)}>
           <p
             className={classNames(
-              `max-w-xs pb-4 text-center font-['Gilroy'] text-base font-[400] tracking-[2px] text-white`,
-              `md:max-w-md`,
-              `lg:max-w-xl`,
-              `xl:max-w-4xl`
+              `pb-4 text-center font-['Gilroy'] text-base font-[400] tracking-[2px] text-white`
             )}
           >
             RENEWME TRAVEL
@@ -51,10 +46,10 @@ const Hero: React.FC = () => {
           </h1>
           <p
             className={classNames(
-              `hero-text max-w-xs text-center font-['Gilroy'] text-base font-[500] text-white`,
-              `md:max-w-md md:text-lg`,
+              `hero-text max-w-[450px] text-center font-['Gilroy'] text-base font-[500] text-white`,
+              `md:max-w-lg md:text-lg`,
               `lg:max-w-xl lg:text-xl`,
-              `xl:max-w-3xl xl:text-2xl`
+              `xl:max-w-2xl xl:text-2xl`
             )}
           >
             A soothing experience for the mindful traveler to stay relaxed and balanced on their
@@ -62,7 +57,7 @@ const Hero: React.FC = () => {
           </p>
         </div>
         <div className={classNames(`hero-buttons grid grid-cols-[1fr_1fr] gap-4`)}>
-          <Link href={'#'}>
+          <Link legacyBehavior href={'#'}>
             <a
               className={classNames(
                 `flex h-10 w-[129px] items-center rounded-lg bg-orange-1 px-4 text-center font-['Gilroy'] text-sm font-[600] text-white hover:bg-orange-1-hover`
@@ -71,7 +66,7 @@ const Hero: React.FC = () => {
               Brand Partners
             </a>
           </Link>
-          <Link href={'#'}>
+          <Link legacyBehavior href={'#'}>
             <a
               className={classNames(
                 `grid h-10 w-[121px] grid-cols-[auto_1fr] grid-rows-[auto_1fr] items-center gap-x-[5px] rounded-lg bg-white pl-2 hover:bg-white/90`
@@ -114,7 +109,7 @@ const Hero: React.FC = () => {
             `xl:gap-[70px]`
           )}
         >
-          <ImageFuture
+          <Image
             className={classNames(
               `h-auto w-full max-w-[230px]`,
               `lg:max-w-[300px]`,
@@ -126,7 +121,7 @@ const Hero: React.FC = () => {
             alt={SOULSCAPE_IMAGES['h-phone-1'].alt}
             priority
           />
-          <ImageFuture
+          <Image
             className={classNames(
               `h-auto w-full max-w-[230px]`,
               `lg:max-w-[300px]`,
@@ -138,7 +133,7 @@ const Hero: React.FC = () => {
             alt={SOULSCAPE_IMAGES['h-phone-2'].alt}
             priority
           />
-          <ImageFuture
+          <Image
             className={classNames(
               `h-auto w-full max-w-[230px]`,
               `lg:max-w-[300px]`,

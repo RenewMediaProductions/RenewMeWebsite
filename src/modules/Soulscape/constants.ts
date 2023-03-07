@@ -123,8 +123,8 @@ export const SOULSCAPE_IMAGES = {
   },
   's6-bg': {
     url: `${imageDomainUrl}/Soulscape/s6-bg.jpg?v=${assetVersion}`,
-    width: 2559,
-    height: 821,
+    width: 2560,
+    height: 826,
     alt: 'image',
   },
   's6-phone-1': {

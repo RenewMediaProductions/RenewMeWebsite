@@ -1,7 +1,7 @@
 import { LOCK_IMAGES } from './constants';
 
 import classNames from 'classnames';
-import ImageFuture from 'next/future/image';
+import Image from 'next/image';
 import React, { ChangeEvent, ReactNode, useState } from 'react';
 import LogoDarkSvg from 'shared/assets/svg/logo-dark.svg';
 import LogoLockSvg from 'shared/assets/svg/logo-lock.svg';
@@ -49,14 +49,14 @@ const Lock: React.FC<{ children: ReactNode }> = ({ children }) => {
               `md:max-w-[unset] md:px-14 md:text-base`
             )}
           >
-            Welcome! We are currently making some very exciting updates. Stay tuned!
+            Discover a new generation of wellness...
           </p>
-          <div className="absolute bottom-[-50px] h-[70%] w-full">
+          <div className="absolute bottom-[-20px] h-[70%] w-full">
             <LogoLockSvg className="h-auto w-full" />
           </div>
-          <div className={classNames(`absolute bottom-0 h-full max-h-[50%]`)}>
-            <div className="absolute bottom-0 h-[35%] w-full bg-[linear-gradient(180deg,rgba(255,255,255,0)_0%,#FFFFFF_82.29%)]"></div>
-            <ImageFuture
+          <div className={classNames(`absolute bottom-0 h-full max-h-[60%]`)}>
+            <div className="absolute bottom-0 h-[35%] w-full bg-[linear-gradient(180deg,rgba(255,255,255,0)_0%,#FFFFFF_100%)]"></div>
+            <Image
               className={classNames(`h-full w-auto`)}
               src={LOCK_IMAGES.phone.url}
               height={LOCK_IMAGES.phone.height}

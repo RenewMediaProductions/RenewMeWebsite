@@ -56,10 +56,6 @@ export const HeroWrapper = styled.div`
   ${({ theme }) => theme.screens.largeMedia} {
   }
   ${({ theme }) => theme.screens.xLargeMedia} {
-    .bg {
-      height: 1000px;
-      width: 1000px;
-    }
   }
   ${({ theme }) => theme.screens.xxLargeMedia} {
   }

@@ -31,33 +31,33 @@ const Footer: React.FC = () => {
         <div className="flex flex-col gap-8 md:flex-row md:justify-between">
           <div className="flex flex-col gap-3">
             <div className="font-['Gilroy'] text-xs font-[500] text-white md:text-sm">Explore</div>
-            <Link href={/* ROUTES.SIGNUP */ '#'}>
+            <Link legacyBehavior href={/* ROUTES.SIGNUP */ '#'}>
               <a className="font-['Gilroy'] text-xs font-[400] text-white md:text-sm">Sign Up</a>
             </Link>
-            <Link href={ROUTES.HOME}>
+            <Link legacyBehavior href={ROUTES.HOME}>
               <a className="font-['Gilroy'] text-xs font-[400] text-white md:text-sm">RenewMe</a>
             </Link>
-            <Link href={ROUTES.SOULSCAPE}>
+            <Link legacyBehavior href={ROUTES.SOULSCAPE}>
               <a className="font-['Gilroy'] text-xs font-[400] text-white md:text-sm">Soulscape</a>
             </Link>
-            <Link href={ROUTES.SPASCAPE}>
+            <Link legacyBehavior href={ROUTES.SPASCAPE}>
               <a className="font-['Gilroy'] text-xs font-[400] text-white md:text-sm">Spascape</a>
             </Link>
           </div>
           <div className="flex flex-col gap-3">
             <div className="font-['Gilroy'] text-xs font-[500] text-white md:text-sm">About</div>
-            <Link href={ROUTES.HOME}>
+            <Link legacyBehavior href={ROUTES.HOME}>
               <a className="font-['Gilroy'] text-xs font-[400] text-white md:text-sm">RenewMe</a>
             </Link>
-            <Link href={`${ROUTES.HOME}#about-developers`}>
+            <Link legacyBehavior href={`${ROUTES.HOME}#about-developers`}>
               <a className="font-['Gilroy'] text-xs font-[400] text-white md:text-sm">Developers</a>
             </Link>
-            <Link href={'#'}>
+            <Link legacyBehavior href={'#'}>
               <a className="font-['Gilroy'] text-xs font-[400] text-white md:text-sm">
                 Global Partners
               </a>
             </Link>
-            <Link href={'#'}>
+            <Link legacyBehavior href={'#'}>
               <a className="font-['Gilroy'] text-xs font-[400] text-white md:text-sm">
                 In the News
               </a>
@@ -65,22 +65,22 @@ const Footer: React.FC = () => {
           </div>
           <div className="flex flex-col gap-3">
             <div className="font-['Gilroy'] text-xs font-[500] text-white md:text-sm">Help</div>
-            <Link href={'#'}>
+            <Link legacyBehavior href={'#'}>
               <a className="font-['Gilroy'] text-xs font-[400] text-white md:text-sm">
                 Help & Support
               </a>
             </Link>
-            <Link href={ROUTES.PRIVACY}>
+            <Link legacyBehavior href={ROUTES.PRIVACY}>
               <a className="font-['Gilroy'] text-xs font-[400] text-white md:text-sm">
                 Privacy Policy
               </a>
             </Link>
-            <Link href={ROUTES.TERMS}>
+            <Link legacyBehavior href={ROUTES.TERMS}>
               <a className="font-['Gilroy'] text-xs font-[400] text-white md:text-sm">
                 Terms of Use
               </a>
             </Link>
-            <Link href={'#'}>
+            <Link legacyBehavior href={'#'}>
               <a className="font-['Gilroy'] text-xs font-[400] text-white md:text-sm">Contact Us</a>
             </Link>
           </div>
@@ -90,22 +90,22 @@ const Footer: React.FC = () => {
             © {getYear(new Date())} RenewMe. All Rights Reserved.
           </p>
           <div className="flex gap-7 md:ml-auto">
-            <Link href={'#'}>
+            <Link legacyBehavior href={'#'}>
               <a className="h-6">
                 <FacebookSvg className="h-full w-auto" />
               </a>
             </Link>
-            <Link href={'#'}>
+            <Link legacyBehavior href={'#'}>
               <a className="h-6">
                 <InstagramSvg className="h-full w-auto" />
               </a>
             </Link>
-            <Link href={'#'}>
+            <Link legacyBehavior href={'#'}>
               <a className="h-6">
                 <YoutubeSvg className="h-full w-auto" />
               </a>
             </Link>
-            <Link href={'#'}>
+            <Link legacyBehavior href={'#'}>
               <a className="h-6">
                 <LinkedInSvg className="h-full w-auto" />
               </a>

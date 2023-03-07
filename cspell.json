@@ -35,7 +35,9 @@
     "maxage",
     "tailwindcss",
     "pallete",
-    "Qoute"
+    "Qoute",
+    "evenodd",
+    "tanstack"
   ],
   "ignorePaths": ["node_modules/", "build/", ".husky", "pnpm-lock.yaml", "package.json"]
 }

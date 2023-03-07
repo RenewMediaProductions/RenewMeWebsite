@@ -5,7 +5,7 @@ import { WellnessWrapper } from './Wellness.styled';
 import { WELLNESS } from '../constants';
 
 import classNames from 'classnames';
-import ImageFuture from 'next/future/image';
+import Image from 'next/image';
 import React, { useEffect, useRef, useState } from 'react';
 import { useWindowSize } from 'react-use';
 import CarouselArrow from 'shared/assets/svg/carousel-arrow.svg';
@@ -113,7 +113,7 @@ const Wellness: React.FC<Props> = ({ className }) => {
                 className="relative h-screen max-h-[589px] w-screen overflow-hidden rounded-[20px] "
                 ref={refArr[wellnessIdx]}
               >
-                <ImageFuture
+                <Image
                   className="absolute top-0 h-full w-full object-cover object-top"
                   src={wellness.image.url}
                   height={wellness.image.height}

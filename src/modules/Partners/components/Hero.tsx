@@ -27,7 +27,7 @@ const Hero: React.FC = () => {
           </p>
         </div>
         <div className="hero-buttons grid">
-          <Link href={'#'}>
+          <Link legacyBehavior href={'#'}>
             <a
               className={classNames(
                 `flex h-10 items-center rounded-lg bg-orange-1 px-4 text-center font-['Gilroy'] text-sm font-[600] text-white hover:bg-orange-1-hover`

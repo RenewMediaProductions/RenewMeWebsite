@@ -3,7 +3,7 @@ import { Service8Wrapper } from './Service8.styled';
 import { HOME_IMAGES } from '../constants';
 
 import classNames from 'classnames';
-import ImageFuture from 'next/future/image';
+import Image from 'next/image';
 import React from 'react';
 import InfoSvg from 'shared/assets/svg/Home/s8-info.svg';
 
@@ -29,7 +29,7 @@ const Service8: React.FC<Props> = ({ className }) => {
           `md:justify-start`
         )}
       >
-        <ImageFuture
+        <Image
           className={classNames(
             `top-[-10px] block w-full max-w-[230px] transition-opacity duration-1000`,
             `md:absolute md:left-[calc(50%-250px)] md:top-0 md:block md:translate-x-[-50%]`,
@@ -41,7 +41,7 @@ const Service8: React.FC<Props> = ({ className }) => {
           height={HOME_IMAGES['s8-phone-1'].height}
           alt={HOME_IMAGES['s8-phone-1'].alt}
         />
-        <ImageFuture
+        <Image
           className={classNames(
             `hidden w-full max-w-[230px] transition-opacity duration-1000`,
             `md:absolute md:left-[calc(50%+250px)] md:bottom-0 md:block md:translate-x-[-50%]`,

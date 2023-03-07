@@ -4,7 +4,7 @@ export const HOME_IMAGES = {
   'h-bg': {
     url: `${imageDomainUrl}/Home/h-bg.jpg?v=${assetVersion}`,
     width: 2560,
-    height: 1440,
+    height: 1024,
     alt: 'image',
   },
   'h-phone-1': {
@@ -23,6 +23,12 @@ export const HOME_IMAGES = {
     url: `${imageDomainUrl}/Home/h-phone-3.png?v=${assetVersion}`,
     width: 823,
     height: 1680,
+    alt: 'image',
+  },
+  'ribbon-mha': {
+    url: `${imageDomainUrl}/Home/ribbon-mha.png?v=${assetVersion}`,
+    width: 380,
+    height: 50,
     alt: 'image',
   },
   's1-phone-1': {

@@ -3,7 +3,7 @@ import { AboutDevelopersWrapper } from './AboutDevelopers.styled';
 import { HOME_IMAGES } from '../constants';
 
 import classNames from 'classnames';
-import ImageFuture from 'next/future/image';
+import Image from 'next/image';
 import React from 'react';
 import AppleSvg from 'shared/assets/svg/apple.svg';
 import HeartSvg from 'shared/assets/svg/heart.svg';
@@ -96,7 +96,7 @@ const AboutDevelopers: React.FC<Props> = ({ className }) => {
             `min-[575px]:left-[calc(50%-100px)] min-[575px]:top-[calc(50%-250px)] min-[575px]:max-w-[159px]`
           )}
         >
-          <ImageFuture
+          <Image
             className={classNames(`h-auto w-full`)}
             src={HOME_IMAGES['man-1'].url}
             height={HOME_IMAGES['man-1'].height}
@@ -111,7 +111,7 @@ const AboutDevelopers: React.FC<Props> = ({ className }) => {
             `lg:top-[calc(50%-170px)]`
           )}
         >
-          <ImageFuture
+          <Image
             className={classNames(`h-auto w-full`)}
             src={HOME_IMAGES['man-2'].url}
             height={HOME_IMAGES['man-2'].height}
@@ -125,7 +125,7 @@ const AboutDevelopers: React.FC<Props> = ({ className }) => {
             `min-[575px]:left-[calc(50%-190px)] min-[575px]:top-[calc(50%+190px)] min-[575px]:max-w-[160px]`
           )}
         >
-          <ImageFuture
+          <Image
             className={classNames(`h-auto w-full`)}
             src={HOME_IMAGES['man-3'].url}
             height={HOME_IMAGES['man-3'].height}
@@ -140,7 +140,7 @@ const AboutDevelopers: React.FC<Props> = ({ className }) => {
             `lg:top-[calc(50%+300px)] `
           )}
         >
-          <ImageFuture
+          <Image
             className={classNames(`h-auto w-full`)}
             src={HOME_IMAGES['man-4'].url}
             height={HOME_IMAGES['man-4'].height}
@@ -155,7 +155,7 @@ const AboutDevelopers: React.FC<Props> = ({ className }) => {
             `lg:left-[calc(50%+200px)]`
           )}
         >
-          <ImageFuture
+          <Image
             className={classNames(`h-auto w-full`)}
             src={HOME_IMAGES['man-5'].url}
             height={HOME_IMAGES['man-5'].height}
@@ -178,7 +178,7 @@ const AboutDevelopers: React.FC<Props> = ({ className }) => {
             `lg:max-w-[252px]`
           )}
         >
-          <ImageFuture
+          <Image
             className={classNames(`h-auto w-full`)}
             src={HOME_IMAGES.women.url}
             height={HOME_IMAGES.women.height}

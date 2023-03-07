@@ -5,7 +5,7 @@ import { NEWS_IMAGES } from '../constants';
 import { NewsVideo } from '../types';
 
 import { useQuery } from '@tanstack/react-query';
-import ImageFuture from 'next/future/image';
+import Image from 'next/image';
 import React from 'react';
 import ABCSvg from 'shared/assets/svg/n-abc.svg';
 import CBSSvg from 'shared/assets/svg/n-cbs.svg';
@@ -36,7 +36,7 @@ const Hero: React.FC = () => {
 
   return (
     <HeroWrapper className="relative">
-      <ImageFuture
+      <Image
         className="absolute top-16 left-0 hidden h-auto object-cover object-right-bottom lg:block lg:max-w-[400px] xl:max-w-[500px] min-[1440px]:max-w-[630px]"
         src={NEWS_IMAGES['dr-lisa-palmer'].url}
         height={NEWS_IMAGES['dr-lisa-palmer'].height}

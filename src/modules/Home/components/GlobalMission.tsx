@@ -1,11 +1,14 @@
 import { GlobalMissionWrapper } from './GlobalMission.styled';
 
+import { HOME_IMAGES } from '../constants';
+
+import Image from 'next/image';
 import React from 'react';
 
 const GlobalMission: React.FC = () => {
   return (
     <GlobalMissionWrapper className="z-[2] flex justify-center">
-      <div className="mx-auto flex h-full max-w-[340px] flex-col gap-10 pt-[80px] md:max-w-[550px] md:pt-[120px] lg:max-w-[860px] lg:pt-[160px] xl:max-w-[916px] xl:gap-12">
+      <div className="mx-auto flex h-full max-w-[340px] flex-col gap-10 pt-[80px] md:max-w-[550px] md:pt-[120px] lg:max-w-[860px] lg:pt-[160px] xl:max-w-[900px] xl:gap-12">
         <h1 className="font-['Gilroy'] text-3xl font-[600] text-black-1 md:text-4xl lg:text-5xl xl:text-6xl">
           Our Global Mission
         </h1>
@@ -27,6 +30,16 @@ const GlobalMission: React.FC = () => {
           America’s leading psychotherapists who now joins the ranks of few women in the exclusive
           space of iOS technology.
         </p>
+        <span className="relative mt-5 h-[32px]">
+          <Image
+            className="absolute left-0 top-[50%] h-[150%] w-[auto] translate-y-[-50%]"
+            src={HOME_IMAGES['ribbon-mha'].url}
+            height={HOME_IMAGES['ribbon-mha'].height}
+            width={HOME_IMAGES['ribbon-mha'].width}
+            alt={HOME_IMAGES['ribbon-mha'].alt}
+            priority
+          />
+        </span>
       </div>
     </GlobalMissionWrapper>
   );

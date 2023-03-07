@@ -3,7 +3,7 @@ import { Service1Wrapper } from './Service1.styled';
 import { HOME_IMAGES } from '../constants';
 
 import classNames from 'classnames';
-import ImageFuture from 'next/future/image';
+import Image from 'next/image';
 import React from 'react';
 import InfoSvg from 'shared/assets/svg/Home/s1-info.svg';
 
@@ -29,7 +29,7 @@ const Service1: React.FC<Props> = ({ className }) => {
           `md:justify-start`
         )}
       >
-        <ImageFuture
+        <Image
           className={classNames(
             `top-[-10px] block w-full max-w-[230px] transition-opacity duration-1000`,
             `md:absolute md:top-[60px]`,
@@ -41,7 +41,7 @@ const Service1: React.FC<Props> = ({ className }) => {
           height={HOME_IMAGES['s1-phone-2'].height}
           alt={HOME_IMAGES['s1-phone-2'].alt}
         />
-        <ImageFuture
+        <Image
           className={classNames(
             `hidden w-full max-w-[230px] transition-opacity duration-1000`,
             `md:absolute md:left-[calc(50%-250px)] md:top-[calc(60px*2)] md:block md:translate-x-[-50%]`,
@@ -53,7 +53,7 @@ const Service1: React.FC<Props> = ({ className }) => {
           height={HOME_IMAGES['s1-phone-1'].height}
           alt={HOME_IMAGES['s1-phone-1'].alt}
         />
-        <ImageFuture
+        <Image
           className={classNames(
             `hidden w-full max-w-[230px] transition-opacity duration-1000`,
             `md:absolute md:left-[calc(50%+250px)] md:top-0 md:block md:translate-x-[-50%]`,

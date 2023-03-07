@@ -3,7 +3,7 @@ import { EscapeTranquilityWrapper } from './EscapeTranquility.styled';
 import { SPASCAPE_IMAGES } from '../constants';
 
 import classNames from 'classnames';
-import ImageFuture from 'next/future/image';
+import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import ExpediaSvg from 'shared/assets/svg/Spascape/expedia.svg';
@@ -20,7 +20,7 @@ const EscapeTranquility: React.FC = () => {
         `lg:h-[900px]`
       )}
     >
-      <ImageFuture
+      <Image
         className={classNames(`absolute top-0 h-full w-full object-cover object-right-bottom`)}
         src={SPASCAPE_IMAGES['es-bg'].url}
         height={SPASCAPE_IMAGES['es-bg'].height}
@@ -36,7 +36,7 @@ const EscapeTranquility: React.FC = () => {
         invigorates the soul while rejuvenating the mind and body at the most luxurious spa
         destinations around the world.
       </p>
-      <Link href={'#'}>
+      <Link legacyBehavior href={'#'}>
         <a className="isolate font-['Gilroy'] text-sm font-[700] text-blue-3 underline md:text-base lg:text-lg">
           Book Your Trip
         </a>

@@ -122,30 +122,30 @@ const Navbar: React.FC<Props> = ({ hide, isTop = true }) => {
             )}
           ></span>
         </div>
-        <Link href={ROUTES.HOME}>
+        <Link legacyBehavior href={ROUTES.HOME}>
           <a className="ga z-[3] h-7 w-auto cursor-pointer lg:h-8">{renderLogo}</a>
         </Link>
         <div className={menuClass}>
           <div className={menuPlaceholderClass}>
-            <Link href={ROUTES.HOME}>
+            <Link legacyBehavior href={ROUTES.HOME}>
               <a className={renewMeClass}>RenewMe</a>
             </Link>
-            <Link href={ROUTES.SOULSCAPE}>
+            <Link legacyBehavior href={ROUTES.SOULSCAPE}>
               <a className={soulScapeClass}>Soulscape</a>
             </Link>
-            <Link href={ROUTES.SPASCAPE}>
+            <Link legacyBehavior href={ROUTES.SPASCAPE}>
               <a className={spaScapeClass}>Spascape</a>
             </Link>
           </div>
         </div>
         <div className="z-[2] ml-auto flex gap-1 font-['Gilroy'] text-sm font-[500]">
-          <Link href={ROUTES.GLOBAL_PARTNERS}>
+          <Link legacyBehavior href={ROUTES.GLOBAL_PARTNERS}>
             <a className={globalPartnersClass}>Global Partners</a>
           </Link>
-          <Link href={ROUTES.NEWS}>
+          <Link legacyBehavior href={ROUTES.NEWS}>
             <a className={inTheNewsClass}>In the News</a>
           </Link>
-          <Link href={/* ROUTES.LOGIN */ '#'}>
+          <Link legacyBehavior href={/* ROUTES.LOGIN */ '#'}>
             <a className={loginClass}>Log In</a>
           </Link>
         </div>
@@ -157,26 +157,26 @@ const Navbar: React.FC<Props> = ({ hide, isTop = true }) => {
             >
               <CloseSvg className="h-[11px] w-auto" />
             </div>
-            <Link href={ROUTES.HOME}>
+            <Link legacyBehavior href={ROUTES.HOME}>
               <a className="hover:underline">RenewMe</a>
             </Link>
-            <Link href={ROUTES.SOULSCAPE}>
+            <Link legacyBehavior href={ROUTES.SOULSCAPE}>
               <a className="hover:underline">Soulscape</a>
             </Link>
-            <Link href={ROUTES.SPASCAPE}>
+            <Link legacyBehavior href={ROUTES.SPASCAPE}>
               <a className="hover:underline">Spascape</a>
             </Link>
             <div className="h-[1px] w-full bg-[#f2f2f2]"></div>
-            <Link href={ROUTES.GLOBAL_PARTNERS}>
+            <Link legacyBehavior href={ROUTES.GLOBAL_PARTNERS}>
               <a className="hover:underline">Global Partners</a>
             </Link>
-            <Link href={ROUTES.NEWS}>
+            <Link legacyBehavior href={ROUTES.NEWS}>
               <a className="hover:underline">In the News</a>
             </Link>
-            <Link href={/* ROUTES.LOGIN */ '#'}>
+            <Link legacyBehavior href={/* ROUTES.LOGIN */ '#'}>
               <a className="hover:underline">Login</a>
             </Link>
-            <Link href={/* ROUTES.SIGNUP */ '#'}>
+            <Link legacyBehavior href={/* ROUTES.SIGNUP */ '#'}>
               <a className="hover:underline">Sign Up</a>
             </Link>
           </div>
