@@ -24,7 +24,7 @@ const Lock: React.FC<{ children: ReactNode }> = ({ children }) => {
       <div
         className={classNames(
           `fixed top-0 flex h-full w-screen flex-col items-center justify-center gap-3 bg-[rgba(83,158,216,0.3)] p-5 backdrop-blur-[40px]`,
-          !isAuth && 'z-50'
+          !isAuth ? 'z-50 block' : 'hidden'
         )}
       >
         <div
