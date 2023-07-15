@@ -8,7 +8,7 @@ import LogoLockSvg from 'shared/assets/svg/logo-lock.svg';
 import { useAuthStore } from 'shared/store/Auth';
 
 const Lock: React.FC<{ children: ReactNode }> = ({ children }) => {
-  const { isAuth, unlock } = useAuthStore();
+  const { unlock } = useAuthStore();
 
   const [password, setPassword] = useState('');
 
@@ -24,7 +24,8 @@ const Lock: React.FC<{ children: ReactNode }> = ({ children }) => {
       <div
         className={classNames(
           `fixed top-0 flex h-full w-screen flex-col items-center justify-center gap-3 bg-[rgba(83,158,216,0.3)] p-5 backdrop-blur-[40px]`,
-          !isAuth ? 'z-50 block' : 'hidden'
+          // !isAuth ? 'z-50 block' : 'hidden'
+          'hidden'
         )}
       >
         <div
