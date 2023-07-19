@@ -11,9 +11,9 @@ const Privacy: React.FC = () => {
   const text3Class = classNames(`${textDefaultClass} font-[400] text-sm pb-5 md:text-base`);
 
   return (
-    <PrivacyWrapper className="container flex flex-col text-3xl mx-auto py-24 px-10 sm:px-20 md:py-28 lg:px-0 lg:py-32 lg:max-w-[825px] xl:py-40">
+    <PrivacyWrapper className="container mx-auto flex flex-col py-24 px-10 text-3xl sm:px-20 md:py-28 lg:max-w-[825px] lg:px-0 lg:py-32 xl:py-40">
       <h1 className={text1Class}>Privacy Policy</h1>
-      <p className={`${textDefaultClass} text-base pb-5 md:text-lg `}>(Updated: January 2022)</p>
+      <p className={`${textDefaultClass} pb-5 text-base md:text-lg `}>(Updated: January 2023)</p>
       <p className={text3Class}>
         RenewMe is committed to your privacy. This Privacy Policy explains how we collect, use,
         disclose, retain and protect your personal information in connection with our services.
@@ -42,7 +42,7 @@ const Privacy: React.FC = () => {
         <p className={text3Class}>
           This Privacy Policy does not apply to the following information:
         </p>
-        <ul className={`${text3Class} pl-7 list-disc`}>
+        <ul className={`${text3Class} list-disc pl-7`}>
           <li>Information collected by anyone other than us (even if related to our business).</li>
           <li>Information collected by us where a separate privacy policy applies.</li>
           <li>
@@ -194,7 +194,7 @@ const Privacy: React.FC = () => {
           We may use Your Information for various lawful business purposes. Among others, below are
           some specific examples of these purposes:
         </p>
-        <ul className={`${text3Class} pl-7 list-disc`}>
+        <ul className={`${text3Class} list-disc pl-7`}>
           <li className="pb-5">
             <strong>Provide our Services to you.</strong> We strive to ensure our services meet the
             high standards that you would expect of RenewMe. For example, we might verify the
@@ -244,7 +244,7 @@ const Privacy: React.FC = () => {
       <section className="pb-7">
         <p className={text2Class}>How We Disclose Your Information</p>
         <p className={text3Class}>We may disclose Your Information:</p>
-        <ul className={`${text3Class} pl-7 list-disc`}>
+        <ul className={`${text3Class} list-disc pl-7`}>
           <li className="pb-5">
             To any person who, in our reasonable judgment, is authorized to receive Your Information
             as your agent, including as a result of your business dealings with that person (for
@@ -400,7 +400,7 @@ const Privacy: React.FC = () => {
           We strive to provide you with choices regarding Your Information that you provide to us.
           Below are some mechanisms that provide you with control over certain information:
         </p>
-        <ul className={`${text3Class} pl-7 list-disc`}>
+        <ul className={`${text3Class} list-disc pl-7`}>
           <li className="pb-5">
             <strong>Cookies.</strong> If you do not wish us to collect cookies, you may set your
             browser to refuse cookies or to alert you when cookies are being sent. If you do so,

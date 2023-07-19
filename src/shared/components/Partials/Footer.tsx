@@ -65,7 +65,7 @@ const Footer: React.FC = () => {
           </div>
           <div className="flex flex-col gap-3">
             <div className="font-['Gilroy'] text-xs font-[500] text-white md:text-sm">Help</div>
-            <Link legacyBehavior href={'#'}>
+            <Link legacyBehavior href="https://www.myrenewmesupport.com">
               <a className="font-['Gilroy'] text-xs font-[400] text-white md:text-sm">
                 Help & Support
               </a>

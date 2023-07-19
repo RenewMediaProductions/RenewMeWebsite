@@ -10,9 +10,9 @@ const Terms: React.FC = () => {
   const text3Class = classNames(`${textDefaultClass} font-[400] text-sm pb-5 md:text-base`);
 
   return (
-    <TermsWrapper className="container flex flex-col text-3xl mx-auto py-24 px-10 sm:px-20 md:py-28 lg:px-0 lg:py-32 lg:max-w-[825px] xl:py-40">
+    <TermsWrapper className="container mx-auto flex flex-col py-24 px-10 text-3xl sm:px-20 md:py-28 lg:max-w-[825px] lg:px-0 lg:py-32 xl:py-40">
       <h1 className={text1Class}>Terms of Use</h1>
-      <p className={`${textDefaultClass} text-base pb-5 md:text-lg `}>(Updated: January 2022)</p>
+      <p className={`${textDefaultClass} pb-5 text-base md:text-lg `}>(Updated: January 2023)</p>
       <section className="pb-7">
         <p className={text3Class}>
           RenewMe brand products, including Soulscape, and Spascape on our iOS application and
@@ -202,7 +202,7 @@ const Terms: React.FC = () => {
           regulations. Without limiting the preceding, your access and use of our Services and
           User-Generated Content must not:
         </p>
-        <ul className={`${text3Class} pl-7 list-disc`}>
+        <ul className={`${text3Class} list-disc pl-7`}>
           <li className="pb-5">
             Contain or promote any material that is trade libelous, unlawfully threatening,
             unlawfully harassing, defamatory, obscene, explicit or vulgar, or otherwise injurious to
@@ -324,7 +324,7 @@ const Terms: React.FC = () => {
           with this Agreement.
         </p>
         <p className={text3Class}>Without limiting the foregoing, we have the right to:</p>
-        <ul className={`${text3Class} pl-7 list-disc`}>
+        <ul className={`${text3Class} list-disc pl-7`}>
           <li className="pb-5">
             Take any action with respect to any User Generated Content that we deem necessary or
             appropriate, in our sole discretion, including removal of any User Generated Content if
@@ -689,7 +689,7 @@ const Terms: React.FC = () => {
           Aspects of our Services may include certain applications for your mobile device
           (collectively, the “Mobile Services”). By using the Mobile Services, you:
         </p>
-        <ul className={`${text3Class} pl-7 list-decimal`}>
+        <ul className={`${text3Class} list-decimal pl-7`}>
           <li className="pb-5">
             Acknowledge that this Agreement is between you and us and not with Apple, Inc., Google,
             Inc. or any other third party;
@@ -802,7 +802,7 @@ const Terms: React.FC = () => {
           particular features or functionality. Based on your Mobile Device settings, when your
           Mobile Device is connected to the Internet either:
         </p>
-        <ul className={`${text3Class} pl-7 list-decimal`}>
+        <ul className={`${text3Class} list-decimal pl-7`}>
           <li className="pb-5">
             The Licensed Application will automatically download and install all available Updates;
             or
@@ -878,7 +878,7 @@ const Terms: React.FC = () => {
           Pursuant to Title 17, United States Code, Section 512(c)(3), to be effective, each
           Notification must include the following:
         </p>
-        <ul className={`${text3Class} pl-7 list-decimal`}>
+        <ul className={`${text3Class} list-decimal pl-7`}>
           <li className="pb-5">
             The Licensed Application will automatically download and install all available Updates;
           </li>
@@ -912,7 +912,7 @@ const Terms: React.FC = () => {
           Upon receipt of the Notification containing the information as outlined in (i) through
           (vi) above, and pursuant to Title 17, United States Code, Section 512:
         </p>
-        <ul className={`${text3Class} pl-7 list-decimal`}>
+        <ul className={`${text3Class} list-decimal pl-7`}>
           <li className="pb-5">
             We will remove or disable access to the material that is alleged to be infringing;
           </li>
@@ -932,7 +932,7 @@ const Terms: React.FC = () => {
           Notification by providing a written communication (“Counter Notification”) to our
           designated agent that includes substantially the following:
         </p>
-        <ul className={`${text3Class} pl-7 list-decimal`}>
+        <ul className={`${text3Class} list-decimal pl-7`}>
           <li className="pb-5">A physical or electronic signature of the Subscriber;</li>
           <li className="pb-5">
             Identification of the material that has been removed or to which access has been
@@ -957,7 +957,7 @@ const Terms: React.FC = () => {
           Upon receipt of a Counter Notification containing the information as outlined in (i)
           through (iv) above, and pursuant to Title 17, United States Code, Section 512:
         </p>
-        <ul className={`${text3Class} pl-7 list-decimal`}>
+        <ul className={`${text3Class} list-decimal pl-7`}>
           <li className="pb-5">
             We will promptly provide the Complaining Party with a copy of the Counter Notification;
           </li>
