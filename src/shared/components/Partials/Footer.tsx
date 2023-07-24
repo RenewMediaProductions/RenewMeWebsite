@@ -80,7 +80,7 @@ const Footer: React.FC = () => {
                 Terms of Use
               </a>
             </Link>
-            <Link legacyBehavior href={'#'}>
+            <Link legacyBehavior href={ROUTES.CONTACT}>
               <a className="font-['Gilroy'] text-xs font-[400] text-white md:text-sm">Contact Us</a>
             </Link>
           </div>

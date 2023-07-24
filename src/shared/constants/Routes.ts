@@ -8,4 +8,5 @@ export const ROUTES = {
   GLOBAL_PARTNERS: '/global-partners',
   PRIVACY: '/privacy',
   TERMS: '/terms',
+  CONTACT: '/contact',
 };
