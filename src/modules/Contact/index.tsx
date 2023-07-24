@@ -18,7 +18,7 @@ const Contact: React.FC = () => {
     setLoading(true);
     try {
       await axios.post('/api/mailer/send', {
-        to: 'renewmediaproductions@gmail.com',
+        to: 'support@myrenewme.com',
         subject: `Support: ${formData.name}`,
         html: `
           <p>Email: ${formData.email}</p>
