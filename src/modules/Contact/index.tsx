@@ -1,10 +1,38 @@
 import { ContactWrapper } from './index.styled';
 
+import axios from 'axios';
 import classNames from 'classnames';
 import Link from 'next/link';
-import React from 'react';
+import React, { useState } from 'react';
 
 const Contact: React.FC = () => {
+  const defaultFormData = {
+    name: '',
+    email: '',
+    message: '',
+  };
+  const [formData, setFormData] = useState(defaultFormData);
+  const [isLoading, setLoading] = useState(false);
+
+  const handleSubmit = async () => {
+    setLoading(true);
+    try {
+      await axios.post('/api/mailer/send', {
+        to: 'renewmediaproductions@gmail.com',
+        subject: `Support: ${formData.name}`,
+        html: `
+          <p>Email: ${formData.email}</p>
+          <p>Message: ${formData.message}</p>
+        `,
+      });
+      setFormData(defaultFormData);
+    } catch (error) {
+      // eslint-disable-next-line no-console
+      console.debug({ error });
+    }
+    setLoading(false);
+  };
+
   return (
     <ContactWrapper className="relative ">
       <div
@@ -55,6 +83,8 @@ const Contact: React.FC = () => {
                 className="h-[45px] w-full rounded-lg border border-[#E0E0E0] bg-white px-3 outline-none xl:h-[56px]"
                 type="text"
                 id="name"
+                onChange={e => setFormData({ ...formData, name: e.target.value })}
+                value={formData.name}
               />
             </div>
             <div className="flex flex-col gap-2">
@@ -65,6 +95,8 @@ const Contact: React.FC = () => {
                 className="h-[45px] w-full rounded-lg border border-[#E0E0E0] bg-white px-3 outline-none xl:h-[56px]"
                 type="email"
                 id="email"
+                onChange={e => setFormData({ ...formData, email: e.target.value })}
+                value={formData.email}
               />
             </div>
             <div className="flex flex-col gap-2">
@@ -74,15 +106,18 @@ const Contact: React.FC = () => {
               <textarea
                 className="h-[80px] w-full rounded-lg border border-[#E0E0E0] bg-white px-3 pt-3 outline-none"
                 id="message"
+                onChange={e => setFormData({ ...formData, message: e.target.value })}
+                value={formData.message}
               />
             </div>
             <button
               className={classNames(
                 `h-[56px] w-full rounded-lg bg-[#00C0C5] font-['Gilroy'] text-base font-[600] text-white`
               )}
-              type="submit"
+              onClick={handleSubmit}
+              disabled={isLoading}
             >
-              Submit
+              {isLoading ? 'Sending' : 'Submit'}
             </button>
           </form>
         </div>

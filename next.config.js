@@ -20,6 +20,7 @@ module.exports = {
     STAGE: process.env.STAGE,
     YOUTUBE_API_KEY: process.env.YOUTUBE_API_KEY,
     WEB_PASSWORD: process.env.WEB_PASSWORD,
+    SENDGRID_API_KEY: process.env.SENDGRID_API_KEY,
   },
   reactStrictMode: true,
   swcMinify: true,
