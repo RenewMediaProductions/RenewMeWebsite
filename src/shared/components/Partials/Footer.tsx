@@ -57,7 +57,7 @@ const Footer: React.FC = () => {
                 Global Partners
               </a>
             </Link>
-            <Link legacyBehavior href={'#'}>
+            <Link legacyBehavior href="https://www.myrenewme.com/news">
               <a className="font-['Gilroy'] text-xs font-[400] text-white md:text-sm">
                 In the News
               </a>
