@@ -28,7 +28,7 @@ const Footer: React.FC = () => {
             Discover Resources and Wellness Brands
           </p>
         </div>
-        <div className="flex flex-col gap-8 md:flex-row md:justify-between">
+        <div className="flex justify-between gap-8">
           <div className="flex flex-col gap-3">
             <div className="font-['Gilroy'] text-xs font-[500] text-white md:text-sm">Explore</div>
             <Link legacyBehavior href={/* ROUTES.SIGNUP */ '#'}>
@@ -46,15 +46,17 @@ const Footer: React.FC = () => {
           </div>
           <div className="flex flex-col gap-3">
             <div className="font-['Gilroy'] text-xs font-[500] text-white md:text-sm">About</div>
-            <Link legacyBehavior href={ROUTES.HOME}>
-              <a className="font-['Gilroy'] text-xs font-[400] text-white md:text-sm">RenewMe</a>
+            <Link legacyBehavior href={ROUTES.CONTACT.GLOBAL_PARTNERS}>
+              <a className="font-['Gilroy'] text-xs font-[400] text-white md:text-sm">
+                Global Partners
+              </a>
             </Link>
             <Link legacyBehavior href={`${ROUTES.HOME}#about-developers`}>
               <a className="font-['Gilroy'] text-xs font-[400] text-white md:text-sm">Developers</a>
             </Link>
-            <Link legacyBehavior href={'#'}>
+            <Link legacyBehavior href={ROUTES.CONTACT.MEDIA_INQUIRIES}>
               <a className="font-['Gilroy'] text-xs font-[400] text-white md:text-sm">
-                Global Partners
+                Media Inquiries
               </a>
             </Link>
             <Link legacyBehavior href="https://www.myrenewme.com/news">
@@ -80,7 +82,7 @@ const Footer: React.FC = () => {
                 Terms of Use
               </a>
             </Link>
-            <Link legacyBehavior href={ROUTES.CONTACT}>
+            <Link legacyBehavior href={ROUTES.CONTACT.INDEX}>
               <a className="font-['Gilroy'] text-xs font-[400] text-white md:text-sm">Contact Us</a>
             </Link>
           </div>
