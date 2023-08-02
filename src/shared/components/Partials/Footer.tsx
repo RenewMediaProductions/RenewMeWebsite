@@ -87,7 +87,7 @@ const Footer: React.FC = () => {
             </Link>
           </div>
         </div>
-        <div className="flex flex-col gap-10 md:col-span-2 md:flex-row md:items-end">
+        <div className="hidden flex-col gap-10 md:col-span-2 md:flex md:flex-row md:items-end">
           <p className="font-['Gilroy'] text-xs font-[400] text-white md:text-sm">
             © {getYear(new Date())} RenewMe. All Rights Reserved.
           </p>
