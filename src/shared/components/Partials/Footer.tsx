@@ -1,31 +1,29 @@
 /* eslint-disable react/no-unescaped-entities */
 import { FooterWrapper } from './Footer.styled';
 
-import { getYear } from 'date-fns';
 import Link from 'next/link';
 import React from 'react';
-import FacebookSvg from 'shared/assets/svg/facebook.svg';
-import InstagramSvg from 'shared/assets/svg/instagram.svg';
-import LinkedInSvg from 'shared/assets/svg/linkedin.svg';
 import LogoFooterSvg from 'shared/assets/svg/logo-footer.svg';
-import YoutubeSvg from 'shared/assets/svg/youtube.svg';
 import { ROUTES } from 'shared/constants/Routes';
 
 const Footer: React.FC = () => {
   return (
     <FooterWrapper className="z-10 bg-[#3A3A3B]">
-      <div className="container mx-auto flex flex-col gap-10 px-6 py-10 md:grid md:grid-cols-2 md:grid-rows-[1fr_auto] md:gap-y-20">
+      <div className="container mx-auto flex flex-col gap-10 px-6 py-10 md:grid md:grid-cols-2 md:py-20">
         <div className="grid gap-2 md:flex md:flex-col md:gap-[25px]">
           <div className="h-9 w-auto cursor-pointer md:h-9">
             <LogoFooterSvg className="h-full w-auto" />
           </div>
-          <p className="max-w-sm font-['Gilroy'] text-xs font-[400] text-white md:text-sm">
+          <p className="max-w-[21.875rem] font-['Gilroy'] text-xs font-[400] text-white md:text-sm">
             Created by Former Apple Developers and Founded by America’s Leading Psychotherapist, Dr.
-            Lisa Palmer, Director of The Renew Center of Florida , Ranked #1 for Treatment of PTSD
-            in US.
+            Lisa Palmer, Director of{' '}
+            <a href="https://www.TheRenewCenter.com" className="underline underline-offset-2">
+              The Renew Center of Florida
+            </a>
+            , Ranked #1 of Top 10 Treatment Centers for PTSD in the US.
           </p>
-          <p className="max-w-sm font-['Gilroy'] text-xs font-[400] text-white md:text-sm">
-            Discover Resources and Wellness Brands
+          <p className="max-w-[21.875rem] font-['Gilroy'] text-xs font-[500] text-white md:text-sm">
+            Brands with a mission of Mental Health Awareness.
           </p>
         </div>
         <div className="flex justify-between gap-8">
@@ -87,7 +85,7 @@ const Footer: React.FC = () => {
             </Link>
           </div>
         </div>
-        <div className="hidden flex-col gap-10 md:col-span-2 md:flex md:flex-row md:items-end">
+        {/* <div className="hidden flex-col gap-10 md:col-span-2 md:flex md:flex-row md:items-end">
           <p className="font-['Gilroy'] text-xs font-[400] text-white md:text-sm">
             © {getYear(new Date())} RenewMe. All Rights Reserved.
           </p>
@@ -113,7 +111,7 @@ const Footer: React.FC = () => {
               </a>
             </Link>
           </div>
-        </div>
+        </div> */}
       </div>
     </FooterWrapper>
   );
