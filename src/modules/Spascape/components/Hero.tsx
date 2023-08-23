@@ -46,6 +46,7 @@ const Hero: React.FC = () => {
           <p
             className={classNames(
               `hero-text max-w-[420px] text-center font-['Gilroy'] text-base font-[500] text-black-1`,
+              // `max-[440px]:text-justify`,
               `md:max-w-md md:text-lg`,
               `lg:max-w-lg lg:text-xl`,
               `xl:max-w-[600px] xl:text-2xl`

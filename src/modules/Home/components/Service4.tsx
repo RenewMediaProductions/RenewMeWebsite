@@ -34,7 +34,7 @@ const Service4: React.FC<Props> = ({ className }) => {
   return (
     <Service4Wrapper
       className={classNames(
-        `relative h-[calc(470px+157px+40px)]`, // {phone height} + {info height} + {margin between phone and info}
+        `relative mt-10 h-[calc(470px+157px+40px)]`, // {phone height} + {info height} + {margin between phone and info}
         `md:h-[calc(470px+245px+60px)]`,
         `lg:h-[calc(613px+272px+90px)]`,
         `xl:h-[calc(666px+272px+90px)]`,
