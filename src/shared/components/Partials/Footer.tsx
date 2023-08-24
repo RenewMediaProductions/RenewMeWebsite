@@ -1,15 +1,10 @@
 /* eslint-disable react/no-unescaped-entities */
 import { FooterWrapper } from './Footer.styled';
 
-import { getYear } from 'date-fns';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
-import FacebookSvg from 'shared/assets/svg/facebook.svg';
-import InstagramSvg from 'shared/assets/svg/instagram.svg';
-import LinkedInSvg from 'shared/assets/svg/linkedin.svg';
 import LogoFooterSvg from 'shared/assets/svg/logo-footer.svg';
 import RevertLogoFooterSvg from 'shared/assets/svg/revert-logo-footer.svg';
-import YoutubeSvg from 'shared/assets/svg/youtube.svg';
 import { ROUTES } from 'shared/constants/Routes';
 
 const Footer: React.FC = () => {
@@ -40,7 +35,7 @@ const Footer: React.FC = () => {
       : 'Discover Resources and Wellness Brands';
   return (
     <FooterWrapper className="z-10 bg-[#3A3A3B]">
-      <div className="container mx-auto flex flex-col gap-10 px-6 py-10 md:grid md:grid-cols-2 md:grid-rows-[1fr_auto] md:gap-y-20">
+      <div className="container mx-auto flex flex-col gap-10 px-6 py-10 md:grid md:grid-cols-2 md:py-20">
         <div className="grid gap-2 md:flex md:flex-col md:gap-[25px]">
           <div className="h-9 w-auto cursor-pointer md:h-9">{logoFooter}</div>
           <p className="max-w-sm font-['Gilroy'] text-xs font-[400] text-white md:text-sm">
@@ -53,7 +48,7 @@ const Footer: React.FC = () => {
             {footerText}
           </p>
         </div>
-        <div className="flex flex-col gap-8 md:flex-row md:justify-between">
+        <div className="flex justify-between gap-8">
           <div className="flex flex-col gap-3">
             <div className="font-['Gilroy'] text-xs font-[500] text-white md:text-sm">Explore</div>
             <Link legacyBehavior href={/* ROUTES.SIGNUP */ '#'}>
@@ -71,18 +66,20 @@ const Footer: React.FC = () => {
           </div>
           <div className="flex flex-col gap-3">
             <div className="font-['Gilroy'] text-xs font-[500] text-white md:text-sm">About</div>
-            <Link legacyBehavior href={ROUTES.HOME}>
-              <a className="font-['Gilroy'] text-xs font-[400] text-white md:text-sm">RenewMe</a>
-            </Link>
-            <Link legacyBehavior href={`${ROUTES.HOME}#about-developers`}>
-              <a className="font-['Gilroy'] text-xs font-[400] text-white md:text-sm">Developers</a>
-            </Link>
-            <Link legacyBehavior href={'#'}>
+            <Link legacyBehavior href={ROUTES.CONTACT.GLOBAL_PARTNERS}>
               <a className="font-['Gilroy'] text-xs font-[400] text-white md:text-sm">
                 Global Partners
               </a>
             </Link>
-            <Link legacyBehavior href={'#'}>
+            <Link legacyBehavior href={`${ROUTES.HOME}#about-developers`}>
+              <a className="font-['Gilroy'] text-xs font-[400] text-white md:text-sm">Developers</a>
+            </Link>
+            <Link legacyBehavior href={ROUTES.CONTACT.MEDIA_INQUIRIES}>
+              <a className="font-['Gilroy'] text-xs font-[400] text-white md:text-sm">
+                Media Inquiries
+              </a>
+            </Link>
+            <Link legacyBehavior href="https://www.myrenewme.com/news">
               <a className="font-['Gilroy'] text-xs font-[400] text-white md:text-sm">
                 In the News
               </a>
@@ -105,12 +102,12 @@ const Footer: React.FC = () => {
                 Terms of Use
               </a>
             </Link>
-            <Link legacyBehavior href={ROUTES.CONTACT}>
+            <Link legacyBehavior href={ROUTES.CONTACT.INDEX}>
               <a className="font-['Gilroy'] text-xs font-[400] text-white md:text-sm">Contact Us</a>
             </Link>
           </div>
         </div>
-        <div className="flex flex-col gap-10 md:col-span-2 md:flex-row md:items-end">
+        {/* <div className="hidden flex-col gap-10 md:col-span-2 md:flex md:flex-row md:items-end">
           <p className="font-['Gilroy'] text-xs font-[400] text-white md:text-sm">
             © {getYear(new Date())} RenewMe. All Rights Reserved.
           </p>
@@ -136,7 +133,7 @@ const Footer: React.FC = () => {
               </a>
             </Link>
           </div>
-        </div>
+        </div> */}
       </div>
     </FooterWrapper>
   );

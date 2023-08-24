@@ -19,7 +19,9 @@ const RootLayout: React.FC<{ children: any }> = ({ children }) => {
       ROUTES.TERMS,
       ROUTES.GLOBAL_PARTNERS,
       ROUTES.NEWS,
-      ROUTES.CONTACT,
+      ROUTES.CONTACT.INDEX,
+      ROUTES.CONTACT.MEDIA_INQUIRIES,
+      ROUTES.CONTACT.GLOBAL_PARTNERS,
     ],
     []
   );
