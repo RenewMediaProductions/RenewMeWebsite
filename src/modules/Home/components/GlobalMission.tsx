@@ -1,9 +1,7 @@
 import { GlobalMissionWrapper } from './GlobalMission.styled';
 
-import { HOME_IMAGES } from '../constants';
-
-import Image from 'next/image';
 import React from 'react';
+import RibbonMhaSvg from 'shared/assets/svg/Home/ribbon-mha.svg';
 
 const GlobalMission: React.FC = () => {
   return (
@@ -31,14 +29,7 @@ const GlobalMission: React.FC = () => {
           space of iOS technology.
         </p>
         <span className="relative mt-5 h-[32px]">
-          <Image
-            className="absolute left-0 top-[50%] h-[150%] w-[auto] translate-y-[-50%]"
-            src={HOME_IMAGES['ribbon-mha'].url}
-            height={HOME_IMAGES['ribbon-mha'].height}
-            width={HOME_IMAGES['ribbon-mha'].width}
-            alt={HOME_IMAGES['ribbon-mha'].alt}
-            priority
-          />
+          <RibbonMhaSvg className="h-[48px] w-[100%] max-w-[380px]" />
         </span>
       </div>
     </GlobalMissionWrapper>

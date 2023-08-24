@@ -25,10 +25,10 @@ const PageLayout: React.FC<Props> = ({ children, showFooter = true, showHeader =
 
   return (
     <AuthenticatedRoute>
-      <PageLayoutWrapper ref={pageLayoutRef} className="relative flex flex-col w-full h-full">
-        <div ref={topRef} className="absolute top-0 w-full h-1"></div>
+      <PageLayoutWrapper ref={pageLayoutRef} className="relative flex h-full w-full flex-col">
+        <div ref={topRef} className="absolute top-0 h-1 w-full"></div>
         {showHeader && <Navbar hide={!showNavbar} isTop={topVisible} />}
-        <div className="w-full h-full mt-[-4rem]">{children}</div>
+        <div className="mt-[-4rem] h-full w-full">{children}</div>
         {showFooter && <Footer />}
       </PageLayoutWrapper>
     </AuthenticatedRoute>

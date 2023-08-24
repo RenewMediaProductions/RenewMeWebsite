@@ -3,29 +3,54 @@ import { FooterWrapper } from './Footer.styled';
 
 import { getYear } from 'date-fns';
 import Link from 'next/link';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import FacebookSvg from 'shared/assets/svg/facebook.svg';
 import InstagramSvg from 'shared/assets/svg/instagram.svg';
 import LinkedInSvg from 'shared/assets/svg/linkedin.svg';
 import LogoFooterSvg from 'shared/assets/svg/logo-footer.svg';
+import RevertLogoFooterSvg from 'shared/assets/svg/revert-logo-footer.svg';
 import YoutubeSvg from 'shared/assets/svg/youtube.svg';
 import { ROUTES } from 'shared/constants/Routes';
 
 const Footer: React.FC = () => {
+  const [width, setWidth] = useState(0);
+
+  const getWidth = () => {
+    setWidth(window.innerWidth);
+  };
+
+  useEffect(() => {
+    window.addEventListener('resize', getWidth);
+
+    return () => {
+      window.removeEventListener('resize', getWidth);
+    };
+  }, []);
+
+  const logoFooter =
+    width <= 640 ? (
+      <RevertLogoFooterSvg className="h-full w-auto" />
+    ) : (
+      <LogoFooterSvg className="h-full w-auto" />
+    );
+
+  const footerText =
+    width <= 640
+      ? 'Live Better. Breathe Deeper. Be Balanced.'
+      : 'Discover Resources and Wellness Brands';
   return (
     <FooterWrapper className="z-10 bg-[#3A3A3B]">
       <div className="container mx-auto flex flex-col gap-10 px-6 py-10 md:grid md:grid-cols-2 md:grid-rows-[1fr_auto] md:gap-y-20">
         <div className="grid gap-2 md:flex md:flex-col md:gap-[25px]">
-          <div className="h-9 w-auto cursor-pointer md:h-9">
-            <LogoFooterSvg className="h-full w-auto" />
-          </div>
+          <div className="h-9 w-auto cursor-pointer md:h-9">{logoFooter}</div>
           <p className="max-w-sm font-['Gilroy'] text-xs font-[400] text-white md:text-sm">
             Created by Former Apple Developers and Founded by America’s Leading Psychotherapist, Dr.
-            Lisa Palmer, Director of The Renew Center of Florida , Ranked #1 for Treatment of PTSD
-            in US.
+            Lisa Palmer, Director of{' '}
+            <span className="underline underline-offset-1">The Renew Center of Florida</span>,
+            Ranked #1 for Treatment of PTSD in US.
           </p>
           <p className="max-w-sm font-['Gilroy'] text-xs font-[400] text-white md:text-sm">
-            Discover Resources and Wellness Brands
+            {footerText}
           </p>
         </div>
         <div className="flex flex-col gap-8 md:flex-row md:justify-between">
