@@ -16,7 +16,8 @@ const EscapeTranquility: React.FC = () => {
   return (
     <EscapeTranquilityWrapper
       className={classNames(
-        `relative flex min-h-[900px] flex-col items-center justify-center overflow-hidden bg-[#EFE7E0]`,
+        `relative flex min-h-[650px] flex-col items-center justify-center overflow-hidden bg-[#EFE7E0]`,
+        `sm:min-h-[900px]`,
         `lg:h-[900px]`
       )}
     >

@@ -17,7 +17,7 @@ const WhatPeopleAreSaying: React.FC<Props> = ({ className }) => {
       <div className="container isolate mx-auto flex flex-col items-center gap-6 px-6 md:gap-10 lg:gap-24">
         <h1 className="text-center font-['Gilroy'] text-3xl font-[500] md:text-4xl lg:text-5xl xl:text-6xl">
           Never miss an update <br />
-          Join our mailing list
+          Join our mailing list.
         </h1>
         <div className="relative flex w-full rounded-[100px] bg-white md:max-w-[500px] lg:max-w-[730px]">
           <input
