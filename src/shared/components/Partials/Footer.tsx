@@ -2,25 +2,14 @@
 import { FooterWrapper } from './Footer.styled';
 
 import Link from 'next/link';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import { useWindowSize } from 'react-use';
 import LogoFooterSvg from 'shared/assets/svg/logo-footer.svg';
 import RevertLogoFooterSvg from 'shared/assets/svg/revert-logo-footer.svg';
 import { ROUTES } from 'shared/constants/Routes';
 
 const Footer: React.FC = () => {
-  const [width, setWidth] = useState(0);
-
-  const getWidth = () => {
-    setWidth(window.innerWidth);
-  };
-
-  useEffect(() => {
-    window.addEventListener('resize', getWidth);
-
-    return () => {
-      window.removeEventListener('resize', getWidth);
-    };
-  }, []);
+  const { width } = useWindowSize();
 
   const logoFooter =
     width <= 640 ? (
@@ -33,6 +22,7 @@ const Footer: React.FC = () => {
     width <= 640
       ? 'Live Better. Breathe Deeper. Be Balanced.'
       : 'Discover Resources and Wellness Brands';
+
   return (
     <FooterWrapper className="z-10 bg-[#3A3A3B]">
       <div className="container mx-auto flex flex-col gap-10 px-6 py-10 md:grid md:grid-cols-2 md:py-20">
