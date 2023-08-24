@@ -30,9 +30,9 @@ const GlobalMission: React.FC = () => {
           America’s leading psychotherapists who now joins the ranks of few women in the exclusive
           space of iOS technology.
         </p>
-        <span className="relative mt-5 h-[32px]">
+        <span className="relative mt-5 h-auto w-[24rem]">
           <Image
-            className="absolute left-0 top-[50%] h-[150%] w-[auto] translate-y-[-50%]"
+            className="absolute left-0 top-0 h-auto w-full object-contain"
             src={HOME_IMAGES['ribbon-mha'].url}
             height={HOME_IMAGES['ribbon-mha'].height}
             width={HOME_IMAGES['ribbon-mha'].width}

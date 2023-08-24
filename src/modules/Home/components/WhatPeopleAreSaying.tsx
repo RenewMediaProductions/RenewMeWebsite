@@ -16,7 +16,7 @@ const WhatPeopleAreSaying: React.FC<Props> = ({ className }) => {
   return (
     <WhatPeopleAreSayingWrapper
       className={classNames(
-        'relative flex w-screen flex-col bg-[#f07e58] pt-10 pb-28 md:pt-20',
+        'relative flex w-screen flex-col bg-[#f07e58] pt-10 pb-10 sm:pb-28 md:pt-20',
         className
       )}
     >
@@ -26,7 +26,7 @@ const WhatPeopleAreSaying: React.FC<Props> = ({ className }) => {
           What People Are Saying...
         </h1>
       </div>
-      <div className="testimonials isolate grid grid-flow-col items-start gap-4 overflow-x-auto px-4 pt-10 pb-16 md:gap-8 md:pt-20 md:pb-24 lg:pt-24 lg:pb-32">
+      <div className="testimonials isolate grid grid-flow-col items-start gap-4 overflow-x-auto px-4 pt-10 sm:pb-16 md:gap-8 md:pt-20 md:pb-24 lg:pt-24 lg:pb-32">
         {TESTIMONIALS.map((testimonial, testimonialIdx) => (
           <div
             key={testimonialIdx}

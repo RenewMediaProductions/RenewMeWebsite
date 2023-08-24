@@ -3,27 +3,39 @@ import { FooterWrapper } from './Footer.styled';
 
 import Link from 'next/link';
 import React from 'react';
+import { useWindowSize } from 'react-use';
 import LogoFooterSvg from 'shared/assets/svg/logo-footer.svg';
+import RevertLogoFooterSvg from 'shared/assets/svg/revert-logo-footer.svg';
 import { ROUTES } from 'shared/constants/Routes';
 
 const Footer: React.FC = () => {
+  const { width } = useWindowSize();
+
+  const logoFooter =
+    width <= 640 ? (
+      <RevertLogoFooterSvg className="h-full w-auto" />
+    ) : (
+      <LogoFooterSvg className="h-full w-auto" />
+    );
+
+  const footerText =
+    width <= 640
+      ? 'Live Better. Breathe Deeper. Be Balanced.'
+      : 'Discover Resources and Wellness Brands';
+
   return (
     <FooterWrapper className="z-10 bg-[#3A3A3B]">
       <div className="container mx-auto flex flex-col gap-10 px-6 py-10 md:grid md:grid-cols-2 md:py-20">
         <div className="grid gap-2 md:flex md:flex-col md:gap-[25px]">
-          <div className="h-9 w-auto cursor-pointer md:h-9">
-            <LogoFooterSvg className="h-full w-auto" />
-          </div>
-          <p className="max-w-[21.875rem] font-['Gilroy'] text-xs font-[400] text-white md:text-sm">
+          <div className="h-9 w-auto cursor-pointer md:h-9">{logoFooter}</div>
+          <p className="max-w-sm font-['Gilroy'] text-xs font-[400] text-white md:text-sm">
             Created by Former Apple Developers and Founded by America’s Leading Psychotherapist, Dr.
             Lisa Palmer, Director of{' '}
-            <a href="https://www.TheRenewCenter.com" className="underline underline-offset-2">
-              The Renew Center of Florida
-            </a>
-            , Ranked #1 of Top 10 Treatment Centers for PTSD in the US.
+            <span className="underline underline-offset-1">The Renew Center of Florida</span>,
+            Ranked #1 for Treatment of PTSD in US.
           </p>
-          <p className="max-w-[21.875rem] font-['Gilroy'] text-xs font-[500] text-white md:text-sm">
-            Brands with a mission of Mental Health Awareness.
+          <p className="max-w-sm font-['Gilroy'] text-xs font-[400] text-white md:text-sm">
+            {footerText}
           </p>
         </div>
         <div className="flex justify-between gap-8">

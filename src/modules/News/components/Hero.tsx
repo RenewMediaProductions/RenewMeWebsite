@@ -50,7 +50,7 @@ const Hero: React.FC = () => {
           <h1 className="hero-text pb-4 font-['Gilroy'] text-3xl font-[600] leading-10 text-black-1 md:text-4xl lg:text-5xl xl:text-6xl">
             News & Updates
           </h1>
-          <p className="hero-text font-['Gilroy'] text-base font-[400] text-black-1 md:text-lg lg:max-w-xl lg:text-xl xl:max-w-2xl xl:text-3xl min-[1550px]:max-w-4xl">
+          <p className="hero-text xl:max-wxl font-['Gilroy'] text-base font-[400] text-black-1 md:text-lg lg:max-w-xl lg:text-xl xl:text-3xl min-[1550px]:max-w-4xl">
             America's leading psychotherapist, healer, and a regularly featured national and
             international television personality, Dr. Lisa Palmer wants you to lead a more healthy
             and balanced life. <br />
