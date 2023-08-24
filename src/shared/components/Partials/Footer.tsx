@@ -18,11 +18,6 @@ const Footer: React.FC = () => {
       <LogoFooterSvg className="h-full w-auto" />
     );
 
-  const footerText =
-    width <= 640
-      ? 'Live Better. Breathe Deeper. Be Balanced.'
-      : 'Discover Resources and Wellness Brands';
-
   return (
     <FooterWrapper className="z-10 bg-[#3A3A3B]">
       <div className="container mx-auto flex flex-col gap-10 px-6 py-10 md:grid md:grid-cols-2 md:py-20">
@@ -35,7 +30,7 @@ const Footer: React.FC = () => {
             Ranked #1 for Treatment of PTSD in US.
           </p>
           <p className="max-w-sm font-['Gilroy'] text-xs font-[400] text-white md:text-sm">
-            {footerText}
+            Live Better. Breathe Deeper. Be Balanced.
           </p>
         </div>
         <div className="flex justify-between gap-8">
