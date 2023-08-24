@@ -27,8 +27,8 @@ export const HOME_IMAGES = {
   },
   'ribbon-mha': {
     url: `${imageDomainUrl}/Home/ribbon-mha.png?v=${assetVersion}`,
-    width: 380,
-    height: 50,
+    width: 1493,
+    height: 157,
     alt: 'image',
   },
   's1-phone-1': {

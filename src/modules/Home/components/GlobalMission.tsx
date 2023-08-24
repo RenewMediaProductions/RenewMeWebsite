@@ -1,7 +1,9 @@
 import { GlobalMissionWrapper } from './GlobalMission.styled';
 
+import { HOME_IMAGES } from '../constants';
+
+import Image from 'next/image';
 import React from 'react';
-import RibbonMhaSvg from 'shared/assets/svg/Home/ribbon-mha.svg';
 
 const GlobalMission: React.FC = () => {
   return (
@@ -28,8 +30,15 @@ const GlobalMission: React.FC = () => {
           America’s leading psychotherapists who now joins the ranks of few women in the exclusive
           space of iOS technology.
         </p>
-        <span className="relative mt-5 h-[32px]">
-          <RibbonMhaSvg className="h-[48px] w-[100%] max-w-[380px]" />
+        <span className="relative mt-5 h-auto w-[24rem]">
+          <Image
+            className="absolute left-0 top-0 h-auto w-full object-contain"
+            src={HOME_IMAGES['ribbon-mha'].url}
+            height={HOME_IMAGES['ribbon-mha'].height}
+            width={HOME_IMAGES['ribbon-mha'].width}
+            alt={HOME_IMAGES['ribbon-mha'].alt}
+            priority
+          />
         </span>
       </div>
     </GlobalMissionWrapper>
