@@ -7,6 +7,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import AppleSvg from 'shared/assets/svg/apple.svg';
+import { ROUTES } from 'shared/constants/Routes';
 
 const Hero: React.FC = () => {
   return (
@@ -56,7 +57,7 @@ const Hero: React.FC = () => {
           </p>
         </div>
         <div className={classNames(`hero-buttons flex gap-4`)}>
-          <Link legacyBehavior href={'#'}>
+          <Link legacyBehavior href={ROUTES.GLOBAL_PARTNERS}>
             <a
               className={classNames(
                 `flex h-10 w-[129px] items-center rounded-lg bg-orange-1 px-4 text-center font-['Gilroy'] text-sm font-[600] text-white hover:bg-orange-1-hover`
