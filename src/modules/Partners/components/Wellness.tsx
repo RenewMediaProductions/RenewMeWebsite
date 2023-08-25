@@ -14,7 +14,7 @@ interface Props {
   className?: string;
 }
 
-const WellnessSection: React.FC = () => {
+const WellnessMobile: React.FC = () => {
   const imageOption = {
     gap: 50,
     left: 0,
@@ -48,7 +48,7 @@ const WellnessSection: React.FC = () => {
               className="relative left-0 flex h-full w-full transition-[left] duration-1000 ease-in-out"
               style={{ left: -imageOption.left }}
             >
-              <div className="relative h-screen max-h-[589px] w-full overflow-hidden rounded-[20px]">
+              <div className="relative h-screen max-h-[400px] w-full overflow-hidden rounded-[20px]">
                 <Image
                   className="absolute top-0 h-full w-full object-cover object-top"
                   src={wellness.image.url}
@@ -120,7 +120,7 @@ const Wellness: React.FC<Props> = ({ className }) => {
     setCurrentWidth(width);
   }, [activeIdx, width]);
 
-  if (currentWidth && currentWidth < 768) return <WellnessSection />;
+  if (currentWidth && currentWidth < 768) return <WellnessMobile />;
 
   return (
     <WellnessWrapper
