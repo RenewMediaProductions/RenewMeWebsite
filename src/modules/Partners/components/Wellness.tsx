@@ -14,7 +14,60 @@ interface Props {
   className?: string;
 }
 
+const WellnessSection: React.FC = () => {
+  const imageOption = {
+    gap: 50,
+    left: 0,
+    width: 0,
+  };
+
+  return (
+    <>
+      {WELLNESS.map((wellness, wellnessIdx) => (
+        <WellnessWrapper
+          key={wellnessIdx}
+          className={classNames(
+            `relative flex h-full w-screen flex-col items-center justify-between gap-[60px] overflow-hidden px-5 pt-[80px] pb-[70px]`,
+            `lg:gap-[80px] lg:pt-[58px] lg:pb-[80px]`,
+            wellnessIdx === 0 && 'mt-[80px]'
+          )}
+          style={{ background: wellness.bgColor }}
+          imageOption={imageOption}
+        >
+          <div className="container grid w-full max-w-[1110px] gap-y-[30px] md:grid-cols-[repeat(2,1fr)]">
+            <div className="font-['Gilroy'] text-4xl font-[600] text-black-1 transition-all duration-1000 ease-in-out md:text-5xl lg:text-[60px] lg:leading-[72px]">
+              {wellness.title} <br />
+              {wellness.subtitle}
+            </div>
+            <div className="font-['Gilroy'] text-base font-[500] text-black-1 transition-all duration-1000 ease-in-out md:max-w-[538px] md:text-lg lg:text-[20px] lg:leading-[32px] ">
+              {wellness.description}
+            </div>
+          </div>
+          <div className="relative grid w-full">
+            <div
+              className="relative left-0 flex h-full w-full transition-[left] duration-1000 ease-in-out"
+              style={{ left: -imageOption.left }}
+            >
+              <div className="relative h-screen max-h-[589px] w-full overflow-hidden rounded-[20px]">
+                <Image
+                  className="absolute top-0 h-full w-full object-cover object-top"
+                  src={wellness.image.url}
+                  height={wellness.image.height}
+                  width={wellness.image.width}
+                  alt={wellness.image.alt}
+                  priority
+                />
+              </div>
+            </div>
+          </div>
+        </WellnessWrapper>
+      ))}
+    </>
+  );
+};
+
 const Wellness: React.FC<Props> = ({ className }) => {
+  const [currentWidth, setCurrentWidth] = useState<number>(0);
   const [activeIdx, setActiveIdx] = useState<number>(0);
   const [imageOption, setImageOption] = useState<{ gap: number; left: number; width: number }>({
     gap: 0,
@@ -63,7 +116,11 @@ const Wellness: React.FC<Props> = ({ className }) => {
         width: imageWidth,
       }));
     }
+
+    setCurrentWidth(width);
   }, [activeIdx, width]);
+
+  if (currentWidth && currentWidth < 768) return <WellnessSection />;
 
   return (
     <WellnessWrapper
