@@ -1,6 +1,6 @@
 {
   "name": "template-next-ts",
-  "version": "0.3.0",
+  "version": "0.5.5",
   "repository": "https://github.com/constrod/template-next-ts",
   "bugs": {
     "url": "https://github.com/constrod/template-next-ts/issues"
@@ -9,13 +9,9 @@
     {
       "name": "Rodrick Alcantara",
       "url": "https://github.com/constROD"
-    },
-    {
-      "name": "Adrian Angelo Abelarde",
-      "url": "https://github.com/drianlarde"
     }
   ],
-  "description": "RenewMeWebsite. A new and refreshing wellness brand inspiring you to be all you are meant to be.",
+  "description": "Custom Template for Next TypeScript",
   "author": "Rodrick Alcantara <rialcantara21@gmail.com>",
   "license": "MIT",
   "scripts": {
@@ -38,15 +34,15 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "@sendgrid/mail": "7.7.0",
-    "@tanstack/react-query": "4.24.4",
+    "@sendgrid/mail": "^7.7.0",
+    "@tanstack/react-query": "^4.24.4",
     "axios": "^0.27.2",
     "classnames": "^2.3.1",
     "date-fns": "^2.28.0",
     "dotenv": "^16.0.1",
     "immer": "^9.0.15",
     "lodash": "^4.17.21",
-    "next": "12.3.1",
+    "next": "13.1.6",
     "react": "18.1.0",
     "react-dom": "18.1.0",
     "react-intersection-observer": "^9.4.1",
