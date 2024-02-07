@@ -90,7 +90,7 @@ const QRCode: React.FC = () => {
         {companyContentMap[companyId]?.banner}
 
         <section
-          className={`flex h-screen w-full flex-col items-center gap-10 py-10 px-10 text-white-1 md:px-40 ${backgroundColor}`}
+          className={`flex h-screen w-full flex-col items-center justify-center gap-10 py-10 px-10 text-white-1 md:px-40 ${backgroundColor}`}
         >
           <Image
             className="hidden md:block"
