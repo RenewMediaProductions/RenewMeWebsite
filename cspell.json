@@ -38,7 +38,8 @@
     "Qoute",
     "zustand",
     "mentalhealthawareness",
-    "evenodd"
+    "evenodd",
+    "couldn"
   ],
   "ignorePaths": ["node_modules/", "build/", ".husky", "pnpm-lock.yaml", "package.json"]
 }
