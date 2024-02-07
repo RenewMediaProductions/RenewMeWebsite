@@ -33,14 +33,14 @@ interface CompanyContent {
 const companyContentMap: { [key: string]: CompanyContent } = {
   soulscape: {
     title: (
-      <h1 className="mb-4 max-w-xs text-center text-3xl font-bold md:mb-6 md:max-w-xl md:text-6xl">
+      <h1 className="max-w-xs text-center text-3xl font-bold text-black md:mb-6 md:max-w-xl md:text-6xl">
         Enjoy <span className="text-sea-1">Soulscape.</span> Travel Mindfully.
       </h1>
     ),
     backgroundColor: 'bg-[#131B42]',
     banner: (
       <Image
-        className="mt-32 md:mt-28 lg:mt-12"
+        className="mt-24 md:mt-28 lg:mt-12"
         src={`${imageDomainUrl}/Code/qr-code-bg-soulscape.svg`}
         alt="Background QR Code Banner"
         width={2560}
@@ -51,7 +51,7 @@ const companyContentMap: { [key: string]: CompanyContent } = {
   },
   renewme: {
     title: (
-      <h1 className="mb-4 max-w-[190px] text-center text-3xl font-bold md:mb-6 md:max-w-4xl md:text-6xl">
+      <h1 className="max-w-[190px] text-center text-3xl font-bold text-black md:mb-6 md:max-w-4xl md:text-6xl">
         Live Better. Be Balanced.
       </h1>
     ),
@@ -121,7 +121,9 @@ const QRCode: React.FC = () => {
       <section className="relative flex w-full flex-col items-center justify-center">
         <div className="absolute top-0 z-10 pt-16 md:pt-24">
           {title}
-          <p className="text-center text-base font-medium md:text-2xl">#mentalhealthawareness</p>
+          <p className="mt-1 text-center text-base font-medium text-black md:text-2xl">
+            #mentalhealthawareness
+          </p>
         </div>
 
         {companyContentMap[companyId]?.banner}
