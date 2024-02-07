@@ -33,7 +33,7 @@ interface CompanyContent {
 const companyContentMap: { [key: string]: CompanyContent } = {
   soulscape: {
     title: (
-      <h1 className="mb-2 max-w-xs text-center text-3xl font-bold md:mb-4 md:max-w-xl md:text-6xl">
+      <h1 className="mb-4 max-w-xs text-center text-3xl font-semibold md:mb-6 md:max-w-xl md:text-6xl">
         Enjoy <span className="text-sea-1">Soulscape.</span> Travel Mindfully.
       </h1>
     ),
@@ -51,7 +51,7 @@ const companyContentMap: { [key: string]: CompanyContent } = {
   },
   renewme: {
     title: (
-      <h1 className="mb-2 max-w-[190px] text-center text-3xl font-bold md:mb-4 md:max-w-4xl md:text-6xl">
+      <h1 className="mb-4 max-w-[190px] text-center text-3xl font-semibold md:mb-6 md:max-w-4xl md:text-6xl">
         Live Better. Be Balanced.
       </h1>
     ),
@@ -127,22 +127,22 @@ const QRCode: React.FC = () => {
         {companyContentMap[companyId]?.banner}
 
         <section
-          className={`flex h-screen w-full flex-col items-center justify-center gap-10 py-10 px-10 text-white-1 md:px-40 ${backgroundColor}`}
+          className={`flex h-fit w-full flex-col items-center justify-center gap-10 py-10 px-10 text-white-1 md:px-40 ${backgroundColor}`}
         >
           <Image
             className="hidden md:block"
             src={`${imageDomainUrl}/Code/renew-logo.svg`}
-            alt="Soulscape QR Code"
-            width={200}
-            height={200}
+            alt="Renew Logo"
+            width={220}
+            height={220}
           />
 
           <Image
             className="md:hidden"
             src={`${imageDomainUrl}/Code/renew-logo.svg`}
-            alt="Soulscape QR Code"
-            width={140}
-            height={140}
+            alt="Renew Logo"
+            width={130}
+            height={130}
           />
 
           <div className="flex w-full flex-col items-center gap-12">
@@ -150,16 +150,16 @@ const QRCode: React.FC = () => {
               <Image
                 className="hidden md:block"
                 src={`${imageDomainUrl}/Code/renew-logo-tm.svg`}
-                alt="Soulscape QR Code"
+                alt="Renew Logo TM"
                 width={220}
                 height={220}
               />
               <Image
                 className="md:hidden"
                 src={`${imageDomainUrl}/Code/renew-logo-tm.svg`}
-                alt="Soulscape QR Code"
-                width={162}
-                height={162}
+                alt="Renew Logo TM"
+                width={130}
+                height={130}
               />
               <p className="flex items-center gap-2 text-sm font-medium md:text-base">
                 CODE:{' '}
