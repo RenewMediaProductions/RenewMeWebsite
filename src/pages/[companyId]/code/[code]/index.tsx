@@ -33,7 +33,7 @@ interface CompanyContent {
 const companyContentMap: { [key: string]: CompanyContent } = {
   soulscape: {
     title: (
-      <h1 className="mb-4 max-w-xs text-center text-3xl font-semibold md:mb-6 md:max-w-xl md:text-6xl">
+      <h1 className="mb-4 max-w-xs text-center text-3xl font-bold md:mb-6 md:max-w-xl md:text-6xl">
         Enjoy <span className="text-sea-1">Soulscape.</span> Travel Mindfully.
       </h1>
     ),
@@ -51,7 +51,7 @@ const companyContentMap: { [key: string]: CompanyContent } = {
   },
   renewme: {
     title: (
-      <h1 className="mb-4 max-w-[190px] text-center text-3xl font-semibold md:mb-6 md:max-w-4xl md:text-6xl">
+      <h1 className="mb-4 max-w-[190px] text-center text-3xl font-bold md:mb-6 md:max-w-4xl md:text-6xl">
         Live Better. Be Balanced.
       </h1>
     ),
