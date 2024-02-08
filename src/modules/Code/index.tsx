@@ -140,7 +140,7 @@ const Code: React.FC = () => {
   };
 
   return (
-    <main className="bg-white-1 font-['Gilroy'] text-black">
+    <main className="flex flex-col bg-white-1 font-['Gilroy'] text-black">
       <section className="relative flex h-screen w-full flex-col items-center justify-center text-base font-[700]">
         {/* Hero Title */}
         <section className="absolute top-0 z-20 ml-[.5rem] flex flex-col items-center pt-[64px] md:pt-14">
@@ -213,15 +213,17 @@ const Code: React.FC = () => {
             </Link>
           </div>
         </section>
+
+        <Separator />
       </section>
+
       <footer
         className={classNames(
-          'flex w-full flex-col items-center gap-6 px-6 pb-6 font-medium text-white',
+          'flex w-full flex-col items-center gap-6 px-6 pb-6 font-medium text-white md:px-16',
           backgroundColor === 'bg-[#131B42]' ? 'bg-[#131B42]' : 'bg-[#0D1A27]' // Add this line
         )}
       >
         <Separator />
-
         <Link href="#">
           <Button textContent="Join the Movement" />
         </Link>
