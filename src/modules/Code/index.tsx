@@ -5,8 +5,6 @@ import { useRouter } from 'next/router';
 import React, { ReactNode, useEffect, useState } from 'react';
 import { imageDomainUrl } from 'shared/constants/Assets';
 
-const Separator: React.FC = () => <div className="mx-4 h-[0.062rem] w-full bg-white-1/30" />;
-
 interface ButtonProps {
   textContent: string;
   className?: string;
@@ -162,7 +160,7 @@ const Code: React.FC = () => {
           />
         </section>
         <section
-          className={`flex h-fit w-full flex-col items-center justify-center px-10 pb-1 pt-6 text-white-1 md:px-40 ${backgroundColor}`}
+          className={`flex h-fit w-full flex-col items-center justify-center px-10 py-6 text-white-1 md:px-40 ${backgroundColor}`}
         >
           <div className="flex w-full flex-col items-center gap-6">
             <div className="flex w-full flex-col items-center gap-2">
@@ -214,12 +212,11 @@ const Code: React.FC = () => {
       </section>
       <footer
         className={classNames(
-          'flex h-fit w-full flex-col items-center gap-6 p-6 font-medium text-white md:px-16',
+          'flex h-fit w-full flex-col items-center gap-6 px-6 pb-6 font-medium text-white md:px-16',
           backgroundColor === 'bg-[#131B42]' ? 'bg-[#131B42]' : 'bg-[#0D1A27]' // Add this line
         )}
       >
-        <Separator />
-
+        <div className="h-2 w-full border-t-[1px] border-white/20"></div>
         <Link href="#">
           <Button textContent="Join the Movement" />
         </Link>
