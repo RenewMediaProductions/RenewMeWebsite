@@ -51,7 +51,6 @@ const companyContentMap: { [key: string]: CompanyContent } = {
         />
 
         <Image
-          // className="md:w-16rem absolute bottom-0 left-0 right-0 z-10 mx-auto hidden h-auto w-64 xs:block md:left-16 md:m-0 lg:left-20 lg:m-0 lg:w-[20rem] xl:left-40 xl:m-0 xl:w-[22rem]"
           className="absolute left-16 bottom-0 right-0 z-10 mx-auto hidden h-auto w-40 xs:block md:left-16 md:m-0 md:w-48 lg:left-28 lg:w-[14rem] xl:left-44"
           src={`${imageDomainUrl}/Code/hero-soulscape-foreground.svg`}
           alt="Background QR Code Banner"
@@ -81,7 +80,7 @@ const companyContentMap: { [key: string]: CompanyContent } = {
         />
 
         <Image
-          className="md:w-16rem absolute bottom-0 left-0 right-0 z-10 mx-auto hidden h-auto w-64 xs:block md:left-16 md:m-0 lg:left-20 lg:m-0 lg:w-[20rem] xl:left-40 xl:m-0 xl:w-[22rem]"
+          className="md:w-16rem absolute bottom-0 left-0 right-0 z-10 mx-auto hidden h-auto w-64 xs:block md:left-16 md:m-0 lg:left-20 lg:w-[20rem] xl:left-40 xl:w-[22rem]"
           src={`${imageDomainUrl}/Code/hero-renewme-foreground.svg`}
           alt="Background QR Code Banner"
           width={1000}
