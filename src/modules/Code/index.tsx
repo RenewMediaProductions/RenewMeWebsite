@@ -39,7 +39,7 @@ const companyContentMap: { [key: string]: CompanyContent } = {
     backgroundColor: 'bg-[#131B42]',
     banner: (
       <Image
-        className="ml-[4vh] md:pt-10"
+        className="ml-[4vh] object-top md:pt-20"
         fill
         src={`${imageDomainUrl}/Code/hero-soulscape-foreground.svg`}
         alt="Background QR Code Banner"
@@ -56,8 +56,8 @@ const companyContentMap: { [key: string]: CompanyContent } = {
     backgroundColor: 'bg-[#0D1A27]',
     banner: (
       <Image
-        className="md:pt-10"
         fill
+        className="object-top md:pt-20"
         src={`${imageDomainUrl}/Code/hero-renewme-foreground.svg`}
         alt="Background QR Code Banner"
       />
@@ -117,15 +117,17 @@ const Code: React.FC = () => {
     <main className="flex flex-col font-['Gilroy'] text-black">
       <section className="flex h-screen w-full flex-col items-center justify-center bg-white-1 text-base font-[700]">
         {/* Hero Vector */}
-        <section className="relative flex h-full w-full flex-col items-center justify-between gap-8 overflow-hidden md:flex-row md:items-center">
+        <section className="relative flex h-full w-full flex-col items-center justify-between gap-8 overflow-hidden md:flex-row md:items-end">
           {/* Hero Title */}
-          <section className="ml-[.5rem] flex w-full flex-col items-center pt-[3rem] md:ml-0 md:items-start md:px-20 md:pt-0">
+          <section className="my-auto ml-[.5rem] flex w-full flex-col items-center pt-[3rem] md:ml-0 md:items-start md:px-20 md:pt-0">
             {title}
             <p className="z-20 mt-[2px] text-center text-base font-medium text-black">
               #mentalhealthawareness
             </p>
           </section>
-          <div className="relative z-10 h-full w-full">{companyContentMap[companyId]?.banner}</div>
+          <div className="relative z-10 h-64 w-full md:mr-20">
+            {companyContentMap[companyId]?.banner}
+          </div>
 
           <Image
             className="absolute bottom-0"
