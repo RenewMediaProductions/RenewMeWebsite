@@ -5,7 +5,7 @@ import { useRouter } from 'next/router';
 import React, { ReactNode, useEffect, useState } from 'react';
 import { imageDomainUrl } from 'shared/constants/Assets';
 
-const Separator: React.FC = () => <div className="mx-4 h-[.0625rem] w-full bg-white-1/30" />;
+const Separator: React.FC = () => <div className="mx-4 h-[0.062rem] w-full bg-white-1/30" />;
 
 interface ButtonProps {
   textContent: string;
@@ -149,7 +149,6 @@ const Code: React.FC = () => {
             #mentalhealthawareness
           </p>
         </section>
-
         {/* Hero Vector */}
         <section className="relative h-[400px] w-full overflow-hidden md:h-[31.25rem] lg:h-[40.625rem] xl:h-screen">
           {companyContentMap[companyId]?.banner}
@@ -162,9 +161,8 @@ const Code: React.FC = () => {
             height={1024}
           />
         </section>
-
         <section
-          className={`flex h-fit w-full flex-col items-center justify-center py-6 px-10 text-white-1 md:px-40 ${backgroundColor}`}
+          className={`flex h-fit w-full flex-col items-center justify-center px-10 pb-1 pt-6 text-white-1 md:px-40 ${backgroundColor}`}
         >
           <div className="flex w-full flex-col items-center gap-6">
             <div className="flex w-full flex-col items-center gap-2">
@@ -213,17 +211,15 @@ const Code: React.FC = () => {
             </Link>
           </div>
         </section>
-
-        <Separator />
       </section>
-
       <footer
         className={classNames(
-          'flex w-full flex-col items-center gap-6 px-6 pb-6 font-medium text-white md:px-16',
+          'flex h-fit w-full flex-col items-center gap-6 p-6 font-medium text-white md:px-16',
           backgroundColor === 'bg-[#131B42]' ? 'bg-[#131B42]' : 'bg-[#0D1A27]' // Add this line
         )}
       >
         <Separator />
+
         <Link href="#">
           <Button textContent="Join the Movement" />
         </Link>
