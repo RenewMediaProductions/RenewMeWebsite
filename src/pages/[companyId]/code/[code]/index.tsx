@@ -39,13 +39,40 @@ const companyContentMap: { [key: string]: CompanyContent } = {
     ),
     backgroundColor: 'bg-[#131B42]',
     banner: (
-      <Image
-        className="mt-24 md:mt-28 lg:mt-12"
-        src={`${imageDomainUrl}/Code/qr-code-bg-soulscape.svg`}
-        alt="Background QR Code Banner"
-        width={2560}
-        height={1024}
-      />
+      <>
+        {/* Extra small devices (mobile phones) */}
+        <Image
+          className="absolute bottom-0 left-5 right-0 z-10 mx-auto block md:hidden"
+          src={`${imageDomainUrl}/Code/hero-soulscape-foreground.svg`}
+          alt="Background QR Code Banner"
+          width={137}
+          height={137}
+        />
+
+        <Image
+          className="absolute left-16 bottom-0 right-0 z-10 mx-auto hidden md:block lg:hidden"
+          src={`${imageDomainUrl}/Code/hero-soulscape-foreground.svg`}
+          alt="Background QR Code Banner"
+          width={220}
+          height={220}
+        />
+
+        <Image
+          className="absolute left-28 bottom-0 right-0 z-10 mx-auto hidden lg:block xl:hidden"
+          src={`${imageDomainUrl}/Code/hero-soulscape-foreground.svg`}
+          alt="Background QR Code Banner"
+          width={360}
+          height={360}
+        />
+
+        <Image
+          className="absolute left-32 bottom-0 right-0 z-10 mx-auto hidden xl:block"
+          src={`${imageDomainUrl}/Code/hero-soulscape-foreground.svg`}
+          alt="Background QR Code Banner"
+          width={430}
+          height={430}
+        />
+      </>
     ),
     validCodes: ['joy369'], // Example valid code for Soulscape
   },
@@ -57,13 +84,43 @@ const companyContentMap: { [key: string]: CompanyContent } = {
     ),
     backgroundColor: 'bg-[#0D1A27]',
     banner: (
-      <Image
-        className="mt-40 md:mt-48 lg:mt-32"
-        src={`${imageDomainUrl}/Code/qr-code-bg-renewme.svg`}
-        alt="Background QR Code Banner"
-        width={2560}
-        height={1024}
-      />
+      <>
+        <Image
+          // Apply absolute positioning, bottom alignment, z-index, and horizontal centering
+          className="absolute bottom-0 left-0 right-0 z-10 mx-auto block md:hidden"
+          src={`${imageDomainUrl}/Code/hero-renewme-foreground.svg`}
+          alt="Background QR Code Banner"
+          width={210}
+          height={210}
+        />
+
+        <Image
+          // Apply absolute positioning, bottom alignment, z-index, and horizontal centering
+          className="absolute left-0 bottom-0 right-0 z-10 mx-auto hidden md:block lg:hidden"
+          src={`${imageDomainUrl}/Code/hero-renewme-foreground.svg`}
+          alt="Background QR Code Banner"
+          width={440}
+          height={440}
+        />
+
+        <Image
+          // Apply absolute positioning, bottom alignment, z-index, and horizontal centering
+          className="absolute left-0 bottom-0 right-0 z-10 mx-auto hidden lg:block xl:hidden"
+          src={`${imageDomainUrl}/Code/hero-renewme-foreground.svg`}
+          alt="Background QR Code Banner"
+          width={600}
+          height={600}
+        />
+
+        <Image
+          // Apply absolute positioning, bottom alignment, z-index, and horizontal centering
+          className="absolute left-0 bottom-0 right-0 z-10 mx-auto hidden xl:block"
+          src={`${imageDomainUrl}/Code/hero-renewme-foreground.svg`}
+          alt="Background QR Code Banner"
+          width={700}
+          height={700}
+        />
+      </>
     ),
     validCodes: ['peace369'], // Add valid codes for RenewMe
   },
@@ -91,7 +148,7 @@ const QRCode: React.FC = () => {
 
   if (isLoading) {
     // Optionally show a loading spinner or return null while waiting
-    return null; // or <div>Loading...</div>
+    return null;
   }
 
   if (!isValidCompanyId || !isValidCode) {
@@ -119,17 +176,27 @@ const QRCode: React.FC = () => {
   return (
     <main className={`bg-white-1 font-['Gilroy'] text-base font-[700] text-[#3A3A3B]`}>
       <section className="relative flex w-full flex-col items-center justify-center">
-        <div className="absolute top-0 z-10 pt-16 md:pt-24">
+        <section className="absolute top-0 z-10 pt-8 md:pt-14">
           {title}
           <p className="mt-1 text-center text-base font-medium text-black md:text-2xl">
             #mentalhealthawareness
           </p>
-        </div>
+        </section>
 
-        {companyContentMap[companyId]?.banner}
+        <section className="relative h-72 w-full overflow-hidden md:h-[500px] lg:h-[650px] xl:h-screen">
+          {companyContentMap[companyId]?.banner}
+
+          <Image
+            className="absolute bottom-0 mt-28"
+            src={`${imageDomainUrl}/Code/hero-background.svg`}
+            alt="Background QR Code Banner"
+            width={2560}
+            height={1024}
+          />
+        </section>
 
         <section
-          className={`flex h-fit w-full flex-col items-center justify-center gap-10 py-10 px-10 text-white-1 md:px-40 ${backgroundColor}`}
+          className={`flex h-fit w-full flex-col items-center justify-center gap-2 py-10 px-10 text-white-1 md:px-40 ${backgroundColor}`}
         >
           <Image
             className="hidden md:block"
