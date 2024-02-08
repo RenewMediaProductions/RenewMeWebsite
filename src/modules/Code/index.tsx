@@ -51,7 +51,8 @@ const companyContentMap: { [key: string]: CompanyContent } = {
         />
 
         <Image
-          className="absolute left-16 bottom-0 right-0 z-10 mx-auto hidden h-auto w-48 xs:block md:w-60 lg:left-28 lg:w-[22rem] xl:left-32 xl:w-[24rem]"
+          // className="md:w-16rem absolute bottom-0 left-0 right-0 z-10 mx-auto hidden h-auto w-64 xs:block md:left-16 md:m-0 lg:left-20 lg:m-0 lg:w-[20rem] xl:left-40 xl:m-0 xl:w-[22rem]"
+          className="absolute left-16 bottom-0 right-0 z-10 mx-auto hidden h-auto w-40 xs:block md:left-16 md:m-0 md:w-48 lg:left-28 lg:w-[14rem] xl:left-44"
           src={`${imageDomainUrl}/Code/hero-soulscape-foreground.svg`}
           alt="Background QR Code Banner"
           width={1000}
@@ -80,7 +81,7 @@ const companyContentMap: { [key: string]: CompanyContent } = {
         />
 
         <Image
-          className="absolute bottom-0 left-0 right-0 z-10 mx-auto hidden h-auto w-72 xs:block md:w-[26rem] lg:w-[34rem] xl:w-[38rem]"
+          className="md:w-16rem absolute bottom-0 left-0 right-0 z-10 mx-auto hidden h-auto w-64 xs:block md:left-16 md:m-0 lg:left-20 lg:m-0 lg:w-[20rem] xl:left-40 xl:m-0 xl:w-[22rem]"
           src={`${imageDomainUrl}/Code/hero-renewme-foreground.svg`}
           alt="Background QR Code Banner"
           width={1000}
@@ -140,90 +141,93 @@ const Code: React.FC = () => {
   };
 
   return (
-    <main className="relative flex w-full flex-col items-center justify-center bg-white-1 font-['Gilroy'] text-base font-[700] text-[#3A3A3B]">
-      {/* Hero Title */}
-      <section className="absolute top-0 z-20 ml-[.5rem] flex flex-col items-center pt-[64px] md:pt-14">
-        {title}
-        <p className="text-1rem mt-[2px] text-center font-medium text-black md:text-[1rem] lg:text-2xl">
-          #mentalhealthawareness
-        </p>
-      </section>
+    <main className="bg-white-1 font-['Gilroy'] text-black">
+      <section className="relative flex h-screen w-full flex-col items-center justify-center text-base font-[700]">
+        {/* Hero Title */}
+        <section className="absolute top-0 z-20 ml-[.5rem] flex flex-col items-center pt-[64px] md:pt-14">
+          {title}
+          <p className="text-1rem mt-[2px] text-center font-medium text-black md:text-[1rem] lg:text-2xl">
+            #mentalhealthawareness
+          </p>
+        </section>
 
-      {/* Hero Vector */}
-      <section className="relative h-[400px] w-full overflow-hidden md:h-[31.25rem] lg:h-[40.625rem] xl:h-screen">
-        {companyContentMap[companyId]?.banner}
+        {/* Hero Vector */}
+        <section className="relative h-[400px] w-full overflow-hidden md:h-[31.25rem] lg:h-[40.625rem] xl:h-screen">
+          {companyContentMap[companyId]?.banner}
 
-        <Image
-          className="absolute bottom-0 mt-28 hidden xs:block"
-          src={`${imageDomainUrl}/Code/hero-background.svg`}
-          alt="Background QR Code Banner"
-          width={2560}
-          height={1024}
-        />
-      </section>
-
-      <section
-        className={`flex h-fit w-full flex-col items-center justify-center py-6 px-10 text-white-1 md:px-40 ${backgroundColor}`}
-      >
-        <div className="flex w-full flex-col items-center gap-6">
           <Image
-            className="hidden h-48 w-auto md:block"
-            src="/assets/Code/renew-logo.png"
-            alt="RenewMe Logo"
-            width={1000}
-            height={1000}
+            className="absolute bottom-0 mt-28 hidden xs:block"
+            src={`${imageDomainUrl}/Code/hero-background.svg`}
+            alt="Background QR Code Banner"
+            width={2560}
+            height={1024}
           />
-          <Image
-            className="h-28 w-auto md:hidden"
-            src={`/assets/Code/renew-logo.png`}
-            alt="Renew Logo"
-            width={1000}
-            height={1000}
-          />
+        </section>
 
-          <div className="flex w-full flex-col items-center gap-2">
-            <Image
-              className="md:hidden"
-              src={`${imageDomainUrl}/Code/renew-logo-tm.svg`}
-              alt="Renew Logo TM"
-              width={150}
-              height={150}
-            />
-            <Image
-              className="hidden md:block"
-              src={`${imageDomainUrl}/Code/renew-logo-tm.svg`}
-              alt="Renew Logo TM"
-              width={220}
-              height={220}
-            />
-
-            <p className="flex items-center gap-2 text-sm font-medium md:text-base">
-              CODE:{' '}
-              <span className="rounded-full bg-white px-2 pt-[2px] pb-[1px] uppercase text-black">
-                {code}
-              </span>
-            </p>
-          </div>
-
-          <Link href="#">
-            <Image
-              src={`${imageDomainUrl}/Code/download-app-store.svg`}
-              alt="Download App Store"
-              width={130}
-              height={130}
-            />
-          </Link>
-
-          <Separator />
-
-          <section className="flex w-full flex-col items-center gap-6 font-medium">
+        <section
+          className={`flex h-fit w-full flex-col items-center justify-center py-6 px-10 text-white-1 md:px-40 ${backgroundColor}`}
+        >
+          <div className="flex w-full flex-col items-center gap-6">
+            <div className="flex w-full flex-col items-center gap-2">
+              <Image
+                className="hidden h-48 w-auto md:block"
+                src="/assets/Code/renew-logo.png"
+                alt="RenewMe Logo"
+                width={1000}
+                height={1000}
+              />
+              <Image
+                className="h-28 w-auto md:hidden"
+                src={`/assets/Code/renew-logo.png`}
+                alt="Renew Logo"
+                width={1000}
+                height={1000}
+              />
+              <Image
+                className="md:hidden"
+                src={`${imageDomainUrl}/Code/renew-logo-tm.svg`}
+                alt="Renew Logo TM"
+                width={150}
+                height={150}
+              />
+              <Image
+                className="hidden md:block"
+                src={`${imageDomainUrl}/Code/renew-logo-tm.svg`}
+                alt="Renew Logo TM"
+                width={220}
+                height={220}
+              />
+              <p className="flex items-center gap-2 text-sm font-medium md:text-base">
+                CODE:{' '}
+                <span className="rounded-full bg-white px-2 pt-[2px] pb-[1px] uppercase text-black">
+                  {code}
+                </span>
+              </p>
+            </div>
             <Link href="#">
-              <Button textContent="Join the Movement" />
+              <Image
+                src={`${imageDomainUrl}/Code/download-app-store.svg`}
+                alt="Download App Store"
+                width={130}
+                height={130}
+              />
             </Link>
-            <p className="text-center text-sm md:text-base">Life balance is better together.</p>
-          </section>
-        </div>
+          </div>
+        </section>
       </section>
+      <footer
+        className={classNames(
+          'flex w-full flex-col items-center gap-6 px-6 pb-6 font-medium text-white',
+          backgroundColor === 'bg-[#131B42]' ? 'bg-[#131B42]' : 'bg-[#0D1A27]' // Add this line
+        )}
+      >
+        <Separator />
+
+        <Link href="#">
+          <Button textContent="Join the Movement" />
+        </Link>
+        <p className="text-center text-sm md:text-base">Life balance is better together.</p>
+      </footer>
     </main>
   );
 };
