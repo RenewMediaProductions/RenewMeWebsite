@@ -32,59 +32,35 @@ interface CompanyContent {
 const companyContentMap: { [key: string]: CompanyContent } = {
   soulscape: {
     title: (
-      <h1 className="max-w-xs text-center text-3xl font-bold leading-normal text-black md:mb-6 md:max-w-xl md:text-6xl">
+      <h1 className="z-20 max-w-xs text-center text-3xl font-bold leading-normal text-black md:mb-6 md:max-w-xl md:text-left md:text-4xl">
         Enjoy <span className="text-sea-1">Soulscape.</span> Travel Mindfully.
       </h1>
     ),
     backgroundColor: 'bg-[#131B42]',
     banner: (
-      <>
-        {/* For extra small devices (default) */}
-        <Image
-          className="absolute bottom-0 left-0 right-0 z-10 mx-auto block xs:hidden"
-          src={`${imageDomainUrl}/Code/hero-vector-soulscape.svg`}
-          alt="Background QR Code Banner"
-          width={2560}
-          height={1024}
-        />
-
-        <Image
-          className="absolute left-16 bottom-0 right-0 z-10 mx-auto hidden h-auto w-40 xs:block md:left-16 md:m-0 md:w-48 lg:left-28 lg:w-[14rem] xl:left-44"
-          src={`${imageDomainUrl}/Code/hero-soulscape-foreground.svg`}
-          alt="Background QR Code Banner"
-          width={1000}
-          height={1000}
-        />
-      </>
+      <Image
+        className="ml-[4vh] md:pt-10"
+        fill
+        src={`${imageDomainUrl}/Code/hero-soulscape-foreground.svg`}
+        alt="Background QR Code Banner"
+      />
     ),
     validCodes: ['joy369'],
   },
-
   renewme: {
     title: (
-      <h1 className="mb-2 max-w-[13rem] text-center text-[2rem] font-bold leading-tight text-black md:max-w-[14rem] md:text-4xl lg:mb-6 lg:max-w-[24rem] lg:text-6xl">
+      <h1 className="z-20 max-w-[11.875rem] text-center text-3xl font-bold leading-snug text-black md:mb-6 md:max-w-xl md:text-left md:text-4xl">
         Live Better. Be Balanced.
       </h1>
     ),
     backgroundColor: 'bg-[#0D1A27]',
     banner: (
-      <>
-        <Image
-          className="absolute bottom-0 left-0 right-0 z-10 mx-auto block xs:hidden"
-          src={`${imageDomainUrl}/Code/hero-vector-renew.svg`}
-          alt="Background QR Code Banner"
-          width={2560}
-          height={1024}
-        />
-
-        <Image
-          className="md:w-16rem absolute bottom-0 left-0 right-0 z-10 mx-auto hidden h-auto w-64 xs:block md:left-16 md:m-0 lg:left-20 lg:w-[20rem] xl:left-40 xl:w-[22rem]"
-          src={`${imageDomainUrl}/Code/hero-renewme-foreground.svg`}
-          alt="Background QR Code Banner"
-          width={1000}
-          height={1000}
-        />
-      </>
+      <Image
+        className="md:pt-10"
+        fill
+        src={`${imageDomainUrl}/Code/hero-renewme-foreground.svg`}
+        alt="Background QR Code Banner"
+      />
     ),
     validCodes: ['peace369'], // Add valid codes for RenewMe
   },
@@ -138,31 +114,32 @@ const Code: React.FC = () => {
   };
 
   return (
-    <main className="flex flex-col bg-white-1 font-['Gilroy'] text-black">
-      <section className="relative flex h-screen w-full flex-col items-center justify-center text-base font-[700]">
-        {/* Hero Title */}
-        <section className="absolute top-0 z-20 ml-[.5rem] flex flex-col items-center pt-[64px] md:pt-14">
-          {title}
-          <p className="text-1rem mt-[2px] text-center font-medium text-black md:text-[1rem] lg:text-2xl">
-            #mentalhealthawareness
-          </p>
-        </section>
+    <main className="flex flex-col font-['Gilroy'] text-black">
+      <section className="flex h-screen w-full flex-col items-center justify-center bg-white-1 text-base font-[700]">
         {/* Hero Vector */}
-        <section className="relative h-[400px] w-full overflow-hidden md:h-[31.25rem] lg:h-[40.625rem] xl:h-screen">
-          {companyContentMap[companyId]?.banner}
+        <section className="relative flex h-full w-full flex-col items-center justify-between gap-8 overflow-hidden md:flex-row md:items-center">
+          {/* Hero Title */}
+          <section className="ml-[.5rem] flex w-full flex-col items-center pt-[3rem] md:ml-0 md:items-start md:px-20 md:pt-0">
+            {title}
+            <p className="z-20 mt-[2px] text-center text-base font-medium text-black">
+              #mentalhealthawareness
+            </p>
+          </section>
+          <div className="relative z-10 h-full w-full">{companyContentMap[companyId]?.banner}</div>
 
           <Image
-            className="absolute bottom-0 mt-28 hidden xs:block"
+            className="absolute bottom-0"
             src={`${imageDomainUrl}/Code/hero-background.svg`}
             alt="Background QR Code Banner"
             width={2560}
             height={1024}
           />
         </section>
+
         <section
-          className={`flex h-fit w-full flex-col items-center justify-center px-10 py-6 text-white-1 md:px-40 ${backgroundColor}`}
+          className={`flex h-full w-full flex-col items-center justify-center px-10 py-6 text-white-1 md:h-fit md:px-40 ${backgroundColor}`}
         >
-          <div className="flex w-full flex-col items-center gap-6">
+          <div className="flex w-full flex-col items-center gap-12">
             <div className="flex w-full flex-col items-center gap-2">
               <Image
                 className="hidden h-48 w-auto md:block"
