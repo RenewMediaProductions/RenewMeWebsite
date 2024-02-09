@@ -125,7 +125,6 @@ const Code: React.FC = () => {
               #mentalhealthawareness
             </p>
           </section>
-
           <div className="relative z-10 h-full w-full md:mr-20">
             {companyContentMap[companyId]?.banner}
           </div>
@@ -190,7 +189,6 @@ const Code: React.FC = () => {
           </div>
         </section>
       </section>
-
       <footer
         className={classNames(
           'flex h-fit w-full flex-col items-center gap-6 px-6 pb-6 font-medium text-white md:px-16',
