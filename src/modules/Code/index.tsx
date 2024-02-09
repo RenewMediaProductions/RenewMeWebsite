@@ -115,7 +115,7 @@ const Code: React.FC = () => {
 
   return (
     <main className="flex flex-col font-['Gilroy'] text-black">
-      <section className="flex h-screen w-full flex-col items-center justify-center bg-white-1 text-base font-[700]">
+      <section className="flex h-[calc(100dvh)] w-full flex-col items-center justify-center bg-white-1 text-base font-[700]">
         {/* Hero Vector */}
         <section className="relative flex h-full w-full flex-col items-center justify-between gap-8 overflow-hidden md:flex-row md:items-end">
           {/* Hero Title */}
