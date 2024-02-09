@@ -39,8 +39,8 @@ const companyContentMap: { [key: string]: CompanyContent } = {
     backgroundColor: 'bg-[#131B42]',
     banner: (
       <Image
-        className="ml-[4vh] object-top md:pt-20"
         fill
+        className="ml-[4vh] object-contain object-bottom px-10 md:pt-6"
         src={`${imageDomainUrl}/Code/hero-soulscape-foreground.svg`}
         alt="Background QR Code Banner"
       />
@@ -57,7 +57,7 @@ const companyContentMap: { [key: string]: CompanyContent } = {
     banner: (
       <Image
         fill
-        className="object-top md:pt-20"
+        className="object-contain object-bottom px-10 md:pt-6"
         src={`${imageDomainUrl}/Code/hero-renewme-foreground.svg`}
         alt="Background QR Code Banner"
       />
@@ -115,22 +115,23 @@ const Code: React.FC = () => {
 
   return (
     <main className="flex flex-col font-['Gilroy'] text-black">
-      <section className="flex h-[100svh] w-full flex-col items-center justify-center bg-white-1 text-base font-[700]">
+      <section className="flex h-[100svh] w-full flex-col items-center justify-start bg-white-1 text-base font-[700]">
         {/* Hero Vector */}
-        <section className="relative flex h-full w-full flex-col items-center justify-between gap-8 overflow-hidden md:flex-row md:items-end">
+        <section className="relative flex h-full w-full flex-col items-center gap-2 overflow-hidden md:flex-row">
           {/* Hero Title */}
-          <section className="my-auto ml-[.5rem] flex w-full flex-col items-center pt-[3rem] md:ml-0 md:items-start md:px-20 md:pt-0">
+          <section className="ml-[.5rem] flex w-full flex-col items-center pt-8 md:ml-0 md:items-start md:px-20 md:pt-0">
             {title}
             <p className="z-20 mt-[2px] text-center text-base font-medium text-black">
               #mentalhealthawareness
             </p>
           </section>
-          <div className="relative z-10 h-64 w-full md:mr-20">
+
+          <div className="relative z-10 h-full w-full md:mr-20">
             {companyContentMap[companyId]?.banner}
           </div>
 
           <Image
-            className="absolute bottom-0"
+            className="absolute bottom-0 h-[40vh] w-full object-cover"
             src={`${imageDomainUrl}/Code/hero-background.svg`}
             alt="Background QR Code Banner"
             width={2560}
@@ -139,7 +140,7 @@ const Code: React.FC = () => {
         </section>
 
         <section
-          className={`flex h-full w-full flex-col items-center justify-center px-10 py-6 text-white-1 md:h-fit md:px-40 ${backgroundColor}`}
+          className={`flex h-fit w-full flex-col items-center justify-center px-10 py-8 text-white-1 md:h-fit md:px-40 ${backgroundColor}`}
         >
           <div className="flex w-full flex-col items-center gap-12">
             <div className="flex w-full flex-col items-center gap-2">
@@ -189,6 +190,7 @@ const Code: React.FC = () => {
           </div>
         </section>
       </section>
+
       <footer
         className={classNames(
           'flex h-fit w-full flex-col items-center gap-6 px-6 pb-6 font-medium text-white md:px-16',
