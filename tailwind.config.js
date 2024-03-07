@@ -1,30 +1,7 @@
 /** @type {import('tailwindcss').Config} */
-
-// const pallete = color => {
-//   const h = `var(--color-${color}-h)`;
-//   const s = `var(--color-${color}-s)`;
-//   const l = `var(--color-${color}-l)`;
-
-//   return {
-//     DEFAULT: dynamicHsl(h, s, l),
-//     100: dynamicHsl(h, s, `calc(${l} + 30%)`),
-//     200: dynamicHsl(h, s, `calc(${l} + 24%)`),
-//     300: dynamicHsl(h, s, `calc(${l} + 18%)`),
-//     400: dynamicHsl(h, s, `calc(${l} + 12%)`),
-//     500: dynamicHsl(h, s, `calc(${l} + 6%)`),
-//     600: dynamicHsl(h, s, l),
-//     700: dynamicHsl(h, s, `calc(${l} - 6%)`),
-//     800: dynamicHsl(h, s, `calc(${l} - 12%)`),
-//     900: dynamicHsl(h, s, `calc(${l} - 18%)`),
-//   };
-// };
-
 module.exports = {
-  content: [
-    './src/pages/**/*.{js,ts,jsx,tsx}',
-    './src/modules/**/*.{js,ts,jsx,tsx}',
-    './src/shared/components/**/*.{js,ts,jsx,tsx}',
-  ],
+  darkMode: ['class'],
+  content: ['./src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     screens: {
       xs: '375px',
@@ -49,8 +26,55 @@ module.exports = {
         'red-1': 'hsl(300,23.5%,93.3%)',
         'sea-1': 'hsl(182,100%,39%)',
         'white-1': 'hsl(225,11%,93%)',
+        border: 'hsl(var(--border))',
+        input: 'hsl(var(--input))',
+        ring: 'hsl(var(--ring))',
+        background: 'hsl(var(--background))',
+        foreground: 'hsl(var(--foreground))',
+        primary: {
+          DEFAULT: 'hsl(var(--primary))',
+          foreground: 'hsl(var(--primary-foreground))',
+        },
+        secondary: {
+          DEFAULT: 'hsl(var(--secondary))',
+          foreground: 'hsl(var(--secondary-foreground))',
+        },
+        destructive: {
+          DEFAULT: 'hsl(var(--destructive))',
+          foreground: 'hsl(var(--destructive-foreground))',
+        },
+        muted: {
+          DEFAULT: 'hsl(var(--muted))',
+          foreground: 'hsl(var(--muted-foreground))',
+        },
+        accent: {
+          DEFAULT: 'hsl(var(--accent))',
+          foreground: 'hsl(var(--accent-foreground))',
+        },
+        popover: {
+          DEFAULT: 'hsl(var(--popover))',
+          foreground: 'hsl(var(--popover-foreground))',
+        },
+        card: {
+          DEFAULT: 'hsl(var(--card))',
+          foreground: 'hsl(var(--card-foreground))',
+        },
+      },
+      keyframes: {
+        'accordion-down': {
+          from: { height: '0' },
+          to: { height: 'var(--radix-accordion-content-height)' },
+        },
+        'accordion-up': {
+          from: { height: 'var(--radix-accordion-content-height)' },
+          to: { height: '0' },
+        },
+      },
+      animation: {
+        'accordion-down': 'accordion-down 0.2s ease-out',
+        'accordion-up': 'accordion-up 0.2s ease-out',
       },
     },
   },
-  plugins: [],
+  plugins: [require('tailwindcss-animate')],
 };
