@@ -10,6 +10,8 @@ import { SWRConfig } from 'swr';
 import type { AppProps } from 'next/app';
 import '../../styles/globals.css';
 
+import { Toaster } from 'src/components/ui/toaster';
+
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
     <React.Fragment>
@@ -64,6 +66,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
             <GlobalStyle />
             <RootLayout>
               <Component {...pageProps} />
+              <Toaster />
             </RootLayout>
           </SWRConfig>
         </ThemeProvider>

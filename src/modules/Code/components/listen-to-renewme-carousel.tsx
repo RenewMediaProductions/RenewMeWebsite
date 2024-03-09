@@ -1,20 +1,9 @@
 import Image from 'next/image';
 import { imageDomainUrl } from 'shared/constants/Assets';
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from 'src/components/ui/carousel';
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from 'src/components/ui/dialog';
+
+import { Carousel, CarouselContent, CarouselItem } from 'src/components/ui/carousel';
+import { Dialog, DialogContent, DialogTrigger } from 'src/components/ui/dialog';
+
 import { cn } from 'src/lib/utils';
 
 const listenToRenewMeCarouselContent = [
@@ -32,7 +21,7 @@ const listenToRenewMeCarouselContent = [
     description: 'Happiness',
     duration: '1:30',
     type: 'RenewMe',
-    thumbnail: `${imageDomainUrl}/Code/listen-to-renewme/image/keys-to-optimism.png`,
+    thumbnail: `${imageDomainUrl}/Code/listen-to-renewme/image/keys-to-optimism.jpg`,
     imageClass: 'object-center',
     video: `https://rqbgrdsdkazwogdqjqxi.supabase.co/storage/v1/object/public/listen-video-samples/renewme/renewme-keys-to-optimism-without-qr.mp4?t=2024-03-07T01%3A45%3A35.901Z`,
   },
@@ -82,69 +71,73 @@ export function ListenToRenewMeCarousel({ companyId }: { companyId: string }) {
     content => content.type.toLowerCase() === companyId.toLowerCase()
   );
 
-  const isSingleItem = filteredContent.length === 1;
+  // Filter those are not matching the companyId
+  const otherContent = listenToRenewMeCarouselContent.filter(
+    content => content.type.toLowerCase() !== companyId.toLowerCase() // Here, call toLowerCase as a method
+  );
+
+  const isFilteredContentSingleItem = filteredContent.length === 1;
+  const isOtherContentSingleItem = otherContent.length === 1;
 
   return (
     <>
-      <Carousel
-        opts={{
-          align: 'start',
-        }}
-        className="relative w-full"
-      >
+      <Carousel className={cn('relative mb-14 w-full', isFilteredContentSingleItem && ' mb-20')}>
         <CarouselContent>
           {filteredContent.map((content: CarouselContentItemsType, index) => (
             <CarouselItem
               key={index}
               className={cn(
-                `md:basis-1/2 lg:basis-1/3`,
-                isSingleItem && 'md:basis-full lg:basis-full'
+                'relative md:basis-1/2 lg:basis-1/3',
+                isFilteredContentSingleItem &&
+                  'basis-full md:flex md:basis-full md:flex-row md:gap-6 lg:basis-full'
               )}
             >
               <Dialog>
-                <DialogTrigger className="cursor-pointer" asChild>
+                <DialogTrigger
+                  className={cn(
+                    'w-full',
+                    isFilteredContentSingleItem &&
+                      'basis-full md:flex md:basis-full md:flex-row md:gap-6 lg:basis-full'
+                  )}
+                >
+                  <Image
+                    src={content.thumbnail}
+                    alt={content.title}
+                    className={cn(
+                      `mb-2 h-64 rounded-xl object-cover ${content.imageClass}`,
+                      isFilteredContentSingleItem && 'basis-full md:mb-0 md:w-1/2'
+                    )}
+                    width={2560}
+                    height={1024}
+                  />
+                  {/* Flex Row */}
                   <div
                     className={cn(
-                      'flex h-full w-full flex-col items-start justify-start gap-4 text-center',
-                      isSingleItem && 'w-full flex-col items-start justify-center lg:flex-row'
+                      'hidden w-full flex-col items-start justify-start text-center md:flex'
                     )}
                   >
-                    <Image
-                      className={cn(
-                        `h-56 w-full rounded-xl object-cover object-center`,
-                        content.imageClass
-                      )}
-                      src={content.thumbnail}
-                      alt="Listen to RenewMe"
-                      width={2560}
-                      height={1024}
-                    />
-                    <div className="flex w-full flex-col items-start">
-                      <div className="flex w-full items-center justify-between">
-                        <h1
-                          className={cn(
-                            'mb-2 text-left text-xl font-bold leading-snug',
-                            isSingleItem && 'text-xl md:text-3xl'
-                          )}
-                        >
-                          {content.title}
-                        </h1>
-                        <p className="md text-xs font-normal text-zinc-400">{content.duration}</p>
-                      </div>
-                      <p className="max-w-[25rem] text-left text-sm font-normal">
-                        {content.description}
-                      </p>
-                    </div>
+                    <h3 className="text-xl font-bold">{content.title}</h3>
+                    <p className="mb-2 max-w-md text-left text-base text-zinc-500">
+                      {content.description}
+                    </p>
+                    <p className="text-base text-zinc-500">{content.duration}</p>
+                  </div>
+
+                  {/* Flex Col  */}
+                  <div
+                    className={cn(
+                      'absolute z-10 flex w-full flex-col items-start justify-start pr-4 text-center md:hidden'
+                    )}
+                  >
+                    <h3 className="text-xl font-bold">{content.title}</h3>
+                    <p className="mb-2 text-left text-sm text-zinc-500">{content.description}</p>
+                    <p className="text-sm text-zinc-500">{content.duration}</p>
                   </div>
                 </DialogTrigger>
-                <DialogContent className="min-w-[50vw] rounded-xl bg-white">
-                  <DialogHeader className="rounded-xl">
-                    <DialogTitle>{content.title}</DialogTitle>
-                    <DialogDescription>{content.description}</DialogDescription>
-                  </DialogHeader>
-                  {/* Assuming `video` is a URL to a video file */}
+
+                <DialogContent className="min-w-[70vw] rounded-xl bg-white">
                   {content.video && (
-                    <video controls className="w-full">
+                    <video controls className="aspect-video w-full">
                       <source src={content.video} type="video/mp4" />
                       Your browser does not support the video tag.
                     </video>
@@ -154,13 +147,85 @@ export function ListenToRenewMeCarousel({ companyId }: { companyId: string }) {
             </CarouselItem>
           ))}
         </CarouselContent>
+      </Carousel>
 
-        <CarouselPrevious
-          className={isSingleItem ? 'hidden' : 'absolute -left-6 h-12 w-12 bg-white/100'}
-        />
-        <CarouselNext
-          className={isSingleItem ? 'hidden' : 'absolute -right-6 h-12 w-12 bg-white/100'}
-        />
+      <h1 className="mb-2 mt-6 w-full text-left text-xl font-bold md:mt-0 md:mb-10 md:text-center md:text-4xl">
+        Listen to{' '}
+        {companyId === 'renewme' ? (
+          <span className="text-[#00C6C9]">Soulscape</span>
+        ) : (
+          <span className="text-[#F07E58]">
+            Renew<span className="text-[#F29D81]">Me</span>
+          </span>
+        )}
+      </h1>
+
+      <Carousel className={cn('relative mb-20 w-full md:mb-14')}>
+        <CarouselContent>
+          {otherContent.map((content: CarouselContentItemsType, index) => (
+            <CarouselItem
+              key={index}
+              className={cn(
+                'relative md:basis-1/2 lg:basis-1/3',
+                isOtherContentSingleItem &&
+                  'basis-full md:flex md:basis-full md:flex-row md:gap-6 lg:basis-full'
+              )}
+            >
+              <Dialog>
+                <DialogTrigger
+                  className={cn(
+                    'w-full',
+                    isOtherContentSingleItem &&
+                      'basis-full md:flex md:basis-full md:flex-row md:gap-6 lg:basis-full'
+                  )}
+                >
+                  <Image
+                    src={content.thumbnail}
+                    alt={content.title}
+                    className={cn(
+                      `mb-2 h-64 rounded-xl object-cover ${content.imageClass}`,
+                      isOtherContentSingleItem && 'md-0 mb-0 basis-full md:w-1/2'
+                    )}
+                    width={2560}
+                    height={1024}
+                  />
+                  {/* Flex Row */}
+                  <div
+                    className={cn(
+                      'hidden w-full flex-col items-start justify-start text-center md:flex'
+                    )}
+                  >
+                    <h3 className="text-xl font-bold">{content.title}</h3>
+                    <p className="mb-2 max-w-md text-left text-base text-zinc-500">
+                      {content.description}
+                    </p>
+                    <p className="text-base text-zinc-500">{content.duration}</p>
+                  </div>
+
+                  {/* Flex Col  */}
+                  <div
+                    className={cn(
+                      'absolute z-10 flex w-full flex-col items-start justify-start pr-4 text-center md:hidden'
+                    )}
+                  >
+                    <h3 className="text-xl font-bold">{content.title}</h3>
+                    <p className="mb-2 text-left text-sm text-zinc-500">{content.description}</p>
+                    <p className="text-sm text-zinc-500">{content.duration}</p>
+                  </div>
+                </DialogTrigger>
+
+                <DialogContent className="min-w-[70vw] rounded-xl bg-white">
+                  {content.video && (
+                    <video controls className="aspect-video w-full">
+                      <source src={content.video} type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+                  )}
+                </DialogContent>
+              </Dialog>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
       </Carousel>
     </>
   );
