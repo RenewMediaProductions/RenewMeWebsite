@@ -1,9 +1,7 @@
 import Image from 'next/image';
 import { imageDomainUrl } from 'shared/constants/Assets';
-
 import { Carousel, CarouselContent, CarouselItem } from 'src/components/ui/carousel';
 import { Dialog, DialogContent, DialogTrigger } from 'src/components/ui/dialog';
-
 import { cn } from 'src/lib/utils';
 
 const listenToRenewMeCarouselContent = [

@@ -1,5 +1,6 @@
 import { Loader2 } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { FC, ReactNode, useEffect, useState } from 'react';
 import { imageDomainUrl } from 'shared/constants/Assets';
@@ -7,11 +8,8 @@ import { Badge } from 'src/components/ui/badge';
 import { Button } from 'src/components/ui/button';
 import { Checkbox } from 'src/components/ui/checkbox';
 import { Dialog, DialogContent } from 'src/components/ui/dialog-no-close';
-import { ListenToRenewMeCarousel } from './components/listen-to-renewme-carousel';
-
 import { useToast } from 'src/components/ui/use-toast';
-
-import Link from 'next/link';
+import { ListenToRenewMeCarousel } from './components/listen-to-renewme-carousel';
 
 interface CompanyContent {
   type: string;
@@ -228,6 +226,7 @@ const Code: FC = () => {
                       href="https://www.myrenewme.com/terms"
                       className="underline"
                       target="_blank"
+                      rel="noreferrer"
                     >
                       Terms of Service
                     </Link>{' '}
@@ -236,6 +235,7 @@ const Code: FC = () => {
                       href="https://www.myrenewme.com/privacy"
                       className="underline"
                       target="_blank"
+                      rel="noreferrer"
                     >
                       Privacy Policy.
                     </Link>
@@ -257,7 +257,7 @@ const Code: FC = () => {
               </div>
 
               <div className="flex w-full flex-col justify-between text-center text-xs text-zinc-400 md:flex-row">
-                <a href="https://www.myrenewme.com/" target="_blank">
+                <a href="https://www.myrenewme.com/" target="_blank" rel="noreferrer">
                   www.myrenewme.com
                 </a>
                 <p>Live Better. Be Balanced</p>
@@ -297,7 +297,7 @@ const Code: FC = () => {
               variant="outline"
               className="w-fit rounded-full border-[#3A3A3B] text-base text-[#3A3A3B]"
             >
-              <Link href={companyContent.shareYourThoughtsUrlForm} target="_blank">
+              <Link href={companyContent.shareYourThoughtsUrlForm} target="_blank" rel="noreferrer">
                 Join the movement
               </Link>
             </Button>
@@ -329,6 +329,13 @@ const Code: FC = () => {
                 alt="Download Icon"
                 width={1200}
                 height={1200}
+                onClick={() => {
+                  toast({
+                    title: `Coming Soon!`,
+                    className: 'bg-white rounded-xl',
+                    description: 'RenewMe is coming! Will be available in the App Store soon!',
+                  });
+                }}
               />
             </div>
           </section>
@@ -336,10 +343,7 @@ const Code: FC = () => {
           <div
             className="flex cursor-pointer items-center gap-2"
             onClick={() => {
-              // Copy current URL to clipboard
               navigator.clipboard.writeText(window.location.href);
-
-              console.log('URL copied to clipboard:', window.location.href);
 
               toast({
                 title: `Link Copied!`,
@@ -448,7 +452,7 @@ const Code: FC = () => {
               variant="outline"
               className="w-full rounded-full border-white bg-transparent px-12 py-6 text-xl text-white hover:bg-white/20 hover:text-white"
             >
-              <Link href={companyContent.shareYourThoughtsUrlForm} target="_blank">
+              <Link href={companyContent.shareYourThoughtsUrlForm} target="_blank" rel="noreferrer">
                 Share your thoughts
               </Link>
             </Button>
@@ -490,7 +494,7 @@ const Code: FC = () => {
               variant="outline"
               className="w-full rounded-full border-white bg-transparent px-12 py-6 text-xl text-white hover:bg-white/20 hover:text-white"
             >
-              <Link href="https://form.typeform.com/to/euOLT3Wv" target="_blank">
+              <Link href="https://form.typeform.com/to/euOLT3Wv" target="_blank" rel="noreferrer">
                 Share your thoughts
               </Link>
             </Button>
