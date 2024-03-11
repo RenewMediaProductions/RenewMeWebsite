@@ -8,10 +8,10 @@ import { imageDomainUrl } from 'shared/constants/Assets';
 
 import { Badge } from 'src/components/ui/badge';
 import { Button } from 'src/components/ui/button';
-import { useToast } from 'src/components/ui/use-toast';
 
 import { Loader2 } from 'lucide-react';
 
+import Hero from './components/code-hero';
 import { ListenToRenewMeCarousel } from './components/listen-to-renewme-carousel';
 import { TermsDialog } from './components/terms-dialog';
 
@@ -98,7 +98,6 @@ const Code: FC = () => {
   const [isLoading, setIsLoading] = useState(true); // Prevents 404 page from flashing
   const [popoverTermsIsOpened, setPopoverTermsisOpened] = useState(false);
   const [termsIsChecked, setTermsIsChecked] = useState(false);
-  const { toast } = useToast();
 
   const companyId = router.query.companyId as string;
   const code = router.query.code as string;
@@ -147,109 +146,14 @@ const Code: FC = () => {
       />
 
       {/* Hero Section */}
-      <section className="mb-6 flex w-full flex-col items-center justify-between gap-10 px-4 pt-12 sm:px-20 md:mb-20 md:items-center md:px-32 md:pt-20 lg:flex-row">
-        <div className="flex flex-col items-center gap-8 md:flex-row md:items-center">
-          {companyId === 'renewme' && (
-            <Image
-              src={`${imageDomainUrl}/Code/renewme-footer.png`}
-              alt="RenewMe Logo"
-              className={`absolute -top-12 -z-10 block h-52 w-screen rounded-b-3xl object-cover md:hidden`}
-              width={2560}
-              height={1024}
-            />
-          )}
-          <Image
-            src={`${imageDomainUrl}/Code/renewme-logo.png`}
-            alt="RenewMe Logo"
-            className="h-44 w-44 rounded-3xl bg-white md:h-64 md:w-64"
-            width={2560}
-            height={1024}
-          />
-          <div className="flex flex-col items-center justify-center md:items-start">
-            <h1 className="text-center text-5xl font-bold md:text-left">
-              Renew
-              <span className="text-[#3A3A3B]/70">Me</span>
-            </h1>
-            <p className="mb-6 text-center text-2xl font-medium md:text-left">
-              Live Better. Be Balanced.
-            </p>
-            <Button
-              variant="outline"
-              className="w-fit rounded-full border-[#3A3A3B] text-base text-[#3A3A3B]"
-            >
-              <Link href={companyContent.shareYourThoughtsUrlForm} target="_blank" rel="noreferrer">
-                Join the movement
-              </Link>
-            </Button>
-          </div>
-        </div>
-
-        <div className="hidden flex-col items-center justify-center gap-6 text-lg md:flex">
-          <Badge
-            variant="outline"
-            className={`${companyContent.textPrimaryColor} text-lg outline outline-1 ${companyContent.outlinePrimaryColor} border-transparent ${companyContent.backgroundPrimaryColorBadge}`}
-          >
-            Coming Soon!
-          </Badge>
-          <section className="flex items-center justify-center gap-4">
-            <div className="flex flex-col items-center justify-center gap-2">
-              <p>Use code</p>
-              <Badge className="bg-[#3A3A3B] text-lg">
-                {companyContent.validCodes.find(validCode => validCode === code)?.toUpperCase()}
-              </Badge>
-            </div>
-
-            <div className="h-[2.5rem] w-0.5 bg-zinc-200"></div>
-
-            <div className="flex flex-col items-center justify-center gap-2">
-              <p>Download</p>
-              <Image
-                className="h-auto w-28 cursor-pointer"
-                src={`${imageDomainUrl}/Code/app-store-button.png`}
-                alt="Download Icon"
-                width={1200}
-                height={1200}
-                onClick={() => {
-                  toast({
-                    title: `Coming Soon!`,
-                    className: 'bg-white rounded-xl',
-                    description: 'RenewMe is coming! Will be available in the App Store soon!',
-                  });
-                }}
-              />
-            </div>
-          </section>
-
-          <div
-            className="flex cursor-pointer items-center gap-2"
-            onClick={() => {
-              navigator.clipboard.writeText(window.location.href);
-
-              toast({
-                title: `Link Copied!`,
-                className: 'bg-white rounded-xl',
-                description: 'Share with friends! RenewMe is coming soon!',
-              });
-            }}
-          >
-            <Image
-              className="h-4 w-4"
-              src={`${imageDomainUrl}/Code/share.svg`}
-              alt="Share Icon"
-              width={2560}
-              height={1024}
-            />
-            Share with friends
-          </div>
-        </div>
-      </section>
+      <Hero companyContent={companyContent} code={code} />
 
       {/* Banner Vector Mobile */}
       <section className="relative mb-6 block w-full basis-full object-top md:hidden">
         {companyContent.bannerVectorMobile}
       </section>
 
-      {/* Download and Use Code Section */}
+      {/* Download and Use Code Section (For mobile view) */}
       <section className="mb-6 flex w-full flex-col items-center justify-center gap-6 px-4 text-lg sm:px-10 md:mb-20 md:hidden md:px-32">
         <Badge
           variant="outline"
