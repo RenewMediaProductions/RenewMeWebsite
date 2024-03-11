@@ -13,4 +13,8 @@ export const ROUTES = {
     MEDIA_INQUIRIES: '/contact/media-inquiries',
     GLOBAL_PARTNERS: '/contact/global-partners',
   },
+  QR: {
+    RENEWME: 'renewme/code/peace369',
+    SOULSCAPE: 'soulscape/code/joy369',
+  },
 };
