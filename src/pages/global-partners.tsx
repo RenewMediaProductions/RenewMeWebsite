@@ -1,5 +1,6 @@
 import Partners from 'modules/Partners';
 import { GetServerSideProps, NextPage } from 'next';
+
 import PageLayout from 'shared/components/Layouts/PageLayout';
 
 // eslint-disable-next-line @typescript-eslint/require-await

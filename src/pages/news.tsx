@@ -1,5 +1,6 @@
 import News from 'modules/News';
 import { NextPage } from 'next';
+
 import PageLayout from 'shared/components/Layouts/PageLayout';
 
 const NewsPage: NextPage = () => {

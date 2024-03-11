@@ -1,9 +1,10 @@
-import LocalStorageUtil from './LocalStorage';
-
 import axios, { AxiosResponse } from 'axios';
-import { Code, HttpResponseType, HTTP_RESPONSES, XHeader } from 'shared/constants/Http';
+
+import { Code, HTTP_RESPONSES, HttpResponseType, XHeader } from 'shared/constants/Http';
 import { AuthLocalStorage } from 'shared/constants/LocalStorage';
 import { HttpOptions, HttpRequest, HttpResponse } from 'shared/types/Http';
+
+import LocalStorageUtil from './LocalStorage';
 
 const PrivateInstance = axios.create();
 const PublicInstance = axios.create();

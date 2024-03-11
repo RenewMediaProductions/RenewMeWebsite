@@ -1,6 +1,6 @@
-import { ValidatorError, ValidatorResponse } from './Validator';
-
 import React from 'react';
+
+import { ValidatorError, ValidatorResponse } from './Validator';
 
 export interface Form<T> {
   defaultValues: T;

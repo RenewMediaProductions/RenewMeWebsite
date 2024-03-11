@@ -1,14 +1,19 @@
-import { Loader2 } from 'lucide-react';
+import { FC, ReactNode, useEffect, useState } from 'react';
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { FC, ReactNode, useEffect, useState } from 'react';
+
 import { imageDomainUrl } from 'shared/constants/Assets';
+
 import { Badge } from 'src/components/ui/badge';
 import { Button } from 'src/components/ui/button';
 import { Checkbox } from 'src/components/ui/checkbox';
 import { Dialog, DialogContent } from 'src/components/ui/dialog-no-close';
 import { useToast } from 'src/components/ui/use-toast';
+
+import { Loader2 } from 'lucide-react';
+
 import { ListenToRenewMeCarousel } from './components/listen-to-renewme-carousel';
 
 interface CompanyContent {
@@ -288,7 +293,8 @@ const Code: FC = () => {
           />
           <div className="flex flex-col items-center justify-center md:items-start">
             <h1 className="text-center text-5xl font-bold md:text-left">
-              Renew<span className="text-[#3A3A3B]/70">Me</span>
+              Renew
+              <span className="text-[#3A3A3B]/70">Me</span>
             </h1>
             <p className="mb-6 text-center text-2xl font-medium md:text-left">
               Live Better. Be Balanced.
@@ -417,7 +423,8 @@ const Code: FC = () => {
             Listen to{' '}
             {companyId === 'renewme' ? (
               <span className="text-[#F07E58]">
-                Renew<span className="text-[#F29D81]">Me</span>
+                Renew
+                <span className="text-[#F29D81]">Me</span>
               </span>
             ) : (
               <span className="text-[#00C6C9]">Soulscape</span>

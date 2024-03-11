@@ -1,7 +1,8 @@
-import { NewsVideo } from './types';
-
 import axios from 'axios';
+
 import { YOUTUBE_API_KEY } from 'shared/configs/App';
+
+import { NewsVideo } from './types';
 
 class NewsService {
   private youtubeId: string;

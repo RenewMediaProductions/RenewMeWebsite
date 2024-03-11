@@ -1,10 +1,10 @@
-import { ColorTheme, ScreenTheme, Theme } from '../types/Theme';
-
 import defaultStyled, {
-  createGlobalStyle,
-  ThemedStyledInterface,
   ThemeProvider as SThemeProvider,
+  ThemedStyledInterface,
+  createGlobalStyle,
 } from 'styled-components';
+
+import { ColorTheme, ScreenTheme, Theme } from '../types/Theme';
 
 const themeColors: ColorTheme = {
   red100: 'red',

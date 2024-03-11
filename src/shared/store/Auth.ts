@@ -1,10 +1,11 @@
 import { addMinutes } from 'date-fns';
 import { LockLocalStorage } from 'modules/Lock/constants';
+import create from 'zustand';
+import { immer } from 'zustand/middleware/immer';
+
 import { WEB_PASSWORD } from 'shared/configs/App';
 import { AuthStore } from 'shared/types/Store';
 import LocalStorageUtil from 'shared/utils/LocalStorage';
-import create from 'zustand';
-import { immer } from 'zustand/middleware/immer';
 
 export const useAuthStore = create(
   immer<AuthStore>(set => ({

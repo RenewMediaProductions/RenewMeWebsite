@@ -1,14 +1,15 @@
+import '../../styles/globals.css';
 import { QueryClientProvider } from '@tanstack/react-query';
 import axios from 'axios';
-import Head from 'next/head';
 import React from 'react';
-import RootLayout from 'shared/components/Layouts/RootLayout';
-import { GlobalStyle, theme, ThemeProvider } from 'shared/theme';
-import { queryClient } from 'shared/utils/Query';
 import { SWRConfig } from 'swr';
 
 import type { AppProps } from 'next/app';
-import '../../styles/globals.css';
+import Head from 'next/head';
+
+import RootLayout from 'shared/components/Layouts/RootLayout';
+import { GlobalStyle, ThemeProvider, theme } from 'shared/theme';
+import { queryClient } from 'shared/utils/Query';
 
 import { Toaster } from 'src/components/ui/toaster';
 

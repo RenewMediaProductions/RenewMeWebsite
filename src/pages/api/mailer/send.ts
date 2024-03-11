@@ -1,7 +1,7 @@
 import sgMail from '@sendgrid/mail';
-import { SENDGRID_API_KEY } from 'shared/configs/App';
-
 import type { NextApiRequest, NextApiResponse } from 'next';
+
+import { SENDGRID_API_KEY } from 'shared/configs/App';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(400).json({ message: 'Not found.' });

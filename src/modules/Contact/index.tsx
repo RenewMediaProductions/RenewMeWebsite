@@ -1,6 +1,6 @@
-import ContactLayout from './components/layout';
-
 import React from 'react';
+
+import ContactLayout from './components/layout';
 
 const Contact: React.FC = () => {
   return (

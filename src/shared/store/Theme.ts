@@ -1,7 +1,8 @@
-import { ThemeStore } from 'shared/types/Store';
-import { Themes } from 'shared/types/Theme';
 import create from 'zustand';
 import { immer } from 'zustand/middleware/immer';
+
+import { ThemeStore } from 'shared/types/Store';
+import { Themes } from 'shared/types/Theme';
 
 export const useThemeStore = create(
   immer<ThemeStore>(set => ({

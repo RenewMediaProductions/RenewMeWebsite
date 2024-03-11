@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useRef, useState } from 'react';
 import { useEffectOnce } from 'react-use';
 
 export const useImageLoaded = () => {

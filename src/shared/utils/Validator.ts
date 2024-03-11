@@ -1,5 +1,6 @@
-import { ValidatorError, ValidatorResponse } from 'shared/types/Validator';
 import * as yup from 'yup';
+
+import { ValidatorError, ValidatorResponse } from 'shared/types/Validator';
 
 export const validate = <T>(
   schema: yup.ObjectSchema<any>,

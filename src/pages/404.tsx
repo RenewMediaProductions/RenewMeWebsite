@@ -1,5 +1,7 @@
 import { NextPage } from 'next';
+
 import { useRouter } from 'next/router';
+
 import { ROUTES } from 'shared/constants/Routes';
 import { styled } from 'shared/theme';
 

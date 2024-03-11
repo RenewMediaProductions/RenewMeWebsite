@@ -1,4 +1,5 @@
 import { format } from 'date-fns';
+
 const isBrowser: boolean = typeof window !== 'undefined';
 
 class CommonUtil {
