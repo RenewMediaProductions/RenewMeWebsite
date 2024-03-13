@@ -1,12 +1,49 @@
 import { assetVersion, imageDomainUrl } from 'shared/constants/Assets';
 
+export const SOULSCAPE_ICONS = {
+  'play-icon': {
+    url: `${imageDomainUrl}/Soulscape/svg/play.svg`,
+    width: 60,
+    height: 60,
+    alt: 'Soulscape Explainer Play Icon',
+  },
+};
+
+export const SOULSCAPE_VIDEOS = {
+  'soulscape-explainer': {
+    url: 'https://rqbgrdsdkazwogdqjqxi.supabase.co/storage/v1/object/public/listen-video-samples/soulscape/soulscape-explainer-ads-without-qr-compressed.mp4?t=2024-03-13T14%3A21%3A50.768Z',
+    type: 'video/mp4',
+    width: 1920,
+    height: 1080,
+  },
+};
+
 export const SOULSCAPE_IMAGES = {
-  'h-bg': {
-    url: `${imageDomainUrl}/Soulscape/h-bg.jpg?v=${assetVersion}`,
+  'soulscape-h-bg-mobile': {
+    url: `${imageDomainUrl}/Soulscape/soulscape-h-bg-mobile.png`,
+    width: 375,
+    height: 812,
+    alt: 'Soulscape Hero Vector Background Mobile',
+  },
+  'soulscape-h-bg': {
+    url: `${imageDomainUrl}/Soulscape/soulscape-h-bg.png`,
     width: 2560,
     height: 1440,
-    alt: 'image',
+    alt: 'Soulscape Hero Vector Background',
   },
+  's0-soulscape-explainer-thumbnail': {
+    url: `${imageDomainUrl}/Soulscape/s0-soulscape-explainer-thumbnail.png`,
+    width: 2560,
+    height: 1440,
+    alt: 'Soulscape Explainer Thumbnail',
+  },
+  // Removed/Updated
+  // 'h-bg': {
+  //   url: `${imageDomainUrl}/Soulscape/h-bg.jpg?v=${assetVersion}`,
+  //   width: 2560,
+  //   height: 1440,
+  //   alt: 'image',
+  // },
   'h-phone-1': {
     url: `${imageDomainUrl}/Soulscape/h-phone-1.png?v=${assetVersion}`,
     width: 823,

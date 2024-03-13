@@ -1,11 +1,12 @@
-import { Service2Wrapper } from './Service2.styled';
+import classNames from 'classnames';
+import React from 'react';
+
+import Image from 'next/image';
+
+import InfoSvg from 'shared/assets/svg/Soulscape/s2-info.svg';
 
 import { SOULSCAPE_IMAGES } from '../constants';
-
-import classNames from 'classnames';
-import Image from 'next/image';
-import React from 'react';
-import InfoSvg from 'shared/assets/svg/Soulscape/s2-info.svg';
+import { Service2Wrapper } from './Service2.styled';
 
 interface Props {
   className?: string;
@@ -73,14 +74,14 @@ const Service2: React.FC<Props> = ({ className }) => {
           </p>
           <p
             className={classNames(
-              `text-center font-['Gilroy'] text-sm font-[400] text-gray-3`,
+              `text-justify font-['Gilroy'] text-sm font-[400] text-gray-3`,
               `md:text-base`,
               `lg:text-lg`
             )}
           >
-            A safe traveler is a more balanced traveler. Check for news updates, weather, and safety
-            considerations, and essential travel tips for a stress-free and enjoyable experience on
-            your journey.
+            Ensure a balanced and secure travel experience by staying informed. Check for news
+            updates, weather forecasts, safety considerations, and essential travel tips. A
+            well-prepared traveler is a stress-free and thoroughly enjoyable one on their journey.
           </p>
         </div>
       </div>

@@ -10,7 +10,7 @@ export const Service1Wrapper = styled.div`
     transform: translate(-50%, -50%);
     background: radial-gradient(
       50% 50% at 50% 50%,
-      rgba(0, 192, 197, 0.25) 0%,
+      rgba(0, 202, 203, 0.4) 0%,
       rgba(243, 243, 243, 0) 80.42%
     );
   }

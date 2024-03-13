@@ -1,12 +1,12 @@
-import { Service5Wrapper } from './Service5.styled';
+import classNames from 'classnames';
+import React from 'react';
+
+import Image from 'next/image';
+
+import InfoSvg from 'shared/assets/svg/Soulscape/s5-info.svg';
 
 import { SOULSCAPE_IMAGES } from '../constants';
-
-import classNames from 'classnames';
-import Image from 'next/image';
-import Link from 'next/link';
-import React from 'react';
-import InfoSvg from 'shared/assets/svg/Soulscape/s5-info.svg';
+import { Service5Wrapper } from './Service5.styled';
 
 interface Props {
   className?: string;
@@ -69,7 +69,7 @@ const Service5: React.FC<Props> = ({ className }) => {
         <div
           className={classNames(
             `absolute bottom-0 flex w-[305px] flex-col items-center gap-2 transition-opacity duration-1000`,
-            `md:left-[50%] md:w-[230px] md:translate-x-[-50%] md:items-start`,
+            `md:left-[50%] md:w-[230px] md:translate-x-[-50%]`,
             `lg:w-[300px]`,
             `xl:w-[326px]`
           )}
@@ -86,25 +86,15 @@ const Service5: React.FC<Props> = ({ className }) => {
           </p>
           <p
             className={classNames(
-              `text-center font-['Gilroy'] text-sm font-[400] text-gray-3`,
-              `md:text-start md:text-base`,
+              `text-justify font-['Gilroy'] text-sm font-[400] text-gray-3`,
+              `md:text-base`,
               `lg:text-lg`
             )}
           >
-            Soulscape makes it easy to plan your next vacation. Book with airlines, hotels, and
-            other sites, and discover the best deals to your favorite destinations.
+            Simplify your vacation planning with Soulscape. Book flights, hotels, and more,
+            effortlessly discovering the best deals for your favorite destinations. Travel planning
+            made easy.
           </p>
-          <Link legacyBehavior href={'#'}>
-            <a
-              className={classNames(
-                `font-['Gilroy'] text-sm font-[600] text-blue-3 underline`,
-                `md:text-base`,
-                `lg:text-lg`
-              )}
-            >
-              Book a Vacation
-            </a>
-          </Link>
         </div>
       </div>
     </Service5Wrapper>

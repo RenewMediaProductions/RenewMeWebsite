@@ -2,7 +2,7 @@ import { assetVersion, imageDomainUrl } from 'shared/constants/Assets';
 
 export const HOME_ICONS = {
   'play-icon': {
-    url: `${imageDomainUrl}/Home/s0-renewme-play.svg`,
+    url: `${imageDomainUrl}/Home/svg/play.svg`,
     width: 60,
     height: 60,
     alt: 'RenewMe Explainer Play Icon',
@@ -49,11 +49,11 @@ export const HOME_IMAGES = {
     height: 157,
     alt: 'image',
   },
-  's0-renewme-explainer': {
+  's0-renewme-explainer-thumbnail': {
     url: `${imageDomainUrl}/Home/s0-explainer-thumbnail.png`,
     width: 2560,
     height: 1024,
-    alt: 'image',
+    alt: 'RenewMe Explainer Thumbnail',
   },
   's1-phone-1': {
     url: `${imageDomainUrl}/Home/s1-phone-1.png?v=${assetVersion}`,

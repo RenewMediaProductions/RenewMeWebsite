@@ -10,7 +10,7 @@ export const Service2Wrapper = styled.div`
     transform: translate(-50%, -50%);
     background: radial-gradient(
       50% 50% at 50% 50%,
-      rgba(240, 126, 89, 0.25) 0%,
+      rgba(0, 202, 203, 0.1) 0%,
       rgba(243, 243, 243, 0) 80.42%
     );
   }
@@ -23,7 +23,7 @@ export const Service2Wrapper = styled.div`
       width: 700px;
       background: radial-gradient(
         50% 50% at 50% 50%,
-        rgba(240, 126, 89, 0.25) 0%,
+        rgba(0, 202, 203, 0.2) 0%,
         rgba(243, 243, 243, 0) 80.42%
       );
     }
