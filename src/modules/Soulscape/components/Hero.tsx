@@ -1,40 +1,53 @@
-import { HeroWrapper } from './Hero.styled';
+import classNames from 'classnames';
+import React from 'react';
+
+import Image from 'next/image';
+
+import { imageDomainUrl } from 'shared/constants/Assets';
+
+import { Badge } from 'src/components/ui/badge';
+import { toast } from 'src/components/ui/use-toast';
 
 import { SOULSCAPE_IMAGES } from '../constants';
-
-import classNames from 'classnames';
-import Image from 'next/image';
-import Link from 'next/link';
-import React from 'react';
-import AppleSvg from 'shared/assets/svg/apple.svg';
-import { ROUTES } from 'shared/constants/Routes';
+import { HeroWrapper } from './Hero.styled';
 
 const Hero: React.FC = () => {
   return (
     <HeroWrapper className={classNames(`relative`)}>
       <Image
-        className={classNames(`absolute top-0 h-[1440px] w-[2560px] object-cover object-center`)}
-        src={SOULSCAPE_IMAGES['h-bg'].url}
-        height={SOULSCAPE_IMAGES['h-bg'].height}
-        width={SOULSCAPE_IMAGES['h-bg'].width}
-        alt={SOULSCAPE_IMAGES['h-bg'].alt}
+        className={classNames(
+          `hidden md:block absolute top-0 h-[1440px] w-[2560px] object-cover object-center`
+        )}
+        src={SOULSCAPE_IMAGES['soulscape-h-bg'].url}
+        height={SOULSCAPE_IMAGES['soulscape-h-bg'].height}
+        width={SOULSCAPE_IMAGES['soulscape-h-bg'].width}
+        alt={SOULSCAPE_IMAGES['soulscape-h-bg'].alt}
         priority
       />
+      <Image
+        className={classNames(
+          `block md:hidden absolute top-0 h-[1440px] w-[2560px] object-cover object-center`
+        )}
+        src={SOULSCAPE_IMAGES['soulscape-h-bg-mobile'].url}
+        height={SOULSCAPE_IMAGES['soulscape-h-bg-mobile'].height}
+        width={SOULSCAPE_IMAGES['soulscape-h-bg-mobile'].width}
+        alt={SOULSCAPE_IMAGES['soulscape-h-bg-mobile'].alt}
+        priority
+      />
+
       <div className={classNames(`bg-bot`)}></div>
       <div
         className={classNames(
-          `container isolate mx-auto flex h-full flex-col items-center px-6 pt-36`,
-          `xl:pt-40`
+          `container isolate mx-auto flex h-full flex-col items-center px-6 pt-36`
         )}
       >
-        <div className={classNames(`pb-8`)}>
-          <p
-            className={classNames(
-              `pb-4 text-center font-['Gilroy'] text-base font-[400] tracking-[2px] text-white`
-            )}
+        <div className={classNames(`pb-8 flex flex-col items-center`)}>
+          <Badge
+            variant="outline"
+            className="mb-6 border-transparent font-['Gilroy'] text-sm text-white outline outline-1 outline-white md:text-lg"
           >
-            RENEWME TRAVEL
-          </p>
+            Coming Soon!
+          </Badge>
           <h1
             className={classNames(
               `hero-text pb-4 text-center font-['Gilroy'] text-3xl font-[600] leading-10 text-white`,
@@ -57,7 +70,61 @@ const Hero: React.FC = () => {
             wanderlust journeys.
           </p>
         </div>
-        <div className={classNames(`hero-buttons grid grid-cols-[1fr_1fr] gap-4`)}>
+        <div className={classNames(`hero-buttons flex gap-4 font-['Gilroy'] text-base md:text-lg`)}>
+          <div className="flex flex-col items-center justify-center gap-6">
+            <div className="flex items-center justify-center gap-4">
+              <div className="flex flex-col items-center justify-center gap-2">
+                <p className="text-base md:text-lg">Use code</p>
+                <Badge className="bg-[#3A3A3B] text-base md:text-lg">JOY369</Badge>
+              </div>
+
+              <div className="h-[2.5rem] w-[1px] bg-white"></div>
+
+              <div className="flex flex-col items-center justify-center gap-2">
+                <p className="text-base md:text-lg">Download</p>
+                <Image
+                  className="h-auto w-[110px] cursor-pointer md:w-32"
+                  src={`${imageDomainUrl}/Code/app-store-button.png`}
+                  alt="Download Icon"
+                  width={1200}
+                  height={1200}
+                  onClick={() => {
+                    toast({
+                      title: `Coming Soon!`,
+                      className: 'bg-white rounded-xl',
+                      description:
+                        'RenewMe Soulscape is coming! Will be available in the App Store soon!',
+                    });
+                  }}
+                />
+              </div>
+            </div>
+
+            <div
+              className="flex cursor-pointer items-center gap-2 text-base md:text-lg"
+              onClick={() => {
+                navigator.clipboard.writeText(window.location.href);
+
+                toast({
+                  title: `Link Copied!`,
+                  className: 'bg-white rounded-xl',
+                  description: 'Share with friends! RenewMe is coming soon!',
+                });
+              }}
+            >
+              <Image
+                className="h-4 w-4"
+                src={`${imageDomainUrl}/Code/share.svg`}
+                alt="Share Icon"
+                width={2560}
+                height={1024}
+              />
+              Share with friends
+            </div>
+          </div>
+        </div>
+
+        {/* <div className={classNames(`hero-buttons grid grid-cols-[1fr_1fr] gap-4`)}>
           <Link legacyBehavior href={ROUTES.GLOBAL_PARTNERS}>
             <a
               className={classNames(
@@ -94,7 +161,7 @@ const Hero: React.FC = () => {
               </span>
             </a>
           </Link>
-        </div>
+        </div> */}
       </div>
       <div
         className={classNames(
