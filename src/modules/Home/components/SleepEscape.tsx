@@ -43,7 +43,7 @@ const SleepEscape: React.FC<Props> = ({ className }) => {
       )}
     >
       <Image
-        className="object-cover"
+        className="object-cover brightness-75 contrast-100"
         src={HOME_IMAGES['s6-bg'].url}
         alt={HOME_IMAGES['s6-bg'].alt}
         fill

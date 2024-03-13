@@ -14,7 +14,7 @@ export const Service4WrapperSetGoals = styled.div`
     transform: translate(-50%, -50%);
     background: radial-gradient(
       50% 50% at 50% 50%,
-      rgba(179, 141, 178, 0.25) 0%,
+      rgba(238, 161, 90, 0.2) 0%,
       rgba(243, 243, 243, 0) 80.42%
     );
   }

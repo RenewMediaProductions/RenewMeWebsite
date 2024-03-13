@@ -12,7 +12,11 @@ export const Service3WrapperRelaxRenew = styled.div`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: radial-gradient(50% 50% at 50% 50%, #9ac17e 0%, rgba(243, 243, 243, 0) 80.42%);
+    background: radial-gradient(
+      50% 50% at 50% 50%,
+      rgba(238, 161, 90, 0.2) 0%,
+      rgba(243, 243, 243, 0) 80.42%
+    );
   }
 
   ${({ theme }) => theme.screens.smallMedia} {
