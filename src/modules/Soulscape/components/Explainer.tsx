@@ -1,3 +1,5 @@
+import React from 'react';
+
 import Image from 'next/image';
 
 import { Dialog, DialogContent, DialogTrigger } from 'src/components/ui/dialog';

@@ -12,12 +12,12 @@ const TravelBalance: React.FC = () => {
         <div className="font-['Gilroy'] w-full text-justify text-base font-[400] text-black-1 md:text-lg lg:text-xl">
           <p>
             Soulscape enhances wellness and relaxation during your travel experience, ensuring you
-            get the most out of your wanderlust adventures. Whether you're on a plane, cruise, or
-            staying at a hotel, let Soulscape guide you seamlessly from check-in to check-out.
+            get the most out of your wanderlust adventures. Whether you&apos;re on a plane, cruise,
+            or staying at a hotel, let Soulscape guide you seamlessly from check-in to check-out.
           </p>
           <br />
           <p>
-            Whether it's discovering breathtaking destinations, booking a trip, preparing for
+            Whether it&apos;s discovering breathtaking destinations, booking a trip, preparing for
             travel, or exploring mindfulness to relax – we provide everything you need to be the
             balanced traveler you are meant to be.
           </p>

@@ -104,8 +104,8 @@ const Service4: React.FC<Props> = ({ className }) => {
             )}
           >
             Immerse yourself in a suite of meditations designed to enhance a state of peace and
-            tranquility, whether you're on the move at the airport or unwinding in the comfort of
-            your hotel.
+            tranquility, whether you&apos;re on the move at the airport or unwinding in the comfort
+            of your hotel.
           </p>
         </div>
       </div>
