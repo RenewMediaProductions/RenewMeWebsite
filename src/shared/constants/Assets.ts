@@ -4,4 +4,4 @@ export const imageDomainUrl = '/assets';
 /**
  * Increment this version number when you update the production assets.
  */
-export const assetVersion = '2.2';
+export const assetVersion = '3.5';

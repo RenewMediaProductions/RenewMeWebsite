@@ -1,8 +1,17 @@
 import { assetVersion, imageDomainUrl } from 'shared/constants/Assets';
 
+export const HOME_ICONS = {
+  'play-icon': {
+    url: `${imageDomainUrl}/Home/s0-renewme-play.svg`,
+    width: 60,
+    height: 60,
+    alt: 'RenewMe Explainer Play Icon',
+  },
+};
+
 export const HOME_IMAGES = {
   'h-bg': {
-    url: `${imageDomainUrl}/Home/h-bg.jpg?v=${assetVersion}`,
+    url: `${imageDomainUrl}/Home/h-bg.png?v=${assetVersion}`,
     width: 2560,
     height: 1024,
     alt: 'image',
@@ -29,6 +38,12 @@ export const HOME_IMAGES = {
     url: `${imageDomainUrl}/Home/ribbon-mha.png?v=${assetVersion}`,
     width: 1493,
     height: 157,
+    alt: 'image',
+  },
+  's0-renewme-explainer': {
+    url: `${imageDomainUrl}/Home/s0-explainer-thumbnail.png`,
+    width: 2560,
+    height: 1024,
     alt: 'image',
   },
   's1-phone-1': {
@@ -120,6 +135,12 @@ export const HOME_IMAGES = {
     width: 823,
     height: 1680,
     alt: 'image',
+  },
+  's6-bg': {
+    url: `${imageDomainUrl}/Home/s6-bg.png?v=${assetVersion}`,
+    width: 2048,
+    height: 1024,
+    alt: 'Sleep Escape Background',
   },
   's6-phone-1': {
     url: `${imageDomainUrl}/Home/s6-phone-1.png?v=${assetVersion}`,

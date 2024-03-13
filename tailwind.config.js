@@ -12,6 +12,9 @@ module.exports = {
       '2xl': '1440px',
     },
     extend: {
+      dropShadow: {
+        'phone-shadow': '0px 15px 4px rgba(0, 0, 0, 0.25)',
+      },
       colors: {
         'gray-1': 'hsl(0,0%,93.3%)',
         'gray-2': 'hsl(0,0%,92.9%)',

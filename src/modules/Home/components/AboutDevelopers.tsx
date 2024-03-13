@@ -1,13 +1,14 @@
-import { AboutDevelopersWrapper } from './AboutDevelopers.styled';
-
-import { HOME_IMAGES } from '../constants';
-
 import classNames from 'classnames';
-import Image from 'next/image';
 import React from 'react';
+
+import Image from 'next/image';
+
 import AppleSvg from 'shared/assets/svg/apple.svg';
 import HeartSvg from 'shared/assets/svg/heart.svg';
 import RenewMeSvg from 'shared/assets/svg/renew-me.svg';
+
+import { HOME_IMAGES } from '../constants';
+import { AboutDevelopersWrapper } from './AboutDevelopers.styled';
 
 interface Props {
   className?: string;
@@ -17,7 +18,7 @@ const AboutDevelopers: React.FC<Props> = ({ className }) => {
   return (
     <AboutDevelopersWrapper
       className={classNames(
-        `grid h-[1700px] w-full grid-rows-[auto_1fr] bg-[#FAFAFA] pt-[80px]`,
+        `grid h-[1800px] w-full grid-rows-[auto_1fr] bg-[#FAFAFA] py-[40px] md:h-fit`,
         `min-[575px]:h-[1500px]`,
         `md:px-10`,
         `xl:h-[1024px] xl:grid-cols-[repeat(2,1fr)] xl:grid-rows-[1fr] xl:items-center`,
@@ -31,7 +32,7 @@ const AboutDevelopers: React.FC<Props> = ({ className }) => {
           `xl:col-[2/3] xl:row-[1/2] xl:max-w-[calc(700px+(24px*2))] xl:gap-10`
         )}
       >
-        <h1 className="font-['Gilroy'] text-3xl font-[600] text-black-1 md:text-4xl lg:text-5xl xl:text-6xl">
+        <h1 className="text-black-1 text-center font-['Gilroy'] text-3xl font-[600] md:text-4xl lg:text-5xl xl:text-6xl">
           M
           <AppleSvg
             className={classNames(
@@ -51,35 +52,59 @@ const AboutDevelopers: React.FC<Props> = ({ className }) => {
           ve.
         </h1>
         <div>
-          <p className={classNames(`mb-2 font-['Gilroy'] text-2xl font-[700] text-[#3A3A3B]`)}>
-            Where Psychology Meets Technology
+          <p
+            className={classNames(
+              `mb-2 text-center font-['Gilroy'] text-xl font-[700] text-[#3A3A3B] md:text-2xl`
+            )}
+          >
+            Psychology Meets Technology
           </p>
-          <p className={classNames(`font-['Gilroy'] text-lg font-[400] text-[#7B7C7D]`)}>
-            RenewMe combines psychology with the power of advanced technology engineered by former
-            Apple engineers to empower employees and customers of global brands with a mission of
-            helping them lead a more happy and balanced life.
-          </p>
-        </div>
-        <div>
-          <p className={classNames(`mb-2 font-['Gilroy'] text-2xl font-[700]  text-[#3A3A3B]`)}>
-            Mission of Mental Health Awareness
-          </p>
-          <p className={classNames(`font-['Gilroy'] text-lg font-[400] text-[#7B7C7D]`)}>
-            RenewMe brand is the brainchild of leading psychotherapist and national media
-            personality Dr. Lisa Palmer, founder of The Renew Center of Florida Ranked #1 in the
-            U.S. for the Treatment of PTSD, and the first female psychotherapist and minority woman
-            in business to develop a self-help smartphone app of its kind.
+          <p
+            className={classNames(`text-justify font-['Gilroy'] text-lg font-[400] text-[#7B7C7D]`)}
+          >
+            RenewMe blends psychology with cutting-edge technology, crafted by former Apple
+            engineers, to empower employees and customers of global brands. Our mission is to assist
+            individuals in leading happier and more balanced lives.
           </p>
         </div>
         <div>
-          <p className={classNames(`mb-2 font-['Gilroy'] text-2xl font-[700] text-[#3A3A3B]`)}>
-            Powered by Former Apple Engineers
+          <div className="flex w-full justify-center">
+            <p
+              className={classNames(
+                `mb-2 w-44 text-center font-['Gilroy'] text-xl font-[700] text-[#3A3A3B] md:w-full md:text-2xl`
+              )}
+            >
+              Mission of Mental Health Awareness
+            </p>
+          </div>
+          <p
+            className={classNames(`text-justify font-['Gilroy'] text-lg font-[400] text-[#7B7C7D]`)}
+          >
+            RenewMe is the brainchild of Dr. Lisa Palmer, a renowned psychotherapist and national
+            media personality. As the founder of The Renew Center of Florida, ranked #1 in the U.S.
+            for PTSD treatment, Dr. Palmer holds the distinction of being the first female
+            psychotherapist and minority woman in business to create a self-help smartphone app of
+            its kind.
           </p>
-          <p className={classNames(`font-['Gilroy'] text-lg font-[400] text-[#7B7C7D]`)}>
-            Our development team includes former Senior iOS Engineers at Apple Inc. (from 2011 to
-            2015) where they were responsible for building and maintaining iOS, iPad, AppleTV and
-            AppleWatch apps for the iTunes Store, App Store, Apple Trailers, Apple Remote, iTunes U,
-            Podcasts and Apple Music.
+        </div>
+        <div>
+          <div className="flex w-full justify-center">
+            <p
+              className={classNames(
+                `mb-2 w-56 text-center font-['Gilroy'] text-xl font-[700] text-[#3A3A3B] md:w-full md:text-2xl`
+              )}
+            >
+              Powered by Former Apple Engineers
+            </p>
+          </div>
+          <p
+            className={classNames(`text-justify font-['Gilroy'] text-lg font-[400] text-[#7B7C7D]`)}
+          >
+            Our development team is comprised of former Senior iOS Engineers from Apple Inc.
+            inspired to make a difference. These highly skilled professionals have played a pivotal
+            role in building and maintaining iOS, iPad, AppleTV, and AppleWatch apps for a variety
+            of services. Their expertise spans projects such as the iTunes Store, App Store, Apple
+            Trailers, Apple Remote, iTunes U, Podcasts, and Apple Music.
           </p>
         </div>
       </div>
