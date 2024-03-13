@@ -13,7 +13,7 @@ import { HeroWrapper } from './Hero.styled';
 
 const Hero: React.FC = () => {
   return (
-    <HeroWrapper className={classNames(`relative`)}>
+    <HeroWrapper className="relative">
       <Image
         className={classNames(
           `absolute top-0 w-screen object-cover object-bottom brightness-[85%] contrast-125`

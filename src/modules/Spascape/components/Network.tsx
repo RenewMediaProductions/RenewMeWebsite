@@ -1,6 +1,5 @@
-import { NetworkWrapper } from './Network.styled';
-
 import React from 'react';
+
 import ABCSvg from 'shared/assets/svg/n-abc.svg';
 import CBSSvg from 'shared/assets/svg/n-cbs.svg';
 import CNNSvg from 'shared/assets/svg/n-cnn.svg';
@@ -8,10 +7,12 @@ import FOXSvg from 'shared/assets/svg/n-fox.svg';
 import NBCSvg from 'shared/assets/svg/n-nbc.svg';
 import SKYSvg from 'shared/assets/svg/n-sky.svg';
 
+import { NetworkWrapper } from './Network.styled';
+
 const Network: React.FC = () => {
   return (
     <NetworkWrapper className="z-[2]">
-      <div className="container mx-auto flex h-full flex-col gap-10 px-6 pt-10 sm:pt-16">
+      <div className="container mx-auto flex h-full flex-col gap-10 px-6 py-10 sm:py-16">
         <span className="text-center font-['Gilroy'] text-base font-[400] text-black-1 md:text-lg lg:text-xl">
           CEO of RenewMe, Dr. Lisa Palmer is seen on the following networks:
         </span>
