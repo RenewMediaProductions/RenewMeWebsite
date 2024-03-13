@@ -19,9 +19,9 @@ const Hero: React.FC = () => {
           `hidden md:block absolute top-0 h-[1440px] w-[2560px] object-cover object-center`
         )}
         src={SOULSCAPE_IMAGES['soulscape-h-bg'].url}
-        height={SOULSCAPE_IMAGES['soulscape-h-bg'].height}
-        width={SOULSCAPE_IMAGES['soulscape-h-bg'].width}
         alt={SOULSCAPE_IMAGES['soulscape-h-bg'].alt}
+        quality={100}
+        fill
         priority
       />
       <Image
@@ -29,9 +29,9 @@ const Hero: React.FC = () => {
           `block md:hidden absolute top-0 h-[1440px] w-[2560px] object-cover object-center`
         )}
         src={SOULSCAPE_IMAGES['soulscape-h-bg-mobile'].url}
-        height={SOULSCAPE_IMAGES['soulscape-h-bg-mobile'].height}
-        width={SOULSCAPE_IMAGES['soulscape-h-bg-mobile'].width}
         alt={SOULSCAPE_IMAGES['soulscape-h-bg-mobile'].alt}
+        quality={100}
+        fill
         priority
       />
 
