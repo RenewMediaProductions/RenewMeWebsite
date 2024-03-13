@@ -5,31 +5,32 @@ import Image from 'next/image';
 
 import InfoSvg from 'shared/assets/svg/Home/s4-info.svg';
 
-import { HOME_IMAGES, STARS } from '../constants';
+import { HOME_IMAGES } from '../constants';
 import { SleepEscapeWrapper } from './SleepEscape.styled';
 
 interface Props {
   className?: string;
 }
 
-const Stars = () => {
-  return (
-    <React.Fragment>
-      {STARS.map((star, idx) => (
-        <span
-          key={idx}
-          className={classNames(`absolute rounded-[50%] bg-white`)}
-          style={{
-            top: `${star.top}%`,
-            left: `${star.left}%`,
-            height: star.size,
-            width: star.size,
-          }}
-        ></span>
-      ))}
-    </React.Fragment>
-  );
-};
+// Removed
+// const Stars = () => {
+//   return (
+//     <React.Fragment>
+//       {STARS.map((star, idx) => (
+//         <span
+//           key={idx}
+//           className={classNames(`absolute rounded-[50%] bg-white`)}
+//           style={{
+//             top: `${star.top}%`,
+//             left: `${star.left}%`,
+//             height: star.size,
+//             width: star.size,
+//           }}
+//         ></span>
+//       ))}
+//     </React.Fragment>
+//   );
+// };
 
 const SleepEscape: React.FC<Props> = ({ className }) => {
   return (
