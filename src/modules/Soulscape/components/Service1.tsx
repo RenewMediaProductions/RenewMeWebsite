@@ -1,11 +1,12 @@
-import { Service1Wrapper } from './Service1.styled';
+import classNames from 'classnames';
+import React from 'react';
+
+import Image from 'next/image';
+
+import InfoSvg from 'shared/assets/svg/Soulscape/s1-info.svg';
 
 import { SOULSCAPE_IMAGES } from '../constants';
-
-import classNames from 'classnames';
-import Image from 'next/image';
-import React from 'react';
-import InfoSvg from 'shared/assets/svg/Soulscape/s1-info.svg';
+import { Service1Wrapper } from './Service1.styled';
 
 interface Props {
   className?: string;
@@ -68,7 +69,7 @@ const Service1: React.FC<Props> = ({ className }) => {
         <div
           className={classNames(
             `absolute bottom-0 flex w-[305px] flex-col items-center gap-2 transition-opacity duration-1000`,
-            `md:left-[calc(50%+250px)] md:w-[230px] md:translate-x-[-50%] md:items-start`,
+            `md:left-[calc(50%+250px)] md:w-[230px] md:translate-x-[-50%]`,
             `lg:left-[calc(50%+320px)] lg:w-[300px]`,
             `xl:left-[calc(50%+370px)] xl:w-[326px]`
           )}
@@ -85,14 +86,14 @@ const Service1: React.FC<Props> = ({ className }) => {
           </p>
           <p
             className={classNames(
-              `text-center font-['Gilroy'] text-sm font-[400] text-gray-3`,
-              `md:text-start md:text-base`,
+              `font-['Gilroy'] text-sm font-[400] text-gray-3 text-justify`,
+              `md:text-base`,
               `lg:text-lg`
             )}
           >
-            Simplify your travels and let Soulscape help you to travel with ease. Explore tips to
-            pack, weather updates, and how to best check-in and check-out of your favorite
-            destinations.
+            Streamline your travels with Soulscape, your ultimate travel companion. Discover packing
+            tips, stay updated on weather forecasts, and learn the best check-in and check-out
+            practices for your favorite destinations. Travel with ease, guided by Soulscape.
           </p>
         </div>
       </div>

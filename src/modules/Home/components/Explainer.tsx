@@ -10,7 +10,7 @@ const Explainer: React.FC = () => {
       <div className="mx-auto flex h-full max-w-[340px] flex-col items-center gap-4 pt-[80px] md:max-w-[550px] md:pt-[120px] lg:max-w-[860px] lg:pt-[160px] xl:max-w-[900px] xl:gap-16">
         <div className="flex flex-col items-center justify-center gap-4">
           <Image
-            className="h-8 w-8"
+            className="h-8 w-8 md:h-10 md:w-10 lg:h-12 lg:w-12 xl:h-14 xl:w-14"
             src={HOME_ICONS['play-icon'].url}
             alt={HOME_ICONS['play-icon'].alt}
             width={HOME_ICONS['play-icon'].width}

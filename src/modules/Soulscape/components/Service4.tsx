@@ -1,11 +1,12 @@
-import { Service4Wrapper } from './Service4.styled';
+import classNames from 'classnames';
+import React from 'react';
+
+import Image from 'next/image';
+
+import InfoSvg from 'shared/assets/svg/Soulscape/s4-info.svg';
 
 import { SOULSCAPE_IMAGES } from '../constants';
-
-import classNames from 'classnames';
-import Image from 'next/image';
-import React from 'react';
-import InfoSvg from 'shared/assets/svg/Soulscape/s4-info.svg';
+import { Service4Wrapper } from './Service4.styled';
 
 interface Props {
   className?: string;
@@ -80,7 +81,7 @@ const Service4: React.FC<Props> = ({ className }) => {
         <div
           className={classNames(
             `absolute bottom-0 flex w-[305px] flex-col items-center gap-2 transition-opacity duration-1000`,
-            `md:left-[calc(50%-250px/2)] md:top-0 md:bottom-[unset] md:w-[230px] md:translate-x-[-50%] md:items-start`,
+            `md:left-[calc(50%-250px/2)] md:top-0 md:bottom-[unset] md:w-[230px] md:translate-x-[-50%]`,
             `lg:left-[calc(50%-320px/2)] lg:w-[300px]`,
             `xl:left-[calc(50%-395px/2)] xl:w-[326px]`
           )}
@@ -97,13 +98,14 @@ const Service4: React.FC<Props> = ({ className }) => {
           </p>
           <p
             className={classNames(
-              `text-center font-['Gilroy'] text-sm font-[400] text-gray-3`,
-              `md:text-start md:text-base`,
+              `text-justify font-['Gilroy'] text-sm font-[400] text-gray-3`,
+              `md:text-base`,
               `lg:text-lg`
             )}
           >
-            A suite of meditations helps you enhance a state of peace and tranquility whether on the
-            move at the airport, or unwinding in the comfort of your hotel.
+            Immerse yourself in a suite of meditations designed to enhance a state of peace and
+            tranquility, whether you're on the move at the airport or unwinding in the comfort of
+            your hotel.
           </p>
         </div>
       </div>

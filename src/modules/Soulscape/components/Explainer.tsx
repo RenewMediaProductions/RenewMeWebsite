@@ -10,14 +10,14 @@ const Explainer: React.FC = () => {
       <div className="mx-auto flex h-full max-w-[340px] flex-col items-center gap-4 pt-[80px] md:max-w-[550px] md:pt-[120px] lg:max-w-[860px] lg:pt-[160px] xl:max-w-[900px] xl:gap-16">
         <div className="flex flex-col items-center justify-center gap-4">
           <Image
-            className="h-8 w-8"
+            className="h-8 w-8 md:h-10 md:w-10 lg:h-12 lg:w-12 xl:h-14 xl:w-14"
             src={SOULSCAPE_ICONS['play-icon'].url}
             alt={SOULSCAPE_ICONS['play-icon'].alt}
             width={SOULSCAPE_ICONS['play-icon'].width}
             height={SOULSCAPE_ICONS['play-icon'].height}
           />
           <h1 className="text-black-1 font-['Gilroy'] text-3xl font-[600] md:text-4xl lg:text-5xl xl:text-6xl">
-            Renew<span className="text-black-1/80">Me</span> Explainer
+            Soulscape Explainer
           </h1>
         </div>
         <Dialog>

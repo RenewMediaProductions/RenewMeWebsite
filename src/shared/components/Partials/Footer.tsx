@@ -1,10 +1,12 @@
 /* eslint-disable react/no-unescaped-entities */
-import { FooterWrapper } from './Footer.styled';
+import React from 'react';
 
 import Link from 'next/link';
-import React from 'react';
+
 import LogoFooterSvg from 'shared/assets/svg/logo-footer.svg';
 import { ROUTES } from 'shared/constants/Routes';
+
+import { FooterWrapper } from './Footer.styled';
 
 const Footer: React.FC = () => {
   return (
@@ -16,13 +18,13 @@ const Footer: React.FC = () => {
             <LogoFooterSvg className="h-full w-auto" />
           </div>
           <p className="max-w-sm font-['Gilroy'] text-xs font-[400] text-white md:text-sm">
-            Created by Former Apple Developers and Founded by America’s Leading Psychotherapist, Dr.
-            Lisa Palmer, Director of{' '}
-            <span className="underline underline-offset-1">The Renew Center of Florida</span>,
-            Ranked #1 for Treatment of PTSD in US.
+            Our mission is to empower individuals on their journey to a more balanced and joyful
+            life. We strive to enhance well-being and promote a renewed sense of fulfillment.
+            Through personalized tools and resources, RenewMe is dedicated to fostering a happier
+            and more harmonious existence for all.
           </p>
-          <p className="max-w-sm font-['Gilroy'] text-xs font-[500] text-white md:text-sm">
-            Live Better. Breathe Deeper. Be Balanced.
+          <p className="max-w-sm font-['Gilroy'] text-xs font-bold text-white md:text-sm">
+            Life balance is better together.
           </p>
         </div>
         <div className="flex justify-between gap-8">
