@@ -18,7 +18,7 @@ const AboutDevelopers: React.FC<Props> = ({ className }) => {
   return (
     <AboutDevelopersWrapper
       className={classNames(
-        `grid h-[1800px] w-full grid-rows-[auto_1fr] bg-[#FAFAFA] py-[40px] md:h-fit`,
+        `grid h-[1800px] w-full grid-rows-[auto_1fr] bg-[#FAFAFA] py-[40px]`,
         `min-[575px]:h-[1500px]`,
         `md:px-10`,
         `xl:h-[1024px] xl:grid-cols-[repeat(2,1fr)] xl:grid-rows-[1fr] xl:items-center`,
@@ -108,6 +108,7 @@ const AboutDevelopers: React.FC<Props> = ({ className }) => {
           </p>
         </div>
       </div>
+
       <div
         className={classNames(
           `relative h-full w-full`,
@@ -129,6 +130,7 @@ const AboutDevelopers: React.FC<Props> = ({ className }) => {
             alt={HOME_IMAGES['man-1'].alt}
           />
         </div>
+
         <div
           className={classNames(
             `absolute top-[calc(50%-200px)] left-[calc(50%+80px)] w-full max-w-[90px] translate-x-[-50%] translate-y-[-50%]`,
@@ -144,6 +146,7 @@ const AboutDevelopers: React.FC<Props> = ({ className }) => {
             alt={HOME_IMAGES['man-2'].alt}
           />
         </div>
+
         <div
           className={classNames(
             `absolute top-[calc(50%+200px)] left-[calc(50%-130px)] w-full max-w-[130px] translate-x-[-50%] translate-y-[-50%]`,
@@ -158,6 +161,7 @@ const AboutDevelopers: React.FC<Props> = ({ className }) => {
             alt={HOME_IMAGES['man-3'].alt}
           />
         </div>
+
         <div
           className={classNames(
             `absolute top-[calc(50%+250px)] left-[50%] w-full max-w-[90px] translate-x-[-50%] translate-y-[-50%]`,
@@ -173,6 +177,7 @@ const AboutDevelopers: React.FC<Props> = ({ className }) => {
             alt={HOME_IMAGES['man-4'].alt}
           />
         </div>
+
         <div
           className={classNames(
             `absolute top-[calc(50%+200px)] left-[calc(50%+130px)] w-full max-w-[130px] translate-x-[-50%] translate-y-[-50%]`,
@@ -188,6 +193,7 @@ const AboutDevelopers: React.FC<Props> = ({ className }) => {
             alt={HOME_IMAGES['man-5'].alt}
           />
         </div>
+
         <div
           className={classNames(
             `absolute top-[50%] left-[50%] w-full max-w-[380px] translate-y-[-50%] translate-x-[-50%]`,

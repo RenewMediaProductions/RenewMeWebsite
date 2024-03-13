@@ -9,6 +9,15 @@ export const HOME_ICONS = {
   },
 };
 
+export const HOME_VIDEOS = {
+  'renewme-explainer': {
+    url: 'https://rqbgrdsdkazwogdqjqxi.supabase.co/storage/v1/object/public/listen-video-samples/renewme/renewme-explainer-ads-without-qr-compressed.mp4?t=2024-03-13T02%3A13%3A16.703Z',
+    type: 'video/mp4',
+    width: 1920,
+    height: 1080,
+  },
+};
+
 export const HOME_IMAGES = {
   'h-bg': {
     url: `${imageDomainUrl}/Home/h-bg.png?v=${assetVersion}`,

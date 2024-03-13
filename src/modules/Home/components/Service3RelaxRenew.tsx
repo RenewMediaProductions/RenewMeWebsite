@@ -69,7 +69,7 @@ const Service3: React.FC<Props> = ({ className }) => {
         <div
           className={classNames(
             `absolute bottom-0 flex w-[305px] flex-col items-center gap-2 transition-opacity duration-1000`,
-            `md:left-[50%] md:w-[230px] md:translate-x-[-50%] md:items-start`,
+            `md:left-[50%] md:w-[230px] md:translate-x-[-50%]`,
             `lg:w-[300px]`,
             `xl:w-[326px]`
           )}
@@ -77,7 +77,7 @@ const Service3: React.FC<Props> = ({ className }) => {
           <InfoSvg className={classNames(`h-[33px] w-[auto] lg:h-[48px]`)} />
           <p
             className={classNames(
-              `text-center font-['Gilroy'] text-lg font-[600] text-black-1`,
+              `text-black-1 text-center font-['Gilroy'] text-lg font-[600]`,
               `md:text-xl`,
               `lg:pt-[8px] lg:text-2xl`
             )}
@@ -86,8 +86,8 @@ const Service3: React.FC<Props> = ({ className }) => {
           </p>
           <p
             className={classNames(
-              `text-center font-['Gilroy'] text-sm font-[400] text-gray-3`,
-              `md:text-start md:text-base`,
+              `text-gray-3 text-justify font-['Gilroy'] text-sm font-[400]`,
+              `md:text-base`,
               `lg:text-lg`
             )}
           >

@@ -2,13 +2,15 @@ import React from 'react';
 
 import Image from 'next/image';
 
+import { Dialog, DialogContent, DialogTrigger } from 'src/components/ui/dialog';
+
 import AboutDevelopers from './components/AboutDevelopers';
 import GlobalMission from './components/GlobalMission';
 import Hero from './components/Hero';
 import Network from './components/Network';
 import Services from './components/Services';
 import WhatPeopleAreSaying from './components/WhatPeopleAreSaying';
-import { HOME_ICONS, HOME_IMAGES } from './constants';
+import { HOME_ICONS, HOME_IMAGES, HOME_VIDEOS } from './constants';
 import { HomeWrapper } from './index.styled';
 
 const Explainer: React.FC = () => {
@@ -27,14 +29,34 @@ const Explainer: React.FC = () => {
             Renew<span className="text-black-1/80">Me</span> Explainer
           </h1>
         </div>
-        <Image
-          className="cursor-pointer transition-all duration-150 ease-in-out hover:brightness-90"
-          src={HOME_IMAGES['s0-renewme-explainer'].url}
-          alt="RenewMe Explainer Thumbnail"
-          width={2000}
-          height={1125}
-          priority
-        />
+        <Dialog>
+          <DialogTrigger>
+            <Image
+              className="cursor-pointer transition-all duration-150 ease-in-out hover:brightness-90"
+              src={HOME_IMAGES['s0-renewme-explainer'].url}
+              alt="RenewMe Explainer Thumbnail"
+              width={2000}
+              height={1125}
+              priority
+            />
+          </DialogTrigger>
+          <DialogContent className="max-w-4xl border-transparent p-0">
+            {/* Create a video source */}
+            <video
+              className="aspect-video w-full h-full rounded-lg"
+              controls
+              autoPlay
+              loop
+              playsInline
+            >
+              <source
+                src={HOME_VIDEOS['renewme-explainer'].url}
+                type={HOME_VIDEOS['renewme-explainer'].type}
+              />
+              Your browser does not support the video tag.
+            </video>
+          </DialogContent>
+        </Dialog>
       </div>
     </section>
   );
