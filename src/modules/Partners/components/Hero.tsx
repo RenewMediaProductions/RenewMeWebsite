@@ -1,10 +1,11 @@
-import { HeroWrapper } from './Hero.styled';
-
 import classNames from 'classnames';
 import { PARTNERS_IMAGES } from 'modules/Partners/constants';
+import React from 'react';
+
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react';
+
+import { HeroWrapper } from './Hero.styled';
 
 const Hero: React.FC = () => {
   return (
@@ -20,10 +21,10 @@ const Hero: React.FC = () => {
             Brands with Purpose
           </h1>
           <p className="hero-text max-w-xs text-center font-['Gilroy'] text-base font-[500] text-black-1 md:max-w-md md:text-lg lg:max-w-xl lg:text-xl xl:max-w-[729px]">
-            RenewMe select partners are dedicated to our global mission of helping individuals live
-            a healthier and happier lives. Together we pride ourselves on special, curated
-            partnerships with popular brands who share our purpose of mental health awareness and a
-            mission of life balance.
+            RenewMe&apos;s select partners share our global mission of promoting healthier and
+            happier lives. Through special, curated collaborations with popular brands, we
+            collectively pride ourselves on advancing mental health awareness and fostering a
+            mission of greater happiness and life balance for all.
           </p>
         </div>
         <div className="hero-buttons grid">

@@ -1,14 +1,14 @@
 /* eslint-disable no-console */
-
-import { WellnessWrapper } from './Wellness.styled';
-
-import { WELLNESS } from '../constants';
-
 import classNames from 'classnames';
-import Image from 'next/image';
 import React, { useEffect, useRef, useState } from 'react';
 import { useWindowSize } from 'react-use';
+
+import Image from 'next/image';
+
 import CarouselArrow from 'shared/assets/svg/carousel-arrow.svg';
+
+import { WELLNESS } from '../constants';
+import { WellnessWrapper } from './Wellness.styled';
 
 interface Props {
   className?: string;
