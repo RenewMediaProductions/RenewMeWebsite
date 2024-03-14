@@ -21,10 +21,10 @@ const Hero: React.FC = () => {
             Brands with Purpose
           </h1>
           <p className="hero-text max-w-xs text-center font-['Gilroy'] text-base font-[500] text-black-1 md:max-w-md md:text-lg lg:max-w-xl lg:text-xl xl:max-w-[729px]">
-            RenewMe's select partners share our global mission of promoting healthier and happier
-            lives. Through special, curated collaborations with popular brands, we collectively
-            pride ourselves on advancing mental health awareness and fostering a mission of greater
-            happiness and life balance for all.
+            RenewMe&apos;s select partners share our global mission of promoting healthier and
+            happier lives. Through special, curated collaborations with popular brands, we
+            collectively pride ourselves on advancing mental health awareness and fostering a
+            mission of greater happiness and life balance for all.
           </p>
         </div>
         <div className="hero-buttons grid">
