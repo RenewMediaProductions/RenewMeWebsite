@@ -56,10 +56,10 @@ const Service2: React.FC<Props> = ({ className }) => {
         />
         <div
           className={classNames(
-            `absolute bottom-0 flex w-[305px] flex-col items-center gap-2 transition-opacity duration-1000`,
-            `md:bottom-[unset] md:top-[50%] md:left-[50%] md:w-[230px] md:translate-x-[-50%] md:translate-y-[-50%]`,
-            `lg:w-[300px]`,
-            `xl:w-[326px]`
+            `absolute bottom-0 flex w-[270px] flex-col items-center gap-2 transition-opacity duration-1000`,
+            `md:bottom-[unset] md:top-[50%] md:left-[50%] md:w-[200px] md:translate-x-[-50%] md:translate-y-[-50%]`,
+            `lg:w-[250px]`,
+            `xl:w-[276px]`
           )}
         >
           <InfoSvg className={classNames(`h-[33px] w-[auto]`, `lg:h-[48px]`)} />

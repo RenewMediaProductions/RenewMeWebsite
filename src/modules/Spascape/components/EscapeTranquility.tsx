@@ -18,7 +18,7 @@ const EscapeTranquility: React.FC = () => {
         quality={100}
         fill
       />
-      <div className="mx-auto relative h-full flex flex-col items-center justify-center md:flex-row gap-10 py-[80px] md:py-[120px] lg:py-[160px] xl:gap-12">
+      <div className="relative mx-auto flex h-full flex-col items-center justify-center gap-10 py-[80px] md:flex-row md:py-[120px] lg:py-[160px] xl:gap-12">
         <Image
           className={classNames(
             `h-auto w-full max-w-[230px]`,
@@ -32,13 +32,18 @@ const EscapeTranquility: React.FC = () => {
           priority
         />
         <div>
-          <h1 className="pb-4 w-full font-['Gilroy'] text-[32px] font-[600] md:text-5xl lg:text-6xl text-transparent bg-clip-text bg-gradient-to-br from-[#00CACC] to-[#009699]">
+          <h1 className="w-full pb-4 font-['Gilroy'] text-[32px] font-[600] text-black-1 md:text-5xl lg:text-6xl">
             Escape to Tranquility
           </h1>
-          <p className="isolate max-w-[325px] pb-0 md:pb-8 text-justify font-['Gilroy'] font-[500] tracking-[0.2px] text-gray-3 md:max-w-[450px] md:text-lg lg:max-w-[600px] lg:text-xl">
-            Spascape is exclusively designed for spa goers to have an immersive experience that
-            invigorates the soul while rejuvenating the mind and body at the most luxurious spa
-            destinations around the world.
+          <p className="isolate hidden max-w-[325px] pb-0 text-justify font-['Gilroy'] font-medium tracking-[0.2px] text-gray-3 md:block md:max-w-[450px] md:pb-8 md:text-lg lg:max-w-[600px] lg:text-xl">
+            Introducing Spascape, exclusively designed for spa enthusiasts seeking an immersive
+            experience that invigorates the soul while rejuvenating the mind and body at spa
+            destinations worldwide. Embark on a journey of ultimate relaxation and renewal.
+          </p>
+          <p className="isolate max-w-[325px] pb-0 text-justify font-['Gilroy'] font-medium tracking-[0.2px] text-gray-3 md:hidden md:max-w-[450px] md:pb-8 md:text-lg lg:max-w-[600px] lg:text-xl">
+            Spascape is exclusively designed for spa enthusiasts seeking an immersive meditative
+            experience that invigorates the soul while rejuvenating the mind and body at their
+            favorite spa destinations worldwide.
           </p>
         </div>
       </div>

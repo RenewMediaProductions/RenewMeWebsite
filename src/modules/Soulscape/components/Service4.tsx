@@ -16,10 +16,10 @@ const Service4: React.FC<Props> = ({ className }) => {
   return (
     <Service4Wrapper
       className={classNames(
-        `relative h-[calc(470px+157px+40px)]`, // {phone height} + {info height} + {margin between phone and info}
-        `md:h-[calc(470px+221px+60px)]`,
-        `lg:h-[calc(613px+244px+90px)]`,
-        `xl:h-[calc(666px+244px+90px)]`,
+        `relative h-fit`,
+        `md:h-[calc(470px+221px+60px+90px)]`,
+        `lg:h-[calc(613px+244px+90px+90px)]`,
+        `xl:h-[calc(666px+244px+90px+90px)]`,
         className
       )}
     >
@@ -32,18 +32,6 @@ const Service4: React.FC<Props> = ({ className }) => {
       >
         <Image
           className={classNames(
-            `top-[-10px] block w-full max-w-[230px] transition-opacity duration-1000`,
-            `md:absolute md:top-[unset] md:bottom-[0] md:left-[calc(50%-250px/2)] md:block md:translate-x-[-50%]`,
-            `lg:left-[calc(50%-320px/2)] lg:max-w-[300px]`,
-            `xl:left-[calc(50%-395px/2)] xl:max-w-[326px]`
-          )}
-          src={SOULSCAPE_IMAGES['s4-phone-2'].url}
-          width={SOULSCAPE_IMAGES['s4-phone-2'].width}
-          height={SOULSCAPE_IMAGES['s4-phone-2'].height}
-          alt={SOULSCAPE_IMAGES['s4-phone-2'].alt}
-        />
-        <Image
-          className={classNames(
             `hidden w-full max-w-[230px] transition-opacity duration-1000`,
             `md:absolute md:top-[0] md:left-[calc(50%-250px*-1.5)] md:block md:translate-x-[-50%]`,
             `lg:left-[calc(50%-320px*-1.5)] lg:max-w-[300px]`,
@@ -54,6 +42,56 @@ const Service4: React.FC<Props> = ({ className }) => {
           height={SOULSCAPE_IMAGES['s4-phone-4'].height}
           alt={SOULSCAPE_IMAGES['s4-phone-4'].alt}
         />
+        <div
+          className={classNames(
+            `flex flex-col-reverse items-center`,
+            `md:absolute md:top-0 md:left-[calc(50%-250px/2)] md:translate-x-[-50%] md:flex-col`,
+            `lg:left-[calc(50%-320px/2)]`,
+            `xl:left-[calc(50%-395px/2)]`
+          )}
+        >
+          <div
+            className={classNames(
+              `mt-[40px] flex w-[270px] flex-col items-center gap-2 transition-opacity duration-1000`,
+              `md:mb-[90px] md:w-[200px]`,
+              `lg:w-[250px]`,
+              `xl:w-[276px]`
+            )}
+          >
+            <InfoSvg className={classNames(`h-[33px] w-[auto]`, `lg:h-[48px]`)} />
+            <p
+              className={classNames(
+                `text-center font-['Gilroy'] text-lg font-[600] text-black-1`,
+                `md:text-xl`,
+                `lg:pt-[8px] lg:text-2xl`
+              )}
+            >
+              Mindful Traveler
+            </p>
+            <p
+              className={classNames(
+                `text-justify font-['Gilroy'] text-sm font-[400] text-gray-3`,
+                `md:text-base`,
+                `lg:text-lg`
+              )}
+            >
+              Immerse yourself in a suite of meditations designed to enhance a state of peace and
+              tranquility, whether you&apos;re on the move at the airport or unwinding in the
+              comfort of your hotel.
+            </p>
+          </div>
+          <Image
+            className={classNames(
+              `block w-full max-w-[230px] transition-opacity duration-1000`,
+              `lg:max-w-[300px]`,
+              `xl:max-w-[326px]`
+            )}
+            src={SOULSCAPE_IMAGES['s4-phone-2'].url}
+            width={SOULSCAPE_IMAGES['s4-phone-2'].width}
+            height={SOULSCAPE_IMAGES['s4-phone-2'].height}
+            alt={SOULSCAPE_IMAGES['s4-phone-2'].alt}
+          />
+        </div>
         <Image
           className={classNames(
             `hidden w-full max-w-[230px] transition-opacity duration-1000`,
@@ -78,36 +116,6 @@ const Service4: React.FC<Props> = ({ className }) => {
           height={SOULSCAPE_IMAGES['s4-phone-1'].height}
           alt={SOULSCAPE_IMAGES['s4-phone-1'].alt}
         />
-        <div
-          className={classNames(
-            `absolute bottom-0 flex w-[305px] flex-col items-center gap-2 transition-opacity duration-1000`,
-            `md:left-[calc(50%-250px/2)] md:top-0 md:bottom-[unset] md:w-[230px] md:translate-x-[-50%]`,
-            `lg:left-[calc(50%-320px/2)] lg:w-[300px]`,
-            `xl:left-[calc(50%-395px/2)] xl:w-[326px]`
-          )}
-        >
-          <InfoSvg className={classNames(`h-[33px] w-[auto] lg:h-[48px]`)} />
-          <p
-            className={classNames(
-              `text-center font-['Gilroy'] text-lg font-[600] text-black-1`,
-              `md:text-xl`,
-              `lg:pt-[8px] lg:text-2xl`
-            )}
-          >
-            Mindful Traveler
-          </p>
-          <p
-            className={classNames(
-              `text-justify font-['Gilroy'] text-sm font-[400] text-gray-3`,
-              `md:text-base`,
-              `lg:text-lg`
-            )}
-          >
-            Immerse yourself in a suite of meditations designed to enhance a state of peace and
-            tranquility, whether you&apos;re on the move at the airport or unwinding in the comfort
-            of your hotel.
-          </p>
-        </div>
       </div>
     </Service4Wrapper>
   );

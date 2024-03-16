@@ -13,8 +13,8 @@ const Soulscape: React.FC = () => {
     <SoulscapeWrapper className="flex flex-col overflow-hidden bg-[#FAFAFA]">
       <Hero />
       <Network />
-      <Explainer />
       <TravelBalance />
+      <Explainer />
       <Services />
       <WhatPeopleAreSaying />
     </SoulscapeWrapper>

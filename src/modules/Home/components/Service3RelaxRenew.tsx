@@ -12,14 +12,14 @@ interface Props {
   className?: string;
 }
 
-const Service3: React.FC<Props> = ({ className }) => {
+const Service3RelaxRenew: React.FC<Props> = ({ className }) => {
   return (
     <Service3WrapperRelaxRenew
       className={classNames(
-        `relative h-[calc(470px+177px+40px)]`, // {phone height} + {info height} + {margin between phone and info}
-        `md:h-[calc(470px+269px+60px)]`,
-        `lg:h-[calc(613px+300px+90px)]`,
-        `xl:h-[calc(666px+300px+90px)]`,
+        `relative h-fit`,
+        `md:h-[calc(470px+269px+100px+90px)]`,
+        `lg:h-[calc(613px+300px+120px+60px)]`,
+        `xl:h-[calc(666px+300px+120px+30px)]`,
         className
       )}
     >
@@ -30,24 +30,68 @@ const Service3: React.FC<Props> = ({ className }) => {
           `md:justify-start`
         )}
       >
-        <Image
-          className={classNames(
-            `top-[-10px] block w-full max-w-[230px] transition-opacity duration-1000`,
-            `md:absolute md:top-0`,
-            `lg:max-w-[300px]`,
-            `xl:max-w-[326px]`
-          )}
-          src={HOME_IMAGES['s3-phone-1'].url}
-          width={HOME_IMAGES['s3-phone-1'].width}
-          height={HOME_IMAGES['s3-phone-1'].height}
-          alt={HOME_IMAGES['s3-phone-1'].alt}
-        />
+        <div className="top-0 flex flex-col items-center md:absolute">
+          <Image
+            className={classNames(
+              `block w-full max-w-[230px] transition-opacity duration-1000`,
+              `lg:max-w-[300px]`,
+              `xl:max-w-[326px]`
+            )}
+            src={HOME_IMAGES['s3-phone-1'].url}
+            width={HOME_IMAGES['s3-phone-1'].width}
+            height={HOME_IMAGES['s3-phone-1'].height}
+            alt={HOME_IMAGES['s3-phone-1'].alt}
+          />
+          <div
+            className={classNames(
+              `mt-[40px] flex w-[270px] flex-col items-center gap-2 transition-opacity duration-1000`,
+              `md:mt-[90px] md:w-[200px]`,
+              `lg:w-[250px]`,
+              `xl:w-[276px]`
+            )}
+          >
+            <InfoSvg className={classNames(`h-[33px] w-[auto]`, `lg:h-[48px]`)} />
+            <p
+              className={classNames(
+                `text-center font-['Gilroy'] text-2xl font-medium text-black-1`,
+                `md:text-start md:text-xl`,
+                `lg:pt-[8px] lg:text-3xl`
+              )}
+            >
+              Relax & Renew
+            </p>
+            <p
+              className={classNames(
+                `hidden text-justify font-['Gilroy'] text-sm font-[400] text-gray-3`,
+                `md:block md:text-base`,
+                `lg:text-lg`
+              )}
+            >
+              Relieve tension and cultivate a positive mindset with audio tracks ranging from 1 to
+              10 minutes. Enhance your well-being, self-esteem, mindfulness, motivation,
+              relationships, body image, confidence, coping skills, self-awareness, and happiness in
+              just a few minutes a day.
+            </p>
+
+            <p
+              className={classNames(
+                `block text-justify font-['Gilroy'] text-sm font-[400] text-gray-3`,
+                `md:hidden md:text-base`,
+                `lg:text-lg`
+              )}
+            >
+              Enhance your well-being, self-esteem, mindfulness, motivation, relationships, body
+              image, confidence, coping skills, self-awareness, and happiness in just a few minutes
+              a day.
+            </p>
+          </div>
+        </div>
         <Image
           className={classNames(
             `hidden w-full max-w-[230px] transition-opacity duration-1000`,
-            `md:absolute md:bottom-[calc(40px*2)] md:left-[calc(50%-250px)] md:block md:translate-x-[-50%]`,
-            `lg:bottom-[calc(30px*2)] lg:left-[calc(50%-320px)] lg:max-w-[300px]`,
-            `xl:bottom-[calc(20px*2)] xl:left-[calc(50%-395px)] xl:max-w-[326px]`
+            `md:absolute md:bottom-[60px] md:left-[calc(50%-250px)] md:block md:translate-x-[-50%]`,
+            `lg:bottom-[90px] lg:left-[calc(50%-320px)] lg:max-w-[300px]`,
+            `xl:left-[calc(50%-395px)] xl:max-w-[326px]`
           )}
           src={HOME_IMAGES['s3-phone-2'].url}
           width={HOME_IMAGES['s3-phone-2'].width}
@@ -57,48 +101,18 @@ const Service3: React.FC<Props> = ({ className }) => {
         <Image
           className={classNames(
             `hidden w-full max-w-[230px] transition-opacity duration-1000`,
-            `md:absolute md:bottom-[calc(40px*2)] md:left-[calc(50%+250px)] md:block md:translate-x-[-50%]`,
-            `lg:bottom-[calc(30px*2)] lg:left-[calc(50%+320px)] lg:max-w-[300px]`,
-            `xl:bottom-[calc(20px*2)] xl:left-[calc(50%+395px)] xl:max-w-[326px]`
+            `md:absolute md:top-[50%] md:right-[calc(50%-250px)] md:block md:translate-x-[50%] md:translate-y-[-50%]`,
+            `lg:right-[calc(50%-320px)] lg:max-w-[300px]`,
+            `xl:right-[calc(50%-395px)] xl:max-w-[326px]`
           )}
           src={HOME_IMAGES['s3-phone-3'].url}
           width={HOME_IMAGES['s3-phone-3'].width}
           height={HOME_IMAGES['s3-phone-3'].height}
           alt={HOME_IMAGES['s3-phone-3'].alt}
         />
-        <div
-          className={classNames(
-            `absolute bottom-0 flex w-[305px] flex-col items-center gap-2 transition-opacity duration-1000`,
-            `md:left-[50%] md:w-[230px] md:translate-x-[-50%]`,
-            `lg:w-[300px]`,
-            `xl:w-[326px]`
-          )}
-        >
-          <InfoSvg className={classNames(`h-[33px] w-[auto] lg:h-[48px]`)} />
-          <p
-            className={classNames(
-              `text-black-1 text-center font-['Gilroy'] text-lg font-[600]`,
-              `md:text-xl`,
-              `lg:pt-[8px] lg:text-2xl`
-            )}
-          >
-            Relax & Renew
-          </p>
-          <p
-            className={classNames(
-              `text-gray-3 text-justify font-['Gilroy'] text-sm font-[400]`,
-              `md:text-base`,
-              `lg:text-lg`
-            )}
-          >
-            Ease tension and boost a positive mindset with 1-10 minute audio tracks to improve
-            health, self-esteem, mindfulness, motivation, relationships, body image, confidence,
-            coping skills, self-awareness, and happiness.
-          </p>
-        </div>
       </div>
     </Service3WrapperRelaxRenew>
   );
 };
 
-export default Service3;
+export default Service3RelaxRenew;

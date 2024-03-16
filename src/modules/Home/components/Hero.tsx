@@ -16,12 +16,12 @@ const Hero: React.FC = () => {
     <HeroWrapper className="relative">
       <Image
         className={classNames(
-          `absolute top-0 w-screen object-cover object-bottom brightness-[85%] contrast-125`
+          `absolute top-0 w-screen object-cover object-bottom brightness-[75%] contrast-[130%] saturate-[120%]`
         )}
         src={HOME_IMAGES['h-bg'].url}
         alt={HOME_IMAGES['h-bg'].alt}
-        fill
         priority
+        fill
       />
       <div className={classNames(`bg-bot`)}></div>
       <div

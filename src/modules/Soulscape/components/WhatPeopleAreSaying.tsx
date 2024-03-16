@@ -19,13 +19,14 @@ const WhatPeopleAreSaying: React.FC<Props> = ({ className }) => {
     >
       {/* <div className="bg"></div> */}
       <Image
+        className="object-cover"
         src={`${imageDomainUrl}/Soulscape/bg-never-miss-an-update.png`}
         alt="What People Are Saying"
         quality={100}
         fill
       />
       <div className="container isolate mx-auto flex flex-col items-center gap-6 px-6 md:gap-10 lg:gap-24">
-        <h1 className="text-center font-['Gilroy'] text-3xl font-[500] md:text-4xl lg:text-5xl xl:text-6xl text-white">
+        <h1 className="text-center font-['Gilroy'] text-3xl font-[500] text-white md:text-4xl lg:text-5xl xl:text-6xl">
           Never miss an update <br />
           Join our mailing list.
         </h1>

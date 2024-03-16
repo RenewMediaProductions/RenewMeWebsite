@@ -35,7 +35,7 @@ const WhatPeopleAreSaying: React.FC<Props> = ({ className }) => {
           />
           <span className="absolute top-[50%] right-3 flex h-11 w-11 translate-y-[-50%] cursor-pointer items-center justify-center rounded-[50%] bg-[#F9E1B9]">
             <Image
-              className="w-7 h-7"
+              className="h-7 w-7"
               src={`${imageDomainUrl}/Spascape/arrow-right-dark.svg`}
               width={100}
               height={100}
