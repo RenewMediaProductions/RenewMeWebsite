@@ -16,7 +16,7 @@ const Hero: React.FC = () => {
     <HeroWrapper className="relative">
       <Image
         className={classNames(
-          `hidden md:block absolute top-0 h-[1440px] w-[2560px] object-cover object-center`
+          `absolute top-0 hidden h-[1440px] w-[2560px] object-cover object-center md:block`
         )}
         src={SOULSCAPE_IMAGES['soulscape-h-bg'].url}
         alt={SOULSCAPE_IMAGES['soulscape-h-bg'].alt}
@@ -26,7 +26,7 @@ const Hero: React.FC = () => {
       />
       <Image
         className={classNames(
-          `block md:hidden absolute top-0 h-[1440px] w-[2560px] object-cover object-center`
+          `absolute top-0 block h-[1440px] w-[2560px] object-cover object-center md:hidden`
         )}
         src={SOULSCAPE_IMAGES['soulscape-h-bg-mobile'].url}
         alt={SOULSCAPE_IMAGES['soulscape-h-bg-mobile'].alt}
@@ -41,7 +41,7 @@ const Hero: React.FC = () => {
           `container isolate mx-auto flex h-full flex-col items-center px-6 pt-36`
         )}
       >
-        <div className={classNames(`pb-8 flex flex-col items-center`)}>
+        <div className={classNames(`flex flex-col items-center pb-8`)}>
           <Badge
             variant="outline"
             className="mb-6 border-transparent font-['Gilroy'] text-sm text-white outline outline-1 outline-white md:text-lg"
