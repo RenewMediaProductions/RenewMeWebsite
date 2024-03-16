@@ -265,11 +265,23 @@ export const HOME_IMAGES = {
     height: 184,
     alt: 'image',
   },
+  'man-6': {
+    url: `${imageDomainUrl}/Home/man-6.png?v=${assetVersion}`,
+    width: 184,
+    height: 184,
+    alt: 'image',
+  },
   women: {
     url: `${imageDomainUrl}/Home/women.png?v=${assetVersion}`,
     width: 253,
     height: 250,
     alt: 'image',
+  },
+  team: {
+    url: `${imageDomainUrl}/Home/team.png?v=${assetVersion}`,
+    width: 3000,
+    height: 3000,
+    alt: 'RenewMe Team',
   },
 };
 

@@ -2,6 +2,7 @@ import classNames from 'classnames';
 import React from 'react';
 
 import Image from 'next/image';
+import Link from 'next/link';
 
 import { imageDomainUrl } from 'shared/constants/Assets';
 
@@ -62,14 +63,14 @@ const Hero: React.FC = () => {
           <div className="flex flex-col items-center justify-center gap-6">
             <div className="flex items-center justify-center gap-4">
               <div className="flex flex-col items-center justify-center gap-2">
-                <p className="text-base md:text-lg">Use code</p>
+                <p className="text-base md:text-lg text-white">Use code</p>
                 <Badge className="bg-[#3A3A3B] text-base md:text-lg">PEACE369</Badge>
               </div>
 
-              <div className="h-[2.5rem] w-[1px] bg-white"></div>
+              <div className="h-[4rem] w-[1px] bg-white"></div>
 
               <div className="flex flex-col items-center justify-center gap-2">
-                <p className="text-base md:text-lg">Download</p>
+                <p className="text-base md:text-lg text-white">Download</p>
                 <Image
                   className="h-auto w-[110px] cursor-pointer md:w-32"
                   src={`${imageDomainUrl}/Code/app-store-button.png`}
@@ -106,7 +107,13 @@ const Hero: React.FC = () => {
                 width={2560}
                 height={1024}
               />
-              Share with friends
+              <Link
+                href="https://www.myrenewme.com/renewme/code/peace369"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Share with friends
+              </Link>
             </div>
           </div>
         </div>

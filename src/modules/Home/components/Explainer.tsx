@@ -9,7 +9,7 @@ import { HOME_ICONS, HOME_IMAGES, HOME_VIDEOS } from '../constants';
 const Explainer: React.FC = () => {
   return (
     <section className="flex w-full justify-center">
-      <div className="mx-auto flex h-full max-w-[340px] flex-col items-center gap-4 pt-[80px] md:max-w-[550px] md:pt-[120px] lg:max-w-[860px] lg:pt-[160px] xl:max-w-[900px] xl:gap-16">
+      <div className="mx-auto flex h-full max-w-[340px] flex-col items-center gap-4 pt-[40px] md:max-w-[550px] md:pt-[60px] lg:max-w-[860px] lg:pt-[80px] xl:max-w-[900px] xl:gap-16">
         <div className="flex flex-col items-center justify-center gap-4 md:gap-8">
           <Image
             className="h-8 w-8 md:h-10 md:w-10 lg:h-12 lg:w-12 xl:h-14 xl:w-14"
@@ -25,7 +25,7 @@ const Explainer: React.FC = () => {
         <Dialog>
           <DialogTrigger>
             <Image
-              className="cursor-pointer transition-all duration-150 ease-in-out hover:brightness-90"
+              className="cursor-pointer transition-all duration-150 ease-in-out hover:brightness-90 shadow-2xl rounded-[30px] md:rounded-[65px]"
               src={HOME_IMAGES['s0-renewme-explainer-thumbnail'].url}
               alt="RenewMe Explainer Thumbnail"
               width={2000}

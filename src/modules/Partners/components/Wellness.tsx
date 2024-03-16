@@ -27,19 +27,19 @@ const WellnessMobile: React.FC = () => {
         <WellnessWrapper
           key={wellnessIdx}
           className={classNames(
-            `relative flex h-full w-screen flex-col items-center justify-between gap-[60px] overflow-hidden px-5 pt-[80px] pb-[70px]`,
+            `relative flex h-full w-screen flex-col items-center justify-between gap-[40px] overflow-hidden px-5 pt-[40px] pb-[40px]`,
             `lg:gap-[80px] lg:pt-[58px] lg:pb-[80px]`,
-            wellnessIdx === 0 && 'mt-[80px]'
+            wellnessIdx === 0 && 'mt-[60px]'
           )}
           style={{ background: wellness.bgColor }}
           imageOption={imageOption}
         >
           <div className="container grid w-full max-w-[1110px] gap-y-[30px] md:grid-cols-[repeat(2,1fr)]">
-            <div className="font-['Gilroy'] text-4xl font-[600] text-black-1 transition-all duration-1000 ease-in-out md:text-5xl lg:text-[60px] lg:leading-[72px]">
+            <div className="font-['Gilroy'] text-4xl font-medium text-black-1 text-center transition-all duration-1000 ease-in-out">
               {wellness.title} <br />
               {wellness.subtitle}
             </div>
-            <div className="font-['Gilroy'] text-base font-[500] text-black-1 transition-all duration-1000 ease-in-out md:max-w-[538px] md:text-lg lg:text-[20px] lg:leading-[32px] ">
+            <div className="font-['Gilroy'] text-base font-regular text-black-1 text-justify transition-all duration-1000 ease-in-out">
               {wellness.description}
             </div>
           </div>

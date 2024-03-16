@@ -15,12 +15,24 @@ const Hero: React.FC = () => {
   return (
     <HeroWrapper className="relative">
       <Image
-        className={classNames(`absolute top-0 h-[1440px] w-[2560px] object-cover object-center`)}
+        className={classNames(
+          `hidden md:block absolute h-[1440px] w-[2560px] object-cover object-center contrast-[110%] brightness-95`
+        )}
         src={SPASCAPE_IMAGES['h-bg'].url}
         alt={SPASCAPE_IMAGES['h-bg'].alt}
         fill
         priority
       />
+      <Image
+        className={classNames(
+          `block md:hidden absolute h-[1440px] w-[2560px] object-cover object-center contrast-[110%] brightness-95`
+        )}
+        src={SPASCAPE_IMAGES['h-bg-mobile'].url}
+        alt={SPASCAPE_IMAGES['h-bg-mobile'].alt}
+        fill
+        priority
+      />
+
       <div
         className={classNames(
           `container isolate mx-auto flex h-full flex-col items-center px-6 pt-36`
@@ -45,10 +57,10 @@ const Hero: React.FC = () => {
           </h1>
           <p
             className={classNames(
-              `hero-text max-w-[620px] text-center font-['Gilroy'] text-base font-[500] text-white`, // Increased from 520px to 620px
-              `md:max-w-xl md:text-lg`, // Changed from md:max-w-lg to md:max-w-xl for medium devices
-              `lg:max-w-2xl lg:text-xl`, // Changed from lg:max-w-xl to lg:max-w-2xl for large devices
-              `xl:max-w-[800px] xl:text-2xl` // Increased from 700px to 800px for extra-large devices
+              `hero-text max-w-[620px] text-center font-['Gilroy'] text-base font-[500] text-white`,
+              `md:max-w-xl md:text-lg`,
+              `lg:max-w-2xl lg:text-xl`,
+              `xl:max-w-[800px] xl:text-2xl`
             )}
           >
             Spascape offers a curated escape while you indulge at spa destinations, providing an
@@ -73,44 +85,49 @@ const Hero: React.FC = () => {
           />
         </div>
       </div>
+
       <div
-        className={classNames(
-          `relative mt-20 flex h-[500px] w-full justify-center overflow-hidden`,
-          `lg:h-[650px]`,
-          `xl:h-[700px]`
-        )}
+        className="flex w-full justify-center font-['Gilroy'] mt-6 isolate cursor-pointer items-center gap-2 text-base md:text-lg z-10"
+        onClick={() => {
+          navigator.clipboard.writeText(window.location.href);
+
+          toast({
+            title: `Link Copied!`,
+            className: 'bg-white rounded-xl',
+            description: 'Share with friends! RenewMe is coming soon!',
+          });
+        }}
       >
+        <Image
+          className="h-4 w-4"
+          src={`${imageDomainUrl}/Code/share.svg`}
+          alt="Share Icon"
+          width={2560}
+          height={1024}
+        />
+        <p>Share with friends</p>
+      </div>
+
+      <div className={classNames(`flex w-full justify-center my-10`, `xl:my-20`)}>
         <div
           className={classNames(
-            `hero-image absolute flex h-auto justify-center gap-[20px]`,
-            `lg:gap-[20px]`,
+            `flex flex-col items-center justify-center gap-[20px]`,
+            `lg:flex-row lg:gap-[40px]`,
             `xl:gap-[70px]`
           )}
         >
           <Image
             className={classNames(
-              `h-auto w-full max-w-[230px]`,
+              `h-auto w-full max-w-[230px] z-10 drop-shadow-phone-shadow`,
               `lg:max-w-[300px]`,
               `xl:max-w-[326px]`
             )}
             src={SPASCAPE_IMAGES['h-phone-1'].url}
-            height={SPASCAPE_IMAGES['h-phone-1'].height}
-            width={SPASCAPE_IMAGES['h-phone-1'].width}
             alt={SPASCAPE_IMAGES['h-phone-1'].alt}
+            width={SPASCAPE_IMAGES['h-phone-1'].width}
+            height={SPASCAPE_IMAGES['h-phone-1'].height}
             priority
           />
-          {/* <Image
-            className={classNames(
-              `h-auto w-full max-w-[230px]`,
-              `lg:max-w-[300px]`,
-              `xl:max-w-[326px]`
-            )}
-            src={SPASCAPE_IMAGES['h-phone-2'].url}
-            height={SPASCAPE_IMAGES['h-phone-2'].height}
-            width={SPASCAPE_IMAGES['h-phone-2'].width}
-            alt={SPASCAPE_IMAGES['h-phone-2'].alt}
-            priority
-          /> */}
         </div>
       </div>
     </HeroWrapper>

@@ -37,10 +37,10 @@ const Service3RelaxRenew: React.FC<Props> = ({ className }) => {
               `lg:max-w-[300px]`,
               `xl:max-w-[326px]`
             )}
-            src={HOME_IMAGES['s3-phone-1'].url}
-            width={HOME_IMAGES['s3-phone-1'].width}
-            height={HOME_IMAGES['s3-phone-1'].height}
-            alt={HOME_IMAGES['s3-phone-1'].alt}
+            src={HOME_IMAGES['s3-phone-2'].url}
+            width={HOME_IMAGES['s3-phone-2'].width}
+            height={HOME_IMAGES['s3-phone-2'].height}
+            alt={HOME_IMAGES['s3-phone-2'].alt}
           />
           <div
             className={classNames(
@@ -93,10 +93,10 @@ const Service3RelaxRenew: React.FC<Props> = ({ className }) => {
             `lg:bottom-[90px] lg:left-[calc(50%-320px)] lg:max-w-[300px]`,
             `xl:left-[calc(50%-395px)] xl:max-w-[326px]`
           )}
-          src={HOME_IMAGES['s3-phone-2'].url}
-          width={HOME_IMAGES['s3-phone-2'].width}
-          height={HOME_IMAGES['s3-phone-2'].height}
-          alt={HOME_IMAGES['s3-phone-2'].alt}
+          src={HOME_IMAGES['s3-phone-1'].url}
+          width={HOME_IMAGES['s3-phone-1'].width}
+          height={HOME_IMAGES['s3-phone-1'].height}
+          alt={HOME_IMAGES['s3-phone-1'].alt}
         />
         <Image
           className={classNames(

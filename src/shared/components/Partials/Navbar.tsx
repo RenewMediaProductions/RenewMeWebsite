@@ -1,10 +1,10 @@
-import { NavbarWrapper } from './Navbar.styled';
-
 import classNames from 'classnames';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
 import React, { useMemo, useState } from 'react';
 import { useEffectOnce, useWindowSize } from 'react-use';
+
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+
 import CloseSvg from 'shared/assets/svg/close.svg';
 import LogoDarkSvg from 'shared/assets/svg/logo-dark.svg';
 import LogoSvg from 'shared/assets/svg/logo.svg';
@@ -12,6 +12,10 @@ import { ROUTES } from 'shared/constants/Routes';
 import { useThemeStore } from 'shared/store/Theme';
 import { screens } from 'shared/theme';
 import { Themes } from 'shared/types/Theme';
+
+import { cn } from 'src/lib/utils';
+
+import { NavbarWrapper } from './Navbar.styled';
 
 interface Props {
   hide: boolean;
@@ -46,12 +50,6 @@ const Navbar: React.FC<Props> = ({ hide, isTop = true }) => {
     !isTop && !show ? 'backdrop-blur-2xl bg-[#ffffff99]' : ''
   );
 
-  const loginClass = classNames(
-    !isDesktop && show && 'hidden',
-    defaultLinkClass,
-    isActiveClass(ROUTES.LOGIN),
-    `ml-auto`
-  );
   const renewMeClass = classNames(defaultLinkClass, isActiveClass(ROUTES.HOME));
   const soulScapeClass = classNames(defaultLinkClass, isActiveClass(ROUTES.SOULSCAPE));
   const spaScapeClass = classNames(defaultLinkClass, isActiveClass(ROUTES.SPASCAPE));
@@ -93,38 +91,75 @@ const Navbar: React.FC<Props> = ({ hide, isTop = true }) => {
     if (window) setCurrentWidth(window.innerWidth);
   });
 
+  let mobileMainNavigationLink;
+  let mobileMainNavigationContent;
+
+  if (router.pathname === ROUTES.HOME) {
+    mobileMainNavigationLink = ROUTES.SOULSCAPE;
+    mobileMainNavigationContent = 'Soulscape';
+  } else if (router.pathname === ROUTES.SOULSCAPE) {
+    mobileMainNavigationLink = ROUTES.SPASCAPE;
+    mobileMainNavigationContent = 'Spascape';
+  } else if (router.pathname === ROUTES.SPASCAPE) {
+    mobileMainNavigationLink = ROUTES.GLOBAL_PARTNERS;
+    mobileMainNavigationContent = 'Partners';
+  } else if (router.pathname === ROUTES.GLOBAL_PARTNERS) {
+    mobileMainNavigationLink = ROUTES.CONTACT.MEDIA_INQUIRIES;
+    mobileMainNavigationContent = 'Media';
+  } else {
+    mobileMainNavigationLink = ROUTES.HOME;
+    mobileMainNavigationContent = 'RenewMe';
+  }
+
   return (
     <NavbarWrapper className={mainClass}>
-      <div className="container relative mx-auto flex h-16 items-center justify-center px-6">
-        <div
-          className="z-[3] mr-3 flex cursor-pointer flex-col space-y-1 lg:hidden"
-          onClick={handleClick}
-        >
-          <span
-            className={classNames(
-              'h-0.5 w-5',
-              theme !== Themes.Light || !isTop ? 'bg-black-1' : 'bg-white',
-              show && 'hidden'
-            )}
-          ></span>
-          <span
-            className={classNames(
-              'h-0.5 w-5',
-              theme !== Themes.Light || !isTop ? 'bg-black-1' : 'bg-white',
-              show && 'hidden'
-            )}
-          ></span>
-          <span
-            className={classNames(
-              'h-0.5 w-5',
-              theme !== Themes.Light || !isTop ? 'bg-black-1' : 'bg-white',
-              show && 'hidden'
-            )}
-          ></span>
+      <div className="container relative mx-auto flex h-16 items-center justify-between px-6">
+        <div className="flex items-center">
+          <div
+            className="z-[3] mr-3 flex cursor-pointer flex-col space-y-1 lg:hidden"
+            onClick={handleClick}
+          >
+            <span
+              className={classNames(
+                'h-0.5 w-5',
+                theme !== Themes.Light || !isTop ? 'bg-black-1' : 'bg-white',
+                show && 'hidden'
+              )}
+            ></span>
+            <span
+              className={classNames(
+                'h-0.5 w-5',
+                theme !== Themes.Light || !isTop ? 'bg-black-1' : 'bg-white',
+                show && 'hidden'
+              )}
+            ></span>
+            <span
+              className={classNames(
+                'h-0.5 w-5',
+                theme !== Themes.Light || !isTop ? 'bg-black-1' : 'bg-white',
+                show && 'hidden'
+              )}
+            ></span>
+          </div>
+          <Link legacyBehavior href={ROUTES.HOME}>
+            <a className="ga z-[3] h-7 w-auto cursor-pointer lg:h-8">{renderLogo}</a>
+          </Link>
         </div>
-        <Link legacyBehavior href={ROUTES.HOME}>
-          <a className="ga z-[3] h-7 w-auto cursor-pointer lg:h-8">{renderLogo}</a>
+
+        <Link legacyBehavior href={mobileMainNavigationLink}>
+          <a
+            className={cn(
+              soulScapeClass,
+              "block text-white md:hidden text-sm m-0 py-1 px-4 font-['Gilroy'] outline outline-1 outline-white rounded-full",
+              mobileMainNavigationContent === 'Media' &&
+                'text-black outline outline-1 outline-black',
+              mobileMainNavigationContent === 'RenewMe' && 'hidden'
+            )}
+          >
+            {mobileMainNavigationContent}
+          </a>
         </Link>
+
         <div className={menuClass}>
           <div className={menuPlaceholderClass}>
             <Link legacyBehavior href={ROUTES.HOME}>
@@ -138,17 +173,16 @@ const Navbar: React.FC<Props> = ({ hide, isTop = true }) => {
             </Link>
           </div>
         </div>
-        <div className="z-[2] ml-auto flex gap-1 font-['Gilroy'] text-sm font-[500]">
+
+        <div className="hidden z-[2] ml-auto md:flex gap-1 font-['Gilroy'] text-sm font-[500]">
           <Link legacyBehavior href={ROUTES.GLOBAL_PARTNERS}>
             <a className={globalPartnersClass}>Global Partners</a>
           </Link>
           <Link legacyBehavior href={ROUTES.NEWS}>
             <a className={inTheNewsClass}>In the News</a>
           </Link>
-          <Link legacyBehavior href={/* ROUTES.LOGIN */ '#'}>
-            <a className={loginClass}>Log In</a>
-          </Link>
         </div>
+
         <div className={mobileMenuClass}>
           <div className="flex flex-col gap-7 font-['Gilroy'] text-xl font-[500]">
             <div
@@ -173,11 +207,8 @@ const Navbar: React.FC<Props> = ({ hide, isTop = true }) => {
             <Link legacyBehavior href={ROUTES.NEWS}>
               <a className="hover:underline">In the News</a>
             </Link>
-            <Link legacyBehavior href={/* ROUTES.LOGIN */ '#'}>
-              <a className="hover:underline">Login</a>
-            </Link>
-            <Link legacyBehavior href={/* ROUTES.SIGNUP */ '#'}>
-              <a className="hover:underline">Sign Up</a>
+            <Link legacyBehavior href={ROUTES.CONTACT.INDEX}>
+              <a className="hover:underline">Contact Us</a>
             </Link>
           </div>
         </div>

@@ -21,19 +21,23 @@ const WhatPeopleAreSaying: React.FC<Props> = ({ className }) => {
       )}
     >
       <div className="bg"></div>
+
+      {/* <div className="pb-16 sm:pb-16 md:pb-24 lg:pb-32"> */}
       <div className="isolate flex justify-center">
         <h1 className="max-w-[250px] text-center font-['Gilroy'] text-3xl font-[500] text-black-1 md:max-w-full md:text-4xl lg:text-5xl xl:text-6xl">
           What People Are Saying...
         </h1>
       </div>
-      <div className="testimonials isolate grid grid-flow-col items-start gap-4 overflow-x-auto px-4 pt-10 sm:pb-16 md:gap-8 md:pt-20 md:pb-24 lg:pt-24 lg:pb-32">
+      <div className="pb-10 md:pb-20 testimonials grid grid-flow-col items-start gap-4 overflow-x-auto px-4 pt-10  md:gap-8 md:pt-20 lg:pt-24 ">
         {TESTIMONIALS.map((testimonial, testimonialIdx) => (
           <div
             key={testimonialIdx}
             className="testimonial relative min-w-[315px] rounded-xl md:min-w-[445px]"
           >
             <QouteSvg />
-            <p>"{testimonial.message}"</p>
+            <p className="text-center md:leading-relaxed md:text-xl text-base md:text-justify">
+              "{testimonial.message}"
+            </p>
             <div className="author-main">
               <div className="name">{testimonial.author}</div>
               <sub>{testimonial.title}</sub>
@@ -42,6 +46,8 @@ const WhatPeopleAreSaying: React.FC<Props> = ({ className }) => {
           </div>
         ))}
       </div>
+      {/* </div> */}
+
       <div className="container isolate mx-auto flex flex-col items-center gap-6 px-6 md:gap-10 lg:gap-24">
         <h1 className="text-center font-['Gilroy'] text-3xl font-[500] text-black-1 md:text-4xl lg:text-5xl xl:text-6xl">
           Never miss an update <br />

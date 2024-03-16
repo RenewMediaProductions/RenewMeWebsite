@@ -54,8 +54,8 @@ export const WhatPeopleAreSayingWrapper = styled.div`
       p {
         font-family: 'Gilroy';
         font-weight: 400;
-        font-size: 20px;
-        line-height: 32px;
+        // font-size: 20px;
+        // line-height: 32px;
         color: #3a3a3b;
         isolation: isolate;
         margin: 0;

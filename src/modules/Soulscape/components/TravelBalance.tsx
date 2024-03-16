@@ -22,7 +22,7 @@ const TravelBalance: React.FC = () => {
             mindfulness to relax – we provide everything you need to be the balanced traveler you
             are meant to be.
           </p>
-          <br />
+          <br className="hidden md:block" />
           <p className="hidden md:block">
             Whether it&apos;s discovering breathtaking destinations, booking a trip, preparing for
             travel, or exploring mindfulness to relax – we provide everything you need to be the

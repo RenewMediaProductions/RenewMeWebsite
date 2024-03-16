@@ -5,7 +5,8 @@ import Image from 'next/image';
 
 import AppleSvg from 'shared/assets/svg/apple.svg';
 import HeartSvg from 'shared/assets/svg/heart.svg';
-import RenewMeSvg from 'shared/assets/svg/renew-me.svg';
+
+import { cn } from 'src/lib/utils';
 
 import { HOME_IMAGES } from '../constants';
 import { AboutDevelopersWrapper } from './AboutDevelopers.styled';
@@ -18,20 +19,15 @@ const AboutDevelopers: React.FC<Props> = ({ className }) => {
   return (
     <AboutDevelopersWrapper
       className={classNames(
-        `grid h-[1800px] w-full grid-rows-[auto_1fr] bg-[#FAFAFA] py-[40px]`,
+        `flex flex-col h-[1800px] items-center justify-center w-full bg-[#FAFAFA] pt-[40px] md:pt-[40px]`,
         `min-[575px]:h-[1500px]`,
         `md:px-10`,
-        `xl:h-[1024px] xl:grid-cols-[repeat(2,1fr)] xl:grid-rows-[1fr] xl:items-center`,
+        `xl:h-[1024px] xl:flex-row-reverse`,
         className
       )}
       id="about-developers"
     >
-      <div
-        className={classNames(
-          `flex flex-col gap-6 px-6`,
-          `xl:col-[2/3] xl:row-[1/2] xl:max-w-[calc(700px+(24px*2))] xl:gap-10`
-        )}
-      >
+      <div className={cn('flex flex-col gap-6 px-6 h-fit xl:basis-full', 'xl:gap-10')}>
         <h1 className="text-center font-['Gilroy'] text-3xl font-[600] text-black-1 md:text-4xl lg:text-5xl xl:text-6xl">
           M
           <AppleSvg
@@ -109,112 +105,14 @@ const AboutDevelopers: React.FC<Props> = ({ className }) => {
         </div>
       </div>
 
-      <div
-        className={classNames(
-          `relative h-full w-full`,
-          `xl:col-[1/2] xl:row-[1/2] xl:grid xl:max-w-[700px] xl:justify-self-end`
-        )}
-      >
-        <div className="bg"></div>
-        <div
-          className={classNames(
-            `absolute top-[calc(50%-220px)] left-[calc(50%-80px)] w-full max-w-[120px] translate-x-[-50%] translate-y-[-50%]`,
-            `min-[575px]:left-[calc(50%-100px)] min-[575px]:top-[calc(50%-250px)] min-[575px]:max-w-[159px]`
-          )}
-        >
+      <div className="relative basis-full">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
           <Image
-            className={classNames(`h-auto w-full`)}
-            src={HOME_IMAGES['man-1'].url}
-            height={HOME_IMAGES['man-1'].height}
-            width={HOME_IMAGES['man-1'].width}
-            alt={HOME_IMAGES['man-1'].alt}
-          />
-        </div>
-
-        <div
-          className={classNames(
-            `absolute top-[calc(50%-200px)] left-[calc(50%+80px)] w-full max-w-[90px] translate-x-[-50%] translate-y-[-50%]`,
-            `min-[575px]:left-[calc(50%+190px)] min-[575px]:top-[calc(50%-200px)] min-[575px]:max-w-[120px]`,
-            `lg:top-[calc(50%-170px)]`
-          )}
-        >
-          <Image
-            className={classNames(`h-auto w-full`)}
-            src={HOME_IMAGES['man-2'].url}
-            height={HOME_IMAGES['man-2'].height}
-            width={HOME_IMAGES['man-2'].width}
-            alt={HOME_IMAGES['man-2'].alt}
-          />
-        </div>
-
-        <div
-          className={classNames(
-            `absolute top-[calc(50%+200px)] left-[calc(50%-130px)] w-full max-w-[130px] translate-x-[-50%] translate-y-[-50%]`,
-            `min-[575px]:left-[calc(50%-190px)] min-[575px]:top-[calc(50%+190px)] min-[575px]:max-w-[160px]`
-          )}
-        >
-          <Image
-            className={classNames(`h-auto w-full`)}
-            src={HOME_IMAGES['man-3'].url}
-            height={HOME_IMAGES['man-3'].height}
-            width={HOME_IMAGES['man-3'].width}
-            alt={HOME_IMAGES['man-3'].alt}
-          />
-        </div>
-
-        <div
-          className={classNames(
-            `absolute top-[calc(50%+250px)] left-[50%] w-full max-w-[90px] translate-x-[-50%] translate-y-[-50%]`,
-            `min-[575px]:top-[calc(50%+300px)] min-[575px]:max-w-[120px]`,
-            `lg:top-[calc(50%+300px)] `
-          )}
-        >
-          <Image
-            className={classNames(`h-auto w-full`)}
-            src={HOME_IMAGES['man-4'].url}
-            height={HOME_IMAGES['man-4'].height}
-            width={HOME_IMAGES['man-4'].width}
-            alt={HOME_IMAGES['man-4'].alt}
-          />
-        </div>
-
-        <div
-          className={classNames(
-            `absolute top-[calc(50%+200px)] left-[calc(50%+130px)] w-full max-w-[130px] translate-x-[-50%] translate-y-[-50%]`,
-            `min-[575px]:left-[calc(50%+190px)] min-[575px]:top-[calc(50%+220px)] min-[575px]:max-w-[160px]`,
-            `lg:left-[calc(50%+200px)]`
-          )}
-        >
-          <Image
-            className={classNames(`h-auto w-full`)}
-            src={HOME_IMAGES['man-5'].url}
-            height={HOME_IMAGES['man-5'].height}
-            width={HOME_IMAGES['man-5'].width}
-            alt={HOME_IMAGES['man-5'].alt}
-          />
-        </div>
-
-        <div
-          className={classNames(
-            `absolute top-[50%] left-[50%] w-full max-w-[380px] translate-y-[-50%] translate-x-[-50%]`,
-            `min-[575px]:max-w-[536px]`
-          )}
-        >
-          <RenewMeSvg className={classNames(`h-auto w-full`)} />
-        </div>
-        <div
-          className={classNames(
-            `absolute top-[50%] left-[50%] w-full max-w-[202px] translate-y-[-50%] translate-x-[-50%]`,
-            `min-[575px]:max-w-[250px]`,
-            `lg:max-w-[252px]`
-          )}
-        >
-          <Image
-            className={classNames(`h-auto w-full`)}
-            src={HOME_IMAGES.women.url}
-            height={HOME_IMAGES.women.height}
-            width={HOME_IMAGES.women.width}
-            alt={HOME_IMAGES.women.alt}
+            className="object-contain max-w-[800px] sm:max-w-[1000px] md:max-w-[1200px]"
+            src={HOME_IMAGES.team.url}
+            alt={HOME_IMAGES.team.alt}
+            width={HOME_IMAGES.team.width}
+            height={HOME_IMAGES.team.height}
           />
         </div>
       </div>

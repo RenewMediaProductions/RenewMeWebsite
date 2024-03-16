@@ -12,9 +12,9 @@ const Services: React.FC = () => {
   return (
     <ServicesWrapper
       className={classNames(
-        `my-[80px] flex flex-col gap-[80px]`,
-        `md:my-[120px] md:gap-[120px]`,
-        `lg:my-[160px] lg:gap-[160px]`
+        `my-[40px] flex flex-col gap-[40px]`,
+        `md:my-[60px] md:gap-[120px]`,
+        `lg:my-[80px] lg:gap-[160px]`
       )}
     >
       {/* Travel Tips */}
