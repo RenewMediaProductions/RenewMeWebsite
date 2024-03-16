@@ -31,8 +31,8 @@ const EscapeTranquility: React.FC = () => {
           alt={SPASCAPE_IMAGES['s1-phone-1'].alt}
           priority
         />
-        <div>
-          <h1 className="w-full pb-4 font-['Gilroy'] text-[32px] font-[600] text-black-1 md:text-5xl lg:text-6xl">
+        <div className="flex w-fit flex-col items-center justify-center md:items-start">
+          <h1 className="w-52 pb-4 text-center font-['Gilroy'] text-4xl font-[500] leading-10 text-black-1 md:w-fit md:pb-6 md:text-left md:text-5xl lg:text-6xl">
             Escape to Tranquility
           </h1>
           <p className="isolate hidden max-w-[325px] pb-0 text-justify font-['Gilroy'] font-medium tracking-[0.2px] text-gray-3 md:block md:max-w-[450px] md:pb-8 md:text-lg lg:max-w-[600px] lg:text-xl">
