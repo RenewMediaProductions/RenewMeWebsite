@@ -1,12 +1,12 @@
-import ContactLayout from './layout';
-
 import React from 'react';
+
+import ContactLayout from './layout';
 
 const MediaInquiries: React.FC = () => {
   return (
     <ContactLayout
       email="pr@myrenewme.com"
-      title="Media Inquiry"
+      title="Media Inquiries"
       description={
         <>
           Get in touch with RenewMe team and <br />

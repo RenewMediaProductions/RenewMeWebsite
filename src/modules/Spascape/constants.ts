@@ -7,6 +7,12 @@ export const SPASCAPE_IMAGES = {
     height: 1440,
     alt: 'image',
   },
+  'h-bg-mobile': {
+    url: `${imageDomainUrl}/Spascape/h-bg-mobile.png`,
+    width: 2560,
+    height: 1440,
+    alt: 'Spascape Hero Background',
+  },
   'h-phone-1': {
     url: `${imageDomainUrl}/Spascape/h-phone-1.png?v=${assetVersion}`,
     width: 823,

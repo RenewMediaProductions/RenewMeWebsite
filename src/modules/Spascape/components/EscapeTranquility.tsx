@@ -21,7 +21,7 @@ const EscapeTranquility: React.FC = () => {
       <div className="relative mx-auto flex h-full flex-col items-center justify-center gap-10 py-[80px] md:flex-row md:py-[120px] lg:py-[160px] xl:gap-12">
         <Image
           className={classNames(
-            `h-auto w-full max-w-[230px]`,
+            `h-auto w-full max-w-[230px] drop-shadow-phone-shadow`,
             `lg:max-w-[300px]`,
             `xl:max-w-[326px]`
           )}

@@ -1,10 +1,11 @@
 /* eslint-disable no-undef */
-import { ContactLayoutWrapper } from './layout.styled';
-
 import axios from 'axios';
 import classNames from 'classnames';
-import Link from 'next/link';
 import React, { useState } from 'react';
+
+import Link from 'next/link';
+
+import { ContactLayoutWrapper } from './layout.styled';
 
 interface Props {
   email: string;
@@ -54,9 +55,9 @@ const ContactLayout: React.FC<Props> = ({ email, title, description, sendDescrip
         <div className="flex flex-col lg:col-[1/-1] lg:row-[1/2] lg:items-center lg:pb-20">
           <h1
             className={classNames(
-              `pb-4 text-start font-['Gilroy'] text-3xl font-[600] leading-10 text-black-1`,
+              `pb-4 text-center font-['Gilroy'] text-3xl font-[600] leading-10 text-black-1`,
               `md:text-4xl`,
-              `lg:text-center lg:text-5xl`,
+              `lg:text-5xl`,
               `xl:text-6xl`
             )}
           >
@@ -64,9 +65,9 @@ const ContactLayout: React.FC<Props> = ({ email, title, description, sendDescrip
           </h1>
           <p
             className={classNames(
-              `text-start font-['Gilroy'] text-base font-[500] text-[#828282]`,
+              `text-center font-['Gilroy'] text-base font-[500] text-[#828282]`,
               `md:text-lg`,
-              `lg:text-center lg:text-xl`,
+              `lg:text-xl`,
               `xl:text-2xl`
             )}
           >
@@ -74,7 +75,7 @@ const ContactLayout: React.FC<Props> = ({ email, title, description, sendDescrip
           </p>
         </div>
         <div className="flex flex-col gap-6 rounded-3xl bg-white p-4 shadow-[0px_16px_24px_0px_rgba(0,0,0,0.08)] lg:p-8">
-          <div>
+          <div className="text-center sm:text-start">
             <h2 className="pb-2 font-['Gilroy'] text-[24px] font-[600] text-[#333] xl:text-[32px]">
               Send us a message!
             </h2>
