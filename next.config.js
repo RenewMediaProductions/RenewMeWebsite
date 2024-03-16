@@ -28,7 +28,7 @@ module.exports = {
     styledComponents: true,
   },
   images: {
-    domains: ['d1nzwmcp9dgg5h.cloudfront.net'],
+    domains: ['d1nzwmcp9dgg5h.cloudfront.net', 'rqbgrdsdkazwogdqjqxi.supabase.co'],
   },
 
   /* Headers */

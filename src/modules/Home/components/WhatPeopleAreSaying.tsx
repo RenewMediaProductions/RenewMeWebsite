@@ -22,7 +22,7 @@ const WhatPeopleAreSaying: React.FC<Props> = ({ className }) => {
     >
       <div className="bg"></div>
       <div className="isolate flex justify-center">
-        <h1 className="max-w-[250px] text-black-1 text-center font-['Gilroy'] text-3xl font-[500] md:max-w-full md:text-4xl lg:text-5xl xl:text-6xl">
+        <h1 className="max-w-[250px] text-center font-['Gilroy'] text-3xl font-[500] text-black-1 md:max-w-full md:text-4xl lg:text-5xl xl:text-6xl">
           What People Are Saying...
         </h1>
       </div>
@@ -43,7 +43,7 @@ const WhatPeopleAreSaying: React.FC<Props> = ({ className }) => {
         ))}
       </div>
       <div className="container isolate mx-auto flex flex-col items-center gap-6 px-6 md:gap-10 lg:gap-24">
-        <h1 className="text-center text-black-1 font-['Gilroy'] text-3xl font-[500] md:text-4xl lg:text-5xl xl:text-6xl">
+        <h1 className="text-center font-['Gilroy'] text-3xl font-[500] text-black-1 md:text-4xl lg:text-5xl xl:text-6xl">
           Never miss an update <br />
           Join our mailing list.
         </h1>

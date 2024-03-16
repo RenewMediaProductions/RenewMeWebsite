@@ -56,7 +56,7 @@ const Hero: React.FC = () => {
           </p>
         </div>
         <div className="flex flex-col items-center justify-center gap-2 font-['Gilroy']">
-          <p className="text-base md:text-lg text-white">Download</p>
+          <p className="text-base text-white md:text-lg">Download</p>
           <Image
             className="h-auto w-[110px] cursor-pointer md:w-32"
             src={`${imageDomainUrl}/Code/app-store-button.png`}

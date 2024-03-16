@@ -14,8 +14,8 @@ const Home: React.FC = () => {
     <HomeWrapper className="flex flex-col overflow-hidden bg-[#FAFAFA]">
       <Hero />
       <Network />
-      <Explainer />
       <GlobalMission />
+      <Explainer />
       <Services />
       <AboutDevelopers />
       <WhatPeopleAreSaying />

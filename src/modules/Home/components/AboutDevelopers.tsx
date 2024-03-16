@@ -32,7 +32,7 @@ const AboutDevelopers: React.FC<Props> = ({ className }) => {
           `xl:col-[2/3] xl:row-[1/2] xl:max-w-[calc(700px+(24px*2))] xl:gap-10`
         )}
       >
-        <h1 className="text-black-1 text-center font-['Gilroy'] text-3xl font-[600] md:text-4xl lg:text-5xl xl:text-6xl">
+        <h1 className="text-center font-['Gilroy'] text-3xl font-[600] text-black-1 md:text-4xl lg:text-5xl xl:text-6xl">
           M
           <AppleSvg
             className={classNames(
@@ -51,10 +51,10 @@ const AboutDevelopers: React.FC<Props> = ({ className }) => {
           />
           ve.
         </h1>
-        <div>
+        <div className="flex w-full flex-col items-center">
           <p
             className={classNames(
-              `mb-2 text-center font-['Gilroy'] text-xl font-[700] text-[#3A3A3B] md:text-2xl`
+              `mb-2 w-48 text-center font-['Gilroy'] text-xl font-[700] text-[#3A3A3B] md:w-full md:text-2xl`
             )}
           >
             Psychology Meets Technology

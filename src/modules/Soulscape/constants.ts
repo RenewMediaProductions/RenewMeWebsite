@@ -20,7 +20,7 @@ export const SOULSCAPE_VIDEOS = {
 
 export const SOULSCAPE_IMAGES = {
   'soulscape-h-bg-mobile': {
-    url: `${imageDomainUrl}/Soulscape/soulscape-h-bg-mobile.png`,
+    url: `${imageDomainUrl}/Soulscape/soulscape-h-bg-mobile.png?v=${assetVersion}`,
     width: 375,
     height: 812,
     alt: 'Soulscape Hero Vector Background Mobile',
