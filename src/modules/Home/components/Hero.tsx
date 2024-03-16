@@ -64,7 +64,9 @@ const Hero: React.FC = () => {
             <div className="flex items-center justify-center gap-4">
               <div className="flex flex-col items-center justify-center gap-2">
                 <p className="text-base md:text-lg text-white">Use code</p>
-                <Badge className="bg-[#3A3A3B] text-base md:text-lg">PEACE369</Badge>
+                <Badge className="bg-[#3A3A3B] w-[110px] text-center text-base md:text-lg flex items-center justify-center">
+                  PEACE369
+                </Badge>
               </div>
 
               <div className="h-[4rem] w-[1px] bg-white"></div>
