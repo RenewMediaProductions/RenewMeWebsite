@@ -16,7 +16,7 @@ const Hero: React.FC = () => {
     <HeroWrapper className="relative">
       <Image
         className={classNames(
-          `hidden md:block absolute h-[1440px] w-[2560px] object-cover object-center contrast-[110%] brightness-95`
+          `absolute hidden h-[1440px] w-[2560px] object-cover object-center brightness-95 contrast-[110%] md:block`
         )}
         src={SPASCAPE_IMAGES['h-bg'].url}
         alt={SPASCAPE_IMAGES['h-bg'].alt}
@@ -25,12 +25,11 @@ const Hero: React.FC = () => {
       />
       <Image
         className={classNames(
-          `block md:hidden absolute h-[1440px] w-[2560px] object-cover object-center contrast-[110%] brightness-95`
+          `absolute block h-[1440px] w-[2560px] object-cover object-center brightness-95 contrast-[110%] md:hidden`
         )}
         src={SPASCAPE_IMAGES['h-bg-mobile'].url}
         alt={SPASCAPE_IMAGES['h-bg-mobile'].alt}
         fill
-        priority
       />
 
       <div
@@ -87,7 +86,7 @@ const Hero: React.FC = () => {
       </div>
 
       <div
-        className="flex w-full justify-center font-['Gilroy'] mt-6 isolate cursor-pointer items-center gap-2 text-base md:text-lg z-10"
+        className="isolate z-10 mt-6 flex w-full cursor-pointer items-center justify-center gap-2 font-['Gilroy'] text-base md:text-lg"
         onClick={() => {
           navigator.clipboard.writeText(window.location.href);
 
@@ -108,7 +107,7 @@ const Hero: React.FC = () => {
         <p>Share with friends</p>
       </div>
 
-      <div className={classNames(`flex w-full justify-center my-10`, `xl:my-20`)}>
+      <div className={classNames(`my-10 flex w-full justify-center`, `xl:my-20`)}>
         <div
           className={classNames(
             `flex flex-col items-center justify-center gap-[20px]`,
@@ -118,7 +117,7 @@ const Hero: React.FC = () => {
         >
           <Image
             className={classNames(
-              `h-auto w-full max-w-[230px] z-10 drop-shadow-phone-shadow`,
+              `z-10 h-auto w-full max-w-[230px] drop-shadow-phone-shadow`,
               `lg:max-w-[300px]`,
               `xl:max-w-[326px]`
             )}

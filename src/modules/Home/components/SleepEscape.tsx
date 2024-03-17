@@ -18,7 +18,7 @@ const SleepEscape: React.FC<Props> = ({ className }) => {
       className={classNames(
         `relative h-fit py-[40px]`,
         `md:h-[calc(470px+245px+100px+240px)]`,
-        `lg:h-[calc(613px+272px+120px+240px)] md:py-[160px]`,
+        `md:py-[160px] lg:h-[calc(613px+272px+120px+240px)]`,
         `xl:h-[calc(666px+272px+120px+240px)]`,
         className
       )}
@@ -28,6 +28,7 @@ const SleepEscape: React.FC<Props> = ({ className }) => {
         src={HOME_IMAGES['s6-bg'].url}
         alt={HOME_IMAGES['s6-bg'].alt}
         fill
+        priority
         quality={100}
       />
       <div

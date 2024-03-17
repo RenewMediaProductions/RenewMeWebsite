@@ -3,13 +3,14 @@ import { FC, ReactNode, useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import { useToast } from 'src/components/ui/use-toast';
 
 import { imageDomainUrl } from 'shared/constants/Assets';
 
 import { Badge } from 'src/components/ui/badge';
 import { Button } from 'src/components/ui/button';
 
-import { Loader2 } from 'lucide-react';
+import { Loader2, ArrowLeft } from 'lucide-react';
 
 import Hero from './components/code-hero';
 import { ListenToRenewMeCarousel } from './components/listen-to-renewme-carousel';
@@ -72,7 +73,7 @@ const companyContentMap: { [key: string]: CompanyContent } = {
     bannerTitle: 'Life balance is better together.',
     bannerVectorDesktop: (
       <Image
-        className="object-cover"
+        className="hidden object-cover md:block"
         src={`${imageDomainUrl}/Code/vector-illustration/buddha-vector-desktop.png`}
         alt="Background QR Code Banner"
         width={2560}
@@ -81,7 +82,7 @@ const companyContentMap: { [key: string]: CompanyContent } = {
     ),
     bannerVectorMobile: (
       <Image
-        className="object-cover"
+        className="hidden object-cover"
         src={`${imageDomainUrl}/Code/vector-illustration/buddha-vector-mobile.png`}
         alt="Background QR Code Banner"
         width={2560}
@@ -94,10 +95,13 @@ const companyContentMap: { [key: string]: CompanyContent } = {
 };
 
 const Code: FC = () => {
+  const { toast } = useToast();
+
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(true); // Prevents 404 page from flashing
   const [popoverTermsIsOpened, setPopoverTermsisOpened] = useState(false);
   const [termsIsChecked, setTermsIsChecked] = useState(false);
+  const [isScrollingDown, setIsScrollingDown] = useState(false);
 
   const companyId = router.query.companyId as string;
   const code = router.query.code as string;
@@ -108,10 +112,26 @@ const Code: FC = () => {
 
   useEffect(() => {
     if (router.isReady) {
-      setIsLoading(false); // Indicate loading is complete
-      setPopoverTermsisOpened(true); // Open the terms popover
+      setIsLoading(false);
+      setPopoverTermsisOpened(true);
     }
   }, [companyId, code, isValidCompanyId, isValidCode, router]);
+
+  useEffect(() => {
+    let lastScrollY = window.pageYOffset;
+
+    const handleScroll = () => {
+      const currentScrollY = window.pageYOffset;
+      setIsScrollingDown(currentScrollY > lastScrollY);
+      lastScrollY = currentScrollY;
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   if (isLoading) {
     return (
@@ -145,6 +165,22 @@ const Code: FC = () => {
         setTermsIsChecked={setTermsIsChecked}
       />
 
+      {/* Back Button */}
+      <div
+        className={`fixed top-4 right-4 z-50 transition-transform duration-300 ${
+          isScrollingDown ? '-translate-y-20' : 'translate-y-0'
+        }`}
+      >
+        <Button
+          variant="ghost"
+          className={`flex h-auto w-fit items-center gap-2 rounded-full bg-white text-zinc-800 outline outline-1 outline-zinc-200 drop-shadow-sm`}
+          onClick={() => router.push('/')}
+        >
+          <ArrowLeft size={20} />
+          <span className="hidden md:block">Back</span>
+        </Button>
+      </div>
+
       {/* Hero Section */}
       <Hero companyContent={companyContent} code={code} />
 
@@ -161,17 +197,15 @@ const Code: FC = () => {
         >
           Coming Soon!
         </Badge>
-        <section className="flex items-center justify-center gap-4">
+        <section className="flex items-center justify-center gap-4 font-medium">
           <div className="flex flex-col items-center justify-center gap-2">
             <p>Use code</p>
-            <Badge
-              className={`${companyContent.backgroundPrimaryColor} ${companyContent.hoverBackgroundPrimaryColorBadge} text-lg`}
-            >
+            <Badge className="flex w-[112px] items-center justify-center bg-black-1 py-[1px] text-lg">
               {companyContent.validCodes.find(validCode => validCode === code)?.toUpperCase()}
             </Badge>
           </div>
 
-          <div className="h-[2.5rem] w-[1px] bg-zinc-200"></div>
+          <div className="h-[4rem] w-0.5 bg-zinc-200"></div>
 
           <div className="flex flex-col items-center justify-center gap-2">
             <p>Download</p>
@@ -181,10 +215,40 @@ const Code: FC = () => {
               alt="Download Icon"
               width={1200}
               height={1200}
+              onClick={() => {
+                toast({
+                  title: `Coming Soon!`,
+                  className: 'bg-white rounded-xl',
+                  description: 'RenewMe is coming! Will be available in the App Store soon!',
+                });
+              }}
             />
           </div>
         </section>
-        <div className="h-[1px] w-full bg-zinc-200"></div>
+
+        <div
+          className="flex cursor-pointer items-center gap-2 font-medium"
+          onClick={() => {
+            navigator.clipboard.writeText(window.location.href);
+
+            toast({
+              title: `Link Copied!`,
+              className: 'bg-white rounded-xl',
+              description: 'Share with friends! RenewMe is coming soon!',
+            });
+          }}
+        >
+          <Image
+            className="h-4 w-4"
+            src={`${imageDomainUrl}/Code/share.svg`}
+            alt="Share Icon"
+            width={2560}
+            height={1024}
+          />
+          Share with friends
+        </div>
+
+        <div className="h-[2px] w-full bg-zinc-200"></div>
       </section>
 
       {/* Listen to RenewMe Section */}
@@ -226,7 +290,7 @@ const Code: FC = () => {
             <h1 className="z-10 mb-2 max-w-xl text-6xl font-bold">
               Life balance is better together.
             </h1>
-            <p className="text-xl">#mentalhealthawareness</p>
+            <p className="text-xl">Life balance is better together</p>
           </div>
 
           <div>
@@ -260,7 +324,7 @@ const Code: FC = () => {
           <div className="absolute bottom-0 z-10 h-10 w-screen bg-[#131B42]"></div>
           <div className="absolute top-0 flex w-full flex-col items-center justify-center">
             <h1 className="text-5xl font-bold">Travel Mindfully.</h1>
-            <p className="text-xl">#mentalhealthawareness</p>
+            <p className="text-xl">Life balance is better together</p>
           </div>
           {companyContent.bannerVectorDesktop}
         </section>

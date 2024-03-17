@@ -6,6 +6,9 @@ import { Carousel, CarouselContent, CarouselItem } from 'src/components/ui/carou
 import { Dialog, DialogContent, DialogTrigger } from 'src/components/ui/dialog';
 import { cn } from 'src/lib/utils';
 
+import { ParallaxProvider } from 'react-scroll-parallax';
+import { ParallaxBanner } from 'react-scroll-parallax';
+
 const listenToRenewMeCarouselContent = [
   {
     title: 'Path to Prosperity',
@@ -80,7 +83,7 @@ export function ListenToRenewMeCarousel({ companyId }: { companyId: string }) {
   const isOtherContentSingleItem = otherContent.length === 1;
 
   return (
-    <>
+    <ParallaxProvider>
       <Carousel className={cn('relative mb-14 w-full', isFilteredContentSingleItem && ' mb-20')}>
         <CarouselContent>
           {filteredContent.map((content: CarouselContentItemsType, index) => (
@@ -89,7 +92,7 @@ export function ListenToRenewMeCarousel({ companyId }: { companyId: string }) {
               className={cn(
                 'relative md:basis-1/2 lg:basis-1/3',
                 isFilteredContentSingleItem &&
-                  'basis-full md:flex md:basis-full md:flex-row md:gap-6 lg:basis-full'
+                  'basis-full md:flex md:basis-full md:flex-row md:items-center md:justify-center md:gap-6 lg:basis-full'
               )}
             >
               <Dialog>
@@ -97,19 +100,30 @@ export function ListenToRenewMeCarousel({ companyId }: { companyId: string }) {
                   className={cn(
                     'w-full',
                     isFilteredContentSingleItem &&
-                      'basis-full md:flex md:basis-full md:flex-row md:gap-6 lg:basis-full'
+                      'basis-full md:flex md:basis-full md:flex-row md:items-center md:justify-center md:gap-6 lg:basis-full'
                   )}
                 >
-                  <Image
-                    src={content.thumbnail}
-                    alt={content.title}
-                    className={cn(
-                      `mb-2 h-64 rounded-xl object-cover ${content.imageClass}`,
-                      isFilteredContentSingleItem && 'basis-full md:mb-0 md:w-1/2'
-                    )}
-                    width={2560}
-                    height={1024}
-                  />
+                  {isFilteredContentSingleItem ? (
+                    <Image
+                      src={content.thumbnail}
+                      alt={content.title}
+                      className={cn(
+                        `mb-2 h-64 rounded-xl object-cover ${content.imageClass}`,
+                        isFilteredContentSingleItem && 'basis-full md:mb-0 md:w-1/2'
+                      )}
+                      width={2560}
+                      height={1024}
+                    />
+                  ) : (
+                    <ParallaxBanner
+                      layers={[{ image: content.thumbnail, speed: -10 }]}
+                      className={cn(
+                        `mb-2 h-64 rounded-xl object-cover ${content.imageClass}`,
+                        isFilteredContentSingleItem && 'basis-full md:mb-0 md:w-1/2'
+                      )}
+                    />
+                  )}
+
                   {/* Flex Row */}
                   <div
                     className={cn(
@@ -126,11 +140,19 @@ export function ListenToRenewMeCarousel({ companyId }: { companyId: string }) {
                   {/* Flex Col  */}
                   <div
                     className={cn(
-                      'absolute z-10 flex w-full flex-col items-start justify-start pr-4 text-center md:hidden'
+                      'absolute z-10 flex w-full flex-col items-center justify-center pr-4 text-center md:hidden',
+                      isFilteredContentSingleItem ? 'items-center' : 'items-start'
                     )}
                   >
                     <h3 className="text-xl font-bold">{content.title}</h3>
-                    <p className="mb-2 text-left text-sm text-zinc-500">{content.description}</p>
+                    <p
+                      className={cn(
+                        'mb-2 text-sm text-zinc-500',
+                        isFilteredContentSingleItem ? 'text-center' : 'text-left'
+                      )}
+                    >
+                      {content.description}
+                    </p>
                     <p className="text-sm text-zinc-500">{content.duration}</p>
                   </div>
                 </DialogTrigger>
@@ -168,7 +190,7 @@ export function ListenToRenewMeCarousel({ companyId }: { companyId: string }) {
               className={cn(
                 'relative md:basis-1/2 lg:basis-1/3',
                 isOtherContentSingleItem &&
-                  'basis-full md:flex md:basis-full md:flex-row md:gap-6 lg:basis-full'
+                  'basis-full md:flex md:basis-full md:flex-row md:items-center md:justify-center md:gap-6 lg:basis-full'
               )}
             >
               <Dialog>
@@ -176,23 +198,35 @@ export function ListenToRenewMeCarousel({ companyId }: { companyId: string }) {
                   className={cn(
                     'w-full',
                     isOtherContentSingleItem &&
-                      'basis-full md:flex md:basis-full md:flex-row md:gap-6 lg:basis-full'
+                      'basis-full md:flex md:basis-full md:flex-row md:items-center md:justify-center md:gap-6 lg:basis-full'
                   )}
                 >
-                  <Image
-                    src={content.thumbnail}
-                    alt={content.title}
-                    className={cn(
-                      `mb-2 h-64 rounded-xl object-cover ${content.imageClass}`,
-                      isOtherContentSingleItem && 'md-0 mb-0 basis-full md:w-1/2'
-                    )}
-                    width={2560}
-                    height={1024}
-                  />
+                  {isOtherContentSingleItem ? (
+                    <Image
+                      src={content.thumbnail}
+                      alt={content.title}
+                      className={cn(
+                        `mb-2 h-64 rounded-xl object-cover ${content.imageClass}`,
+                        isOtherContentSingleItem && 'basis-full md:mb-0 md:w-1/2'
+                      )}
+                      width={2560}
+                      height={1024}
+                    />
+                  ) : (
+                    <ParallaxBanner
+                      layers={[{ image: content.thumbnail, speed: -10 }]}
+                      className={cn(
+                        `mb-2 h-64 rounded-xl object-cover ${content.imageClass}`,
+                        isOtherContentSingleItem && 'basis-full md:mb-0 md:w-1/2'
+                      )}
+                    />
+                  )}
+
                   {/* Flex Row */}
                   <div
                     className={cn(
-                      'hidden w-full flex-col items-start justify-start text-center md:flex'
+                      'hidden w-full flex-col items-start justify-start text-center md:flex',
+                      !isOtherContentSingleItem && 'mt-2'
                     )}
                   >
                     <h3 className="text-xl font-bold">{content.title}</h3>
@@ -205,11 +239,19 @@ export function ListenToRenewMeCarousel({ companyId }: { companyId: string }) {
                   {/* Flex Col  */}
                   <div
                     className={cn(
-                      'absolute z-10 flex w-full flex-col items-start justify-start pr-4 text-center md:hidden'
+                      'absolute z-10 flex w-full flex-col items-center justify-start pr-4 text-center md:hidden',
+                      isOtherContentSingleItem ? 'items-center' : 'items-start'
                     )}
                   >
                     <h3 className="text-xl font-bold">{content.title}</h3>
-                    <p className="mb-2 text-left text-sm text-zinc-500">{content.description}</p>
+                    <p
+                      className={cn(
+                        'mb-2 text-sm text-zinc-500',
+                        isOtherContentSingleItem ? 'text-center' : 'text-left'
+                      )}
+                    >
+                      {content.description}
+                    </p>
                     <p className="text-sm text-zinc-500">{content.duration}</p>
                   </div>
                 </DialogTrigger>
@@ -227,6 +269,6 @@ export function ListenToRenewMeCarousel({ companyId }: { companyId: string }) {
           ))}
         </CarouselContent>
       </Carousel>
-    </>
+    </ParallaxProvider>
   );
 }

@@ -76,7 +76,7 @@ const Hero: React.FC = () => {
             <div className="flex items-center justify-center gap-4">
               <div className="flex flex-col items-center justify-center gap-2">
                 <p className="text-base text-white md:text-lg">Use code</p>
-                <Badge className="bg-[#3A3A3B] w-[110px] md:w-[128px] text-center text-base md:text-lg flex items-center justify-center">
+                <Badge className="flex w-[110px] items-center justify-center bg-[#3A3A3B] text-center text-base md:w-[128px] md:text-lg">
                   JOY369
                 </Badge>
               </div>
@@ -133,45 +133,6 @@ const Hero: React.FC = () => {
             </div>
           </div>
         </div>
-
-        {/* <div className={classNames(`hero-buttons grid grid-cols-[1fr_1fr] gap-4`)}>
-          <Link legacyBehavior href={ROUTES.GLOBAL_PARTNERS}>
-            <a
-              className={classNames(
-                `flex h-10 w-[129px] items-center rounded-lg bg-orange-1 px-4 text-center font-['Gilroy'] text-sm font-[600] text-white hover:bg-orange-1-hover`
-              )}
-            >
-              Brand Partners
-            </a>
-          </Link>
-          <Link legacyBehavior href={'#'}>
-            <a
-              className={classNames(
-                `grid h-10 w-[121px] grid-cols-[auto_1fr] grid-rows-[auto_1fr] items-center gap-x-[5px] rounded-lg bg-white pl-2 hover:bg-white/90`
-              )}
-            >
-              <AppleSvg
-                className={classNames(
-                  `col-start-1 row-start-1 row-end-3 h-auto w-[17px] justify-self-end`
-                )}
-              />
-              <sub
-                className={classNames(
-                  `col-start-2 row-span-1 mt-2 mb-0.5 font-['Gilroy'] text-[8px] font-[500] text-black-1`
-                )}
-              >
-                Download on the
-              </sub>
-              <span
-                className={classNames(
-                  `col-start-2 row-span-2  font-['Gilroy'] text-lg font-[600] text-black-1`
-                )}
-              >
-                App Store
-              </span>
-            </a>
-          </Link>
-        </div> */}
       </div>
       <div
         className={classNames(
@@ -187,18 +148,6 @@ const Hero: React.FC = () => {
             `xl:gap-[70px]`
           )}
         >
-          {/* <Image
-            className={classNames(
-              `h-auto w-full max-w-[230px]`,
-              `lg:max-w-[300px]`,
-              `xl:max-w-[326px]`
-            )}
-            src={SOULSCAPE_IMAGES['h-phone-1'].url}
-            height={SOULSCAPE_IMAGES['h-phone-1'].height}
-            width={SOULSCAPE_IMAGES['h-phone-1'].width}
-            alt={SOULSCAPE_IMAGES['h-phone-1'].alt}
-            priority
-          /> */}
           <Image
             className={classNames(
               `h-auto w-full max-w-[230px]`,
@@ -209,7 +158,6 @@ const Hero: React.FC = () => {
             height={SOULSCAPE_IMAGES['h-phone-2'].height}
             width={SOULSCAPE_IMAGES['h-phone-2'].width}
             alt={SOULSCAPE_IMAGES['h-phone-2'].alt}
-            priority
           />
           <Image
             className={classNames(
@@ -221,7 +169,6 @@ const Hero: React.FC = () => {
             height={SOULSCAPE_IMAGES['h-phone-3'].height}
             width={SOULSCAPE_IMAGES['h-phone-3'].width}
             alt={SOULSCAPE_IMAGES['h-phone-3'].alt}
-            priority
           />
         </div>
       </div>

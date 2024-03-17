@@ -1,7 +1,7 @@
-import { TermsWrapper } from './index.styled';
-
 import classNames from 'classnames';
 import React from 'react';
+
+import { TermsWrapper } from './index.styled';
 
 const Terms: React.FC = () => {
   const textDefaultClass = classNames(`font-['Gilroy'] text-[#333333]`);

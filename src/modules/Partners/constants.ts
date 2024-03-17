@@ -2,31 +2,31 @@ import { assetVersion, imageDomainUrl } from 'shared/constants/Assets';
 
 export const PARTNERS_IMAGES = {
   'h-card-1': {
-    url: `${imageDomainUrl}/Partners/h-card-1.webp?v=${assetVersion}`,
+    url: `${imageDomainUrl}/Partners/h-card-1.png?v=${assetVersion}`,
     width: 420,
     height: 604,
     alt: 'image',
   },
   'h-card-2': {
-    url: `${imageDomainUrl}/Partners/h-card-2.webp?v=${assetVersion}`,
+    url: `${imageDomainUrl}/Partners/h-card-2.png?v=${assetVersion}`,
     width: 420,
     height: 604,
     alt: 'image',
   },
   'h-card-3': {
-    url: `${imageDomainUrl}/Partners/h-card-3.webp?v=${assetVersion}`,
+    url: `${imageDomainUrl}/Partners/h-card-3.png?v=${assetVersion}`,
     width: 420,
     height: 604,
     alt: 'image',
   },
   'h-card-4': {
-    url: `${imageDomainUrl}/Partners/h-card-4.webp?v=${assetVersion}`,
+    url: `${imageDomainUrl}/Partners/h-card-4.png?v=${assetVersion}`,
     width: 420,
     height: 604,
     alt: 'image',
   },
   'h-card-5': {
-    url: `${imageDomainUrl}/Partners/h-card-5.webp?v=${assetVersion}`,
+    url: `${imageDomainUrl}/Partners/h-card-5.png?v=${assetVersion}`,
     width: 420,
     height: 604,
     alt: 'image',

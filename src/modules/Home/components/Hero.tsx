@@ -144,7 +144,6 @@ const Hero: React.FC = () => {
             height={HOME_IMAGES['h-phone-1'].height}
             width={HOME_IMAGES['h-phone-1'].width}
             alt={HOME_IMAGES['h-phone-1'].alt}
-            priority
           />
           <Image
             className={classNames(
@@ -156,7 +155,6 @@ const Hero: React.FC = () => {
             height={HOME_IMAGES['h-phone-2'].height}
             width={HOME_IMAGES['h-phone-2'].width}
             alt={HOME_IMAGES['h-phone-2'].alt}
-            priority
           />
           <Image
             className={classNames(
@@ -168,7 +166,6 @@ const Hero: React.FC = () => {
             height={HOME_IMAGES['h-phone-3'].height}
             width={HOME_IMAGES['h-phone-3'].width}
             alt={HOME_IMAGES['h-phone-3'].alt}
-            priority
           />
         </div>
       </div>
