@@ -1,8 +1,8 @@
 /* eslint-disable react/no-unescaped-entities */
-import { PrivacyWrapper } from './index.styled';
-
 import classNames from 'classnames';
 import React from 'react';
+
+import { PrivacyWrapper } from './index.styled';
 
 const Privacy: React.FC = () => {
   const textDefaultClass = classNames(`font-['Gilroy'] text-[#333333]`);
@@ -13,11 +13,12 @@ const Privacy: React.FC = () => {
   return (
     <PrivacyWrapper className="container mx-auto flex flex-col py-24 px-10 text-3xl sm:px-20 md:py-28 lg:max-w-[825px] lg:px-0 lg:py-32 xl:py-40">
       <h1 className={text1Class}>Privacy Policy</h1>
-      <p className={`${textDefaultClass} pb-5 text-base md:text-lg `}>(Updated: January 2023)</p>
+      <p className={`${textDefaultClass} pb-5 text-base md:text-lg `}>(Updated: March 2024)</p>
       <p className={text3Class}>
         RenewMe is committed to your privacy. This Privacy Policy explains how we collect, use,
         disclose, retain and protect your personal information in connection with our services.
       </p>
+      {/* Introduction */}
       <section className="pb-7">
         <p className={text2Class}>Introduction</p>
         <p className={text3Class}>
@@ -62,6 +63,8 @@ const Privacy: React.FC = () => {
           </li>
         </ul>
       </section>
+
+      {/* Information We Collect and How We Collect It */}
       <section className="pb-7">
         <p className={text2Class}>Information We Collect and How We Collect It</p>
         <p className={text3Class}>
@@ -188,6 +191,8 @@ const Privacy: React.FC = () => {
           responsible provider directly.
         </p>
       </section>
+
+      {/* How and Why We Use Your Information */}
       <section className="pb-7">
         <p className={text2Class}>How and Why We Use Your Information</p>
         <p className={text3Class}>
@@ -241,6 +246,8 @@ const Privacy: React.FC = () => {
           </li>
         </ul>
       </section>
+
+      {/* How We Disclose Your Information */}
       <section className="pb-7">
         <p className={text2Class}>How We Disclose Your Information</p>
         <p className={text3Class}>We may disclose Your Information:</p>
@@ -313,6 +320,8 @@ const Privacy: React.FC = () => {
           described above, then you should not provide us with Your Information.
         </p>
       </section>
+
+      {/* Aggregation and De-Personalization */}
       <section className="pb-7">
         <p className={text2Class}>Aggregation and De-Personalization</p>
         <p className={text3Class}>
@@ -324,6 +333,8 @@ const Privacy: React.FC = () => {
           time, for any lawful purpose, without notice or compensation to you.
         </p>
       </section>
+
+      {/* Sharing with Friends */}
       <section className="pb-7">
         <p className={text2Class}>Sharing with Friends</p>
         <p className={text3Class}>
@@ -334,6 +345,8 @@ const Privacy: React.FC = () => {
           and as otherwise set forth in this Privacy Policy.
         </p>
       </section>
+
+      {/* Promotions */}
       <section className="pb-7">
         <p className={text2Class}>Promotions</p>
         <p className={text3Class}>
@@ -342,6 +355,8 @@ const Privacy: React.FC = () => {
           regarding information sharing and disclosure pursuant to that Promotion.
         </p>
       </section>
+
+      {/* Circumvention of Security Measures */}
       <section className="pb-7">
         <p className={text2Class}>Circumvention of Security Measures</p>
         <p className={text3Class}>
@@ -357,9 +372,11 @@ const Privacy: React.FC = () => {
           privacy settings or security measures. In the event that an unauthorized third party
           compromises our security measures, to the extent permitted by applicable law, we will not
           be responsible for any damages, directly or indirectly, caused by an unauthorized third
-          party’s ability to view, use or disseminate Your Information
+          party’s ability to view, use or disseminate Your Information.
         </p>
       </section>
+
+      {/* User Contributions */}
       <section className="pb-7">
         <p className={text2Class}>User Contributions</p>
         <p className={text3Class}>
@@ -373,6 +390,8 @@ const Privacy: React.FC = () => {
           Contributions on our Services
         </p>
       </section>
+
+      {/* Business Transfers */}
       <section className="pb-7">
         <p className={text2Class}>Business Transfers</p>
         <p className={text3Class}>
@@ -386,6 +405,8 @@ const Privacy: React.FC = () => {
           for any lawful purpose, without notice or compensation to you.
         </p>
       </section>
+
+      {/* How Long Do We Retain Your Information */}
       <section className="pb-7">
         <p className={text2Class}>How Long Do We Retain Your Information</p>
         <p className={text3Class}>
@@ -394,6 +415,8 @@ const Privacy: React.FC = () => {
           retention period is required by applicable law.
         </p>
       </section>
+
+      {/* Choices About How We Use and Disclose Your Information */}
       <section className="pb-7">
         <p className={text2Class}>Choices About How We Use and Disclose Your Information</p>
         <p className={text3Class}>
@@ -415,11 +438,14 @@ const Privacy: React.FC = () => {
             of user data, change of password and other similar communications essential to your
             transactions on or through our Services) through your account settings or by, to the
             extent applicable, by using the unsubscribe process at the bottom of such communication,
-            by emailing us at info@MyRenewMe.com or by calling us at 1-800-515-6460. Please be aware
-            that it can take up to 10 business days to remove you from our marketing lists. If you
-            opt out from receiving our marketing communications, you may continue to receive
-            service-related communications, such as communications that are essential to your
-            transactions on or through our Services.
+            by emailing us at{' '}
+            <a className="underline" href="mailto:info@MyRenewMe.com">
+              info@MyRenewMe.com
+            </a>{' '}
+            or by calling us at 1-800-515-6460. Please be aware that it can take up to 10 business
+            days to remove you from our marketing lists. If you opt out from receiving our marketing
+            communications, you may continue to receive service-related communications, such as
+            communications that are essential to your transactions on or through our Services.
           </li>
           <li className="pb-5">
             <strong>Managing Your Information.</strong> If a portion of our Services allows you to
@@ -448,14 +474,24 @@ const Privacy: React.FC = () => {
             <strong>Online Behavioral Advertising.</strong> Certain third-party advertising networks
             that deliver behavioral advertising are members of the Network Advertising Initiative
             (“NAI”). You can prevent NAI member companies from collecting preference data about you
-            by visiting http://www.networkadvertising.org/choices/ and following the NAI’s
-            directions. Note that if you opt out through the NAI, you will still receive
-            advertising. In addition, if you opt out through the NAI and later delete your cookies,
-            use a different browser or buy a new computer, you will need to renew your opt-out
-            choice.
+            by visiting{' '}
+            <a
+              className="underline"
+              href="http://www.networkadvertising.org/choices/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              http://www.networkadvertising.org/choices/
+            </a>{' '}
+            and following the NAI’s directions. Note that if you opt out through the NAI, you will
+            still receive advertising. In addition, if you opt out through the NAI and later delete
+            your cookies, use a different browser or buy a new computer, you will need to renew your
+            opt-out choice.
           </li>
         </ul>
       </section>
+
+      {/* Third-Party Services */}
       <section className="pb-7">
         <p className={text2Class}>Your Information that You Disclose to Third Parties</p>
         <p className={text3Class}>
@@ -470,6 +506,8 @@ const Privacy: React.FC = () => {
           contact them directly.
         </p>
       </section>
+
+      {/* International Users */}
       <section className="pb-7">
         <p className={text2Class}>Operations of Our Services in the United States</p>
         <p className={text3Class}>
@@ -479,6 +517,8 @@ const Privacy: React.FC = () => {
           be less stringent than the laws in your country.
         </p>
       </section>
+
+      {/* Children’s Information */}
       <section className="pb-7">
         <p className={text2Class}>Children’s Information.</p>
         <p className={text3Class}>
@@ -491,6 +531,8 @@ const Privacy: React.FC = () => {
           our records.
         </p>
       </section>
+
+      {/* Changes to this Privacy Policy */}
       <section className="pb-7">
         <p className={text2Class}>Changes to this Privacy Policy</p>
         <p className={text3Class}>
@@ -507,22 +549,27 @@ const Privacy: React.FC = () => {
           any other third parties.
         </p>
       </section>
+
+      {/* Your California Rights Policy */}
       <section className="pb-7">
         <p className={text2Class}>Your California Rights Policy</p>
         <p className={text3Class}>
           Individuals who are residents of California and have provided Your Information to us may
           request certain information regarding our disclosure of Your Information to third parties
-          for direct marketing purposes. Such requests must be submitted to us at
-          Info@MyRenewMe.comat:
+          for direct marketing purposes. Such requests must be submitted to us at{' '}
+          <a className="underline" href="mailto:pr@myrenewme.com">
+            pr@myrenewme.com
+          </a>{' '}
+          or
         </p>
         <p className={text3Class}>
-          <strong>Renew Media Productions, LLC</strong>
+          <strong>RenewMe</strong>
           <br />
           Attention: Legal
           <br />
-          516 S. Dixie Highway, #321
+          299 Camino Gardens Blvd, Suite 100
           <br />
-          West Palm Beach, Florida 33401
+          Boca Raton, Florida 33432
         </p>
         <p className={text3Class}>
           California privacy rights requests must include the reference “Request for California
@@ -532,22 +579,28 @@ const Privacy: React.FC = () => {
           respond to requests submitted other than to the address specified above.
         </p>
       </section>
+
+      {/* Contact Us */}
       <section className="pb-7">
         <p className={text2Class}>Questions, Comments, or Concerns About this Privacy Policy?</p>
         <p className={text3Class}>
           Our team is always happy to hear from you. We welcome any questions, comments and concerns
           about this Privacy Policy. If you have questions, comments or concerns regarding this
           Privacy Policy, or wish to exercise your rights related to Your Information, please
-          contact us atInfo@MyRenewMe.com or:
+          contact us at{' '}
+          <a className="underline" href="mailto:pr@myrenewme.com">
+            pr@myrenewme.com
+          </a>
+          :
         </p>
         <p className={text3Class}>
-          <strong>Renew Media Productions, LLC</strong>
+          <strong>RenewMe</strong>
           <br />
           Attention: Legal
           <br />
-          516 S. Dixie Highway, #321
+          299 Camino Gardens Blvd, Suite 100
           <br />
-          West Palm Beach, Florida 33401
+          Boca Raton, Florida 33432
         </p>
         <p className={text3Class}>
           If we do not address your questions, comments or concerns about this Privacy Policy to

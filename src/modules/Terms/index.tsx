@@ -1,6 +1,10 @@
 import classNames from 'classnames';
 import React from 'react';
 
+import Link from 'next/link';
+
+import { ROUTES } from 'shared/constants/Routes';
+
 import { TermsWrapper } from './index.styled';
 
 const Terms: React.FC = () => {
@@ -12,17 +16,26 @@ const Terms: React.FC = () => {
   return (
     <TermsWrapper className="container mx-auto flex flex-col py-24 px-10 text-3xl sm:px-20 md:py-28 lg:max-w-[825px] lg:px-0 lg:py-32 xl:py-40">
       <h1 className={text1Class}>Terms of Use</h1>
-      <p className={`${textDefaultClass} pb-5 text-base md:text-lg `}>(Updated: January 2023)</p>
+      <p className={`${textDefaultClass} pb-5 text-base md:text-lg `}>(Updated: March 2024)</p>
+
       <section className="pb-7">
         <p className={text3Class}>
           RenewMe brand products, including Soulscape, and Spascape on our iOS application and
-          website available at www.myrenewme.com, are owned and operated by Renew Media Productions,
-          LLC (“RenewMe,” “we” or “us”). RenewMe provides services to help people lead a balanced,
-          relaxed, and motivated life. These Terms of Use (this “Agreement”) and our Privacy Policy
-          (the “Privacy Policy”) govern your access to and use of our applications (including the
-          RenewMe App), various websites (including www.myrenewme.com, widgets, email notifications,
-          push notifications, and other mediums, or portions of such mediums, including our online
-          and offline services and products (collectively, our “Services”).
+          website available at{' '}
+          <Link className="underline" href={ROUTES.HOME}>
+            www.myrenewme.com
+          </Link>
+          , are owned and operated by Renew Media Productions, LLC (“RenewMe,” “we” or “us”).
+          RenewMe provides services to help people lead a balanced, relaxed, and motivated life.
+          These Terms of Use (this “Agreement”) and our Privacy Policy (the “Privacy Policy”) govern
+          your access to and use of our applications (including the RenewMe App), various websites
+          (including
+          <Link className="underline" href={ROUTES.HOME}>
+            www.myrenewme.com
+          </Link>
+          , widgets, email notifications, push notifications, and other mediums, or portions of such
+          mediums, including our online and offline services and products (collectively, our
+          “Services”).
         </p>
         <p className={text3Class}>
           Please read this Agreement and the Privacy Policy carefully before downloading,
@@ -157,7 +170,11 @@ const Terms: React.FC = () => {
           unauthorized use of your password, any unauthorized use of any account that you may have
           with us, any violation of this Agreement, or any other breach of security known to you in
           connection with any product or service available on or through our Services by contacting
-          us at info@MyRenewMe.com.
+          us at{' '}
+          <a className="underline" href="mailto:pr@myrenewme.com">
+            pr@myrenewme.com
+          </a>
+          .
         </p>
         <p className={text3Class}>
           <strong>You Must Comply with this Agreement and All Applicable Laws.</strong> You will
@@ -189,8 +206,11 @@ const Terms: React.FC = () => {
           the obligation, to remove or edit any User Generated Content.
         </p>
         <p className={text3Class}>
-          Please immediately report problems with the User Generated Content to us at
-          info@MyRenewMe.com.
+          Please immediately report problems with the User Generated Content to us at{' '}
+          <a className="underline" href="mailto:pr@myrenewme.com">
+            pr@myrenewme.com
+          </a>
+          .
         </p>
       </section>
       <section className="pb-7">
@@ -289,7 +309,11 @@ const Terms: React.FC = () => {
         </p>
         <p className={text3Class}>
           If you see content or conduct connected with our Services that reflects poorly on us, our
-          employees, or other representatives, please notify info@MyRenewMe.com immediately.
+          employees, or other representatives, please notify{' '}
+          <a className="underline" href="mailto:info@MyRenewMe.com">
+            info@MyRenewMe.com
+          </a>{' '}
+          immediately.
         </p>
       </section>
       <section className="pb-7">
@@ -474,7 +498,7 @@ const Terms: React.FC = () => {
           time without notice, including after confirmation of a Transaction. Further, you expressly
           agree that any Transaction is not contingent on the delivery of any future functionality
           or features, or dependent on any oral or written public comments made by us regarding
-          future functionality or features
+          future functionality or features.
         </p>
       </section>
       <section className="pb-7">
@@ -864,15 +888,18 @@ const Terms: React.FC = () => {
           either express mail or U.S. mail to:
         </p>
         <p className={text3Class}>
-          <strong>Renew Media Productions, LLC</strong>
+          <strong>RenewMe</strong>
           <br />
           Attention: Legal
           <br />
-          516 S. Dixie Highway, #321
+          299 Camino Gardens Blvd, Suite 100
           <br />
-          West Palm Beach, Florida 33401
+          Boca Raton, Florida 33432
           <br />
-          Email address of designated agent: Info@MyRenewMe.com
+          Email address of designated agent:{' '}
+          <a className="underline" href="mailto:pr@myrenewme.com">
+            pr@myrenewme.com
+          </a>
         </p>
         <p className={text3Class}>
           Pursuant to Title 17, United States Code, Section 512(c)(3), to be effective, each
@@ -1300,7 +1327,11 @@ const Terms: React.FC = () => {
         </p>
         <p className={text3Class}>
           If you have questions, comments, concerns or feedback regarding this Agreement or our
-          Services, please contact us at Info@MyRenewMe.com or in writing at:
+          Services, please contact us at{' '}
+          <a className="underline" href="mailto:pr@myrenewme.com">
+            pr@myrenewme.com
+          </a>{' '}
+          or
         </p>
       </section>
       <section className="pb-7">
@@ -1309,9 +1340,9 @@ const Terms: React.FC = () => {
           <br />
           <strong>Attention: Legal</strong>
           <br />
-          <strong>516 S. Dixie Highway, #321</strong>
+          <strong>299 Camino Gardens Blvd, Suite 100</strong>
           <br />
-          <strong>West Palm Beach, Florida 33401</strong>
+          <strong>Boca Raton, Florida 33432</strong>
           <br />
         </p>
       </section>
