@@ -18,7 +18,7 @@ const SleepEscape: React.FC<Props> = ({ className }) => {
       className={classNames(
         `relative h-fit py-[40px]`,
         `md:h-[calc(470px+245px+100px+240px)]`,
-        `md:py-[160px] lg:h-[calc(613px+272px+120px+240px)]`,
+        `lg:h-[calc(613px+272px+120px+240px)] md:py-[160px]`,
         `xl:h-[calc(666px+272px+120px+240px)]`,
         className
       )}
@@ -28,7 +28,6 @@ const SleepEscape: React.FC<Props> = ({ className }) => {
         src={HOME_IMAGES['s6-bg'].url}
         alt={HOME_IMAGES['s6-bg'].alt}
         fill
-        priority
         quality={100}
       />
       <div
@@ -37,7 +36,7 @@ const SleepEscape: React.FC<Props> = ({ className }) => {
           `md:justify-start`
         )}
       >
-        <div className="flex flex-col items-center md:hidden">
+        <div className="top-0 flex flex-col items-center md:absolute">
           <Image
             className={classNames(
               `block w-full max-w-[230px] drop-shadow-phone-shadow transition-opacity duration-1000`,
@@ -52,48 +51,7 @@ const SleepEscape: React.FC<Props> = ({ className }) => {
           <div
             className={classNames(
               `mt-[40px] flex w-[270px] flex-col items-center justify-center gap-2 transition-opacity duration-1000`,
-              `md:hidden`
-            )}
-          >
-            <InfoSvg className={classNames(`h-[33px] w-[auto]`, `lg:h-[48px]`)} />
-            <p
-              className={classNames(
-                `text-center font-['Gilroy'] text-lg font-[600] text-white`,
-                `md:text-xl`,
-                `lg:pt-[8px] lg:text-2xl`
-              )}
-            >
-              Sleep Escape
-            </p>
-            <p
-              className={classNames(
-                `text-justify font-['Gilroy'] text-sm font-[400] text-white`,
-                `md:text-base`,
-                `lg:text-lg`
-              )}
-            >
-              Embark on serene bedtime journeys crafted to nurture your well-being, fostering
-              relaxation, imagination, and positive beliefs as you peacefully rest your mind.
-            </p>
-          </div>
-        </div>
-        <div className="hidden flex-col items-center md:absolute md:top-0 md:flex">
-          <Image
-            className={classNames(
-              `hidden w-full max-w-[230px] drop-shadow-phone-shadow transition-opacity duration-1000`,
-              `md:block`,
-              `lg:max-w-[300px]`,
-              `xl:max-w-[326px]`
-            )}
-            src={HOME_IMAGES['s4-phone-2'].url}
-            width={HOME_IMAGES['s4-phone-2'].width}
-            height={HOME_IMAGES['s4-phone-2'].height}
-            alt={HOME_IMAGES['s4-phone-2'].alt}
-          />
-          <div
-            className={classNames(
-              `mt-[90px] hidden w-[200px] flex-col items-center justify-center gap-2 transition-opacity duration-1000`,
-              `md:flex`,
+              `md:mt-[90px] md:w-[200px]`,
               `lg:w-[250px]`,
               `xl:w-[276px]`
             )}
@@ -127,10 +85,10 @@ const SleepEscape: React.FC<Props> = ({ className }) => {
             `lg:bottom-0 lg:left-[calc(50%-320px)] lg:max-w-[300px]`,
             `xl:left-[calc(50%-395px)] xl:max-w-[326px]`
           )}
-          src={HOME_IMAGES['s4-phone-1'].url}
-          width={HOME_IMAGES['s4-phone-1'].width}
-          height={HOME_IMAGES['s4-phone-1'].height}
-          alt={HOME_IMAGES['s4-phone-1'].alt}
+          src={HOME_IMAGES['s4-phone-2'].url}
+          width={HOME_IMAGES['s4-phone-2'].width}
+          height={HOME_IMAGES['s4-phone-2'].height}
+          alt={HOME_IMAGES['s4-phone-2'].alt}
         />
         <Image
           className={classNames(

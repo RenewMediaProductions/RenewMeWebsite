@@ -3,7 +3,6 @@ import React from 'react';
 
 import Image from 'next/image';
 
-import AppleSvg from 'shared/assets/svg/apple.svg';
 import HeartSvg from 'shared/assets/svg/heart.svg';
 
 import { cn } from 'src/lib/utils';
@@ -30,11 +29,11 @@ const AboutDevelopers: React.FC<Props> = ({ className }) => {
       <div className={cn('flex flex-col gap-6 px-6 h-fit xl:basis-full', 'xl:gap-10')}>
         <h1 className="text-center font-['Gilroy'] text-3xl font-[600] text-black-1 md:text-4xl lg:text-5xl xl:text-6xl">
           M
-          <AppleSvg
+          <HeartSvg
             className={classNames(
-              `mb-[6px] inline-block h-auto w-full max-w-[19px] [&>path]:fill-[#3A3A3B]`,
-              `lg:mb-[9px] lg:max-w-[29px]`,
-              `xl:mb-[10px] xl:max-w-[37px]`
+              `inline-block h-auto w-full max-w-[19px] [&>path]:fill-[#3A3A3B]`,
+              `lg:max-w-[29px]`,
+              `xl:max-w-[37px]`
             )}
           />
           de with L

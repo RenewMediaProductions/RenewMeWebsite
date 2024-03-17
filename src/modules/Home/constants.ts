@@ -555,7 +555,7 @@ export const TESTIMONIALS = [
   },
   {
     author: 'Mark Victor Hanson',
-    title: `Author of “The Power of Focus”`,
+    title: `Author of “Chicken Soup for the Soul”`,
     place: '',
     message: `Dr. Lisa Palmer has emerged as an architect of breakthroughs. She brilliantly unearths
     intimate and precious core characteristics of your individual blueprint into believing

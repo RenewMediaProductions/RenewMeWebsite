@@ -113,7 +113,7 @@ const Navbar: React.FC<Props> = ({ hide, isTop = true }) => {
 
   return (
     <NavbarWrapper className={mainClass}>
-      <div className="container relative mx-auto flex h-16 items-center justify-between px-6">
+      <div className="container relative mx-auto flex h-16 items-center justify-between px-6 md:px-24 lg:px-36 xl:px-40">
         <div className="flex items-center">
           <div
             className="z-[3] mr-3 flex cursor-pointer flex-col space-y-1 lg:hidden"
