@@ -7,6 +7,7 @@ import { imageDomainUrl } from 'shared/constants/Assets';
 
 import { Badge } from 'src/components/ui/badge';
 import { toast } from 'src/components/ui/use-toast';
+import { cn } from 'src/lib/utils';
 
 import { SPASCAPE_IMAGES } from '../constants';
 import { HeroWrapper } from './Hero.styled';
@@ -34,77 +35,83 @@ const Hero: React.FC = () => {
 
       <div
         className={classNames(
-          `container isolate mx-auto flex h-full flex-col items-center px-6 pt-36`
+          `container isolate mx-auto flex h-full flex-col items-center px-6 pt-28`
         )}
       >
-        <div className={classNames(`flex flex-col items-center pb-8`)}>
+        <div className={classNames(`flex flex-col items-center pb-6`)}>
           <Badge
             variant="outline"
-            className="mb-6 border-transparent font-['Gilroy'] text-sm text-white outline outline-1 outline-white md:text-lg"
+            className="font-medium mb-16 border-transparent font-['Gilroy'] text-sm text-white outline outline-1 outline-white md:text-md"
           >
             Coming Soon!
           </Badge>
           <h1
             className={classNames(
-              `hero-text pb-4 text-center font-['Gilroy'] text-3xl font-[600] leading-10 text-white`,
-              `md:text-4xl`,
-              `lg:text-5xl`,
-              `xl:text-6xl`
+              `hero-text pb-4 text-center font-['Gilroy'] text-5xl font-medium leading-10 text-white`,
+              `md:text-7xl`
             )}
           >
             Spascape
           </h1>
           <p
             className={classNames(
-              `hero-text max-w-[620px] text-center font-['Gilroy'] text-base font-[500] text-white`,
-              `md:max-w-xl md:text-lg`,
-              `lg:max-w-2xl lg:text-xl`,
-              `xl:max-w-[800px] xl:text-2xl`
+              `hero-text max-w-[300px] text-center font-['Gilroy'] text-base font-[500] text-white`,
+              `md:max-w-lg`,
+              `lg:max-w-xl lg:text-lg`,
+              `xl:max-w-2xl xl:text-xl`
             )}
           >
             Spascape offers a curated escape while you indulge at spa destinations, providing an
             immersive experience for those seeking relaxation and rejuvenation of mind and body.
           </p>
         </div>
-        <div className="flex flex-col items-center justify-center gap-2 font-['Gilroy']">
-          <p className="text-base text-white md:text-lg">Download</p>
-          <Image
-            className="h-auto w-[110px] cursor-pointer md:w-32"
-            src={`${imageDomainUrl}/Code/app-store-button.png`}
-            alt="Download Icon"
-            width={1200}
-            height={1200}
-            onClick={() => {
-              toast({
-                title: `Coming Soon!`,
-                className: 'bg-white rounded-xl',
-                description: 'RenewMe is coming! Will be available in the App Store soon!',
-              });
-            }}
-          />
+        <div className={classNames(`hero-buttons flex gap-4 font-['Gilroy'] text-base md:text-lg`)}>
+          <div className="flex flex-col items-center justify-center gap-6">
+            <div className="flex items-center justify-center gap-4">
+              <div className={cn('flex flex-col items-center justify-center gap-2')}>
+                <p className={cn('text-white font-medium', 'lg:text-sm', 'xl:text-base')}>
+                  Download
+                </p>
+                <Image
+                  className="h-auto w-[110px] cursor-pointer"
+                  src={`${imageDomainUrl}/Code/app-store-button.png`}
+                  alt="Download Icon"
+                  width={1200}
+                  height={1200}
+                  onClick={() => {
+                    toast({
+                      title: `Coming Soon!`,
+                      className: 'bg-white rounded-xl',
+                      description: 'RenewMe is coming! Will be available in the App Store soon!',
+                    });
+                  }}
+                />
+              </div>
+            </div>
+
+            <div
+              className="flex cursor-pointer items-center gap-1 text-base font-medium"
+              onClick={() => {
+                navigator.clipboard.writeText(window.location.href);
+
+                toast({
+                  title: `Link Copied!`,
+                  className: 'bg-white rounded-xl',
+                  description: 'Share with friends! RenewMe is coming soon!',
+                });
+              }}
+            >
+              <Image
+                className="h-4 w-4"
+                src={`${imageDomainUrl}/Code/share.svg`}
+                alt="Share Icon"
+                width={2560}
+                height={1024}
+              />
+              Share with friends
+            </div>
+          </div>
         </div>
-      </div>
-
-      <div
-        className="isolate z-10 mt-6 flex w-full cursor-pointer items-center justify-center gap-2 font-['Gilroy'] text-base md:text-lg"
-        onClick={() => {
-          navigator.clipboard.writeText(window.location.href);
-
-          toast({
-            title: `Link Copied!`,
-            className: 'bg-white rounded-xl',
-            description: 'Share with friends! RenewMe is coming soon!',
-          });
-        }}
-      >
-        <Image
-          className="h-4 w-4"
-          src={`${imageDomainUrl}/Code/share.svg`}
-          alt="Share Icon"
-          width={2560}
-          height={1024}
-        />
-        <p>Share with friends</p>
       </div>
 
       <div className={classNames(`my-10 flex w-full justify-center`, `xl:my-20`)}>

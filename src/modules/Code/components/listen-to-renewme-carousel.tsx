@@ -1,3 +1,5 @@
+import { ParallaxBanner, ParallaxProvider } from 'react-scroll-parallax';
+
 import Image from 'next/image';
 
 import { imageDomainUrl } from 'shared/constants/Assets';
@@ -5,9 +7,6 @@ import { imageDomainUrl } from 'shared/constants/Assets';
 import { Carousel, CarouselContent, CarouselItem } from 'src/components/ui/carousel';
 import { Dialog, DialogContent, DialogTrigger } from 'src/components/ui/dialog';
 import { cn } from 'src/lib/utils';
-
-import { ParallaxProvider } from 'react-scroll-parallax';
-import { ParallaxBanner } from 'react-scroll-parallax';
 
 const listenToRenewMeCarouselContent = [
   {
@@ -84,13 +83,15 @@ export function ListenToRenewMeCarousel({ companyId }: { companyId: string }) {
 
   return (
     <ParallaxProvider>
-      <Carousel className={cn('relative mb-14 w-full', isFilteredContentSingleItem && ' mb-20')}>
+      <Carousel className={cn('relative mb-14 w-full', isFilteredContentSingleItem && 'mb-20')}>
         <CarouselContent>
           {filteredContent.map((content: CarouselContentItemsType, index) => (
             <CarouselItem
               key={index}
               className={cn(
-                'relative md:basis-1/2 lg:basis-1/3',
+                'relative',
+                'md:basis-1/2',
+                'lg:basis-1/3',
                 isFilteredContentSingleItem &&
                   'basis-full md:flex md:basis-full md:flex-row md:items-center md:justify-center md:gap-6 lg:basis-full'
               )}
@@ -108,7 +109,8 @@ export function ListenToRenewMeCarousel({ companyId }: { companyId: string }) {
                       src={content.thumbnail}
                       alt={content.title}
                       className={cn(
-                        `mb-2 h-64 rounded-xl object-cover ${content.imageClass}`,
+                        `mb-2 h-40 rounded-xl object-cover ${content.imageClass} drop-shadow-lg`,
+                        'md:h-52',
                         isFilteredContentSingleItem && 'basis-full md:mb-0 md:w-1/2'
                       )}
                       width={2560}
@@ -118,7 +120,8 @@ export function ListenToRenewMeCarousel({ companyId }: { companyId: string }) {
                     <ParallaxBanner
                       layers={[{ image: content.thumbnail, speed: -10 }]}
                       className={cn(
-                        `mb-2 h-64 rounded-xl object-cover ${content.imageClass}`,
+                        `mb-2 h-40 rounded-xl object-cover ${content.imageClass} drop-shadow-lg`,
+                        'md:h-52',
                         isFilteredContentSingleItem && 'basis-full md:mb-0 md:w-1/2'
                       )}
                     />
@@ -127,11 +130,12 @@ export function ListenToRenewMeCarousel({ companyId }: { companyId: string }) {
                   {/* Flex Row */}
                   <div
                     className={cn(
-                      'hidden w-full flex-col items-start justify-start text-center md:flex'
+                      'hidden w-full flex-col items-start justify-start text-center',
+                      'md:flex'
                     )}
                   >
-                    <h3 className="text-xl font-bold">{content.title}</h3>
-                    <p className="mb-2 max-w-md text-left text-base text-zinc-500">
+                    <h3 className="text-md md:text-lg font-bold">{content.title}</h3>
+                    <p className="mb-2 font-medium max-w-md text-left text-base text-zinc-500">
                       {content.description}
                     </p>
                     <p className="text-base text-zinc-500">{content.duration}</p>
@@ -140,14 +144,15 @@ export function ListenToRenewMeCarousel({ companyId }: { companyId: string }) {
                   {/* Flex Col  */}
                   <div
                     className={cn(
-                      'absolute z-10 flex w-full flex-col items-center justify-center pr-4 text-center md:hidden',
+                      'absolute z-10 flex w-full flex-col items-center justify-center pr-4 text-center',
+                      'md:hidden',
                       isFilteredContentSingleItem ? 'items-center' : 'items-start'
                     )}
                   >
-                    <h3 className="text-xl font-bold">{content.title}</h3>
+                    <h3 className="text-md md:text-lg font-bold">{content.title}</h3>
                     <p
                       className={cn(
-                        'mb-2 text-sm text-zinc-500',
+                        'mb-2 text-sm text-zinc-500 font-medium',
                         isFilteredContentSingleItem ? 'text-center' : 'text-left'
                       )}
                     >
@@ -171,7 +176,12 @@ export function ListenToRenewMeCarousel({ companyId }: { companyId: string }) {
         </CarouselContent>
       </Carousel>
 
-      <h1 className="mb-2 mt-6 w-full text-left text-xl font-bold md:mt-0 md:mb-10 md:text-center md:text-4xl">
+      <h1
+        className={cn(
+          'mb-2 mt-6 w-full text-left text-xl font-bold',
+          'md:text-4xl md:mb-10 md:mt-0 md:text-center'
+        )}
+      >
         Listen to{' '}
         {companyId === 'renewme' ? (
           <span className="text-[#00C6C9]">Soulscape</span>
@@ -182,13 +192,15 @@ export function ListenToRenewMeCarousel({ companyId }: { companyId: string }) {
         )}
       </h1>
 
-      <Carousel className={cn('relative mb-20 w-full md:mb-14')}>
+      <Carousel className={cn('relative mb-20 w-full', 'md:mb-14')}>
         <CarouselContent>
           {otherContent.map((content: CarouselContentItemsType, index) => (
             <CarouselItem
               key={index}
               className={cn(
-                'relative md:basis-1/2 lg:basis-1/3',
+                'relative',
+                'basis-1/2',
+                'lg:basis-1/3',
                 isOtherContentSingleItem &&
                   'basis-full md:flex md:basis-full md:flex-row md:items-center md:justify-center md:gap-6 lg:basis-full'
               )}
@@ -206,8 +218,9 @@ export function ListenToRenewMeCarousel({ companyId }: { companyId: string }) {
                       src={content.thumbnail}
                       alt={content.title}
                       className={cn(
-                        `mb-2 h-64 rounded-xl object-cover ${content.imageClass}`,
-                        isOtherContentSingleItem && 'basis-full md:mb-0 md:w-1/2'
+                        `mb-2 h-28 rounded-xl object-cover ${content.imageClass} drop-shadow-lg`,
+                        'md:h-40',
+                        isOtherContentSingleItem && 'basis-full md:mb-0'
                       )}
                       width={2560}
                       height={1024}
@@ -216,7 +229,8 @@ export function ListenToRenewMeCarousel({ companyId }: { companyId: string }) {
                     <ParallaxBanner
                       layers={[{ image: content.thumbnail, speed: -10 }]}
                       className={cn(
-                        `mb-2 h-64 rounded-xl object-cover ${content.imageClass}`,
+                        `mb-2 h-28 rounded-xl object-cover ${content.imageClass} drop-shadow-lg`,
+                        'md:h-40',
                         isOtherContentSingleItem && 'basis-full md:mb-0 md:w-1/2'
                       )}
                     />
@@ -225,12 +239,13 @@ export function ListenToRenewMeCarousel({ companyId }: { companyId: string }) {
                   {/* Flex Row */}
                   <div
                     className={cn(
-                      'hidden w-full flex-col items-start justify-start text-center md:flex',
+                      'hidden w-full flex-col items-start justify-start text-center',
+                      'md:flex',
                       !isOtherContentSingleItem && 'mt-2'
                     )}
                   >
-                    <h3 className="text-xl font-bold">{content.title}</h3>
-                    <p className="mb-2 max-w-md text-left text-base text-zinc-500">
+                    <h3 className="text-md md:text-lg font-bold">{content.title}</h3>
+                    <p className="mb-2 max-w-md text-left text-base text-zinc-500 font-medium">
                       {content.description}
                     </p>
                     <p className="text-base text-zinc-500">{content.duration}</p>
@@ -239,14 +254,15 @@ export function ListenToRenewMeCarousel({ companyId }: { companyId: string }) {
                   {/* Flex Col  */}
                   <div
                     className={cn(
-                      'absolute z-10 flex w-full flex-col items-center justify-start pr-4 text-center md:hidden',
+                      'absolute z-10 flex w-full flex-col items-center justify-start pr-4 text-center',
+                      'md:hidden',
                       isOtherContentSingleItem ? 'items-center' : 'items-start'
                     )}
                   >
-                    <h3 className="text-xl font-bold">{content.title}</h3>
+                    <h3 className="text-md md:text-lg text-left font-bold">{content.title}</h3>
                     <p
                       className={cn(
-                        'mb-2 text-sm text-zinc-500',
+                        'mb-2 text-sm text-zinc-500 font-medium',
                         isOtherContentSingleItem ? 'text-center' : 'text-left'
                       )}
                     >
