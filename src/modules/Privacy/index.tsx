@@ -5,7 +5,7 @@ import { cn } from 'src/lib/utils';
 
 import { PrivacyWrapper } from './index.styled';
 
-const Privacy = ({ className }: { className: string }) => {
+const Privacy = ({ className }: { className?: string }) => {
   const textDefaultClass = classNames(`font-['Gilroy'] text-[#333333]`);
   const text1Class = classNames(`${textDefaultClass} font-[700] text-3xl md:text-6xl`);
   const text2Class = classNames(`${textDefaultClass} font-[700] text-lg pb-5 md:text-xl`);
