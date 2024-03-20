@@ -35,7 +35,7 @@ const Terms = ({ className }: { className?: string }) => {
           RenewMe provides services to help people lead a balanced, relaxed, and motivated life.
           These Terms of Use (this “Agreement”) and our Privacy Policy (the “Privacy Policy”) govern
           your access to and use of our applications (including the RenewMe App), various websites
-          (including
+          (including{' '}
           <Link className="underline" href={ROUTES.HOME}>
             www.myrenewme.com
           </Link>
