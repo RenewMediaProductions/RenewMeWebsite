@@ -149,7 +149,7 @@ const QRRenewMePage = () => {
             <p className="text-base md:text-lg">Share with friends</p>
           </section>
         </section>
-        <div className="h-[1px] w-full bg-zinc-200"></div>
+        <div className="block md:hidden h-[1px] w-full bg-zinc-200"></div>
       </section>
 
       {/* Carousel 1 */}
