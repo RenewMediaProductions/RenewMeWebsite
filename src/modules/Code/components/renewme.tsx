@@ -68,7 +68,7 @@ const QRRenewMePage = () => {
       />
 
       {/* Hero RenewMe */}
-      <section className="w-full items-center px-[40px] md:px-[60px] lg:px-[80px] xl:px-[140px] pt-[158px] md:pt-[140px] pb-[62px] md:pb-[44px] gap-5 md:gap-10 flex flex-col lg:flex-row lg:justify-between">
+      <section className="w-full items-center px-[40px] md:px-[60px] lg:px-[80px] xl:px-[140px] pt-[158px] md:pt-[140px] pb-[32px] md:pb-[44px] gap-5 md:gap-10 flex flex-col lg:flex-row lg:justify-between">
         <section className="flex flex-col justify-center md:flex-row items-center gap-3 md:gap-10">
           <div className="w-[132px] md:w-[220px] p-5 md:p-8 outline outline-1 outline-zinc-200 rounded-[40px] md:rounded-[70px] bg-white">
             <Image
@@ -95,7 +95,8 @@ const QRRenewMePage = () => {
             </Button>
           </div>
         </section>
-        <section className="w-full md:w-[280px] h-full flex flex-col items-center mt-3">
+
+        <section className="w-full md:w-[280px] h-full flex flex-col items-center mt-3 mb-4">
           <Badge className="bg-orange-400/10 text-orange-400 outline outline-1 mb-10 md:mb-8 outline-orange-400 text-md font-medium pt-1 px-4 hover:bg-orange-400/10">
             Coming Soon!
           </Badge>
@@ -148,6 +149,7 @@ const QRRenewMePage = () => {
             <p className="text-base md:text-lg">Share with friends</p>
           </section>
         </section>
+        <div className="h-[1px] w-full bg-zinc-200"></div>
       </section>
 
       {/* Carousel 1 */}
@@ -303,12 +305,12 @@ const QRRenewMePage = () => {
 
       {/* Guide: Mobile RenewMe */}
       {/* <Image
-          className="opacity-20 absolute top-0 z-10 md:hidden block"
-          src={`${imageDomainUrl}/Code/renewme-guide-mobile.png`}
-          alt="RenewMe Guide Mobile"
-          width={2000}
-          height={1200}
-        /> */}
+        className="opacity-20 absolute top-0 z-10 md:hidden block"
+        src={`${imageDomainUrl}/Code/renewme-guide-mobile.png`}
+        alt="RenewMe Guide Mobile"
+        width={2000}
+        height={1200}
+      /> */}
 
       {/* Guide: Desktop RenewMe */}
       {/* <Image
