@@ -100,7 +100,7 @@ const QRRenewMePage = () => {
           <Badge className="bg-orange-400/10 text-orange-400 outline outline-1 mb-10 md:mb-8 outline-orange-400 text-md font-medium pt-1 px-4 hover:bg-orange-400/10">
             Coming Soon!
           </Badge>
-          <section className="flex justify-between md:w-full gap-2 xs:gap-7 md:gap-0 -mb-1">
+          <section className="flex justify-between md:w-full gap-4 xs:gap-7 md:gap-0 -mb-1">
             <div className="flex flex-col items-center w-[116px]">
               <h1 className="text-lg font-medium mb-1">Use Code</h1>
               <Badge className="text-lg w-full flex items-center justify-center font-medium pt-1">
