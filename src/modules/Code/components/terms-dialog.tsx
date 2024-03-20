@@ -1,12 +1,15 @@
+import { DialogClose } from '@radix-ui/react-dialog';
+import Privacy from 'modules/Privacy';
+import Terms from 'modules/Terms';
 import { FC, ReactNode } from 'react';
 
 import Image from 'next/image';
-import Link from 'next/link';
 
 import { imageDomainUrl } from 'shared/constants/Assets';
 
 import { Button } from 'src/components/ui/button';
 import { Checkbox } from 'src/components/ui/checkbox';
+import { Dialog, DialogContent, DialogTrigger } from 'src/components/ui/dialog';
 
 interface CustomDialogProps {
   isOpen: boolean;
@@ -119,24 +122,62 @@ export const TermsDialog = ({
                   Accept terms and conditions
                 </label>
                 <p className="text-xs text-muted-foreground">
-                  You agree to our{' '}
-                  <Link
-                    href="https://www.myrenewme.com/terms"
-                    className="underline"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Terms of Service
-                  </Link>{' '}
-                  and{' '}
-                  <Link
-                    href="https://www.myrenewme.com/privacy"
-                    className="underline"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Privacy Policy.
-                  </Link>
+                  You agree to our {/* Terms of Service */}
+                  <Dialog>
+                    <DialogTrigger className="underline">Terms of Service</DialogTrigger>
+                    <DialogContent className="bg-white max-w-[100vw] md:max-w-[80vw] max-h-[100vw] md:max-h-[40vw] overflow-y-auto rounded-2xl border-transparent">
+                      <section className="relative">
+                        <Terms className="p-0" />
+                        <DialogClose asChild>
+                          <section className="sticky flex gap-2 bottom-0">
+                            <Button
+                              className="w-full font-['Gilroy'] hover:bg-zinc-800 drop-shadow-2xl"
+                              variant="default"
+                              onClick={() => {
+                                setTermsIsChecked(true);
+                              }}
+                            >
+                              I Agree
+                            </Button>
+                            <Button
+                              className="w-full font-['Gilroy'] drop-shadow-2xl"
+                              variant="outline"
+                            >
+                              Close
+                            </Button>
+                          </section>
+                        </DialogClose>
+                      </section>
+                    </DialogContent>
+                  </Dialog>{' '}
+                  and {/* Privacy Policy */}
+                  <Dialog>
+                    <DialogTrigger className="underline">Privacy Policy.</DialogTrigger>
+                    <DialogContent className="bg-white max-w-[100vw] md:max-w-[80vw] max-h-[100vw] md:max-h-[40vw] overflow-y-auto rounded-2xl border-transparent">
+                      <section className="relative">
+                        <Privacy className="p-0" />
+                        <DialogClose asChild>
+                          <section className="sticky flex gap-2 bottom-0">
+                            <Button
+                              className="w-full font-['Gilroy'] hover:bg-zinc-800 drop-shadow-2xl"
+                              variant="default"
+                              onClick={() => {
+                                setTermsIsChecked(true);
+                              }}
+                            >
+                              I Agree
+                            </Button>
+                            <Button
+                              className="w-full font-['Gilroy'] drop-shadow-2xl"
+                              variant="outline"
+                            >
+                              Close
+                            </Button>
+                          </section>
+                        </DialogClose>
+                      </section>
+                    </DialogContent>
+                  </Dialog>
                 </p>
               </div>
             </div>

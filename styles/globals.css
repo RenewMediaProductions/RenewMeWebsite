@@ -43,3 +43,7 @@
   font-style: normal;
   src: url('/fonts/Gilroy-Bold.otf') format('opentype');
 }
+
+.debug {
+  border: 1px solid red;
+}
