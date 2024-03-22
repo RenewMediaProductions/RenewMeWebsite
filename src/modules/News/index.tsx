@@ -11,12 +11,12 @@ import WhatPeopleAreSaying from './components/WhatPeopleAreSaying';
 
 const inTheNewsContents = [
   {
-    title: 'Media Sizzle Reel 2022 - Dr. Lisa Palmer',
-    youtubeLink: 'https://www.youtube-nocookie.com/embed/MRUedr9zev4?si=MscKK3HKHY9p-syo',
-  },
-  {
     title: 'Media Sizzle Reel 2023 - Dr. Lisa Palmer',
     youtubeLink: 'https://www.youtube.com/embed/e_y1_kRQNRo?si=aHi7xEK6VElWsmU7',
+  },
+  {
+    title: 'Media Sizzle Reel 2022 - Dr. Lisa Palmer',
+    youtubeLink: 'https://www.youtube-nocookie.com/embed/MRUedr9zev4?si=MscKK3HKHY9p-syo',
   },
 ];
 
@@ -70,24 +70,18 @@ const News: React.FC = () => {
           In the News
         </h2>
         <div className="flex overflow-x-auto gap-4 md:gap-7 items-start w-screen px-[30px] md:px-[50px] lg:px-[164px]">
-          {
-            // In the News
-            inTheNewsContents.map((content, index) => (
-              <div key={index} className="flex-shrink-0 w-[300px] md:w-[690px] h-fit">
-                <iframe
-                  className="w-full aspect-video mb-3 md:mb-7 rounded-xl md:rounded-3xl"
-                  src={content.youtubeLink}
-                  title=""
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  referrerPolicy="no-referrer"
-                  allowFullScreen
-                />
-                <h4 className="text-base font-normal md:text-2xl font-['Gilroy'] max-w-[550px]">
-                  {content.title}
-                </h4>
-              </div>
-            ))
-          }
+          {inTheNewsContents.map((content, index) => (
+            <div key={index} className="flex-shrink-0 w-[300px] md:w-[690px] h-fit">
+              <iframe
+                className="w-full aspect-video mb-3 md:mb-7 rounded-xl md:rounded-3xl"
+                src={content.youtubeLink}
+                title=""
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="no-referrer"
+                allowFullScreen
+              />
+            </div>
+          ))}
         </div>
       </section>
 
